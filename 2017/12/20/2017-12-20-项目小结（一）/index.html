@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    项目小结（一） |  
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-120241019-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?e64327510d75307e8f002f9b4c2f1629";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<link rel="alternate" href="/atom.xml" title="空" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="vuejs-2017-12-20-项目小结（一）"
+  class="article article-type-vuejs"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  项目小结（一）
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/12/20/2017-12-20-%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" class="article-date">
+  <time datetime="2017-12-20T06:17:20.000Z" itemprop="datePublished">2017-12-20</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>许久没有写vue了，前几天有人问我问题，概念都有些理不清楚了。。<br>项目快完成，总结一下。从最基础的开始，重现我遇到的问题和一些细节问题。</p>
+<h2 id="项目效果图"><a href="#项目效果图" class="headerlink" title="项目效果图"></a>项目效果图</h2><p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-1.png"></p>
+<a id="more"></a>
+<p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-2.png"><br><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-3.png"></p>
+<h3 id="现实分析："><a href="#现实分析：" class="headerlink" title="现实分析："></a>现实分析：</h3><ol>
+<li>上方一个搜索框，输入的时候获取数据。点击加入到右侧的列表中，叠加品种数量+1</li>
+<li>左侧默认有两个树状结构图，点击根展开收起，点击子节点，加入右侧列表。</li>
+<li>右侧点击删除按钮删除选项，选中数量-1</li>
+<li>超过6个的时候显示tip。</li>
+</ol>
+<h3 id="实现分析："><a href="#实现分析：" class="headerlink" title="实现分析："></a>实现分析：</h3><ol>
+<li>把各个部分拆分成组件。<ol>
+<li>topbar 表头组件</li>
+<li>searchbox 搜索框组件</li>
+<li>selectleftbox 左侧页面组件</li>
+<li>singletree 单支树状组件</li>
+<li>selectrightbox 右侧页面组件</li>
+<li>tip 组件</li>
+</ol>
+</li>
+<li>状态跨多个组件 使用vuex来实现数据统一管理</li>
+<li>不使用图片图标 iconfont上下载svg图标</li>
+</ol>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>使用vue-cli创建vuejs目录结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-cli -g</span><br><span class="line">vue init webpack vue-test</span><br><span class="line">cd vue-test</span><br><span class="line">npm install</span><br><span class="line">npm install vuex --save</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="（一）-项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示-这些难看的链接hash呢？"><a href="#（一）-项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示-这些难看的链接hash呢？" class="headerlink" title="（一） 项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示/#/这些难看的链接hash呢？"></a>（一） 项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示<code>/#/</code>这些难看的链接hash呢？</h3><ol>
+<li>最简单的方式就是去除入口文件man.js 中的router的引入和调用的地方<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import router from &#x27;./router&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    <span class="comment">// router,</span></span><br><span class="line">    store,</span><br><span class="line">    template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span>,</span><br><span class="line">    components: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>还有一种也是可以实现的，就是在/router/index.js 中修改路由模式<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="comment">// import HelloWorld from &#x27;@/components/HelloWorld&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">    mode: <span class="string">&#x27;history&#x27;</span>,</span><br><span class="line">    routes: [</span><br><span class="line">        &#123;</span><br><span class="line">            path: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">            <span class="comment">// name: &#x27;HelloWorld&#x27;,</span></span><br><span class="line">            <span class="comment">// component: HelloWorld</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+把模式改成<code>mode: &#39;history&#39; </code> ，在默认首页就不会出现hash值了，但是这可能不像想象中简单，还需要服务端配置。详细：<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh-cn/essentials/history-mode.html">链接</a>。<br>所以还是用第一种吧。 2333</li>
+</ol>
+<h2 id="（二）使用svg资源"><a href="#（二）使用svg资源" class="headerlink" title="（二）使用svg资源"></a>（二）使用svg资源</h2><p>先去<a target="_blank" rel="noopener" href="http://www.iconfont.cn/%E6%89%BE%E5%88%B0%E7%B1%BB%E4%BC%BC%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AE">http://www.iconfont.cn/找到类似图标按钮</a> 不在乎大小和颜色。</p>
+<p>添加入库。选完后点击购物车按钮，把所有的图标添加到项目中（没有可以新建一个）。到项目页面 点击编辑图标，可以修改图标的位置大小颜色。保存后下载svg。</p>
+<p>把svg放置到项目assets文件夹（静态资源）下，组件中使用img标签引入svg文件。</p>
+<p>还可以使用background属性引入。（奇怪，我开发的时候明明不能用，/(ㄒoㄒ)/~~ 现在居然可以了，还以为是个bug呢，算了，之后如果遇到再说）</p>
+<p>我们引入svg难道就仅仅只是当做背景使用的吗？当然不是！！！</p>
+<p>应该还还可以直接直接控制颜色的变化，但是试了半天没效果，发现了其他引入的方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; fn1</span><br><span class="line">&lt;object :data&#x3D;&quot;addBtn&quot; type&#x3D;&quot;&quot;&gt;&lt;&#x2F;object&gt;</span><br><span class="line"></span><br><span class="line">import addBtn from &#39;@&#x2F;assets&#x2F;add.svg’</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; fn2</span><br><span class="line">&lt;object :data&#x3D;“require(.&#x2F;assets&#x2F;add,svg)&quot; type&#x3D;&quot;&quot;&gt;&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="（三）组件的编写"><a href="#（三）组件的编写" class="headerlink" title="（三）组件的编写"></a>（三）组件的编写</h2><p>组件是vue的核新内容，vue推崇的是全部使用组件的方式构建页面。<br>下面是tip组件的基本内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tip&quot;</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">&quot;../assets/info.svg&quot;</span> alt=<span class="string">&quot;info&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tip-info&quot;</span>&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> Store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: &#123;</span><br><span class="line">            type: <span class="built_in">String</span>,</span><br><span class="line">            <span class="keyword">default</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    data () &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            message: <span class="built_in">this</span>.msg</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"><span class="comment">/* 样式 */</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>组件基本功能就是传入tip文字，显示文字。就是这么简单，props中定义了传参的参数的类型和默认值，可以直接使用this.参数来调用。但是我们一般不直接使用参数，而是把参数赋值给当前组件的一个变量，因为参数的内容是不可更改的，所以防止出现失误，所以赋值之后，使用被赋值的变量进行操作。</p>
+<h2 id="（四）跃动的组件。。"><a href="#（四）跃动的组件。。" class="headerlink" title="（四）跃动的组件。。"></a>（四）跃动的组件。。</h2><p>运行实例我们可以发现tip组件的是有动画效果的，从上方落下渐显，过1.5秒后，当前位置落下渐逝，效果是不是很酷。</p>
+<p>我们来分析一下：</p>
+<p>其实我们主要使用的是vue的内置组件<transition></p>
+<p>参数name=“fall”  fall是我们自己定义的一个动画的名称。同时我们要在样式中增加，如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fall-enter</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">50px</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fall-enter-active</span> &#123;</span><br><span class="line">    <span class="attribute">transition</span>: all .<span class="number">5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fall-leave</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fall-leave-active</span> &#123;</span><br><span class="line">    <span class="attribute">transition</span>: all .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">50px</span>);</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.name-enter 代表进入之前的状态<br>.name-enter-active 代表进入的状态<br>.name-leave 离开之前的状态<br>.name-leave-active 离开的状态  </p>
+<p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/transition-css.png"></p>
+<p>借用一张图片说明，这个是一个渐显到渐逝的过程。绝大部分v-enter-active（进入的状态）和 v-leave（离开之前的状态）其实是一样的，所以v-leave就不用写了，只要控制好其他的三个状态就可以了。这里面需要用到transition属性的地方是active（激活）的时候。为什么是这样呢？你可以审查一下元素发现，内置组件<code>&lt;transition&gt;</code>的主要作用就是把这四个状态（类）按照约定好的触发状态添加和删除。至此我们动画就可以动起来了。</p>
+<p>拓展（其他参数）：</p>
+<ul>
+<li>name - string，用于自动生成 CSS 过渡类名。例如：name: ‘fade’ 将自动拓展为.fade-enter，.fade-enter-active等。默认类名为 “v”</li>
+<li>appear - boolean，是否在初始渲染时使用过渡。默认为 false。</li>
+<li>css - boolean，是否使用 CSS 过渡类。默认为 true。如果设置为 false，将只通过组件事件触发注册的 JavaScript 钩子。</li>
+<li>type - string，指定过渡事件类型，侦听过渡何时结束。有效值为 “transition” 和 “animation”。默认 Vue.js 将自动检测出持续时间长的为过渡事件类型。</li>
+<li>mode - string，控制离开/进入的过渡时间序列。有效的模式有 “out-in” 和 “in-out”；默认同时生效。<br>还有一些事件，可以在动画发生之前和之后触发，让动画的控制更加细节。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/#transition">官网详细说明</a></p>
+<h2 id="（五）vuex统一的数据管理"><a href="#（五）vuex统一的数据管理" class="headerlink" title="（五）vuex统一的数据管理"></a>（五）vuex统一的数据管理</h2><p>安装完vuex之后，项目比较简单，所以我们在入门文件main.js同级建了一个store.js的文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state: &#123;</span><br><span class="line">        num:<span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    mutations: &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>main.js 引入和把store中的内容作为实例的参数传入。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store&#x27;</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    store,</span><br><span class="line">    template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span>,</span><br><span class="line">    components: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>组件中使用store可以通过</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>来使用store中的数据，但这样是有点多余的，因为Vuex 通过 store 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中，可以直接在组件中使用$store.state.num 获取到num的值。</p>
+<p>Vuex.store中的：<br>state 用于数据（状态）的存储。 Vuex 使用单一状态树。我们是不能操作state中的数据的。</p>
+<p>mutation 是唯一能操作修改state的方法。我们通过调用我们自定义的mutation方法，修改state。</p>
+<p>getter 用于获取数据，虽然state不能修改，但是获取数据state是可以的，getter返回的数据是可以定义一些逻辑在里面的。例如筛选出num大于0的数据。</p>
+<p>action 类似于mutation，mutation必须是同步函数，虽说如此但是我tip的显示隐藏状态是放在mutation中设了一个定时器（异步）去设置隐藏状态，也是可以的。在下文的时候修改一下。</p>
+<p>Module 是防止store太大，不便管理而设置的。</p>
+<p>这次我们拿右侧选择框来做演示。<br>右侧的选中数据来自左侧选择框中点击添加而来，首先数据被添加到store中，右侧发现数据更新了，立即渲染新的数据。<br>如何设置呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// data</span></span><br><span class="line">selectList: <span class="built_in">this</span>.$store.state.selectData,</span><br></pre></td></tr></table></figure>
+<p>这样就能拿到数据进行渲染啦。<br>点击左侧添加到右侧。<br>同理我们设置了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// data</span></span><br><span class="line">isShowDelAllBtn: <span class="built_in">this</span>.$store.state.selectData.length &gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>用于渲染当有数据的时候就显示删除全部的按钮，但是失效了？？？<br>渲染的数据一旦被处理之后返回就不再有“数据双向绑定”的特性了，个人猜测。 </p>
+<p>所以vuex给出一个解决方案：<br>mapState 辅助函数<br>当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性<br>直接贴代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span>  <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: mapState(&#123;</span><br><span class="line">    isShowDelAllBtn: <span class="function"><span class="params">state</span> =&gt;</span> state.selectData.length &gt; <span class="number">0</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>mapstate中定义的计算属性isShowDelAllBtn直接可以在组件中使用 默认带一个参数state，可以直接使用state中的方法和属性</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>先分享这么几点，好久没碰了，之后加深理解之后不断优化。加油！ happy hacking！</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://kuckboy1994.github.io/2017/12/20/2017-12-20-%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/svg/" rel="tag">svg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuex/" rel="tag">vuex</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2017/12/21/2017-12-21-%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            前端优化
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2017/12/04/2017-12-04-%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">注释规范</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "pTYnUlVxn3Jqw8vwmDXghUTq-gzGzoHsz",
+    app_key: "o0SyljW2iMeUeYfs6nMyA1cu",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2017-2020
+        <i class="ri-heart-fill heart_icon"></i> kuckboy1994
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s4.cnzz.com/z_stat.php?id=1279191630&amp;web_id=1279191630'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.png" alt="空"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">摄影</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=536057&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

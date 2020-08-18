@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>谈一谈一年来的经历</title>
+    <url>/2017/11/05/2017-11-05-%E8%B0%88%E4%B8%80%E8%B0%88%E4%B8%80%E5%B9%B4%E6%9D%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</url>
+    <content><![CDATA[<h2 id="生活篇"><a href="#生活篇" class="headerlink" title="生活篇"></a>生活篇</h2><p>去年的四月底（201604），我和我的室友（我羊），带着一个包和一千块钱去往了宁波到杭州的路途。当时住在我高中同学租的小和山那边的居民房里，那时候手里也比较拮据，生活用品都是两个人一起用的，当时还想着可能是场持久战，看什么时候能找到工作吧。一个星期还是一个月？</p>
+<p>每天晚上我们都会花时间在学习今天面试的内容和投简历上，第二天一早我们就会出门，因为面试总是会被排的满满当当的。每天早上从小和山出来的时候，公交车总是异常的挤，想来大城市就是有这么多怀揣这梦想的打工者吧。中午的时候吃饭就是看运气了，得找一家看起来不贵的店进去吃，不然怕是熬不住了。晚上的时候我和我羊要是面试完离得近，我们就会约着见面一起，要么就是回去再吃。我们住的地方附近就有一个大学，附近的垃圾街伙食还是挺实惠的。</p>
+<p>找工作期间，志鹏（隔壁班的小伙伴，之前已经在杭州找到工作了）还来找我们一起吃过饭，大家一起聊聊天，感觉又回到了大学读书的时候，没有辛苦，只有梦想。</p>
+<p>幸福来的总是很快，第三天晚上的时候，我收到了同花顺的offer，第四天也收到了两个offer。我羊也收到了两三个offer，我们那天晚上还出去吃了一顿杨国福麻辣烫。第一次吃杨国福，点了二十二块，这一碗贼大，吃了一半就吃不下了，这种计价模式真是让人害怕啊！（你得知道你手里有几斤几两 ）</p>
+<a id="more"></a>
+<p>找房子的时候和我羊意见不一致，结果就分开住了。现在想来当时真的是非常的不明智啊！那时候每天加班，下班的时候有没有去我那边的公交和班车，每天下班就是骑着公共自行车回去，下雨天就打车回去，感觉得不偿失，心一横，浪费了一个月的押金。搬到了公司附近住，价格和原来的差不多。</p>
+<p>之后的生活犹如止水一般，平淡但又充满惊喜，见到了许多宁波的大学同学。毕业散伙饭上，大家各自诉说这个对于我们陌生又好玩的世界的一点理解和抱怨。但我们的心一直在路上…</p>
+<h2 id="工作篇"><a href="#工作篇" class="headerlink" title="工作篇"></a>工作篇</h2><p>去年五月份入职，在同花顺已经一年多了，到现在差不多也是老员工了(人员流动太大了)，通过面试php入职，在10月份正式转了前端，开始了前端填坑之路。</p>
+<p>刚转前端的时候，楠姐对我挺不满意的（自知之明还是有的）。啥也不会，就从切图开始一点点开始。之后老贾带着我做了level2首页，那是我第一次接触seajs。学会简单使用后的的我，欣喜诺狂（不知道你能否理解，说多了害羞⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄）。</p>
+<p>之后一位我很佩服的同事（国梁兄）离开了，他给了我很多中肯的建议，我愿意学，他愿意传授，多么美好的场景。他走后，我接手了他的任务和芦荟一起合作。哇！require + backbonejs + sass + jade。其实之前，策策和我是两个候选人，我厚着脸皮主动接了。这么一堆高级的东西，让我压力也很大，周末的时候我拼命的看了两天的视频和教程，周一直接开始干，之后芦荟也给了我很大的帮助，一周多点顺利的交付了测试。</p>
+<p>在之后的很长的一段时间里面我又学习了gulp，ie6的兼容等，完成了项目。照理来说，我应该很快能成为技术大牛，但是…</p>
+<p>我一直得意于有机会参与一些需要类似高端技术的项目，但完成之后，我一直没有总结，或没有深入的了解，学习浅藏辄止。让我以为我已经会了，仅仅是会了。</p>
+<p>直到今年三月份的时候，我开始沉下心，进行条理性的学习，从前端的基础（html、css、js）、ps如何切图，一些简单的性能优化等（学习的内容是我去年九月份花了1000块报名的前端微专业，当时觉得特别坑，后来仔细的学习之后还是有很多干货的）。整理成文档传到了github上，之后只要使用任何技术点，基本上都会整理到到这个上面。</p>
+<p>去年底的时候来了个新同事，现在算是我比较铁的哥们了。给我的感觉就是靠谱，虽然比我小，但是他的基础很好，平常遇到问题的时候我们经常会讨论。在他身上学会了很多东西，他也会发现我的问题，给我指出来。</p>
+<p>六月份的时候，客户端内核升级开始，把所有的项目都迁到chrome下，考虑到以后可以不用兼容。在团队内准备引入vuejs。第一个项目应该是api管理平台，和老贾一起合作的。那时候状态特别好，晚上回去看视频和教程，第二天把学习到的内容运用到项目中，或改进之前的问题。花了两期两周的时间完成。这应该算是正式转向现在技术栈的一次尝试了，之前的工作流都是依赖jQuery的一种工作模式，那时候我们还写了很多组件为了提高工作效率。</p>
+<p>八月份的时候，楠姐将离开我们四个月，孕育小宝宝。留下了我们一帮人，但是这段时间里，产品那边需求少了很多，工作安排比以前宽裕了很多，一般八点就能差不多回家了。就我来说，以前基本九点之后才能回家。这段时间我开始加强我的js基础，css动画，svg等方面的技能。同时开始了THink前端平台，现在还未完成。主要是为了前端方面的内部需求，同时也加强了我对于vue的理解。</p>
+<p>十月份的时候，开始了金融大师手机app的项目，开始做手机页面，使用reactjs+and，写h5页面也稍有心得。</p>
+<p>做前端已经一年整了，现在的我回头看当时的我，走了很多弯路，但是这确实是我想走的路。这是我赖以生存的技能，也是我的爱好，创造一个不一样的世界呈现给众人。接下去的一年将会给我更大的挑战，我也会挑战更大的困难。毕竟我不是一个人了…</p>
+]]></content>
+      <tags>
+        <tag>感悟</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>水平垂直居中</title>
+    <url>/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
+    <content><![CDATA[<h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><ol>
+<li><p>若是行内元素，给改元素的父级设置 <code>text-align:center</code> ，即可实现行内元素水平居中。<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/1-text-align.html">demo</a></p>
+</li>
+<li><p>若是块级元素, 该元素设置 <code>margin:0 auto</code> 。<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/2-margin-auto.html">demo</a></p>
+</li>
+<li><p>若子元素包含 <code>float:left</code> 属性, 为了让子元素水平居中, 则可让父元素宽度设置为 <code>fit-content</code> ,并且配合 <code>margin</code> , 作如下设置:<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/3-margin-auto-fit-content.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.fit-content</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: -moz-fit-content;</span><br><span class="line">    <span class="attribute">width</span>: -webkit-fit-content;</span><br><span class="line">    <span class="attribute">width</span>: fit-content;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 目前这个属性只支持Chrome和Firefox浏览器。</p>
+<a id="more"></a></li>
+<li><p>使用flex布局，可以很轻松的实现水平居中：<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/4-flex-justify-content.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> .son 将会被水平居中 </p>
+</li>
+<li><p>**使用CSS3盒模型，父元素 <code>display:box;box-pack:center;</code></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: horizontal;</span><br><span class="line">    <span class="attribute">-webkit-box-pack</span>: center;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: -moz-box;</span><br><span class="line">    <span class="attribute">-moz-box-orient</span>: horizontal;</span><br><span class="line">    <span class="attribute">-moz-box-pack</span>: center;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: -o-box;</span><br><span class="line">    <span class="attribute">-o-box-orient</span>: horizontal;</span><br><span class="line">    <span class="attribute">-o-box-pack</span>: center;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: -ms-box;</span><br><span class="line">    <span class="attribute">-ms-box-orient</span>: horizontal;</span><br><span class="line">    <span class="attribute">-ms-box-pack</span>: center;</span><br><span class="line">    </span><br><span class="line">    <span class="attribute">display</span>: box;</span><br><span class="line">    <span class="attribute">box-orient</span>: horizontal;</span><br><span class="line">    <span class="attribute">box-pack</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 没有深入了解。<br> 基本介绍： <code>display:box;</code> 是09年出来的。 <code>display: flex;</code> 是12年出来的。地址：<a href="https://css-tricks.com/old-flexbox-and-new-flexbox/">“Old” Flexbox and “New” Flexbox</a>。<br> 看文章说在手机页面的时候，老机子 <code>display:flex</code> 会有问题的时候就需要box上场啦。</p>
+</li>
+<li><p>通过使用决定对位，以及负值的 <code>margin-left</code> 来实现：<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/position-margin-left.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">0.5</span> * 当前元素的宽度; </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用CSS3中新增的 <code>transform</code> 属性，以及绝对定位:<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/transform.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用绝对定位，以及 <code>left:0;right:0;margin:0 auto;</code> ：<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/position-absolute-margin-auto.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h2><ol>
+<li><p>元素是单行文本，设置line-height等于父元素的高度。<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/1-line-height.html">demo</a></p>
+</li>
+<li><p>元素是行内块级元素, 基本思想是使用display: inline-block, vertical-align: middle和一个伪元素让内容块处于容器中央。<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/2-display-inline-block.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.parent</span><span class="selector-pseudo">::after</span>, <span class="selector-class">.son</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:inline-block;</span><br><span class="line">    <span class="attribute">vertical-align</span>:middle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.parent</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">100%</span>;</span><br><span class="line">    <span class="comment">/*width: 10px;*/</span></span><br><span class="line">    <span class="comment">/*background-color: blue;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 通过父元素创建一个看不见的伪类（宽度为0），高度为100%，同时设置为 <code>inline-block</code> 和 <code>vertical-align:middle</code> 使元素垂直居中。<br> 这是一种很流行的方法, 也适应IE7。</p>
+</li>
+<li><p>可用 <code>vertical-align</code> 属性，而 <code>vertical-align</code> 只有在元素为 <code>td</code> 或者 <code>th</code> 时，才会生效，对于其他块级元素，例如 <code>div</code> 、 <code>p</code> 等，默认情况是不支持的。为了使用 <code>vertical-align</code> ，我们需要设置父元素 <code>display:table-cell;vertical-align:middle</code> 。<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/3-table-vertical-align.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用flex布局，<code>align-items: center;</code> : <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/4-flex-align-items-center.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用CSS3盒模型 <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/5-display-box.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">    <span class="attribute">-webkit-box-pack</span>: center;</span><br><span class="line">    </span><br><span class="line">    <span class="attribute">display</span>: -moz-box;</span><br><span class="line">    <span class="attribute">-moz-box-orient</span>: vertical;</span><br><span class="line">    <span class="attribute">-moz-box-pack</span>: center;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: box;</span><br><span class="line">    <span class="attribute">box-orient</span>: vertical;</span><br><span class="line">    <span class="attribute">box-pack</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过使用决定对位，以及负值的 <code>margin-top</code> 来实现：<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/6-position-margin-top.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">0.5</span> * 高度的一半; </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用CSS3中新增的 <code>transform</code> 属性，以及绝对定位:<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/7-position-transform.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, -<span class="number">50%</span>);</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置父元素相对定位 <code>position:relative</code> ，子元素如下css样式：<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical/8-position-relative-absolute.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h2><ol>
+<li><p>flex: <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical-horizontal/1-flex.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位 + <code>margin</code> : <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical-horizontal/2-absolute-margin.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">0.5</span> * 宽度;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">0.5</span> * 高度;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>绝对定位 + <code>transform</code> : <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical-horizontal/3-absolute-transform.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位 + <code>margin: auto</code> : <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical-horizontal/4-absolute-margin-auto.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>table</code> + <code>margin:auto</code> : <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical-horizontal/5-table-margin-auto.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.ancestor</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>display:inline-block;vertical-align:middle;</code> : <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/vertical-horizontal/6-inline-block-vertical-align.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.parent</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>:inline-block;</span><br><span class="line">    <span class="attribute">vertical-align</span>:middle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>:inline-block;</span><br><span class="line">    <span class="attribute">vertical-align</span>:middle;</span><br><span class="line">    </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
+<li>flex<ul>
+<li>基本可以完成任何复杂的布局，</li>
+<li>兼容性ie11+</li>
+<li>不同浏览器需要前缀</li>
+<li>渲染的性能</li>
+</ul>
+</li>
+<li>绝对定位<ul>
+<li>+ <code>margin</code> 设置可以完美的兼容ie6，缺点是子元素宽高固定。</li>
+<li>+ <code>transform</code> 兼容ie11+，但是自由度上是最佳的。</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://github.com/Arisons/css-center">css-center</a></li>
+<li><a href="https://www.smashingmagazine.com/2013/05/centering-elements-with-flexbox/">Flexbox Is As Easy As Pie: Designing CSS Layouts</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用网页实现移动端横向纵向列固定的表格</title>
+    <url>/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/</url>
+    <content><![CDATA[<p>最终效果：</p>
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/gif/table-fixed.gif"></p>
+<p>当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>简单分析来说，页面就是上面一个<code>position:fixed;</code>在顶部，下面的列表的最左边一列<code>position-x:fixed</code>（哈哈这个属性当然是不存在的啦）。</p>
+<p>从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们都只能操作一个元素，不知道大家能不能理解，就好比我们页面上有一个区域a有滚动条，当前的页面很长，也有滚动条，鼠标在区域a上滚动的时候页面是不动的，只有当区域a滚到底的时候，页面才会继续滚动。所以利用这个特性，我们创造一个叠加的滚动区域，一个<code>overflow-y:auto;</code>，一个<code>overflow-x:auto</code>。一个只能纵向滚动，一个只能横向滚动。</p>
+<a id="more"></a>
+<h2 id="html解释"><a href="#html解释" class="headerlink" title="html解释"></a>html解释</h2><p>html结构如下，左侧列表单独盛放（固定），右侧创造一个可以滚动的区域。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-body&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-body-left-fixed&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>涨停股份<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>888888<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>涨停股份<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>888888<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-body-right&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-tr&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>20170912<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>20171010<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>23.4%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>67.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>-19.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>103.90<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>9.12<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-tr&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>20170912<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>20171010<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>23.4%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>67.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>-19.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>103.90<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-td&quot;</span>&gt;</span>9.12<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="css解释"><a href="#css解释" class="headerlink" title="css解释"></a>css解释</h2><p><code>.table-body</code>设置为纵向滚动，<code>.table-body-right</code> 设置为横向滚动。<br><code>-webkit-overflow-scrolling: touch;</code> 是为了解决IOS滑动卡顿的问题。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.table-body</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">3.5rem</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">overflow-y</span>: auto;</span><br><span class="line">    <span class="attribute">overflow-x</span>: hidden;</span><br><span class="line">    <span class="attribute">-webkit-overflow-scrolling</span>: touch;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.table-body-right</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">25vw</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">overflow-x</span>: auto;</span><br><span class="line">    <span class="attribute">-webkit-overflow-scrolling</span>: touch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="联动，优化"><a href="#联动，优化" class="headerlink" title="联动，优化"></a>联动，优化</h2><p>上面的表头是简单版的列表，只有横向滚动。所以是非常easy的。</p>
+<p>还有一个是联动，就是上面滚动的时候，得出左侧滚动距离<code>scrollLeft</code>，但是只是单纯去设置<code>thead[0].scrollLeft = e.target.scrollLeft;</code>（表头的左侧滚动距离等于目列表的左侧滚动距离），其实是有问题的，比如在高速的操作下（what…你是机器人么）。会出现你手停下来了，出现对不齐的问题。解决的办法就是把当前的操作加入异步队列中，这样所有的操作都会被执行下来。</p>
+<p>以上就是最近写手机模板的收获。</p>
+<p><a href="https://github.com/kuckboy1994/Blog/blob/master/demo/table-fixed/index.html">demo</a></p>
+<blockquote>
+<p>要是所有人都能理解你，你得平庸成什么样</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+        <tag>HTML</tag>
+        <tag>移动端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给文本输入框增加下边框效果</title>
+    <url>/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<p>文本翻译自 <a href="https://css-tricks.com/">css-tricks</a> 网站的 <a href="https://css-tricks.com/text-input-expanding-bottom-border/">Text Input with Expanding Bottom Border</a> 一文。翻译有误，期待斧正。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Petr Gazarov在他的文章<code>Text input highlight, TripAdvisor style</code>中使用了一个漂亮的小设计。</p>
+<p><img src="https://github.com/kuckboy1994/Blog/blob/master/gif/bb_oqufjg.webp?raw=true"></p>
+<p>这是一个花招，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p>
+<a id="more"></a>
+<p>如果你愿意使用<code>&lt;span contenteditable&gt;</code>，你可以在CSS中完成所有的事情！</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">div &#123;</span><br><span class="line"><span class="css">    <span class="selector-tag">padding</span>: 0<span class="selector-class">.4rem</span> 0;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border-bottom</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#383838</span>;</span></span><br><span class="line">    width: 90vw;</span><br><span class="line">&#125;</span><br><span class="line">span &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    bottom: -11px;</span><br><span class="line">    color: white;</span><br><span class="line">    display: inline-block;</span><br><span class="line"><span class="css">    <span class="selector-tag">padding</span>: 0<span class="selector-class">.4rem</span> 0;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border-bottom</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#D5BA5E</span>;</span></span><br><span class="line">    outline: 0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">contenteditable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>因为你没有使用input，所以<code>placeholder</code>（占位符）也就无效了。</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p><code>contenteditable</code>的兼容ie6+</p>
+<p><code>contenteditable</code>是有继承性（inherit）的。如果没有设置该属性，其默认值继承自父元素。</p>
+<p><code>contenteditable=true</code>在黏贴的时候会把html标签给带上，所以显示出原来的感觉和富文本编辑差不多。</p>
+<p>在<a href="http://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/">张鑫旭-小tip: 如何让contenteditable元素只能输入纯文本</a> 一文中提到了</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">contenteditable=&quot;&quot;</span><br><span class="line">contenteditable=&quot;events&quot;</span><br><span class="line">contenteditable=&quot;caret&quot;</span><br><span class="line">contenteditable=&quot;plaintext-only&quot;</span><br><span class="line">contenteditable=&quot;true&quot;</span><br><span class="line">contenteditable=&quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<p><code>contenteditable=&quot;plaintext-only&quot;</code> 黏贴是纯文本的内容。但也仅限于Chrome之流的浏览器。</p>
+<h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><ul>
+<li>认识到自己对于样式的了解还不够</li>
+<li>可以看看W3C之后的规范和草案</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://css-tricks.com/text-input-expanding-bottom-border/">https://css-tricks.com/text-input-expanding-bottom-border/</a></li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/">小tip: 如何让contenteditable元素只能输入纯文本</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">contenteditable - HTML | MDN</a></li>
+<li><a href="https://w3c.github.io/">w3c</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用伪元素来形成类似“居中浮动”的效果</title>
+    <url>/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<p>文本翻译自 <a href="https://css-tricks.com/">css-tricks</a> 网站的 <a href="https://css-tricks.com/float-center/">Faking ‘float: center’ with Pseudo Elements</a> 一文。翻译有误，期待斧正。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>比方说，你想完成一个类似这样的布局：</p>
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/catinmiddle1.png" alt="catinmiddle1"></p>
+<p>这个展示效果没毛病吧？特别是你想把这个猫作为文章的重点。</p>
+<p>做到这一点其实并不容易。我们当前有的布局方法并不能真正的考虑到这一点。事实上，有时候觉得这种布局并没有真正的“网页设计”的思想。我说的对吗？我不认为即使有这种流通边缘的CSS布局系统就能很好地处理这个问题。这有点像float，因为文本环绕着图像，但是文本环绕两个方向，所以有点像<code>float: center;</code>居中浮动;或<code>float: both;</code>全部浮动，但这两个都是不存在的。</p>
+<p>但这是可以实现的！</p>
+<a id="more"></a>
+<p>证明：<a href="https://css-tricks.com/examples/FloatBoth/">查看</a> <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/css-tricks/float-both/index.html">查看源码</a></p>
+<p>我们将通过使用浮动的伪元素占位符来实现它。每一<code>列①</code>放入一个伪元素占位符，一个左浮动，一个右浮动。伪元素的高度为图像的高度，宽度为图像的一半宽（差不多，不要忘记你还有padding和中间的槽【两列中间的分隔距离】需要考虑）。</p>
+<p>主要代码：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#l</span><span class="selector-pseudo">:before</span>, <span class="selector-id">#r</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>; </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">125px</span>; </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">250px</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">float</span>: right; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#r</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">float</span>: left; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/psuedoplaceholders.jpg" alt="psuedoplaceholders"></p>
+<p>现在文本中有一个洞，准备好把我们的图像放在那里。我们可以通过绝对定位来实现，就像在演示中那样。或者你可以把它放在上面的一个元素上，然后用负的顶部边缘来把文本拉出来。</p>
+<h2 id="标注："><a href="#标注：" class="headerlink" title="标注："></a>标注：</h2><ul>
+<li>列①： 注意，我们使用的是div来实现文本的列，而不是CSS列，虽然使用css来实现更酷，更具有语义化，但是用css的话我们上面的就不起作用了。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+        <tag>翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取id元素的“又”一种方法</title>
+    <url>/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="获取id元素的“又”一种方法"><a href="#获取id元素的“又”一种方法" class="headerlink" title="获取id元素的“又”一种方法"></a>获取id元素的“又”一种方法</h1><p>今天在偶然看到某大在掘金上面发了一篇文章<a href="https://juejin.im/post/5a0bae515188252964213855">underscore 系列之如何写自己的 underscore</a>，渣渣的我就好奇的点进去看了起来。。。</p>
+<p>在关于 <strong>导出</strong> 的地方看到了</p>
+<blockquote>
+<p>typeof exports != ‘undefined’</p>
+</blockquote>
+<p>这样一句。</p>
+<p>纳尼？ <code>exports</code> 可以直接取到页面中的id为 <code>exports</code> 的元素。</p>
+<p>脑洞巨大的我抛下文章主要内容去查这个问题了。。。</p>
+<p>首先自己试验了一下 <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/window/window.id.html">demo</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;exports&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    alert(<span class="built_in">window</span>.document.getElementById(<span class="string">&#x27;exports&#x27;</span>) == <span class="built_in">window</span>.exports);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在ie下下面也能完美运行。。</p>
+<p>问题来了，难道大家都不知道这个方法吗？还是这个方法有什么弊端，大家都避而不用？</p>
+<a id="more"></a>
+<p>果然！<a href="https://segmentfault.com/q/1010000003689321">segmentfault - 疑惑，原生JS中可以直接使用ID名称来获取元素，而不用使用getElementById()方法？</a> </p>
+<p>someone say:</p>
+<blockquote>
+<p>这个最初是 IE 里面的，后来 firefox chrome 好像也支持了。<br>不建议使用，这个不是标准里面的，将来不一定支持。<br>而且代码容易写混乱了，multiNavItem1【id】 属于全局作用域，而且你可以给他赋值，赋值之后就是那个新的值，不赋值就是那个元素的值，当有些 id 赋了值有些没有，那么有些就是这个 DOM 对象，有些不是，特别容易混乱了。</p>
+</blockquote>
+<p>本来看看v8的源码，发现我还是入门级别的，大家都不推荐看。我还是老老实实的打基础的吧。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>讨论一下css命名</title>
+    <url>/2017/11/22/2017-11-22-%E8%AE%A8%E8%AE%BA%E4%B8%80%E4%B8%8Bcss%E5%91%BD%E5%90%8D/</url>
+    <content><![CDATA[<p>现在开发中遇到的最头痛的事情莫过于给css命名了。好的命名可以快速的帮我们定位到页面中的元素，修改上也非常轻松。<br>幸运的是我们有 <code>BEM</code>。</p>
+<h2 id="BEM"><a href="#BEM" class="headerlink" title="BEM"></a>BEM</h2><p>块（block）、元素（element）、修饰符方法（modifier）(通常称为BEM)是HTML和CSS类中常用的命名约定。是由 <code>Yandex</code> 团队提出的，它的目标是帮助开发者更好地理解项目中的HTML和CSS之间的关系。</p>
+<ul>
+<li>B: block 是模块，或者称为一个组件。</li>
+<li>E: element 代表块中的元素（子节点），为了表明子节点属于哪个模块，写法是 <code>block__element</code> 。</li>
+<li>M：modifier 代表某个节点的修饰状态。</li>
+</ul>
+<p>下面是简单的例子：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.block</span>&#123;&#125;    <span class="comment">/* 模块 */</span></span><br><span class="line"><span class="selector-class">.block--modifier</span>&#123;&#125;  <span class="comment">/* 当前模块的修饰符 */</span></span><br><span class="line"><span class="selector-class">.block__element</span>&#123;&#125;   <span class="comment">/* 模块下面的元素 */</span></span><br><span class="line"><span class="selector-class">.block__element--modifier</span>&#123;&#125; <span class="comment">/* 当前模块下面的元素的修饰符 */</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>你可能会存在疑问为什么使用两个 <code>-</code> 或两个 <code>_</code> ，其实这个是给你用来当做连接符来使用的。这样同样增加了你命名的多样性。<br>例如：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.footer-bar</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.footer-bar--full</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.footer-bar__info</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>注意</em></strong></p>
+<p>有修饰符了并不意味原来的 <code>.block__element</code> 就不需要了， <code>.block__element</code> 是主体， <code>.block__element--modifier</code> 的作用仅仅是展示 <code>modifier</code> 的效果。<br>下面是一个good的例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;block block--mod&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;block block--size-big block--shadow-yes&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>下面是一个bad的例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;block--mod&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>BEM的好处是让你看着类名就知道他在哪里（场景）使用的。不像 <code>css module</code> 通过不断的增加层级来显示他的位置。举个类似生活中的模型来显示BEM的是如何关联的:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.person</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.person__hand</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.person__hand--left</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.person--female</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.person--female__hand</span>&#123;&#125; <span class="comment">/* 不推荐这么写 */</span></span><br></pre></td></tr></table></figure>
+<p>只要能看懂单词的意思，基本上就知道了指代是什么。<br>可能有人会疑惑 <code>.person--female__hand&#123;&#125;</code> 不就变成主体了吗？其实我是不推荐这么写的，如果你想展示的是 <code>女性的手</code> 的话，可以通过在父元素person上增加 <code>.person--female</code> 来修饰。存在多个状态可以增加 <code>.block__element--modifier</code> 来修饰，完全没有问题。</p>
+<p>再举个官网上的例子：<br>我们有一个表单，想要在圣诞节增加一点节日气息，我们就可以增加一个 <code>form--theme-xmas</code> 的类，通过 <code>--</code> 修饰符我们可以快速的构建我们新的版本。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">&quot;form form--theme-xmas form--simple&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;form__input&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;form__submit form__submit--disabled&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.form</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form--theme-xmas</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form--simple</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form__input</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form__submit</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form__submit--disabled</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>再增加一个配图的例子：o(╯□╰)o<br><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/bem/site-search.png"><br>这个搜索框就可以看作一个块Block，这个块里由两个子节点，一个是输入区域input，还有一个是查询按钮button。<br>对于这个块的命名，按照BEM法则，我们可以写成以下这样：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">&quot;site-search&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;site-search__input&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;site-search__button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;search&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将整体的搜索框命名为site-search作为一个模块，模块下的两个子节点就在后面加上两根下划线，加上自己的名字 input 和 button，这样的命名方式，即使我们没有看到网页内容，只看了CSS样式名字，也能感受到页面结构和页面元素之间的关系。<br>如果要说明按钮button是灰色的，我们还可以加上修饰的类名modifier，比如可以是site-search__button–gray。<br><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/bem/site-search__button.png"><br>上图就说明能将某个元素进行模块化，里面能够包含多个元素，这样的命名规范能够更好的说明元素之间的关系。</p>
+<p><code>Yandex</code>提出的<code>BEM</code>只是一种比较严格的命名规范，个人认为最重要的是严格，你只有严格遵守了，才不会出现一些奇怪的问题。至于规则都是可以更加自身情况改变的。</p>
+<h2 id="BEM变异"><a href="#BEM变异" class="headerlink" title="BEM变异"></a>BEM变异</h2><p>并列选择器版本</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.block-element</span><span class="selector-class">.modifier</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>.modifier 不单独使用，所以不存在冲突<br>例1：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.menu</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.menu-item</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.menu-item</span><span class="selector-class">.active</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>例2：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.shopCart</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.shopCart-title</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.shopCart-item</span>&#123;&#125;</span><br><span class="line"><span class="selector-class">.shopCart-item</span><span class="selector-class">.selected</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>BEN和BEM变异——并列选择器演示：<a href="https://github.com/kuckboy1994/Blog/blob/master/demo/BEM/index.html">demo</a></p>
+<h2 id="BEM和BEM变异和原本的命名方式的对比"><a href="#BEM和BEM变异和原本的命名方式的对比" class="headerlink" title="BEM和BEM变异和原本的命名方式的对比"></a>BEM和BEM变异和原本的命名方式的对比</h2><p>BEM的优势：</p>
+<ul>
+<li>让原本存在多意的内容变得更加直意</li>
+<li>原本层次化的内容变成了扁平，查找更加方便</li>
+</ul>
+<p>BEM的劣势：</p>
+<ul>
+<li>长得难看，太长了（┑(￣Д ￣)┍）</li>
+<li>代码量增加（现在有gzip压缩，我们不需要担心文件太大，大部分编辑有自动补全功能也能接受）</li>
+</ul>
+<p>BEM变异——并列选择器的优势：</p>
+<ul>
+<li>让原本存在多意的内容变得更加直意</li>
+<li>比BEM的“段”</li>
+</ul>
+<p>BEM变异——并列选择器的劣势：</p>
+<ul>
+<li>会占用修饰符类。如果修饰符类的权重变大页面维护成本变大。</li>
+<li>不兼容ie6</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>引用一句话作为结束语：</p>
+<blockquote>
+<p>BEM（或BEM的变异）是一个非常有用，强大，简单的命名约定，让你的前端代码更容易阅读和理解，更容易协作，更容易控制，更加健壮和明确而且更加严密。<br>尽管BEM看上去多少有点奇怪，但是无论什么项目，它对前端开发者都是一个巨有价值的工具。</p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html">BEM思想之彻底弄清BEM语法</a></li>
+<li><a href="http://getbem.com/naming/">getbem.com-naming</a></li>
+<li><a href="https://segmentfault.com/a/1190000012090363">BEM实战之扒一扒淘票票页面</a></li>
+<li><a href="https://www.zhihu.com/question/21935157">如何看待 CSS 中 BEM 的命名方式？</a></li>
+<li><a href="https://css-tricks.com/bem-101/">BEM 101</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+        <tag>规范</tag>
+        <tag>BEM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>laydate日历组件改造心得</title>
+    <url>/2017/11/30/2017-11-30-laydate%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6%E6%94%B9%E9%80%A0%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<p>最近两天对<code>layDate 5.0.85</code>版本进行了改造。来谈一下心得。</p>
+<h2 id="修改内容"><a href="#修改内容" class="headerlink" title="修改内容"></a>修改内容</h2><ol>
+<li>修复了当<code>min</code>的<code>日</code>比<code>max</code>的<code>日</code>大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。</li>
+<li>增加了过滤日期的功能（正选和反选）</li>
+<li>增加了选择最近的功能</li>
+<li>增加了暗黑主题<br>想要体验的小伙伴，点击<a href="https://github.com/kuckboy1994/laydate">传送门</a></li>
+</ol>
+<h2 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h2><p>当时<code>豆饼</code>(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而且是开源的（这就方便我们个性化的定制）。号称是layui独立维护的三大组件之一，而且还是最近重写的，瞬间感觉就被他征服了。立马上手！</p>
+<a id="more"></a>
+<p>当时还是有点心虚的，毕竟还是第一次改源码，风险还是存在的。发现写法和我以前写原生js插件的差不多（复杂程度还是差很多的），还能看得懂些。但是有些方法就有点不知为何这么写了，但主要还是完成我的任务。读代码的时候发现他封装了很多类似jQuery的方法，如：<br>extend、each、addClass、removeClass、hasClass、attr、find、html、val、append、remove、on、off。<br>还有一些个性化的方法，如：<br>elem(创建元素)、elem(创建元素)、addStr(追加字符)、digit(数字前置补零)。<br>这些方法其实在平常的工作中也是很常用的，但jQuery已经帮我们做好了。但是如果在现在化的工作流中比如(react、vue)中我们就不会去选择使用jQuery了，可能就需要我们自己封装了。到时候可以回头看看。</p>
+<p>组件的config和方法都设置在原型上，一个是保证方法始终可用（上下文方便传递），另一个是方便链式调用。</p>
+<p>laydate通过window对象向外暴露。</p>
+<p>支持amd规范。</p>
+<p>同时试了一下修改主题，主题的设置感觉不是很方便，如果我上传到资源服务器，要是要增加样式的话，就得替换文件，后期考虑增加配置样式地址。</p>
+<p>过几天有空了整理一下，准备给master发个pull request。</p>
+<p>拒绝97，拥抱开源！ 2333</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>vi-vim</title>
+    <url>/2017/12/03/2017-12-03-vi-vim/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><code>vi</code>和<code>Vim</code>都是运行在<code>类Unix系统</code>下的编辑器。<br><code>vi</code>是<code>Visual</code>的不正规的缩写。<br><code>Vim</code>是从<code>vi</code>发展出来的一个文本编辑器。正式名字<code>Vi IMproved</code>。</p>
+<h2 id="vi琐事"><a href="#vi琐事" class="headerlink" title="vi琐事"></a>vi琐事</h2><p>vi是在伯克利加州大学，Evans Hall中，使用”Lear-Siegler ADM3A终端”编写完成，在这台机器上的“退出键”（Esc），也就是今天键盘“表格键”（Tab）的位置，目前vi用户仍使用“退出键”（Esc）来转换状态。<br><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/vi%26vim/asm3aKeyboard.png"><br>看了这张图，ヾ(｡｀Д´｡) 和HHKB的键盘好像啊，怪不得大神都用HHKB。<br>但用HHKB不一定是大神☹。</p>
+<a id="more"></a>
+<h2 id="模式编辑器"><a href="#模式编辑器" class="headerlink" title="模式编辑器"></a>模式编辑器</h2><p>vi 是一个模式编辑器<br>常用的模式</p>
+<ul>
+<li>普通模式</li>
+<li>命令模式</li>
+<li>插入模式</li>
+</ul>
+<p>简单介绍常用的操作</p>
+<h2 id="保存-amp-退出"><a href="#保存-amp-退出" class="headerlink" title="保存&amp;退出"></a>保存&amp;退出</h2><p>:q quit<br>:q! quit and abandom<br>:w write<br>:wq write and quit</p>
+<h2 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h2><table class="multi">
+<caption class="cap">表1：vi(vim)光标移动按键</caption>
+<tr>
+<th class="title" width="25%">按键</th>
+<th class="title" width="75%">移动光标</th>
+</tr>
+<tr>
+<td valign="top">l or 右箭头</td>
+<td valign="top">向右移动一个字符</td>
+</tr>
+<tr>
+<td valign="top">h or 左箭头</td>
+<td valign="top">向左移动一个字符</td>
+</tr>
+<tr>
+<td valign="top">j or 下箭头</td>
+<td valign="top">向下移动一行</td>
+</tr>
+<tr>
+<td valign="top">k or 上箭头</td>
+<td valign="top">向上移动一行</td>
+</tr>
+<tr>
+<td valign="top">0 (零按键) </td>
+<td valign="top">移动到当前行的行首。</td>
+</tr>
+<tr>
+<td valign="top">^</td>
+<td valign="top">移动到当前行的第一个非空字符。</td>
+</tr>
+<tr>
+<td valign="top">$</td>
+<td valign="top">移动到当前行的末尾。</td>
+</tr>
+<tr>
+<td valign="top">w</td>
+<td valign="top">移动到下一个单词或标点符号的开头。</td>
+</tr>
+<tr>
+<td valign="top">W</td>
+<td valign="top">移动到下一个单词的开头，忽略标点符号。</td>
+</tr>
+<tr>
+<td valign="top">b</td>
+<td valign="top">移动到上一个单词或标点符号的开头。</td>
+</tr>
+<tr>
+<td valign="top">B</td>
+<td valign="top">移动到上一个单词的开头，忽略标点符号。</td>
+</tr>
+<tr>
+<td valign="top">Ctrl-f or Page Down </td>
+<td valign="top">向下翻一页</td>
+</tr>
+<tr>
+<td valign="top">Ctrl-b or Page Up </td>
+<td valign="top">向上翻一页</td>
+</tr>
+<tr>
+<td valign="top">numberG</td>
+<td valign="top">移动到第 number 行。例如，1G 移动到文件的第一行。</td>
+</tr>
+<tr>
+<td valign="top">gg</td>
+<td valign="top">移动到文件的第一行</td>
+</tr>
+<tr>
+<td valign="top">G</td>
+<td valign="top">移动到文件末尾。</td>
+</tr>
+<tr>
+<td valign="top">l、h、j、k、b、w都是可以结合数字键一起使用的</td>
+<td valign="top">比如10k，向上移动10行</td>
+</tr>
+</table>
+
+
+
+<table class="multi">
+<caption class="cap">表2: 编辑模式进入</caption>
+<tr>
+<th class="title" width="25%">命令</th>
+<th class="title" width="75%">编辑模式进入</th>
+</tr>
+<tr>
+<td valign="top">i</td>
+<td valign="top">当前字符前面插入</td>
+</tr>
+<tr>
+<td valign="top">a</td>
+<td valign="top">当前字符后面追加字符。</td>
+</tr>
+<tr>
+<td valign="top">a</td>
+<td valign="top">当前字符后面追加字符。</td>
+</tr>
+<tr>
+<td valign="top">A</td>
+<td valign="top">当前行尾后面追加字符。</td>
+</tr>
+<tr>
+<td valign="top">o</td>
+<td valign="top">当前行的下方打开一行。</td>
+</tr>
+<tr>
+<td valign="top">O</td>
+<td valign="top">当前行的上方打开一行。</td>
+</tr>
+</table>
+
+
+
+<table class="multi">
+<caption class="cap">表3: 文本删除命令</caption>
+<tr>
+<th class="title" width="25%">命令</th>
+<th class="title" width="75%">删除的文本</th>
+</tr>
+<tr>
+<td valign="top">x</td>
+<td valign="top">当前字符</td>
+</tr>
+<tr>
+<td valign="top">3x</td>
+<td valign="top">当前字符及其后的两个字符。</td>
+</tr>
+<tr>
+<td valign="top">dd</td>
+<td valign="top">当前行。</td>
+</tr>
+<tr>
+<td valign="top">5dd</td>
+<td valign="top">当前行及随后的四行文本。</td>
+</tr>
+<tr>
+<td valign="top">dW</td>
+<td valign="top">从光标位置开始到下一个单词的开头。</td>
+</tr>
+<tr>
+<td valign="top">d$</td>
+<td valign="top">从光标位置开始到当前行的行尾。</td>
+</tr>
+<tr>
+<td valign="top">d0</td>
+<td valign="top">从光标位置开始到当前行的行首。</td>
+</tr>
+<tr>
+<td valign="top">d^</td>
+<td valign="top">从光标位置开始到文本行的第一个非空字符。</td>
+</tr>
+<tr>
+<td valign="top">dG</td>
+<td valign="top">从当前行到文件的末尾。</td>
+</tr>
+<tr>
+<td valign="top">d20G</td>
+<td valign="top">从当前行到文件的第20行。</td>
+</tr>
+</table>
+
+
+<table class="multi">
+<caption class="cap">表4: 复制命令 & 粘贴</caption>
+<tr>
+<th class="title" width="25%">命令</th>
+<th class="title" width="75%">复制的内容</th>
+</tr>
+<tr>
+<td valign="top">p</td>
+<td valign="top">当前行光标位置之后粘贴</td>
+</tr>
+<td valign="top">P</td>
+<td valign="top">当前行光标位置之前粘贴</td>
+</tr>
+<tr>
+<td valign="top">yy</td>
+<td valign="top">当前行。</td>
+</tr>
+<tr>
+<td valign="top">5yy</td>
+<td valign="top">当前行及随后的四行文本。</td>
+</tr>
+<tr>
+<td valign="top">yW</td>
+<td valign="top">从当前光标位置到下一个单词的开头。</td>
+</tr>
+<tr>
+<td valign="top">y$</td>
+<td valign="top">从当前光标位置到当前行的末尾。</td>
+</tr>
+<tr>
+<td valign="top">y0</td>
+<td valign="top">从当前光标位置到行首。</td>
+</tr>
+<tr>
+<td valign="top">y^</td>
+<td valign="top">从当前光标位置到文本行的第一个非空字符。</td>
+</tr>
+<tr>
+<td valign="top">yG</td>
+<td valign="top">从当前行到文件末尾。</td>
+</tr>
+<tr>
+<td valign="top">y20G</td>
+<td valign="top">从当前行到文件的第20行。</td>
+</tr>
+</table>
+
+
+
+
+<table class="multi">
+<tr>
+<th class="title" width="25%">条目</th>
+<th class="title" width="75%">含义</th>
+</tr>
+<tr>
+<td valign="top">:</td>
+<td valign="top">冒号字符运行一个 ex 命令。</td>
+</tr>
+<tr>
+<td valign="top">%</td>
+<td valign="top">指定要操作的行数。% 是一个快捷方式，表示从第一行到最后一行。另外，操作范围也可以用 1,5 来代替（因为我们的文件只有5行文本），或者用 1,$ 来代替，意思是 “ 从第一行到文件的最后一行。”如果省略了文本行的范围，那么操作只对当前行生效。</td>
+</tr>
+<tr>
+<td valign="top">s</td>
+<td valign="top">指定操作。在这种情况下是，替换（查找与替代）。</td>
+</tr>
+<tr>
+<td valign="top">/Line/line</td>
+<td valign="top">查找类型与替代文本。</td>
+</tr>
+<tr>
+<td valign="top">g</td>
+<td valign="top">这是“全局”的意思，意味着对文本行中所有匹配的字符串执行查找和替换操作。如果省略 g，则只替换每个文本行中第一个匹配的字符串。</td>
+</tr>
+</table>
+
+
+
+
+<table class="multi">
+<caption class="cap">表13-5: 替换确认按键</caption>
+<tr>
+<th class="title" width="25%">按键</th>
+<th class="title" width="75%">行为</th>
+</tr>
+<tr>
+<td valign="top">y</td>
+<td valign="top">执行替换操作</td>
+</tr>
+<tr>
+<td valign="top">n</td>
+<td valign="top">跳过这个匹配的实例</td>
+</tr>
+<tr>
+<td valign="top">a</td>
+<td valign="top">对这个及随后所有匹配的字符串执行替换操作。</td>
+</tr>
+<tr>
+<td valign="top">q or esc</td>
+<td valign="top">退出替换操作。</td>
+</tr>
+<tr>
+<td valign="top">l</td>
+<td valign="top">执行这次替换并退出。l 是 “last” 的简写。</td>
+</tr>
+<tr>
+<td valign="top">Ctrl-e, Ctrl-y</td>
+<td valign="top">分别是向下滚动和向上滚动。用于查看建议替换的上下文。</td>
+</tr>
+</table>
+
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ol>
+<li><p>内容查找<br>文件中查找<code>kuck</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/kuck</span><br><span class="line"></span><br><span class="line">n // 查找下一个</span><br><span class="line">N // 查找上一个</span><br></pre></td></tr></table></figure></li>
+<li><p>内容替换<br>替换<code>shan</code>为<code>kuck</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">:%s/shan/kuck/g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以同时编辑两个文档</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi shanchao.txt demo.txt</span><br><span class="line"></span><br><span class="line">:ls</span><br><span class="line">  1 %a   <span class="string">&quot;shanchao.txt&quot;</span>                         line 1</span><br><span class="line">  2 <span class="comment">#    &quot;demo.txt&quot;                             line 1</span></span><br><span class="line"></span><br><span class="line">:n  // 下一个文件</span><br><span class="line">:N  // 上一个文件</span><br><span class="line">:e newfile  // 新建一个newfile的文件</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://github.com/wangding/git-demo/blob/master/03vi.md">wangding</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Vim">Vim-维基百科</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>注释规范</title>
+    <url>/2017/12/04/2017-12-04-%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<p>此为开发团队遵循和约定的<code>注释规范</code>，意在降低后期维护的代价。</p>
+<h2 id="为什么要写代码注释？"><a href="#为什么要写代码注释？" class="headerlink" title="为什么要写代码注释？"></a>为什么要写代码注释？</h2><ul>
+<li>编码规范中有一条就是——见名知意。但有的时候直白的函数名不能表达完整的意思，这时候就是注释就可以很好的帮助我们解释和说明了。</li>
+<li>请确保你的代码能够自描述、注释良好并且易于他人理解。</li>
+<li>好的代码注释能够传达上下文关系和代码目的。</li>
+</ul>
+<h2 id="注释中写什么？"><a href="#注释中写什么？" class="headerlink" title="注释中写什么？"></a>注释中写什么？</h2><ul>
+<li>难于理解的代码段</li>
+<li>可能存在错误的代码段</li>
+<li>浏览器特殊的HACK代码</li>
+<li>想吐槽的产品逻辑</li>
+<li>业务逻辑强相关的代码</li>
+</ul>
+<p>对这些内容写一些注释对于自己或帮助他人理解是非常有帮助的。</p>
+<a id="more"></a>
+<h2 id="什么时候写注释？"><a href="#什么时候写注释？" class="headerlink" title="什么时候写注释？"></a>什么时候写注释？</h2><ul>
+<li>在写代码前添加注释<ul>
+<li>这时候你脑子里是清晰完整的思路。</li>
+</ul>
+</li>
+<li>在写完代码之后添加注释<ul>
+<li>你是在整理或者总结。</li>
+<li>它可能要花费你更多的时间。<br>就好比做需求分析一样，你确认好了需求，直接写完。如果写完或者边写边确认需求，你将花费更多的时间。</li>
+</ul>
+</li>
+</ul>
+<h2 id="注释尽量使用英文来描述-（不是必须的）"><a href="#注释尽量使用英文来描述-（不是必须的）" class="headerlink" title="注释尽量使用英文来描述 （不是必须的）"></a>注释尽量使用英文来描述 （不是必须的）</h2><p>使用中文注释的弊端：<br>在文件编码改变的时候中文会变成乱码的问题。  </p>
+<blockquote>
+<p>用英文注释还是用中文注释, it is a problem, 但不管怎样, 注释是为了<strong>让别人看懂</strong>, 难道是为了炫耀编程语言之外的你的母语或外语水平吗；</p>
+</blockquote>
+<h2 id="注释的详解"><a href="#注释的详解" class="headerlink" title="注释的详解"></a>注释的详解</h2><p>注释一般的写法，遵从这个规范方便大家理解，解决强迫症的问题。。。</p>
+<h3 id="圣战——-tab-vs-space"><a href="#圣战——-tab-vs-space" class="headerlink" title="圣战—— tab vs space"></a>圣战—— tab vs space</h3><p><img src="http://i.imgur.com/ow6DnXf.png"><br>千万不要tab和space混用，还有什么比生命更加重要呢？<br><a href="http://v.youku.com/v_show/id_XMTYzMDQ3ODgxMg==.html">优酷视频链接</a><br><code>o(*￣︶￣*)o</code> </p>
+<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><ul>
+<li>双斜线后，必须跟注释内容保留一个空格</li>
+<li>可独占一行, 前边不许有空行, 缩进与下一行代码保持一致</li>
+<li>可位于一个代码行的末尾，注意这里的格式<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Good</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="comment">// if you made it here, then all security checks passed</span></span><br><span class="line">    allowed();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> zhangsan = <span class="string">&quot;zhangsan&quot;</span>;    <span class="comment">// 双斜线距离分号一个tab（或多个tab，用于对齐），双斜线后始终保留一个空格</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><ul>
+<li>最少三行, 格式如下</li>
+<li>前边留空一行<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 注释的内容</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>定义类型：</strong> 都是以<code>&#123;</code>开始, 以<code>&#125;</code>结束。</p>
+<p><strong>使用说明：</strong> 提供参数的说明. 使用完整的句子, 并用第三人称来书写方法说明.</p>
+<p><strong>栗子：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [description]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param  <span class="type">&#123;[type]&#125;</span> </span>params [description]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;[type]&#125;</span>        </span>[description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 以下的代码是 jquery-3.1.1.js 中的一段代码</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Checks document order of two siblings</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;Element&#125;</span> <span class="variable">a</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;Element&#125;</span> <span class="variable">b</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Number&#125;</span> </span>Returns less than 0 if a precedes b, greater than 0 if a follows b</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">siblingCheck</span>(<span class="params"> a, b </span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> cur = b &amp;&amp; a,</span><br><span class="line">  diff = cur &amp;&amp; a.nodeType === <span class="number">1</span> &amp;&amp; b.nodeType === <span class="number">1</span> &amp;&amp; a.sourceIndex - b.sourceIndex;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Use IE sourceIndex if available on both nodes</span></span><br><span class="line">  <span class="keyword">if</span> ( diff ) &#123;</span><br><span class="line">    <span class="keyword">return</span> diff;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Check if b follows a</span></span><br><span class="line">  <span class="keyword">if</span> ( cur ) &#123;</span><br><span class="line">    <span class="keyword">while</span> ( (cur = cur.nextSibling) ) &#123;</span><br><span class="line">      <span class="keyword">if</span> ( cur === b ) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a ? <span class="number">1</span> : <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 函数功能简述</span></span><br><span class="line"><span class="comment"> * 具体描述一些细节</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param    <span class="type">&#123;string&#125;</span>  </span>address     地址</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param    <span class="type">&#123;array&#125;</span>   </span>com         商品数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param    <span class="type">&#123;string&#125;</span>  </span>pay_status  支付方式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns  <span class="variable">void</span></span></span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date     </span>2017-04-10</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author   </span>name&lt;name<span class="doctag">@myheixn</span>.com&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="单行注释和多行注释的使用规范"><a href="#单行注释和多行注释的使用规范" class="headerlink" title="单行注释和多行注释的使用规范"></a>单行注释和多行注释的使用规范</h3><ul>
+<li>方法前面使用多行注释。</li>
+<li>方法内部使用单行注释，如果内容比较多，使用多个单行注释。</li>
+</ul>
+<h3 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: who are you</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: when you write it</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: the function of this file.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
+<li><p>各类标签 <code>@param</code>、<code>@method</code> 等 参考 <a href="http://usejsdoc.org/">@use JSDoc</a></p>
+</li>
+<li><p>用在哪里</p>
+<ul>
+<li>所有的方法</li>
+<li>所有的构造函数</li>
+<li>所有的全局变量</li>
+</ul>
+</li>
+<li><p>常用tag<br>@author、@callback、@copyright、@default、@description、@throws 、@todo、@param、@returns</p>
+</li>
+<li><p>后端常用的<br>@namespace、@class、@extends、@public、@protected、@private</p>
+</li>
+</ul>
+<h4 id="author-标识开发者信息（非常重要）"><a href="#author-标识开发者信息（非常重要）" class="headerlink" title="@author 标识开发者信息（非常重要）"></a>@author 标识开发者信息（非常重要）</h4><p><strong>注释一般出自author之手，对代码和项目最了解的人。</strong></p>
+<p>开发者信息能够体现开发人员对文件的贡献，并且能够让遇到问题或希望了解相关信息的人找到维护人。通常情况文件在被创建时标识的是创建者。随着项目的进展，越来越多的人加入，参与这个文件的开发，新的作者应该被加入 <code>@author</code> 标识。</p>
+<p><code>@author</code> 标识具有多人时，原则是按照 <code>责任</code> 进行排序。通常的说就是如果有问题，就是找第一个人应该比找第二个人有效。比如文件的创建者由于各种原因，模块移交给了其他人或其他团队，后来因为新增需求，其他人在新增代码时，添加 <code>@author</code> 标识应该把自己的名字添加在创建人的前面。</p>
+<p><code>@author</code> 中的名字不允许被删除。任何劳动成果都应该被尊重。</p>
+<p>业务项目中，一个文件可能被多人频繁修改，并且每个人的维护时间都可能不会很长，不建议为文件增加 <code>@author</code> 标识。通过版本控制系统追踪变更，按业务逻辑单元确定模块的维护责任人，通过文档与wiki跟踪和查询，是更好的责任管理方式。</p>
+<p>对于业务逻辑无关的技术型基础项目，特别是开源的公共项目，应使用 <code>@author</code> 标识。</p>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author <span class="variable">author</span></span>-name(mail-name<span class="doctag">@myhexin</span>.com)</span></span><br><span class="line"><span class="comment"> *         author-name2(mail-name2<span class="doctag">@myhexin</span>.com)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: when you write it</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: the function of this file.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="TODO-注释"><a href="#TODO-注释" class="headerlink" title="TODO 注释"></a>TODO 注释</h4><blockquote>
+<p>对那些临时的, 短期的解决方案, 或已经够好但仍不完美的代码使用 <code>TODO</code> 注释.</p>
+</blockquote>
+<p><code>TODO</code> 注释要使用全大写的字符串 <code>TODO</code>, 在随后的圆括号里写上你的大名, 邮件地址, 或其它身份标识. 冒号是可选的. 主要目的是让添加注释的人 (也是可以请求提供更多细节的人) 可根据规范的 <code>TODO</code> 格式进行查找. 添加 <code>TODO</code> 注释并不意味着你要自己来修正.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// TODO(123123@qq.com): Use a &quot;*&quot; here for concatenation operator.</span></span><br><span class="line"><span class="comment">// TODO(123123@qq.com) change this to use relations.</span></span><br></pre></td></tr></table></figure>
+<p>全局查询<br>代码评审 </p>
+<h3 id="多人合作注释"><a href="#多人合作注释" class="headerlink" title="多人合作注释"></a>多人合作注释</h3><p>同一个文件的代码可能被多个人修改，这个时候需要标识出谁改动了哪些部分。</p>
+<p><strong>格式：</strong> <code>// add begin by</code> 作者名 ,一个分号<code>;</code>，再加上原因 <code>Reason</code></p>
+<p>代码添加的最后加上： <code>//add end</code></p>
+<p><code>Example</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// add begin by liuxing ; Init post&#x27;s id</span></span><br><span class="line"><span class="keyword">var</span> postId = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// end add</span></span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// add begin by liuxing</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 多行注释来说明原因</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> postId = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// end add</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="工具（插件）"><a href="#工具（插件）" class="headerlink" title="工具（插件）"></a>工具（插件）</h2><ul>
+<li>sublime Text <a href="https://github.com/adambullmer/sublime_docblockr_python">DocBlockr-github</a></li>
+<li>Atom <a href="https://github.com/nikhilkalige/docblockr">docblockr-github</a> <a href="https://atom.io/packages/docblockr">docblockr</a></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.jianshu.com/p/822aa0077595">编程注释规范</a></li>
+<li><a href="https://github.com/fex-team/styleguide/blob/master/javascript.md">JavaScript编码规范</a></li>
+<li><a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/comments/#"> Google 开源项目风格指南 - 注释</a></li>
+<li><a href="https://segmentfault.com/a/1190000000502593">强迫症-&gt;js注释规范</a></li>
+<li><a href="http://www.jianshu.com/p/dc0986b3e68a">为什么缩进用 tab 比用 space 好？</a></li>
+<li><a href="http://www.cnblogs.com/yiyumeng/archive/2012/01/18/2325298.html">代码注释规范</a></li>
+<li><a href="https://linuxtoy.org/archives/why-emacs-vim-good.html">为何 Emacs 和 Vim 被称为两大神器</a></li>
+<li><a href="http://blog.jobbole.com/105381/">用 Tab 还是 Space？谷歌程序员分析了10亿份代码</a></li>
+<li><a href="http://kb.cnblogs.com/page/206954/">那些令人喷饭的代码注释</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>规范</tag>
+        <tag>注释</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目小结（一）</title>
+    <url>/2017/12/20/2017-12-20-%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<p>许久没有写vue了，前几天有人问我问题，概念都有些理不清楚了。。<br>项目快完成，总结一下。从最基础的开始，重现我遇到的问题和一些细节问题。</p>
+<h2 id="项目效果图"><a href="#项目效果图" class="headerlink" title="项目效果图"></a>项目效果图</h2><p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-1.png"></p>
+<a id="more"></a>
+<p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-2.png"><br><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-3.png"></p>
+<h3 id="现实分析："><a href="#现实分析：" class="headerlink" title="现实分析："></a>现实分析：</h3><ol>
+<li>上方一个搜索框，输入的时候获取数据。点击加入到右侧的列表中，叠加品种数量+1</li>
+<li>左侧默认有两个树状结构图，点击根展开收起，点击子节点，加入右侧列表。</li>
+<li>右侧点击删除按钮删除选项，选中数量-1</li>
+<li>超过6个的时候显示tip。</li>
+</ol>
+<h3 id="实现分析："><a href="#实现分析：" class="headerlink" title="实现分析："></a>实现分析：</h3><ol>
+<li>把各个部分拆分成组件。<ol>
+<li>topbar 表头组件</li>
+<li>searchbox 搜索框组件</li>
+<li>selectleftbox 左侧页面组件</li>
+<li>singletree 单支树状组件</li>
+<li>selectrightbox 右侧页面组件</li>
+<li>tip 组件</li>
+</ol>
+</li>
+<li>状态跨多个组件 使用vuex来实现数据统一管理</li>
+<li>不使用图片图标 iconfont上下载svg图标</li>
+</ol>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>使用vue-cli创建vuejs目录结构</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install vue-cli -g</span><br><span class="line">vue init webpack vue-test</span><br><span class="line">cd vue-test</span><br><span class="line">npm install</span><br><span class="line">npm install vuex --save</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="（一）-项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示-这些难看的链接hash呢？"><a href="#（一）-项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示-这些难看的链接hash呢？" class="headerlink" title="（一） 项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示/#/这些难看的链接hash呢？"></a>（一） 项目安装的时候，其实是不用路由的，但是手贱的我一不小心安装了，要如何不显示<code>/#/</code>这些难看的链接hash呢？</h3><ol>
+<li>最简单的方式就是去除入口文件man.js 中的router的引入和调用的地方<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// import router from &#x27;./router&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    <span class="comment">// router,</span></span><br><span class="line">    store,</span><br><span class="line">    template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span>,</span><br><span class="line">    components: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>还有一种也是可以实现的，就是在/router/index.js 中修改路由模式<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="comment">// import HelloWorld from &#x27;@/components/HelloWorld&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">    mode: <span class="string">&#x27;history&#x27;</span>,</span><br><span class="line">    routes: [</span><br><span class="line">        &#123;</span><br><span class="line">            path: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">            <span class="comment">// name: &#x27;HelloWorld&#x27;,</span></span><br><span class="line">            <span class="comment">// component: HelloWorld</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+把模式改成<code>mode: &#39;history&#39; </code> ，在默认首页就不会出现hash值了，但是这可能不像想象中简单，还需要服务端配置。详细：<a href="https://router.vuejs.org/zh-cn/essentials/history-mode.html">链接</a>。<br>所以还是用第一种吧。 2333</li>
+</ol>
+<h2 id="（二）使用svg资源"><a href="#（二）使用svg资源" class="headerlink" title="（二）使用svg资源"></a>（二）使用svg资源</h2><p>先去<a href="http://www.iconfont.cn/%E6%89%BE%E5%88%B0%E7%B1%BB%E4%BC%BC%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AE">http://www.iconfont.cn/找到类似图标按钮</a> 不在乎大小和颜色。</p>
+<p>添加入库。选完后点击购物车按钮，把所有的图标添加到项目中（没有可以新建一个）。到项目页面 点击编辑图标，可以修改图标的位置大小颜色。保存后下载svg。</p>
+<p>把svg放置到项目assets文件夹（静态资源）下，组件中使用img标签引入svg文件。</p>
+<p>还可以使用background属性引入。（奇怪，我开发的时候明明不能用，/(ㄒoㄒ)/~~ 现在居然可以了，还以为是个bug呢，算了，之后如果遇到再说）</p>
+<p>我们引入svg难道就仅仅只是当做背景使用的吗？当然不是！！！</p>
+<p>应该还还可以直接直接控制颜色的变化，但是试了半天没效果，发现了其他引入的方式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; fn1</span><br><span class="line">&lt;object :data&#x3D;&quot;addBtn&quot; type&#x3D;&quot;&quot;&gt;&lt;&#x2F;object&gt;</span><br><span class="line"></span><br><span class="line">import addBtn from &#39;@&#x2F;assets&#x2F;add.svg’</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; fn2</span><br><span class="line">&lt;object :data&#x3D;“require(.&#x2F;assets&#x2F;add,svg)&quot; type&#x3D;&quot;&quot;&gt;&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="（三）组件的编写"><a href="#（三）组件的编写" class="headerlink" title="（三）组件的编写"></a>（三）组件的编写</h2><p>组件是vue的核新内容，vue推崇的是全部使用组件的方式构建页面。<br>下面是tip组件的基本内容。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tip&quot;</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">&quot;../assets/info.svg&quot;</span> alt=<span class="string">&quot;info&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tip-info&quot;</span>&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> Store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: &#123;</span><br><span class="line">            type: <span class="built_in">String</span>,</span><br><span class="line">            <span class="keyword">default</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    data () &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            message: <span class="built_in">this</span>.msg</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"><span class="comment">/* 样式 */</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>组件基本功能就是传入tip文字，显示文字。就是这么简单，props中定义了传参的参数的类型和默认值，可以直接使用this.参数来调用。但是我们一般不直接使用参数，而是把参数赋值给当前组件的一个变量，因为参数的内容是不可更改的，所以防止出现失误，所以赋值之后，使用被赋值的变量进行操作。</p>
+<h2 id="（四）跃动的组件。。"><a href="#（四）跃动的组件。。" class="headerlink" title="（四）跃动的组件。。"></a>（四）跃动的组件。。</h2><p>运行实例我们可以发现tip组件的是有动画效果的，从上方落下渐显，过1.5秒后，当前位置落下渐逝，效果是不是很酷。</p>
+<p>我们来分析一下：</p>
+<p>其实我们主要使用的是vue的内置组件<transition></p>
+<p>参数name=“fall”  fall是我们自己定义的一个动画的名称。同时我们要在样式中增加，如：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.fall-enter</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">50px</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fall-enter-active</span> &#123;</span><br><span class="line">    <span class="attribute">transition</span>: all .<span class="number">5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fall-leave</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fall-leave-active</span> &#123;</span><br><span class="line">    <span class="attribute">transition</span>: all .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">50px</span>);</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.name-enter 代表进入之前的状态<br>.name-enter-active 代表进入的状态<br>.name-leave 离开之前的状态<br>.name-leave-active 离开的状态  </p>
+<p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/transition-css.png"></p>
+<p>借用一张图片说明，这个是一个渐显到渐逝的过程。绝大部分v-enter-active（进入的状态）和 v-leave（离开之前的状态）其实是一样的，所以v-leave就不用写了，只要控制好其他的三个状态就可以了。这里面需要用到transition属性的地方是active（激活）的时候。为什么是这样呢？你可以审查一下元素发现，内置组件<code>&lt;transition&gt;</code>的主要作用就是把这四个状态（类）按照约定好的触发状态添加和删除。至此我们动画就可以动起来了。</p>
+<p>拓展（其他参数）：</p>
+<ul>
+<li>name - string，用于自动生成 CSS 过渡类名。例如：name: ‘fade’ 将自动拓展为.fade-enter，.fade-enter-active等。默认类名为 “v”</li>
+<li>appear - boolean，是否在初始渲染时使用过渡。默认为 false。</li>
+<li>css - boolean，是否使用 CSS 过渡类。默认为 true。如果设置为 false，将只通过组件事件触发注册的 JavaScript 钩子。</li>
+<li>type - string，指定过渡事件类型，侦听过渡何时结束。有效值为 “transition” 和 “animation”。默认 Vue.js 将自动检测出持续时间长的为过渡事件类型。</li>
+<li>mode - string，控制离开/进入的过渡时间序列。有效的模式有 “out-in” 和 “in-out”；默认同时生效。<br>还有一些事件，可以在动画发生之前和之后触发，让动画的控制更加细节。</li>
+</ul>
+<p><a href="https://cn.vuejs.org/v2/api/#transition">官网详细说明</a></p>
+<h2 id="（五）vuex统一的数据管理"><a href="#（五）vuex统一的数据管理" class="headerlink" title="（五）vuex统一的数据管理"></a>（五）vuex统一的数据管理</h2><p>安装完vuex之后，项目比较简单，所以我们在入门文件main.js同级建了一个store.js的文件。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state: &#123;</span><br><span class="line">        num:<span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    mutations: &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>main.js 引入和把store中的内容作为实例的参数传入。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store&#x27;</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    store,</span><br><span class="line">    template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span>,</span><br><span class="line">    components: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>组件中使用store可以通过</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Store <span class="keyword">from</span> <span class="string">&#x27;@/store&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>来使用store中的数据，但这样是有点多余的，因为Vuex 通过 store 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中，可以直接在组件中使用$store.state.num 获取到num的值。</p>
+<p>Vuex.store中的：<br>state 用于数据（状态）的存储。 Vuex 使用单一状态树。我们是不能操作state中的数据的。</p>
+<p>mutation 是唯一能操作修改state的方法。我们通过调用我们自定义的mutation方法，修改state。</p>
+<p>getter 用于获取数据，虽然state不能修改，但是获取数据state是可以的，getter返回的数据是可以定义一些逻辑在里面的。例如筛选出num大于0的数据。</p>
+<p>action 类似于mutation，mutation必须是同步函数，虽说如此但是我tip的显示隐藏状态是放在mutation中设了一个定时器（异步）去设置隐藏状态，也是可以的。在下文的时候修改一下。</p>
+<p>Module 是防止store太大，不便管理而设置的。</p>
+<p>这次我们拿右侧选择框来做演示。<br>右侧的选中数据来自左侧选择框中点击添加而来，首先数据被添加到store中，右侧发现数据更新了，立即渲染新的数据。<br>如何设置呢？</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// data</span></span><br><span class="line">selectList: <span class="built_in">this</span>.$store.state.selectData,</span><br></pre></td></tr></table></figure>
+<p>这样就能拿到数据进行渲染啦。<br>点击左侧添加到右侧。<br>同理我们设置了</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// data</span></span><br><span class="line">isShowDelAllBtn: <span class="built_in">this</span>.$store.state.selectData.length &gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>用于渲染当有数据的时候就显示删除全部的按钮，但是失效了？？？<br>渲染的数据一旦被处理之后返回就不再有“数据双向绑定”的特性了，个人猜测。 </p>
+<p>所以vuex给出一个解决方案：<br>mapState 辅助函数<br>当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性<br>直接贴代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span>  <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: mapState(&#123;</span><br><span class="line">    isShowDelAllBtn: <span class="function"><span class="params">state</span> =&gt;</span> state.selectData.length &gt; <span class="number">0</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>mapstate中定义的计算属性isShowDelAllBtn直接可以在组件中使用 默认带一个参数state，可以直接使用state中的方法和属性</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>先分享这么几点，好久没碰了，之后加深理解之后不断优化。加油！ happy hacking！</p>
+]]></content>
+      <tags>
+        <tag>vue</tag>
+        <tag>vuex</tag>
+        <tag>svg</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端优化</title>
+    <url>/2017/12/21/2017-12-21-%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>前端优化主要包括：网络加载类、页面渲染类、CSS优化类、JavaScript执行类、缓存类、图片类、架构协议类等几类。</p>
+<h2 id="网络加载"><a href="#网络加载" class="headerlink" title="网络加载"></a>网络加载</h2><p>1．<code>减少 HTTP 资源请求次数</code>在前端页面中，通常建议尽可能合并静态资源图片、JavaScript 或 CSS 代码，减少页面请求数和资源请求消耗，这样可以缩短页面首次访问的用户等待时间。通过构建工具合并雪碧图、CSS、JavaScript 文件等都是为了减少 HTTP 资源请求次数。另外也要尽量避免重复的资源，防止增加多余请求。</p>
+<p>2．<code>减小 HTTP 请求大小</code>除了减少 HTTP 资源请求次数，也要尽量减小每个 HTTP 请求的大小。如减少没必要的图片、JavaScript、CSS 及 HTML 代码，对文件进行压缩优化，或者使用 gzip 压缩传输内容等都可以用来减小文件大小，缩短网络传输等待时延。前面我们使用构建工具来压缩静态图片资源以及移除代码中的注释并压缩，目的都是为了减小 HTTP 请求的大小。</p>
+<p>3．<code>将 CSS 或 JavaScript 放到外部文件中</code>，避免使用<code>&lt;style&gt;</code>或<code>&lt;script&gt;</code>标签直接引入在 HTML 文件中引用外部资源可以有效利用浏览器的静态资源缓存，但有时候在移动端页面 CSS 或 JavaScript 比较简单的情况下为了减少请求，也会将 CSS 或 JavaScript 直接写到 HTML 里面，具体要根据 CSS 或 JavaScript 文件的大小和业务的场景来分析。如果 CSS 或 JavaScript 文件内容较多，业务逻辑较复杂，建议放到外部文件引入。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//cdn.domain.com/path/main.css&quot;</span> &gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.domain.com/path/main.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>4．<code>避免页面中空的 href 和 src当标签的 href 属性为空</code>，或<code>&lt;script&gt;</code>、、<code>&lt;iframe&gt;</code>标签的 src 属性为空时，浏览器在渲染的过程中仍会将 href 属性或 src 属性中的空内容进行加载，直至加载失败，这样就阻塞了页面中其他资源的下载进程，而且最终加载到的内容是无效的，因此要尽量避免。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--不推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;photo&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>点击链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>5．<code>为 HTML 指定 Cache-Control 或 Expires为 HTML 内容设置 Cache-Control 或 Expires 可以将 HTML 内容缓存起来</code>，避免频繁向服务器端发送请求。前面讲到，在页面 Cache-Control 或 Expires 头部有效时，浏览器将直接从缓存中读取内容，不向服务器端发送请求。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Cache-Control&quot;</span> <span class="attr">content</span>=<span class="string">&quot;max-age=7200&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Expires&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Mon,20Jul201623:00:00GMT&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>6．<code>合理设置 Etag 和 Last-Modified合理设置 Etag 和 Last-Modified 使用浏览器缓存</code>，对于未修改的文件，静态资源服务器会向浏览器端返回304，让浏览器从缓存中读取文件，减少 Web 资源下载的带宽消耗并降低服务器负载。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;last-modified&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Sun,05 Nov 2017 13:45:57 GMT&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>7．<code>减少页面重定向</code>页面每次重定向都会延长页面内容返回的等待延时，一次重定向大约需要200毫秒不等的时间开销（无缓存），为了保证用户尽快看到页面内容，要尽量避免页面重定向。</p>
+<p>8．<code>使用静态资源分域存放</code>来增加下载并行数浏览器在同一时刻向同一个域名请求文件的并行下载数是有限的，因此可以利用多个域名的主机来存放不同的静态资源，增大页面加载时资源的并行下载数，缩短页面资源加载的时间。通常根据多个域名来分别存储 JavaScript、CSS 和图片文件。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//cdn1.domain.com/path/main.css&quot;</span> &gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn2.domain.com/path/main.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>9．<code>使用静态资源 CDN 来存储文件</code>如果条件允许，可以利用 CDN 网络加快同一个地理区域内重复静态资源文件的响应下载速度，缩短资源请求时间。</p>
+<p>10．<code>使用 CDN Combo 下载传输内容</code>CDN Combo 是在 CDN 服务器端将多个文件请求打包成一个文件的形式来返回的技术，这样可以实现 HTTP 连接传输的一次性复用，减少浏览器的 HTTP 请求数，加快资源下载速度。例如同一个域名 CDN 服务器上的 a.js，b.js，c.js 就可以按如下方式在一个请求中下载。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.domain.com/path/a.js,b.js,c.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>11．<code>使用可缓存的 AJAX</code>对于返回内容相同的请求，没必要每次都直接从服务端拉取，合理使用 AJAX 缓存能加快 AJAX 响应速度并减轻服务器压力。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url : url,</span><br><span class="line">    type : <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    cache : <span class="literal">true</span>, <span class="comment">//推荐使用缓存</span></span><br><span class="line">    data : &#123;&#125;,</span><br><span class="line">    success ()&#123;<span class="comment">//...&#125;,</span></span><br><span class="line">    error ()&#123;<span class="comment">//...&#125;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>12．<code>使用 GET 来完成 AJAX 请求</code> 使用 XMLHttpRequest 时，浏览器中的 POST 方法会发起两次 TCP 数据包传输，首先发送文件头，然后发送 HTTP 正文数据。而使用 GET 时只发送头部，所以在拉取服务端数据时使用 GET 请求效率更高。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url : url,</span><br><span class="line">    type : <span class="string">&#x27;get&#x27;</span>, <span class="comment">//推荐使用get完成请求</span></span><br><span class="line">    data : &#123;&#125;,</span><br><span class="line">    success ()&#123;<span class="comment">//...&#125;,</span></span><br><span class="line">    error()&#123;<span class="comment">//...&#125;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>13．<code>减少 Cookie 的大小并进行 Cookie 隔离HTTP</code> 请求通常默认带上浏览器端的 Cookie 一起发送给服务器，所以在非必要的情况下，要尽量减少 Cookie 来减小 HTTP 请求的大小。对于静态资源，尽量使用不同的域名来存放，因为 Cookie 默认是不能跨域的，这样就做到了不同域名下静态资源请求的 Cookie 隔离。</p>
+<p>14．<code>缩小 favicon.ico 并缓存</code> 有利于 favicon.ico 的重复加载，因为一般一个 Web 应用的 favicon.ico 是很少改变的。</p>
+<p>15．<code>推荐使用异步 JavaScript 资源</code> 异步的 JavaScript 资源不会阻塞文档解析，所以允许在浏览器中优先渲染页面，延后加载脚本执行。例如 JavaScript 的引用可以如下设置，也可以使用模块化加载机制来实现。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;main.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;main.js&quot;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使用 async 时，加载和渲染后续文档元素的过程和 main.js 的加载与执行是并行的。使用 defer 时，加载后续文档元素的过程和 main.js 的加载是并行的，但是 main.js 的执行要在页面所有元素解析完成之后才开始执行。</p>
+<p>16．<code>消除阻塞渲染的 CSS 及 JavaScript</code> 对于页面中加载时间过长的 CSS 或 JavaScript 文件，需要进行合理拆分或延后加载，保证关键路径的资源能快速加载完成。</p>
+<p>17．<code>避免使用 CSS import 引用加载 CSS</code> CSS 中的 ＠import 可以从另一个样式文件中引入样式，但应该避免这种用法，因为这样会增加 CSS 资源加载的关键路径长度，带有 ＠import 的 CSS 样式需要在 CSS 文件串行解析到 @import 时才会加载另外的 CSS 文件，大大延后 CSS 渲染完成的时间。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--不推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="keyword">@import</span> <span class="string">&quot;path/main.css&quot;</span>;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//cdn1.domain.com/path/main.css&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="移动端网络加载类"><a href="#移动端网络加载类" class="headerlink" title="移动端网络加载类"></a>移动端网络加载类</h2><p>移动端浏览器前端优化策略相对于桌面端浏览器，移动端 Web 浏览器上有一些较为明显的特点：设备屏幕较小、新特性兼容性较好、支持一些较新的 HTML5 和 CSS3 特性、需要与 Native 应用交互等。但移动端浏览器可用的 CPU 计算资源和网络资源极为有限，因此要做好移动端 Web 上的优化往往需要做更多的事情。首先，在移动端 Web 的前端页面渲染中，桌面浏览器端上的优化规则同样适用，此外针对移动端也要做一些极致的优化来达到更好的效果。需要注意的是，并不是移动端的优化原则在桌面浏览器端就不适用，而是由于兼容性和差异性的原因，一些优化原则在移动端更具代表性。</p>
+<p>1．<code>首屏数据请求提前，避免 JavaScript 文件加载后才请求数据</code> 为了进一步提升页面加载速度，可以考虑将页面的数据请求尽可能提前，避免在 JavaScript 加载完成后才去请求数据。通常数据请求是页面内容渲染中关键路径最长的部分，而且不能并行，所以如果能将数据请求提前，可以极大程度上缩短页面内容的渲染完成时间。</p>
+<p>2．<code>首屏加载和按需加载</code>，非首屏内容滚屏加载，保证首屏内容最小化由于移动端网络速度相对较慢，网络资源有限，因此为了尽快完成页面内容的加载，需要保证首屏加载资源最小化，非首屏内容使用滚动的方式异步加载。一般推荐移动端页面首屏数据展示延时最长不超过3秒。目前中国联通 3G 的网络速度为 338KB/s（2.71Mb/s），所以推荐首屏所有资源大小不超过 1014KB，即大约不超过 1MB。</p>
+<p>3．<code>模块化资源并行下载</code> 在移动端资源加载中，尽量保证 JavaScript 资源并行加载，主要指的是模块化 JavaScript 资源的异步加载，例如AMD的异步模块，使用并行的加载方式能够缩短多个文件资源的加载时间。</p>
+<p>4．首屏必备的 CSS 和 JavaScript通常为了在 HTML 加载完成时能使浏览器中有基本的样式，需要将页面渲染时必备的 CSS 和 JavaScript 通过 <code>&lt;script&gt;</code> 或 <code>&lt;style&gt;</code> 内联到页面中，避免页面 HTML 载入完成到页面内容展示这段过程中页面出现空白。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>样例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="comment">/*必备的首屏CSS*/</span></span></span><br><span class="line">    html,body&#123;</span><br><span class="line"><span class="css">        <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">padding</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span>:<span class="selector-id">#ccc</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>5．<code>meta dns prefetch 设置 DNS 预解析设置文件资源的 DNS 预解析，让浏览器提前解析获取静态资源的主机 IP，避免等到请求时才发起 DNS 解析请求</code>。通常在移动端 HTML 中可以采用如下方式完成。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--cdn域名预解析--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;x-dns-prefetch-control&quot;</span> <span class="attr">content</span>=<span class="string">&quot;on&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//cdn.domain.com&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>6．<code>资源预加载</code> 对于移动端首屏加载后可能会被使用的资源，需要在首屏完成加载后尽快进行加载，保证在用户需要浏览时已经加载完成，这时候如果再去异步请求就显得很慢。</p>
+<p>7．<code>合理利用MTU策略</code> 通常情况下，我们认为 TCP 网络传输的最大传输单元（Maximum Transmission Unit，MTU）为 1500B，即一个RTT（Round-Trip Time，网络请求往返时间）内可以传输的数据量最大为 1500 字节。因此，在前后端分离的开发模式中，尽量保证页面的 HTML 内容在 1KB 以内，这样整个 HTML 的内容请求就可以在一个 RTT 内请求完成，最大限度地提高 HTML 载入速度。</p>
+<h2 id="页面渲染类"><a href="#页面渲染类" class="headerlink" title="页面渲染类"></a>页面渲染类</h2><p>1．<code>把 CSS 资源引用放到 HTML 文件顶部</code> 一般推荐将所有 CSS 资源尽早指定在 HTML 文档 中，这样浏览器可以优先下载 CSS 并尽早完成页面渲染。</p>
+<p>2．<code>JavaScript 资源引用放到 HTML 文件底部</code> JavaScript 资源放到 HTML 文档底部可以防止 JavaScript 的加载和解析执行对页面渲染造成阻塞。由于 JavaScript 资源默认是解析阻塞的，除非被标记为异步或者通过其他的异步方式加载，否则会阻塞 HTML DOM 解析和 CSS 渲染的过程。</p>
+<p>3．<code>尽量预先设定图片等大小</code> 在加载大量的图片元素时，尽量预先限定图片的尺寸大小，否则在图片加载过程中会更新图片的排版信息，产生大量的重排</p>
+<p>4．<code>不要在 HTML 中直接缩放图片</code> 在 HTML 中直接缩放图片会导致页面内容的重排重绘，此时可能会使页面中的其他操作产生卡顿，因此要尽量减少在页面中直接进行图片缩放。</p>
+<p>5．<code>减少 DOM 元素数量和深度</code> HTML 中标签元素越多，标签的层级越深，浏览器解析 DOM 并绘制到浏览器中所花的时间就越长，所以应尽可能保持 DOM 元素简洁和层级较少。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--不推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:void(0);&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./path/photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./path/photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>6．<code>尽量避免在选择器末尾添加通配符</code> CSS 解析匹配到 渲染树的过程是从右到左的逆向匹配，在选择器末尾添加通配符至少会增加一倍多计算量。</p>
+<p>7．<code>减少使用关系型</code> 样式表的写法直接使用唯一的类名即可最大限度的提升渲染引擎绘制渲染树等效率</p>
+<p>8．<code>尽量减少使用JS动画</code> JS 直接操作 DOM 极容易引起页面的重排</p>
+<p>9．<code>CSS 动画使用 translate、scale 代替 top、height</code> 尽量使用 CSS3 的 translate、scale 属性代替 top、left 和 height、width，避免大量的重排计算</p>
+<p>10．<code>尽量避免使用&lt;table&gt;&lt;iframe&gt;</code> 内容的渲染是将 table 的 DOM 渲染树全部生成完并一次性绘制到页面上的，所以在长表格渲染时很耗性能，应该尽量避免使用它，可以考虑使用列表元素代替。尽量使用异步的方式动态添加 iframe，因为 iframe 内资源的下载进程会阻塞父页面静态资源的下载与 CSS 及 HTML DOM 的解析。</p>
+<p>11．<code>避免运行耗时的 JavaScript长时间运行</code> JavaScript 会阻塞浏览器构建 DOM 树、DOM 渲染树、渲染页面。所以，任何与页面初次渲染无关的逻辑功能都应该延迟加载执行，这和 JavaScript 资源的异步加载思路是一致的。</p>
+<p>12．<code>避免使用 CSS 表达式或 CSS 滤镜</code> CSS 表达式或 CSS 滤镜的解析渲染速度是比较慢的，在有其他解决方案的情况下应该尽量避免使用。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//不推荐</span><br><span class="line"><span class="selector-class">.opacity</span>&#123;</span><br><span class="line">    <span class="attribute">filter </span>: progid : DXImageTransform.Microsoft.<span class="built_in">Alpha</span>( opacity = <span class="number">50</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="缓存类"><a href="#缓存类" class="headerlink" title="缓存类"></a>缓存类</h2><p>1．<code>合理利用浏览器缓存</code> 除了上面说到的使用 Cache-Control、Expires、Etag 和 Last-Modified 来设置 HTTP 缓存外，在移动端还可以使用 localStorage 等来保存 AJAX 返回的数据，或者使用 localStorage 保存 CSS 或 JavaScript 静态资源内容，实现移动端的离线应用，尽可能减少网络请求，保证静态资源内容的快速加载。</p>
+<p>2．<code>静态资源离线方案</code> 对于移动端或 Hybrid 应用，可以设置离线文件或离线包机制让静态资源请求从本地读取，加快资源载入速度，并实现离线更新。</p>
+<p>3．尝试使用 AMP HTMLAMP HTML 可以作为优化前端页面性能的一个解决方案，使用 AMP Component 中的元素来代替原始的页面元素进行直接渲染。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--不推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://www.domain.com/videos/myvideo.mp4&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">poster</span>=<span class="string">&quot;path/poster.jpg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">fallback</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Your browser doesn’t support HTML5 video<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span> <span class="attr">src</span>=<span class="string">&quot;foo.mp4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">&quot;video/webm&quot;</span> <span class="attr">src</span>=<span class="string">&quot;foo.webm&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--推荐--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">amp-video</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://www.domain.com/videos/myvideo.mp4&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">poster</span>=<span class="string">&quot;path/poster.jpg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">fallback</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Your browser doesn’t support HTML5 video<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span> <span class="attr">src</span>=<span class="string">&quot;foo.mp4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">&quot;video/webm&quot;</span> <span class="attr">src</span>=<span class="string">&quot;foo.webm&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">amp-video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>4．<code>尝试使用 PWA</code> 模式PWA（Progressive Web Apps）是 Google 提出的用前沿的 Web 技术为网页提供 App 般使用体验的一系列方案。</p>
+<h2 id="图片类"><a href="#图片类" class="headerlink" title="图片类"></a>图片类</h2><p>1．<code>图片压缩处理</code> 在移动端，通常要保证页面中一切用到的图片都是经过压缩优化处理的，而不是以原图的形式直接使用的，因为那样很消耗流量，而且加载时间更长。</p>
+<p>2．<code>使用较小的图片，合理使用 base64</code> 内嵌图片在页面使用的背景图片不多且较小的情况下，可以将图片转化成 base64 编码嵌入到 HTML 页面或 CSS 文件中，这样可以减少页面的 HTTP 请求数。需要注意的是，要保证图片较小，一般图片大小超过 2KB 就不推荐使用 base64 嵌入显示了。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.class-name</span>&#123;</span><br><span class="line">    <span class="attribute">background-image </span>: <span class="built_in">url</span>(<span class="string">&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAMAAABxsOwqAAAAYFBMVEWnxwusyQukxQudwQyZvgyhxAyfwgyxzAsUHQGOuA0aJAERGAFIXwSTugyEqgtqhghQZgUwQQIpOQKbuguVtQuKrAuCowp2kQlheghTbQZHWQU7SwVAVgQ6TgQlLwMeKwFOemyQAAAAVElEQVQI1y3JVRaAIAAF0UconXbvf5ei8HfPDIQQhBAAFE10iKig3SLRNN4SP/p+N08VC0YnfIlNWtqIkhg/TPYbCvhqdHAWRXPZSp3g3CWZvVLXC6OJA3ukv0AaAAAAAElFTkSuQmCC&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3．<code>使用更高压缩比格式的图片</code> 使用具有较高压缩比格式的图片，如 webp（需要设计降级兼容方案）等。在同等图片画质的情况下，高压缩比格式的图片体积更小，能够更快完成文件传输，节省网络流量。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.domain.com/path/photo.webp&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;webp格式图片&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>4．<code>图片懒加载</code> 为了保证页面内容的最小化，加速页面的渲染，尽可能节省移动端网络流量，页面中的图片资源推荐使用懒加载实现，在页面滚动时动态载入图片。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;//cdn.domain.com/path/photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;懒加载图片&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>5．<code>使用 MediaQuery 或 srcset</code> 根据不同屏幕加载不同大小图片在介绍响应式的章节中我们了解到，针对不同的移动端屏幕尺寸和分辨率，输出不同大小的图片或背景图能保证在用户体验不降低的前提下节省网络流量，加快部分机型的图片加载速度，这在移动端非常值得推荐。</p>
+<p>6．<code>使用 iconfont 代替图片</code> 图标在页面中尽可能使用 iconfont 来代替图片图标，这样做的好处有以下几个：<br>    - 使用 iconfont 体积较小，而且是矢量图，因此缩放时不会失真；<br>    - 可以方便地修改图片大小尺寸和呈现颜色。<br>    - 但是需要注意的是，iconfont 引用不同 webfont 格式时的兼容性写法，根据经验推荐尽量按照以下顺序书写，否则不容易兼容到所有的浏览器上。<br>    <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>:iconfont;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&quot;./iconfont.eot&quot;</span>);</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&quot;./iconfont.eot?#iefix&quot;</span>)  <span class="built_in">format</span>(<span class="string">&quot;eot&quot;</span>),</span><br><span class="line">        <span class="built_in">url</span>(<span class="string">&quot;./iconfont.woff&quot;</span>)  <span class="built_in">format</span>(<span class="string">&quot;woff&quot;</span>),</span><br><span class="line">        <span class="built_in">url</span>(<span class="string">&quot;./iconfont.ttf&quot;</span>)  <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>7．<code>定义图片大小限制</code> 加载的单张图片一般建议不超过 30KB，避免大图片加载时间长而阻塞页面其他资源的下载，因此推荐在 10KB 以内。如果用户上传的图片过大，建议设置告警系统，帮助我们观察了解整个网站的图片流量情况，做出进一步的改善。</p>
+<p>8．<code>强缓存策略</code> 对于一些「永远」不会变的图片可以使用强缓存的方式缓存在用户的浏览器上。</p>
+<h2 id="脚本类"><a href="#脚本类" class="headerlink" title="脚本类"></a>脚本类</h2><p>1．<code>尽量使用id选择器</code> 选择页面 DOM 元素时尽量使用 id 选择器，因为 id 选择器速度最快。</p>
+<p>2．<code>合理缓存DOM对象</code> 对于需要重复使用的 DOM 对象，要优先设置缓存变量，避免每次使用时都要从整个DOM树中重新查找。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//不推荐</span></span><br><span class="line">$(<span class="string">&#x27;#mod.active&#x27;</span>).remove(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">$(<span class="string">&#x27;#mod.not-active&#x27;</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//推荐</span></span><br><span class="line"><span class="keyword">let</span> $mod=$(<span class="string">&#x27;#mod&#x27;</span>);</span><br><span class="line">$mod.find(<span class="string">&#x27;.active&#x27;</span>).remove(<span class="string">&#x27;active&#x27;</span>);</span><br><span class="line">$mod.find(<span class="string">&#x27;.not-active&#x27;</span>).addClass(<span class="string">&#x27;active&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>3．<code>页面元素尽量使用事件代理</code>，避免直接事件绑定使用事件代理可以避免对每个元素都进行绑定，并且可以避免出现内存泄露及需要动态添加元素的事件绑定问题，所以尽量不要直接使用事件绑定。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//不推荐</span></span><br><span class="line">$(<span class="string">&#x27;.btn&#x27;</span>).on(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//推荐</span></span><br><span class="line">$(<span class="string">&#x27;body&#x27;</span>).on(<span class="string">&#x27;click&#x27;</span>,<span class="string">&#x27;.btn&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>4．<code>使用 touchstart 代替 click由于移动端屏幕的设计</code>， touchstart 事件和 click 事件触发时间之间存在 300 毫秒的延时，所以在页面中没有实现 touchmove 滚动处理的情况下，可以使用 touchstart 事件来代替元素的 click 事件，加快页面点击的响应速度，提高用户体验。但同时我们也要<code>注意页面重叠元素 touch 动作的点击穿透问题</code>。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//不推荐</span></span><br><span class="line">$(<span class="string">&#x27;body&#x27;</span>).on(<span class="string">&#x27;click&#x27;</span>,<span class="string">&#x27;.btn&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//推荐</span></span><br><span class="line">$(<span class="string">&#x27;body&#x27;</span>).on(<span class="string">&#x27;touchstart&#x27;</span>,<span class="string">&#x27;.btn&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>5．<code>避免 touchmove、scroll 连续事件处理</code> 需要对 touchmove、scroll 这类可能连续触发回调的事件设置事件节流，例如设置每隔 16ms（60 帧的帧间隔为 16.7ms，因此可以合理地设置为 16ms ）才进行一次事件处理，避免频繁的事件调用导致移动端页面卡顿。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//不推荐</span></span><br><span class="line">$(<span class="string">&#x27;.scroller&#x27;</span>).on(<span class="string">&#x27;touchmove&#x27;</span>,<span class="string">&#x27;.btn&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//推荐</span></span><br><span class="line">$(<span class="string">&#x27;.scroller&#x27;</span>).on(<span class="string">&#x27;touchmove&#x27;</span>,<span class="string">&#x27;.btn&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> self=<span class="built_in">this</span>;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(self);</span><br><span class="line">    &#125;,<span class="number">16</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>6．<code>避免使用 eval、with</code>，使用 join 代替连接符＋，推荐使用 ECMAScript6 的字符串模板这些都是一些基础的安全脚本编写问题，尽可能使用较高效率的特性来完成这些操作，避免不规范或不安全的写法。</p>
+<p>7．<code>尽量使用 ECMAScript6＋的特性来编程</code> ECMAScript6＋ 一定程度上更加安全高效，而且部分特性执行速度更快，也是未来规范的需要，所以推荐使用 ECMAScript6＋ 的新特性来完成后面的开发</p>
+<h2 id="渲染类"><a href="#渲染类" class="headerlink" title="渲染类"></a>渲染类</h2><p>1．<code>使用 Viewport 固定屏幕渲染，可以加速页面渲染内容</code> 一般认为，在移动端设置 Viewport 可以加速页面的渲染，同时可以避免缩放导致页面重排重绘。在移动端固定 Viewport 设置的方法如下。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--设置viewport不缩放--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2．<code>避免各种形式重排重绘</code> 页面的重排重绘很耗性能，所以一定要尽可能减少页面的重排重绘，例如页面图片大小变化、元素位置变化等这些情况都会导致重排重绘。</p>
+<p>3．<code>使用 CSS3 动画</code>，开启GPU加速使用 CSS3 动画时可以设置 transform:translateZ(0) 来开启移动设备浏览器的GPU图形处理加速，让动画过程更加流畅，但需要注意的是，在 Native WebView 下 GPU 加速有几率产生 App Crash。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-transform</span><span class="selector-pseudo">:translateZ(0)</span>;</span><br><span class="line"><span class="selector-tag">-ms-transform</span><span class="selector-pseudo">:translateZ(0)</span>;</span><br><span class="line"><span class="selector-tag">-o-transform</span><span class="selector-pseudo">:translateZ(0)</span>;</span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:translateZ(0)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>4．<code>合理使用 Canvas 和 requestAnimationFrame选择</code> Canvas 或 requestAnimationFrame 等更高效的动画实现方式，尽量避免使用 setTimeout、setInterval 等方式来直接处理连续动画。</p>
+<p>5．<code>SVG 代替图片</code> 部分情况下可以考虑使用 SVG 代替图片实现动画，因为使用 SVG 格式内容更小，而且 SVG DOM 结构方便调整。</p>
+<p>6．<code>不滥用 float</code> 在 DOM 渲染树生成后的布局渲染阶段，使用 float 的元素布局计算比较耗性能，所以尽量减少 float 的使用，推荐使用固定布局或 flex-box 弹性布局的方式来实现页面元素布局。</p>
+<p>7．<code>不滥用 web 字体或过多 font-size 声明</code> 过多的 font-size 声明会增加字体的大小计算，而且也没有必要的。</p>
+<p>8．<code>做好脚本容错</code> 脚本容错可以避免「非正常环境」的执行错误影响页面的加载和不相关功能的使用</p>
+<h2 id="架构协议类"><a href="#架构协议类" class="headerlink" title="架构协议类"></a>架构协议类</h2><p>1．<code>尝试使用 SPDY 和 HTTP2</code> 在条件允许的情况下可以考虑使用 SPDY 协议来进行文件资源传输，利用连接复用加快传输过程，缩短资源加载时间。HTTP2 在未来也是可以考虑尝试的。</p>
+<p>2．<code>使用后端数据渲染</code> 使用后端数据渲染的方式可以加快页面内容的渲染展示，避免空白页面的出现，同时可以解决移动端页面SEO的问题。如果条件允许，后端数据渲染是一个很不错的实践思路。</p>
+<p>3．<code>使用 NativeView 代替 DOM 的性能劣势</code> 可以尝试使用 NativeView 的 MNV＊ 开发模式来避免 HTML DOM 性能慢的问题，目前使用 MNV＊ 的开发模式已经可以将页面内容渲染体验做到接近客户端 Native 应用的体验了。但需要避免 js Framework 和 native Framework 的频繁交互。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://github.com/CodingMeUp/some_notes/issues/2">前端优化</a></li>
+<li><a href="http://www.cnblogs.com/xianyulaodi/p/5755079.html">【原】雅虎前端优化的35条军规</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>优化</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取本机的ip地址</title>
+    <url>/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/</url>
+    <content><![CDATA[<p>有的时候我们需要知道我们本地机器的ip地址。</p>
+<p>前端项目大部分都是通过localhost:端口号来运行的，但是比如我们要写RN的时候，在安卓模拟器中的我们可能就不能直接使用<code>localhost</code>或<code>127.0.0.1</code>，使用的应该是局域网给我们动态分配的ip地址。</p>
+<p>下面介绍两种三种方式获得动态分配的ip地址：</p>
+<h2 id="图形化获取"><a href="#图形化获取" class="headerlink" title="图形化获取"></a>图形化获取</h2><ol>
+<li>打开偏好设置，点击网络</li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png) -->
+<a id="more"></a>
+2. 红框圈起来的就是ip地址
+
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip2.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip2.png) -->
+
+<h2 id="命令行获取"><a href="#命令行获取" class="headerlink" title="命令行获取"></a>命令行获取</h2><ol>
+<li>打开<code>terminal</code><br>输入<code>ifconfig</code>。注意不是<code>ipconfig</code></li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip3.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip3.png) -->
+
+<h2 id="程序获取"><a href="#程序获取" class="headerlink" title="程序获取"></a>程序获取</h2><p>每次链接wifi的时候，我们的ip可能就会被重新分配，每次去走上面一遍可能会比较麻烦，有没有上面比较高级的方式获取呢。</p>
+<ol>
+<li>首先需要node环境</li>
+<li>在对应的程序下安装 <code>address</code> 包<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">npm install address --save-dev</span><br></pre></td></tr></table></figure>
+为了演示简单，单独写一个文件，例如：getIpAddress.js<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> address = <span class="built_in">require</span>(<span class="string">&#x27;address&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(address.ip())</span><br></pre></td></tr></table></figure>
+使用node运行。</li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip4.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip4.png) -->
+
+
+<p>有了上述的方法，我们就可以在程序启动的时候，告诉开发者（我们自己）当前的ip地址是多少，我们就能直接去模拟器中打开了。</p>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png) -->
+`address`包还可以获取`IPv6`和`MAC`地址。详细查看 [address-npm](https://www.npmjs.com/package/address)]]></content>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XSS攻击</title>
+    <url>/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/</url>
+    <content><![CDATA[<p>XSS攻击全称跨站脚本攻击，常见的就是攻击者把恶意代码植入到用户页面中。</p>
+<p>在XSS攻击中，一般有三个角色参与：攻击者、目标服务器、受害者的浏览器。</p>
+<p>由于服务端没有对用户的输入做安全方面的验证，攻击者就通过输入的方式，夹带一些恶意的html脚本代码（包括html, css, js）。</p>
+<a id="more"></a>
+
+<h2 id="XSS攻击的分类"><a href="#XSS攻击的分类" class="headerlink" title="XSS攻击的分类"></a>XSS攻击的分类</h2><ol>
+<li>反射型XSS（Reflected XSS）</li>
+</ol>
+<p>反射型XSS，又称非持久型XSS。之所以称为反射型XSS，则是因为这种攻击方式的注入代码是从目标服务器通过错误信息、搜索结果等等方式“反射”回来的。而称为非持久型XSS，则是因为这种攻击方式具有一次性。<code>攻击者通过电子邮件等方式将包含注入脚本的恶意链接发送给受害者，当受害者点击该链接时，注入脚本被传输到目标服务器上，然后服务器将注入脚本“反射”到受害者的浏览器上，从而在该浏览器上执行了这段脚本。</code></p>
+<p>比如攻击者将如下链接发送给受害者：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;search.asp?input&#x3D;&lt;script&gt;alert(document.cookie);&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>当受害者点击这个链接的时候，注入的脚本被当作搜索的关键词发送到目标服务器的search.asp页面中，则在搜索结果的返回页面中，这段脚本将被当作搜索的关键词而嵌入（服务端渲染）。这样，当用户得到搜索结果页面后，这段脚本也得到了执行。这就是反射型XSS攻击的原理，可以看到，攻击者巧妙地通过反射型XSS的攻击方式，达到了在受害者的浏览器上执行脚本的目的。由于代码注入的是一个动态产生的页面而不是永久的页面，因此这种攻击方式只在点击链接的时候才产生作用，这也是它被称为非持久型XSS的原因。<br>危害在用户查询的时候，可以实现把用户的cookie信息发送给攻击者</p>
+<p>情况二，通过渲染页面进行攻击：<br>比如攻击者将如下链接发送给受害者：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;response-xss.html?input&#x3D;&lt;style&gt;body&#123;background:red;&#125;&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<p>需要渲染input中的内容到页面中，上面的会修改页面的背景色。<br><s>渲染模式是没办法获取用户cookie信息的（个人测试得出的结论，有异议敬请斧正）。</s><br>如果一个input的value属性值是</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">琅琊榜&quot; onclick&#x3D;&quot;javascript:alert(&#39;handsome boy&#39;)</span><br></pre></td></tr></table></figure>
+<p>就可能出现</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;琅琊榜&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;javascript:alert(&#x27;handsome boy&#x27;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>点击输入框爆炸。。</p>
+<ol start="2">
+<li>存储型XSS（Stored XSS）</li>
+</ol>
+<p>存储型XSS，又称持久型XSS，他和反射型XSS最大的不同就是，攻击脚本将被永久地存放在目标服务器的数据库和文件中。这种攻击多见于论坛，攻击者在发帖的过程中，将恶意脚本连同正常信息一起注入到帖子的内容之中。随着帖子被论坛服务器存储下来，恶意脚本也永久地被存放在论坛服务器的后端存储器中。当其它用户浏览这个被注入了恶意脚本的帖子的时候，恶意脚本则会在他们的浏览器中得到执行，从而受到了攻击。</p>
+<p>可以看到，存储型XSS的攻击方式能够将恶意代码永久地嵌入一个页面当中，所有访问这个页面的用户都将成为受害者。如果我们能够谨慎对待不明链接，那么反射型的XSS攻击将没有多大作为，而存储型XSS则不同，由于它注入的往往是一些我们所信任的页面，因此无论我们多么小心，都难免会受到攻击。可以说，存储型XSS更具有隐蔽性，带来的危害也更大，除非服务器能完全阻止注入，否则任何人都很有可能受到攻击。</p>
+<ol>
+<li><p>发一篇文章，里面包含了恶意脚本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">今天天气不错啊！&lt;script&gt;alert(&#39;handsome boy&#39;)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>后端没有对文章进行过滤，直接保存文章内容到数据库。</p>
+</li>
+<li><p>当其他看这篇文章的时候，包含的恶意脚本就会执行。</p>
+</li>
+</ol>
+<p>PS：因为大部分文章是保存整个HTML内容的，前端显示时候也不做过滤，就极可能出现这种情况。</p>
+<p><code>结论：</code></p>
+<p>后端尽可能对提交数据做过滤，在场景需求而不过滤的情况下，前端就需要做些处理了。</p>
+<p>开发安全措施：</p>
+<ol>
+<li><p>首要是服务端要进行过滤，因为前端的校验可以被绕过。</p>
+</li>
+<li><p>当服务端不校验时候，前端要以各种方式过滤里面可能的恶意脚本，例如script标签，将特殊字符转换成HTML编码。</p>
+</li>
+<li><p>跨站请求伪造</p>
+</li>
+</ol>
+<p>跨站请求伪造（Cross-SiteRequest Forgery，CSRF），作为OWASP组织的2007年提出十大安全漏洞第五，它也属于XSS攻击的一种衍生。所谓跨站请求伪造，就是攻击者利用XSS注入攻击的方式，注入一段脚本，而当受害者的浏览器运行这段脚本时，脚本伪造受害者发送了一个合法请求。比如我们注入如下的HTML代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://www.bank.com/transfer.do?toAct=123456&amp;money=10000&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>假如上面的代码中所访问的是某个银行网站的转账服务，则当受害者的浏览器运行这段脚本时，就会向攻击者指定的账户（示例的123456）执行转账操作。由于这个转账请求是在受害者的浏览器中运行的，因此浏览器也会自动将受害者的Cookie信息一并发送。这样，发送的请求就好像是受害者自己发送的一样，银行网站也将认可这个请求的合法性，攻击者也就达到了伪造请求的目的。</p>
+<p>类似操作：<br>攻击者提供一个免费的wifi，连接之后，在本地开启fiddler这种抓包工具，这类工具不仅能获取到被攻击者的所有信息，还能修改用户访问的内容，模拟用户在被害者设备发起请求。<br><img src="https://github.com/kuckboy1994/Blog/raw/master/images/xss-attack/xss-attack.png"></p>
+<ol start="4">
+<li>注入恶意软件</li>
+</ol>
+<p>除了直接注入恶意脚本以外，通过XSS攻击，攻击者也可以很方便地在脚本中引入一些恶意软件，比如病毒、木马、蠕虫等等。例如，攻击者可以在某个自己建立的页面上放置一些恶意软件，然后用XSS注入的方式，插入一段引用该页面的脚本。这样当受害者的浏览器执行这段脚本的时候，就会自动访问放置了恶意软件的页面，从而受到这些恶意软件的感染。</p>
+<p>利用XSS注入恶意软件的方式，攻击者可以很方便地在互联网上传播病毒、木马和蠕虫，通过这种途径，攻击者就可以通过这些病毒、木马和蠕虫，进一步地对受害者的主机发动攻击。目前，互联网上的“挂马”现象非常普遍，而XSS注入的出现也无疑给“挂马”的攻击者指明了又一个新的方向。通过传播这些木马，窃取合法用户的敏感信息，不少非法攻击者也逐渐将这一过程产业化，经常可以见到以信封方式批量兜售账号密码的现象。这也给许多正常的网络用户造成了许多无法挽回的巨大损失，造成的危害也很大。</p>
+<h2 id="XSS的预防"><a href="#XSS的预防" class="headerlink" title="XSS的预防"></a>XSS的预防</h2><p>在前面的文章中，我们具体介绍了各种XSS攻击的原理和方式。可以看出，XSS是一种覆盖面很广，隐蔽性很高，危害也非常大的网络应用安全漏洞。除非网站服务器完全不存在XSS漏洞，否则就会给攻击者们留下空子。因此，如何在Web应用程序的开发过程中对XSS漏洞进行预防，是所有网站开发人员所必须注意的重中之重。下面我们介绍几种常用的XSS预防措施。</p>
+<ol>
+<li>输入检测</li>
+</ol>
+<p>对用户的所有输入数据进行检测，比如过滤其中的“&lt;”、“&gt;”、“/”等可能导致脚本注入的特殊字符，或者过滤“script”、“javascript”等脚本关键字，或者对输入数据的长度进行限制等等。同时，我们也要考虑用户可能绕开ASCII码，使用十六进行编码如“&lt;</span>”（“&lt;”）、“&gt;”（“&gt;”）等来输入脚本。因此，对用户输入的十六进制编码，我们也要进行相应的过滤。只要开发人员能够严格检测每一处交互点，保证对所有用户可能的输入都进行检测和XSS过滤，就能够有效地阻止XSS攻击。</p>
+<ol start="2">
+<li>输出编码</li>
+</ol>
+<p>通过前面对XSS攻击的分析，我们可以看到，之所以会产生XSS攻击，就是因为Web应用程序将用户的输入直接嵌入到某个页面当中，作为该页面的HTML代码的一部分。因此，当Web应用程序将用户的输入数据输出到目标页面中时，只要用HtmlEncoder等工具先对这些数据进行编码，然后再输出到目标页面中。这样，如果用户输入一些HTML的脚本，也会被当成普通的文字，而不会成为目标页面HTML代码的一部分得到执行。</p>
+<ol start="3">
+<li>Cookie防盗</li>
+</ol>
+<p>利用XSS攻击，攻击者可以很方便地窃取到合法用户的Cookie信息。因此，对于网站来说，不能在Cookie信息中存放太多敏感信息，也不能将Cookie作为身份认证的唯一标识，等等。因此，对于Cookie，我们可以采取以下的措施。首先，我们要尽可能地避免在Cookie中泄露隐私，如用户名、密码等；其次，我们可以将Cookie信息用MD5等Hash算法进行多次散列后存放；再次，为了防止重放攻击，我们也可以将Cookie和IP进行绑定，这样也可以阻止攻击者冒充正常用户的身份。</p>
+<ol start="4">
+<li>严格限制URL访问</li>
+</ol>
+<p>攻击者使用XSS攻击，通常都要借助于自己指定的网站页面，比如用它来记录敏感信息、在该页面上“挂马”等等。因此，在页面的脚本代码执行过程中，只要我们严格限制其访问的URL，比如只允许脚本代码访问本网站的URL等方式，就可以避免脚本的执行链接到其它可能是攻击者指定的页面上。</p>
+<ol start="5">
+<li>用户注意事项</li>
+</ol>
+<p>作为一名普通的网络用户，在XSS攻击的预防上总体处在被动的地位。但是我们也可以通过采取一些措施来尽可能地避免受到XSS攻击。首先，我们不要轻易相信电子邮件或者网页中的不明链接，这些链接很有可能引导反射型XSS攻击或者使我们访问到一些不安全的网页。其次，我们在不必要的时候可以禁用脚本功能，这样XSS注入的脚本就无法得到运行。再次，我们也可以使用一些安全的浏览器上网，有的浏览器提供XSS过滤功能，会提示页面中可能发生的XSS注入并将其阻挡下来。</p>
+<h2 id="XSS的漏洞检测"><a href="#XSS的漏洞检测" class="headerlink" title="XSS的漏洞检测"></a>XSS的漏洞检测</h2><ol>
+<li>黑盒测试<br>所谓黑盒测试，就是在不知道系统的代码和运行状态的条件下，对系统进行的测试。在对XSS漏洞的检测中，我们可以模拟黑客的攻击手段，在所有可能的数据输入接口处，尝试进行一些XSS注入。通过观察注入后的引用这些数据的页面，看其是否出现被注入的现象，即可确实是否存在XSS漏洞。比如我们可以用下面所列的一些脚本来尝试XSS注入：<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">1. 在HTML标签中输出</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">2. 在HTML属性中输出</span><br><span class="line">&quot;&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">e.g.</span></span></span><br><span class="line">&lt;div name=&quot;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;javascript:alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">http://xxx.com/yyy.png&quot; onerror=&quot;alert(&#x27;XSS&#x27;)</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://xxx.com/yyy.png&quot;</span> <span class="attr">onerror</span>=<span class="string">&quot;alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">3. 在<span class="tag">&lt;<span class="name">script</span>&gt;</span>标签中输出</span><br><span class="line">&quot;;alert(document.cookie);//</span><br><span class="line">e.g. </span><br><span class="line"><span class="handlebars"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> x = <span class="string">&quot;&quot;</span>;alert(<span class="built_in">document</span>.cookie);<span class="comment">//&quot;;</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">4. 在事件中输出</span><br><span class="line">&#x27;&#x27;);alert(document.cookie</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;funcA(&#x27;&#x27;);alert(document.cookie)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">5. 在CSS中输出（仅低版本 IE 有效）</span><br><span class="line">body &#123;background-image:url(&quot;javascript:alert(&#x27;XSS&#x27;)&quot;);&#125;</span><br><span class="line">body &#123;background-image:expression(alert(&#x27;xss&#x27;));&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如果在打开那些引用了该输入数据的页面时，弹出对话框显示信息，则可以确定该数据输入时有可能导致XSS注入，从而确定了XSS漏洞的位置。</p>
+<ol start="2">
+<li>静态分析</li>
+</ol>
+<p>XSS漏洞静态分析方法属于白盒测试方法的一种，它通过对Web应用的代码进行分析，从而发现其中可能存在的问题。通常来说，静态分析技术只是对代码进行一些简单的扫描，找到其中有可能导致XSS注入的地方，将其报告给我们。</p>
+<p>比如在Web应用的代码中可能存在一些读入数据的API，如Request.QueryString()，$_GET等，如果存在这些API，则表示可能引入XSS的注入。通过静态分析工具，我们可以很容易发现所有这些读入数据的API，从而详细检查每一个数据输入点是否进行了XSS注入的过滤。可以看到，静态分析的方法，只是帮助我们定位XSS漏洞的可能位置，由于静态分析工具难以判定是否对输入数据进行过XSS过滤，因此还是需要我们手动地进行检查，从而确保不存在XSS漏洞。</p>
+<ol start="3">
+<li>数据流分析</li>
+</ol>
+<p>XSS漏洞之所以产生，根本原因在于不安全的数据流，使得用户的输入数据被直接嵌入到某些页面中。比如PHP中的echo语句，就能够将一些数据直接添加为HTML页面的一部分，如果这个数据是用户注入了XSS脚本的数据，则会导致产生XSS攻击。因此，数据流分析的主要思想就是使用一些模型或者工具，分析Web应用程序代码中的数据传输情况，从而发现其中存在的问题。比如，我们可以将用户的输入数据所存储的变量打上污点标记，通过对数据流和变量类型的分析，逐步标记所有引用了污点变量的中间变量，最后通过观察输出到页面中的变量数据是否存在污点，来判断是否可能产生XSS漏洞。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/hitwangpeng/article/details/45503465">[web安全]XSS可能发生的场景及解决方法</a></li>
+<li><a href="https://www.cnblogs.com/lovesong/p/5199623.html">前端安全之XSS攻击</a></li>
+<li><a href="http://blog.csdn.net/yefan2222/article/details/7091863">Cross-Site Scripting(XSS): 跨站脚本攻击介绍</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>xss</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客搭建指南</title>
+    <url>/2018/05/28/2018-05-28-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><ul>
+<li><p>安装 <code>node</code> 和 <code>git</code></p>
+</li>
+<li><p>安装 <code>hexo</code></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建项目</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init kuckboy1994.github.io</span><br><span class="line">cd kuckboy1994.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>项目目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml     &#x2F;&#x2F; 配置信息</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds       &#x2F;&#x2F; 模板文件夹</span><br><span class="line">├── source          &#x2F;&#x2F; 资源 博客文章</span><br><span class="line">|   ├── _drafts     &#x2F;&#x2F; 草稿</span><br><span class="line">|   └── _posts      &#x2F;&#x2F; 正式发布的文章</span><br><span class="line">└── themes          &#x2F;&#x2F; 主题</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><ul>
+<li>配置信息<br><br>如下是我个人的<a href="https://github.com/kuckboy1994/hexobackup/blob/master/_config.yml">配置</a>：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## Source: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># Site</span><br><span class="line">title: kuckboy的博客</span><br><span class="line">subtitle: 必须向前看，要犯就犯新的错误</span><br><span class="line">description: 专注种多肉的前端一枚</span><br><span class="line">keywords: 前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer</span><br><span class="line">author: kuckboy1994</span><br><span class="line">email: shanchao@qq.com</span><br><span class="line">language: </span><br><span class="line">timezone: Asia&#x2F;Shanghai</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: &#x2F;&#x2F;blog.kuckboy1994.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Directory</span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads&#x2F;code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"># Writing</span><br><span class="line">new_post_name: :year-:month-:day-:title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default &#x3D; &#39;&#39;)</span><br><span class="line"># per_page: Posts displayed per page. (0 &#x3D; disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br><span class="line">  </span><br><span class="line"># Category &amp; Tag</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Server</span><br><span class="line">## Hexo uses Connect as a server</span><br><span class="line">## You can customize the logger format as defined in</span><br><span class="line">## http:&#x2F;&#x2F;www.senchalabs.org&#x2F;connect&#x2F;logger.html</span><br><span class="line">port: 4000</span><br><span class="line">server_ip: localhost</span><br><span class="line">logger: false</span><br><span class="line">logger_format: dev</span><br><span class="line"></span><br><span class="line"># Date &#x2F; Time format</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F;</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 6</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: yilia</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">    path: baidusitemap.xm</span><br><span class="line"></span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: false</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: rsync</span><br><span class="line">  # type: git</span><br><span class="line">  repo: git@github.com:kuckboy1994&#x2F;kuckboy1994.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  host: 140.143.193.185</span><br><span class="line">  user: root</span><br><span class="line">  root: &#x2F;data&#x2F;blog</span><br><span class="line">  port: 22</span><br><span class="line">  delete: true</span><br><span class="line">  verbose: true</span><br><span class="line">  ignore_errors: true</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <code>_config.yml</code> 中的 <code>default_layout</code> 参数代替</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new draft 我是草稿</span><br></pre></td></tr></table></figure>
+<p>就会在 <code>/source/_drafts/</code> 下生成一个 <code>我是草稿.md</code> 文件。在生成静态文件的时候这个文件是不会被显示的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new blog</span><br></pre></td></tr></table></figure>
+<p>就会在 <code>/source/_posts/</code> 下生成一个 <code>blog.md</code> 文件。生成静态文件的时候就是正常的博客了。</p>
+<h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>发布草稿箱中的内容转成正常的博客。在生成静态文件的时候也可以被正常看到。</p>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br><span class="line"></span><br><span class="line">hexo s &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
+<p>启动服务器。在线预览。默认网址是：<code>http://localhost:4000/</code></p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line">hexo g &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
+<p>生成静态文件</p>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line">hexo d &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
+<p>部署网站</p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
+<li><code>server</code> 命令是会自动监听文件变化的。开启端口之后。直接刷新网页就可以看到变化。</li>
+<li>新建的草稿如何在线预览？<br>  命令行增加如下参数  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s --draft</span><br></pre></td></tr></table></figure></li>
+<li><code>more &gt;&gt;</code> 设置。在文章的前五行左右加入如下代码，在首页的列表就不会显示全部的文章了。  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>部署之前先修改 <code>_config.yml</code> 中参数的配置。 例如：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="comment"># type: git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:kuckboy1994/kuckboy1994.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">host:</span> <span class="number">140.143</span><span class="number">.193</span><span class="number">.185</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/data/blog</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">22</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>上面的配置包含了两种部署方式。一个是同步的服务器。一个是发布的github的page页面。修改 <code>type</code> 实现两种发布。</p>
+<p><code>git</code> 需要安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br><span class="line">  <span class="attr">message:</span> [<span class="string">message</span>]</span><br></pre></td></tr></table></figure>
+
+<p>发布到服务器，需要安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> [<span class="string">port</span>]</span><br><span class="line">  <span class="attr">delete:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br><span class="line">  <span class="attr">verbose:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br><span class="line">  <span class="attr">ignore_errors:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>我使用的主题是 <a href="https://github.com/litten/hexo-theme-yilia">yilia</a>。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>在项目下执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure>
+<p>会把项目 <code>clone</code> 到项目的 <code>theme/yilia</code> 文件夹下。</p>
+<h3 id="修改主题配置"><a href="#修改主题配置" class="headerlink" title="修改主题配置"></a>修改主题配置</h3><p>修改hexo根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code></p>
+<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><p>想把当前博客的配置上传到github上。遇到了如下的问题。</p>
+<p><img src="https://wx3.sinaimg.cn/mw690/ec4d7780gy1fr4x8f45eqj20v808stak.jpg" alt="主题无法提交"></p>
+<p>问题的原因是 <code>themes/yilia</code> 这个项目下有和 <code>github</code> 上的项目关联了。 因为我修改了主题下面的配置，文件改动，但是有没有添加到暂存和提交。但是又不能提交。因为项目不是我维护的。所以你只要删除 <code>themes/yilia</code> 下的 <code>.git</code> 文件夹就可以了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://hexo.io/zh-cn/docs/index.html">hexo 中文官网</a></li>
+<li><a href="https://segmentfault.com/q/1010000007524645">Github pages和hexo d出现错误</a></li>
+<li><a href="https://github.com/litten/hexo-theme-yilia">Github litten/hexo-theme-yilia</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-常见的css问题</title>
+    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E5%B8%B8%E8%A7%81%E7%9A%84css%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响"><a href="#在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响" class="headerlink" title="在 scroll-view 中 padding 会对内部元素的 position: absolute 产生影响"></a>在 <code>scroll-view</code> 中 <code>padding</code> 会对内部元素的 <code>position: absolute</code> 产生影响</h3><p><code>padding</code> 在 <code>scroll-view</code> 中的效果有点像 <code>margin</code> 。</p>
+<p>例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;square&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.square</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>效果如下：</p>
+<p><img src="http://wx2.sinaimg.cn/mw690/ec4d7780gy1frtrw0nlj3j209009mmx7.jpg"></p>
+<p>在 <code>.box</code> 上增加 <code>padding</code></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">100</span>rpx; </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frtrw4o2ifj208x09cdfv.jpg"></p>
+<p>应该是 <code>scroll-view</code> 组件封装的时候没有考虑到 <code>padding</code> 的影响吧。或者官方认为这个遇到问题可以通过调节元素的层级关系来解决而没有去解决的一个疑难杂症？😂</p>
+<h3 id="图片下方存在留白"><a href="#图片下方存在留白" class="headerlink" title="图片下方存在留白"></a>图片下方存在留白</h3><p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtsk7ft47j208y0f7wgn.jpg"></p>
+<p>和正常的网页处理方式一致。</p>
+<ul>
+<li><p>修改 <code>vertical-align</code>, 默认是 <code>baseline</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vertical-align: middle; </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 <code>display</code>, 默认是 <code>inline</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display: block;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>微信小程序</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-组件button详解</title>
+    <url>/2018/05/29/2018-05-29-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E7%BB%84%E4%BB%B6button%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p>我们在小程序开发的时候，会有这样的需求，设置一个透明的 <code>button</code>。为什么要用 <code>button</code> 呢？因为 <code>button</code> 有很多的开放功能，例如：获取用户信息、分享、调起会话、获取用户手机号、启动外部App、打开设置页。</p>
+<p>问题来了，设置透明的 <code>button</code> 到底该怎么实现呢？</p>
+<p>设置 <code>background: transparent</code> 是无效的。我们需要设置按钮 <code>镂空</code>。 如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">plain</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但是。。。 为什么是这样的？<br><img src="http://wx4.sinaimg.cn/mw690/ec4d7780gy1frsmrk5mucj208v0al74e.jpg"></p>
+<a id="more"></a>
+<p>尝试设置一下 <code>CSS</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">border: none;</span><br></pre></td></tr></table></figure>
+
+<p>完全没有效果呀？</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frsmvt9q1gj20c00b143h.jpg"></p>
+<p>最终的解决办法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">button::after &#123;</span><br><span class="line">  border: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在根目录下的 <code>app.wxss</code> 添加如上代码修改所有 <code>button</code> 的效果。<br>猜测官方的 <code>button</code> 组件使用的是 <code>::after</code> 伪类的方式实现边框的。遇到同类问题可以在 <code>::after</code> 上做尝试。 例如: <code>border-radius</code>。</p>
+]]></content>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑_收集用户的formid</title>
+    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%94%B6%E9%9B%86%E7%94%A8%E6%88%B7%E7%9A%84formid/</url>
+    <content><![CDATA[<h2 id="我们为什么要收集用户的-formid-呢？"><a href="#我们为什么要收集用户的-formid-呢？" class="headerlink" title="我们为什么要收集用户的 formid 呢？"></a>我们为什么要收集用户的 <code>formid</code> 呢？</h2><p>因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。</p>
+<h2 id="如何收集formid"><a href="#如何收集formid" class="headerlink" title="如何收集formid"></a>如何收集formid</h2><p>要获取用户id，首先我们要有一个 <code>form</code> 表单组件。 只有在提交表单的时候才会有 <code>formid</code>，而且 <code>report-submit</code> 属性为 <code>true</code>。代码如下</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- wxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">bindsubmit</span>=<span class="string">&quot;eventCollectFormId&quot;</span> <span class="attr">report-submit</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">form-type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收集用户formId</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">eventCollectFormId (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.detail.formId)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。</p>
+<a id="more"></a>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p><code>form</code> 组件可以设置在页面的最外层。内部放置多个 <code>button</code>。统一调用一个 <code>bindsubmit</code> 事件。</p>
+<p>要想尽可能多的获取 <code>formid</code> 又不想把所有的标签都使用 <code>button</code>，因为 <code>button</code> 修改样式的代缴是比较大的。可以使用悬浮的 <code>button</code> 。只要设置：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">opacity</span>: 0;</span><br></pre></td></tr></table></figure>
+<p>把原来的事件放置到 <code>button</code> 上即可。</p>
+<p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frsobwh7psj20ai0cudhn.jpg"></p>
+<p>红色框起来的地方，我在 <code>喜欢操作</code> 上方加了一个按钮，并且赋值了相应的属性。这样我们就在用户交互的时候同时获取了他的 <code>formid</code>。而且增加了用户的点击区域，优化了交互。</p>
+]]></content>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-横向滚动列表</title>
+    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8%E5%88%97%E8%A1%A8/</url>
+    <content><![CDATA[<ul>
+<li>设置横向滚动列表，除了我们常见的设置</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">overflow-x</span>: <span class="selector-tag">auto</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这样设置出来的列表滚动起来比较 <code>涩</code> 。滚动起来不够流畅。</p>
+<ul>
+<li>还有一种做法就是使用 <code>scroll-view</code> 组件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;share-list&quot;</span> <span class="attr">scroll-x</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;share-item&quot;</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;[1,2,3,4,5,6]&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.share-list</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>样式中一定要设置 <code>white-space: nowrap;</code> 否则不能滚动。</p>
+<p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtre5rolqg206j0bchdu.gif"></p>
+]]></content>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-视频滚动播放</title>
+    <url>/2018/07/03/2018-07-03-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E8%A7%86%E9%A2%91%E6%BB%9A%E5%8A%A8%E6%92%AD%E6%94%BE/</url>
+    <content><![CDATA[<p><a href="https://github.com/kuckboy1994/mp_scroll_play_demo">项目地址</a> 欢迎star</p>
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p><img src="https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif"></p>
+<ul>
+<li>如果未正常显示gif，<a href="https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif">点击链接</a> 查看</li>
+</ul>
+<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><ol>
+<li>滚动到视频一半的位置，进行切换视频播放</li>
+<li>记录所有视频的播放位置，再次切换回来的时候继续播放。</li>
+<li>当播放视频滚出可见范围的时候，立刻停止播放（声音停止）。滚动停止的时候新的视频开始播放。</li>
+<li>全屏播放。（这里存在一个坑，全屏的时候会立刻自动退出全屏）</li>
+<li>基础上拉加载，上拉刷新（demo中未提现，配置下app.json即可实现）</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* global getApp Page wx */</span></span><br><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的防抖函数</span></span><br><span class="line"><span class="keyword">let</span> timeout</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">    timeout = <span class="built_in">setTimeout</span>(func, wait)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的节流函数</span></span><br><span class="line"><span class="keyword">let</span> timeout2 = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!timeout2) &#123;</span><br><span class="line">      timeout2 = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout2)</span><br><span class="line">        timeout2 = <span class="literal">null</span></span><br><span class="line">        func()</span><br><span class="line">      &#125;, wait)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    width: wx.getSystemInfoSync().windowWidth,</span><br><span class="line">    height: wx.getSystemInfoSync().windowHeight,</span><br><span class="line"></span><br><span class="line">    videoLoading: <span class="literal">false</span>,</span><br><span class="line">    videoList: [],</span><br><span class="line"></span><br><span class="line">    location: [],</span><br><span class="line">    isLock: <span class="literal">false</span>,  <span class="comment">// 当前栗子无用，如果有些弹窗控制不住背后的视频列表滚动的话，isLock的作用就发挥出来了。</span></span><br><span class="line">    localIndex: <span class="number">0</span>,</span><br><span class="line">    noPageScroll: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  info: &#123;</span><br><span class="line">    videoPlayDetail: &#123;&#125; <span class="comment">// 存放所有视频的播放位置</span></span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad (options) &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList(<span class="number">1</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 分页获取视频</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  getVideoList (initPage) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoLoading, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">if</span> (videoLoading) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoLoading: <span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 制造模拟数据</span></span><br><span class="line">    <span class="keyword">let</span> data = [&#123;</span><br><span class="line">      cover: <span class="string">&#x27;https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvx1996xoj20da07in0t.jpg&#x27;</span>,</span><br><span class="line">      src: <span class="string">&#x27;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&#x27;</span>,</span><br><span class="line">      width: <span class="number">480</span>,</span><br><span class="line">      height: <span class="number">272</span>,</span><br><span class="line">      title: <span class="string">&#x27;腾讯大学视频&#x27;</span>,</span><br><span class="line">      isPlay: <span class="literal">false</span></span><br><span class="line">    &#125;]</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="comment">// 模拟请求</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        videoList: videoList.concat(<span class="built_in">this</span>.formatVideoList(data)),</span><br><span class="line">        videoLoading: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="comment">// 给数据足够的渲染时间，之后进行视频位置的测量</span></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.getLocationInfo()</span><br><span class="line">        <span class="keyword">if</span> (initPage) &#123; <span class="comment">// 如果是首次进入，就自动播放第一个视频</span></span><br><span class="line">          <span class="built_in">this</span>.showVideoList(<span class="number">0</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 格式化视频列表</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Array&#125;</span> </span>videoList 需要格式化的视频列表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  formatVideoList (videoList) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; width, height &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">return</span> videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> styleHight = width * value.height / value.width</span><br><span class="line">      styleHight = styleHight &gt; <span class="number">0.7</span> * height ? <span class="number">0.7</span> * height : styleHight</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...value,</span><br><span class="line">        styleHight: <span class="built_in">Math</span>.floor(styleHight),</span><br><span class="line">        currentTime: <span class="number">0</span>,</span><br><span class="line">        isPlay: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 点击播放</span></span><br><span class="line">  eventPlay (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; index &#125; = event.currentTarget.dataset</span><br><span class="line">    <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 视频更新的时候不断的去记录播放的位置</span></span><br><span class="line">  eventPlayupdate (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">detail</span>: &#123; currentTime &#125;, <span class="attr">currentTarget</span>: &#123; <span class="attr">dataset</span>: &#123; index &#125; &#125; &#125; = event</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.info.videoPlayDetail[index] = currentTime</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 到底加载更多</span></span><br><span class="line">  onReachBottom () &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 设置播放的视频</span></span><br><span class="line">  showVideoList (index) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index)</span><br><span class="line">    <span class="keyword">let</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    videoList = videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      value.isPlay = <span class="literal">false</span></span><br><span class="line">      <span class="keyword">return</span> value</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">if</span> (index &gt;= <span class="number">0</span> &amp;&amp; videoList[index]) &#123;</span><br><span class="line">      videoList[index].isPlay = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoList</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 全屏播放，设置当前页面滚动无效，全屏的时候，会触发滚动事件。</span></span><br><span class="line">  eventFullScreen (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event)</span><br><span class="line">    <span class="keyword">const</span> &#123; fullScreen &#125; = event.detail</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      noPageScroll: fullScreen</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onPageScroll (&#123; scrollTop &#125;) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.data.noPageScroll) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取数据分别放置到各自的节流防抖函数中，防止调用的时候数据已近发生改变</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节流，每200毫秒触发一次</span></span><br><span class="line">    throttle(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;throttle&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, localIndex, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">          index = i</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (localIndex !== index) &#123;</span><br><span class="line">        videoList[localIndex].currentTime = <span class="built_in">this</span>.info.videoPlayDetail[localIndex]</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          videoList</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">this</span>.showVideoList()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 防抖，只触发一次</span></span><br><span class="line">    debounce(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;debounce&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, isLock &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">if</span> (!isLock) &#123;</span><br><span class="line">        <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">            index = i</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          localIndex: index</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 测量当前的所有视频的高度，计算出视频播放与否的位置</span></span><br><span class="line">  getLocationInfo () &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">var</span> query = wx.createSelectorQuery()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; videoList.length; i++) &#123;</span><br><span class="line">      query.select(<span class="string">`#video<span class="subst">$&#123;i&#125;</span>`</span>).boundingClientRect()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> length = videoList.length</span><br><span class="line">    <span class="keyword">const</span> location = []</span><br><span class="line">    query.exec(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line"></span><br><span class="line">      <span class="keyword">let</span> start = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> end = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> lei = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">          start = <span class="number">0</span></span><br><span class="line">          end = videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          start = end</span><br><span class="line">          end = lei + videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location.push(&#123;</span><br><span class="line">          start: start,</span><br><span class="line">          end: end</span><br><span class="line">        &#125;)</span><br><span class="line">        lei = lei + res[i].height + <span class="number">10</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        location</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+</search>

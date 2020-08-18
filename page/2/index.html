@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-120241019-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?e64327510d75307e8f002f9b4c2f1629";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<link rel="alternate" href="/atom.xml" title="空" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/kuckboy1994"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover4.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">空</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['必须向前看', '要犯就犯新的错误', ''],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-2017-12-04-注释规范"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/12/04/2017-12-04-%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/"
+    >注释规范</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/12/04/2017-12-04-%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/" class="article-date">
+  <time datetime="2017-12-04T06:11:33.000Z" itemprop="datePublished">2017-12-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>此为开发团队遵循和约定的<code>注释规范</code>，意在降低后期维护的代价。</p>
+<h2 id="为什么要写代码注释？"><a href="#为什么要写代码注释？" class="headerlink" title="为什么要写代码注释？"></a>为什么要写代码注释？</h2><ul>
+<li>编码规范中有一条就是——见名知意。但有的时候直白的函数名不能表达完整的意思，这时候就是注释就可以很好的帮助我们解释和说明了。</li>
+<li>请确保你的代码能够自描述、注释良好并且易于他人理解。</li>
+<li>好的代码注释能够传达上下文关系和代码目的。</li>
+</ul>
+<h2 id="注释中写什么？"><a href="#注释中写什么？" class="headerlink" title="注释中写什么？"></a>注释中写什么？</h2><ul>
+<li>难于理解的代码段</li>
+<li>可能存在错误的代码段</li>
+<li>浏览器特殊的HACK代码</li>
+<li>想吐槽的产品逻辑</li>
+<li>业务逻辑强相关的代码</li>
+</ul>
+<p>对这些内容写一些注释对于自己或帮助他人理解是非常有帮助的。</p> 
+      <a class="article-more-link" href="/2017/12/04/2017-12-04-%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B3%A8%E9%87%8A/" rel="tag">注释</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-12-03-vi-vim"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/12/03/2017-12-03-vi-vim/"
+    >vi-vim</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/12/03/2017-12-03-vi-vim/" class="article-date">
+  <time datetime="2017-12-03T06:09:48.000Z" itemprop="datePublished">2017-12-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><code>vi</code>和<code>Vim</code>都是运行在<code>类Unix系统</code>下的编辑器。<br><code>vi</code>是<code>Visual</code>的不正规的缩写。<br><code>Vim</code>是从<code>vi</code>发展出来的一个文本编辑器。正式名字<code>Vi IMproved</code>。</p>
+<h2 id="vi琐事"><a href="#vi琐事" class="headerlink" title="vi琐事"></a>vi琐事</h2><p>vi是在伯克利加州大学，Evans Hall中，使用”Lear-Siegler ADM3A终端”编写完成，在这台机器上的“退出键”（Esc），也就是今天键盘“表格键”（Tab）的位置，目前vi用户仍使用“退出键”（Esc）来转换状态。<br><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/vi%26vim/asm3aKeyboard.png"><br>看了这张图，ヾ(｡｀Д´｡) 和HHKB的键盘好像啊，怪不得大神都用HHKB。<br>但用HHKB不一定是大神☹。</p> 
+      <a class="article-more-link" href="/2017/12/03/2017-12-03-vi-vim/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" rel="tag">编辑器</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-30-laydate日历组件改造心得"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/30/2017-11-30-laydate%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6%E6%94%B9%E9%80%A0%E5%BF%83%E5%BE%97/"
+    >laydate日历组件改造心得</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/30/2017-11-30-laydate%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6%E6%94%B9%E9%80%A0%E5%BF%83%E5%BE%97/" class="article-date">
+  <time datetime="2017-11-30T06:07:38.000Z" itemprop="datePublished">2017-11-30</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>最近两天对<code>layDate 5.0.85</code>版本进行了改造。来谈一下心得。</p>
+<h2 id="修改内容"><a href="#修改内容" class="headerlink" title="修改内容"></a>修改内容</h2><ol>
+<li>修复了当<code>min</code>的<code>日</code>比<code>max</code>的<code>日</code>大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。</li>
+<li>增加了过滤日期的功能（正选和反选）</li>
+<li>增加了选择最近的功能</li>
+<li>增加了暗黑主题<br>想要体验的小伙伴，点击<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/laydate">传送门</a></li>
+</ol>
+<h2 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h2><p>当时<code>豆饼</code>(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而且是开源的（这就方便我们个性化的定制）。号称是layui独立维护的三大组件之一，而且还是最近重写的，瞬间感觉就被他征服了。立马上手！</p> 
+      <a class="article-more-link" href="/2017/11/30/2017-11-30-laydate%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6%E6%94%B9%E9%80%A0%E5%BF%83%E5%BE%97/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-22-讨论一下css命名"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/22/2017-11-22-%E8%AE%A8%E8%AE%BA%E4%B8%80%E4%B8%8Bcss%E5%91%BD%E5%90%8D/"
+    >讨论一下css命名</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/22/2017-11-22-%E8%AE%A8%E8%AE%BA%E4%B8%80%E4%B8%8Bcss%E5%91%BD%E5%90%8D/" class="article-date">
+  <time datetime="2017-11-22T11:53:52.000Z" itemprop="datePublished">2017-11-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>现在开发中遇到的最头痛的事情莫过于给css命名了。好的命名可以快速的帮我们定位到页面中的元素，修改上也非常轻松。<br>幸运的是我们有 <code>BEM</code>。</p>
+<h2 id="BEM"><a href="#BEM" class="headerlink" title="BEM"></a>BEM</h2><p>块（block）、元素（element）、修饰符方法（modifier）(通常称为BEM)是HTML和CSS类中常用的命名约定。是由 <code>Yandex</code> 团队提出的，它的目标是帮助开发者更好地理解项目中的HTML和CSS之间的关系。</p>
+<ul>
+<li>B: block 是模块，或者称为一个组件。</li>
+<li>E: element 代表块中的元素（子节点），为了表明子节点属于哪个模块，写法是 <code>block__element</code> 。</li>
+<li>M：modifier 代表某个节点的修饰状态。</li>
+</ul>
+<p>下面是简单的例子：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span>&#123;&#125;    <span class="comment">/* 模块 */</span></span><br><span class="line"><span class="selector-class">.block--modifier</span>&#123;&#125;  <span class="comment">/* 当前模块的修饰符 */</span></span><br><span class="line"><span class="selector-class">.block__element</span>&#123;&#125;   <span class="comment">/* 模块下面的元素 */</span></span><br><span class="line"><span class="selector-class">.block__element--modifier</span>&#123;&#125; <span class="comment">/* 当前模块下面的元素的修饰符 */</span></span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2017/11/22/2017-11-22-%E8%AE%A8%E8%AE%BA%E4%B8%80%E4%B8%8Bcss%E5%91%BD%E5%90%8D/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-15-获取id元素的“又”一种方法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/"
+    >获取id元素的“又”一种方法</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2017-11-15T06:04:14.000Z" itemprop="datePublished">2017-11-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="获取id元素的“又”一种方法"><a href="#获取id元素的“又”一种方法" class="headerlink" title="获取id元素的“又”一种方法"></a>获取id元素的“又”一种方法</h1><p>今天在偶然看到某大在掘金上面发了一篇文章<a target="_blank" rel="noopener" href="https://juejin.im/post/5a0bae515188252964213855">underscore 系列之如何写自己的 underscore</a>，渣渣的我就好奇的点进去看了起来。。。</p>
+<p>在关于 <strong>导出</strong> 的地方看到了</p>
+<blockquote>
+<p>typeof exports != ‘undefined’</p>
+</blockquote>
+<p>这样一句。</p>
+<p>纳尼？ <code>exports</code> 可以直接取到页面中的id为 <code>exports</code> 的元素。</p>
+<p>脑洞巨大的我抛下文章主要内容去查这个问题了。。。</p>
+<p>首先自己试验了一下 <a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/window/window.id.html">demo</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;exports&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    alert(<span class="built_in">window</span>.document.getElementById(<span class="string">&#x27;exports&#x27;</span>) == <span class="built_in">window</span>.exports);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在ie下下面也能完美运行。。</p>
+<p>问题来了，难道大家都不知道这个方法吗？还是这个方法有什么弊端，大家都避而不用？</p> 
+      <a class="article-more-link" href="/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-14-给文本输入框增加下边框效果"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/"
+    >给文本输入框增加下边框效果</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/" class="article-date">
+  <time datetime="2017-11-14T03:57:53.000Z" itemprop="datePublished">2017-11-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>文本翻译自 <a target="_blank" rel="noopener" href="https://css-tricks.com/">css-tricks</a> 网站的 <a target="_blank" rel="noopener" href="https://css-tricks.com/text-input-expanding-bottom-border/">Text Input with Expanding Bottom Border</a> 一文。翻译有误，期待斧正。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Petr Gazarov在他的文章<code>Text input highlight, TripAdvisor style</code>中使用了一个漂亮的小设计。</p>
+<p><img src="https://github.com/kuckboy1994/Blog/blob/master/gif/bb_oqufjg.webp?raw=true"></p>
+<p>这是一个花招，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p> 
+      <a class="article-more-link" href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-13-用网页实现移动端横向纵向列固定的表格"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/"
+    >用网页实现移动端横向纵向列固定的表格</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/" class="article-date">
+  <time datetime="2017-11-13T03:54:47.000Z" itemprop="datePublished">2017-11-13</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>最终效果：</p>
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/gif/table-fixed.gif"></p>
+<p>当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>简单分析来说，页面就是上面一个<code>position:fixed;</code>在顶部，下面的列表的最左边一列<code>position-x:fixed</code>（哈哈这个属性当然是不存在的啦）。</p>
+<p>从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们都只能操作一个元素，不知道大家能不能理解，就好比我们页面上有一个区域a有滚动条，当前的页面很长，也有滚动条，鼠标在区域a上滚动的时候页面是不动的，只有当区域a滚到底的时候，页面才会继续滚动。所以利用这个特性，我们创造一个叠加的滚动区域，一个<code>overflow-y:auto;</code>，一个<code>overflow-x:auto</code>。一个只能纵向滚动，一个只能横向滚动。</p> 
+      <a class="article-more-link" href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" rel="tag">移动端</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-11-水平垂直居中"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"
+    >水平垂直居中</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/" class="article-date">
+  <time datetime="2017-11-11T11:52:36.000Z" itemprop="datePublished">2017-11-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><ol>
+<li><p>若是行内元素，给改元素的父级设置 <code>text-align:center</code> ，即可实现行内元素水平居中。<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/1-text-align.html">demo</a></p>
+</li>
+<li><p>若是块级元素, 该元素设置 <code>margin:0 auto</code> 。<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/2-margin-auto.html">demo</a></p>
+</li>
+<li><p>若子元素包含 <code>float:left</code> 属性, 为了让子元素水平居中, 则可让父元素宽度设置为 <code>fit-content</code> ,并且配合 <code>margin</code> , 作如下设置:<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/3-margin-auto-fit-content.html">demo</a></p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fit-content</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: -moz-fit-content;</span><br><span class="line">    <span class="attribute">width</span>: -webkit-fit-content;</span><br><span class="line">    <span class="attribute">width</span>: fit-content;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 目前这个属性只支持Chrome和Firefox浏览器。</p> 
+      <a class="article-more-link" href="/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-11-使用伪元素来形成类似“居中浮动”的效果"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/"
+    >使用伪元素来形成类似“居中浮动”的效果</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/" class="article-date">
+  <time datetime="2017-11-11T11:50:41.000Z" itemprop="datePublished">2017-11-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>文本翻译自 <a target="_blank" rel="noopener" href="https://css-tricks.com/">css-tricks</a> 网站的 <a target="_blank" rel="noopener" href="https://css-tricks.com/float-center/">Faking ‘float: center’ with Pseudo Elements</a> 一文。翻译有误，期待斧正。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>比方说，你想完成一个类似这样的布局：</p>
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/catinmiddle1.png" alt="catinmiddle1"></p>
+<p>这个展示效果没毛病吧？特别是你想把这个猫作为文章的重点。</p>
+<p>做到这一点其实并不容易。我们当前有的布局方法并不能真正的考虑到这一点。事实上，有时候觉得这种布局并没有真正的“网页设计”的思想。我说的对吗？我不认为即使有这种流通边缘的CSS布局系统就能很好地处理这个问题。这有点像float，因为文本环绕着图像，但是文本环绕两个方向，所以有点像<code>float: center;</code>居中浮动;或<code>float: both;</code>全部浮动，但这两个都是不存在的。</p>
+<p>但这是可以实现的！</p> 
+      <a class="article-more-link" href="/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-11-05-谈一谈一年来的经历"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/11/05/2017-11-05-%E8%B0%88%E4%B8%80%E8%B0%88%E4%B8%80%E5%B9%B4%E6%9D%A5%E7%9A%84%E7%BB%8F%E5%8E%86/"
+    >谈一谈一年来的经历</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/11/05/2017-11-05-%E8%B0%88%E4%B8%80%E8%B0%88%E4%B8%80%E5%B9%B4%E6%9D%A5%E7%9A%84%E7%BB%8F%E5%8E%86/" class="article-date">
+  <time datetime="2017-11-05T03:48:03.000Z" itemprop="datePublished">2017-11-05</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="生活篇"><a href="#生活篇" class="headerlink" title="生活篇"></a>生活篇</h2><p>去年的四月底（201604），我和我的室友（我羊），带着一个包和一千块钱去往了宁波到杭州的路途。当时住在我高中同学租的小和山那边的居民房里，那时候手里也比较拮据，生活用品都是两个人一起用的，当时还想着可能是场持久战，看什么时候能找到工作吧。一个星期还是一个月？</p>
+<p>每天晚上我们都会花时间在学习今天面试的内容和投简历上，第二天一早我们就会出门，因为面试总是会被排的满满当当的。每天早上从小和山出来的时候，公交车总是异常的挤，想来大城市就是有这么多怀揣这梦想的打工者吧。中午的时候吃饭就是看运气了，得找一家看起来不贵的店进去吃，不然怕是熬不住了。晚上的时候我和我羊要是面试完离得近，我们就会约着见面一起，要么就是回去再吃。我们住的地方附近就有一个大学，附近的垃圾街伙食还是挺实惠的。</p>
+<p>找工作期间，志鹏（隔壁班的小伙伴，之前已经在杭州找到工作了）还来找我们一起吃过饭，大家一起聊聊天，感觉又回到了大学读书的时候，没有辛苦，只有梦想。</p>
+<p>幸福来的总是很快，第三天晚上的时候，我收到了同花顺的offer，第四天也收到了两个offer。我羊也收到了两三个offer，我们那天晚上还出去吃了一顿杨国福麻辣烫。第一次吃杨国福，点了二十二块，这一碗贼大，吃了一半就吃不下了，这种计价模式真是让人害怕啊！（你得知道你手里有几斤几两 ）</p> 
+      <a class="article-more-link" href="/2017/11/05/2017-11-05-%E8%B0%88%E4%B8%80%E8%B0%88%E4%B8%80%E5%B9%B4%E6%9D%A5%E7%9A%84%E7%BB%8F%E5%8E%86/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2017-2020
+        <i class="ri-heart-fill heart_icon"></i> kuckboy1994
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s4.cnzz.com/z_stat.php?id=1279191630&amp;web_id=1279191630'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.png" alt="空"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">摄影</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=536057&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

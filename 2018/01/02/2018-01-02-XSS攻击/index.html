@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    XSS攻击 |  
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-120241019-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?e64327510d75307e8f002f9b4c2f1629";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<link rel="alternate" href="/atom.xml" title="空" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-2018-01-02-XSS攻击"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  XSS攻击
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/" class="article-date">
+  <time datetime="2018-01-02T06:22:16.000Z" itemprop="datePublished">2018-01-02</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">14 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>XSS攻击全称跨站脚本攻击，常见的就是攻击者把恶意代码植入到用户页面中。</p>
+<p>在XSS攻击中，一般有三个角色参与：攻击者、目标服务器、受害者的浏览器。</p>
+<p>由于服务端没有对用户的输入做安全方面的验证，攻击者就通过输入的方式，夹带一些恶意的html脚本代码（包括html, css, js）。</p>
+<a id="more"></a>
+
+<h2 id="XSS攻击的分类"><a href="#XSS攻击的分类" class="headerlink" title="XSS攻击的分类"></a>XSS攻击的分类</h2><ol>
+<li>反射型XSS（Reflected XSS）</li>
+</ol>
+<p>反射型XSS，又称非持久型XSS。之所以称为反射型XSS，则是因为这种攻击方式的注入代码是从目标服务器通过错误信息、搜索结果等等方式“反射”回来的。而称为非持久型XSS，则是因为这种攻击方式具有一次性。<code>攻击者通过电子邮件等方式将包含注入脚本的恶意链接发送给受害者，当受害者点击该链接时，注入脚本被传输到目标服务器上，然后服务器将注入脚本“反射”到受害者的浏览器上，从而在该浏览器上执行了这段脚本。</code></p>
+<p>比如攻击者将如下链接发送给受害者：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;search.asp?input&#x3D;&lt;script&gt;alert(document.cookie);&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>当受害者点击这个链接的时候，注入的脚本被当作搜索的关键词发送到目标服务器的search.asp页面中，则在搜索结果的返回页面中，这段脚本将被当作搜索的关键词而嵌入（服务端渲染）。这样，当用户得到搜索结果页面后，这段脚本也得到了执行。这就是反射型XSS攻击的原理，可以看到，攻击者巧妙地通过反射型XSS的攻击方式，达到了在受害者的浏览器上执行脚本的目的。由于代码注入的是一个动态产生的页面而不是永久的页面，因此这种攻击方式只在点击链接的时候才产生作用，这也是它被称为非持久型XSS的原因。<br>危害在用户查询的时候，可以实现把用户的cookie信息发送给攻击者</p>
+<p>情况二，通过渲染页面进行攻击：<br>比如攻击者将如下链接发送给受害者：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;response-xss.html?input&#x3D;&lt;style&gt;body&#123;background:red;&#125;&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<p>需要渲染input中的内容到页面中，上面的会修改页面的背景色。<br><s>渲染模式是没办法获取用户cookie信息的（个人测试得出的结论，有异议敬请斧正）。</s><br>如果一个input的value属性值是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">琅琊榜&quot; onclick&#x3D;&quot;javascript:alert(&#39;handsome boy&#39;)</span><br></pre></td></tr></table></figure>
+<p>就可能出现</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;琅琊榜&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;javascript:alert(&#x27;handsome boy&#x27;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>点击输入框爆炸。。</p>
+<ol start="2">
+<li>存储型XSS（Stored XSS）</li>
+</ol>
+<p>存储型XSS，又称持久型XSS，他和反射型XSS最大的不同就是，攻击脚本将被永久地存放在目标服务器的数据库和文件中。这种攻击多见于论坛，攻击者在发帖的过程中，将恶意脚本连同正常信息一起注入到帖子的内容之中。随着帖子被论坛服务器存储下来，恶意脚本也永久地被存放在论坛服务器的后端存储器中。当其它用户浏览这个被注入了恶意脚本的帖子的时候，恶意脚本则会在他们的浏览器中得到执行，从而受到了攻击。</p>
+<p>可以看到，存储型XSS的攻击方式能够将恶意代码永久地嵌入一个页面当中，所有访问这个页面的用户都将成为受害者。如果我们能够谨慎对待不明链接，那么反射型的XSS攻击将没有多大作为，而存储型XSS则不同，由于它注入的往往是一些我们所信任的页面，因此无论我们多么小心，都难免会受到攻击。可以说，存储型XSS更具有隐蔽性，带来的危害也更大，除非服务器能完全阻止注入，否则任何人都很有可能受到攻击。</p>
+<ol>
+<li><p>发一篇文章，里面包含了恶意脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">今天天气不错啊！&lt;script&gt;alert(&#39;handsome boy&#39;)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>后端没有对文章进行过滤，直接保存文章内容到数据库。</p>
+</li>
+<li><p>当其他看这篇文章的时候，包含的恶意脚本就会执行。</p>
+</li>
+</ol>
+<p>PS：因为大部分文章是保存整个HTML内容的，前端显示时候也不做过滤，就极可能出现这种情况。</p>
+<p><code>结论：</code></p>
+<p>后端尽可能对提交数据做过滤，在场景需求而不过滤的情况下，前端就需要做些处理了。</p>
+<p>开发安全措施：</p>
+<ol>
+<li><p>首要是服务端要进行过滤，因为前端的校验可以被绕过。</p>
+</li>
+<li><p>当服务端不校验时候，前端要以各种方式过滤里面可能的恶意脚本，例如script标签，将特殊字符转换成HTML编码。</p>
+</li>
+<li><p>跨站请求伪造</p>
+</li>
+</ol>
+<p>跨站请求伪造（Cross-SiteRequest Forgery，CSRF），作为OWASP组织的2007年提出十大安全漏洞第五，它也属于XSS攻击的一种衍生。所谓跨站请求伪造，就是攻击者利用XSS注入攻击的方式，注入一段脚本，而当受害者的浏览器运行这段脚本时，脚本伪造受害者发送了一个合法请求。比如我们注入如下的HTML代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://www.bank.com/transfer.do?toAct=123456&amp;money=10000&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>假如上面的代码中所访问的是某个银行网站的转账服务，则当受害者的浏览器运行这段脚本时，就会向攻击者指定的账户（示例的123456）执行转账操作。由于这个转账请求是在受害者的浏览器中运行的，因此浏览器也会自动将受害者的Cookie信息一并发送。这样，发送的请求就好像是受害者自己发送的一样，银行网站也将认可这个请求的合法性，攻击者也就达到了伪造请求的目的。</p>
+<p>类似操作：<br>攻击者提供一个免费的wifi，连接之后，在本地开启fiddler这种抓包工具，这类工具不仅能获取到被攻击者的所有信息，还能修改用户访问的内容，模拟用户在被害者设备发起请求。<br><img src="https://github.com/kuckboy1994/Blog/raw/master/images/xss-attack/xss-attack.png"></p>
+<ol start="4">
+<li>注入恶意软件</li>
+</ol>
+<p>除了直接注入恶意脚本以外，通过XSS攻击，攻击者也可以很方便地在脚本中引入一些恶意软件，比如病毒、木马、蠕虫等等。例如，攻击者可以在某个自己建立的页面上放置一些恶意软件，然后用XSS注入的方式，插入一段引用该页面的脚本。这样当受害者的浏览器执行这段脚本的时候，就会自动访问放置了恶意软件的页面，从而受到这些恶意软件的感染。</p>
+<p>利用XSS注入恶意软件的方式，攻击者可以很方便地在互联网上传播病毒、木马和蠕虫，通过这种途径，攻击者就可以通过这些病毒、木马和蠕虫，进一步地对受害者的主机发动攻击。目前，互联网上的“挂马”现象非常普遍，而XSS注入的出现也无疑给“挂马”的攻击者指明了又一个新的方向。通过传播这些木马，窃取合法用户的敏感信息，不少非法攻击者也逐渐将这一过程产业化，经常可以见到以信封方式批量兜售账号密码的现象。这也给许多正常的网络用户造成了许多无法挽回的巨大损失，造成的危害也很大。</p>
+<h2 id="XSS的预防"><a href="#XSS的预防" class="headerlink" title="XSS的预防"></a>XSS的预防</h2><p>在前面的文章中，我们具体介绍了各种XSS攻击的原理和方式。可以看出，XSS是一种覆盖面很广，隐蔽性很高，危害也非常大的网络应用安全漏洞。除非网站服务器完全不存在XSS漏洞，否则就会给攻击者们留下空子。因此，如何在Web应用程序的开发过程中对XSS漏洞进行预防，是所有网站开发人员所必须注意的重中之重。下面我们介绍几种常用的XSS预防措施。</p>
+<ol>
+<li>输入检测</li>
+</ol>
+<p>对用户的所有输入数据进行检测，比如过滤其中的“&lt;”、“&gt;”、“/”等可能导致脚本注入的特殊字符，或者过滤“script”、“javascript”等脚本关键字，或者对输入数据的长度进行限制等等。同时，我们也要考虑用户可能绕开ASCII码，使用十六进行编码如“&lt;</span>”（“&lt;”）、“&gt;”（“&gt;”）等来输入脚本。因此，对用户输入的十六进制编码，我们也要进行相应的过滤。只要开发人员能够严格检测每一处交互点，保证对所有用户可能的输入都进行检测和XSS过滤，就能够有效地阻止XSS攻击。</p>
+<ol start="2">
+<li>输出编码</li>
+</ol>
+<p>通过前面对XSS攻击的分析，我们可以看到，之所以会产生XSS攻击，就是因为Web应用程序将用户的输入直接嵌入到某个页面当中，作为该页面的HTML代码的一部分。因此，当Web应用程序将用户的输入数据输出到目标页面中时，只要用HtmlEncoder等工具先对这些数据进行编码，然后再输出到目标页面中。这样，如果用户输入一些HTML的脚本，也会被当成普通的文字，而不会成为目标页面HTML代码的一部分得到执行。</p>
+<ol start="3">
+<li>Cookie防盗</li>
+</ol>
+<p>利用XSS攻击，攻击者可以很方便地窃取到合法用户的Cookie信息。因此，对于网站来说，不能在Cookie信息中存放太多敏感信息，也不能将Cookie作为身份认证的唯一标识，等等。因此，对于Cookie，我们可以采取以下的措施。首先，我们要尽可能地避免在Cookie中泄露隐私，如用户名、密码等；其次，我们可以将Cookie信息用MD5等Hash算法进行多次散列后存放；再次，为了防止重放攻击，我们也可以将Cookie和IP进行绑定，这样也可以阻止攻击者冒充正常用户的身份。</p>
+<ol start="4">
+<li>严格限制URL访问</li>
+</ol>
+<p>攻击者使用XSS攻击，通常都要借助于自己指定的网站页面，比如用它来记录敏感信息、在该页面上“挂马”等等。因此，在页面的脚本代码执行过程中，只要我们严格限制其访问的URL，比如只允许脚本代码访问本网站的URL等方式，就可以避免脚本的执行链接到其它可能是攻击者指定的页面上。</p>
+<ol start="5">
+<li>用户注意事项</li>
+</ol>
+<p>作为一名普通的网络用户，在XSS攻击的预防上总体处在被动的地位。但是我们也可以通过采取一些措施来尽可能地避免受到XSS攻击。首先，我们不要轻易相信电子邮件或者网页中的不明链接，这些链接很有可能引导反射型XSS攻击或者使我们访问到一些不安全的网页。其次，我们在不必要的时候可以禁用脚本功能，这样XSS注入的脚本就无法得到运行。再次，我们也可以使用一些安全的浏览器上网，有的浏览器提供XSS过滤功能，会提示页面中可能发生的XSS注入并将其阻挡下来。</p>
+<h2 id="XSS的漏洞检测"><a href="#XSS的漏洞检测" class="headerlink" title="XSS的漏洞检测"></a>XSS的漏洞检测</h2><ol>
+<li>黑盒测试<br>所谓黑盒测试，就是在不知道系统的代码和运行状态的条件下，对系统进行的测试。在对XSS漏洞的检测中，我们可以模拟黑客的攻击手段，在所有可能的数据输入接口处，尝试进行一些XSS注入。通过观察注入后的引用这些数据的页面，看其是否出现被注入的现象，即可确实是否存在XSS漏洞。比如我们可以用下面所列的一些脚本来尝试XSS注入：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">1. 在HTML标签中输出</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">2. 在HTML属性中输出</span><br><span class="line">&quot;&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">e.g.</span></span></span><br><span class="line">&lt;div name=&quot;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;javascript:alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">http://xxx.com/yyy.png&quot; onerror=&quot;alert(&#x27;XSS&#x27;)</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://xxx.com/yyy.png&quot;</span> <span class="attr">onerror</span>=<span class="string">&quot;alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">3. 在<span class="tag">&lt;<span class="name">script</span>&gt;</span>标签中输出</span><br><span class="line">&quot;;alert(document.cookie);//</span><br><span class="line">e.g. </span><br><span class="line"><span class="handlebars"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> x = <span class="string">&quot;&quot;</span>;alert(<span class="built_in">document</span>.cookie);<span class="comment">//&quot;;</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">4. 在事件中输出</span><br><span class="line">&#x27;&#x27;);alert(document.cookie</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;funcA(&#x27;&#x27;);alert(document.cookie)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">5. 在CSS中输出（仅低版本 IE 有效）</span><br><span class="line">body &#123;background-image:url(&quot;javascript:alert(&#x27;XSS&#x27;)&quot;);&#125;</span><br><span class="line">body &#123;background-image:expression(alert(&#x27;xss&#x27;));&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如果在打开那些引用了该输入数据的页面时，弹出对话框显示信息，则可以确定该数据输入时有可能导致XSS注入，从而确定了XSS漏洞的位置。</p>
+<ol start="2">
+<li>静态分析</li>
+</ol>
+<p>XSS漏洞静态分析方法属于白盒测试方法的一种，它通过对Web应用的代码进行分析，从而发现其中可能存在的问题。通常来说，静态分析技术只是对代码进行一些简单的扫描，找到其中有可能导致XSS注入的地方，将其报告给我们。</p>
+<p>比如在Web应用的代码中可能存在一些读入数据的API，如Request.QueryString()，$_GET等，如果存在这些API，则表示可能引入XSS的注入。通过静态分析工具，我们可以很容易发现所有这些读入数据的API，从而详细检查每一个数据输入点是否进行了XSS注入的过滤。可以看到，静态分析的方法，只是帮助我们定位XSS漏洞的可能位置，由于静态分析工具难以判定是否对输入数据进行过XSS过滤，因此还是需要我们手动地进行检查，从而确保不存在XSS漏洞。</p>
+<ol start="3">
+<li>数据流分析</li>
+</ol>
+<p>XSS漏洞之所以产生，根本原因在于不安全的数据流，使得用户的输入数据被直接嵌入到某些页面中。比如PHP中的echo语句，就能够将一些数据直接添加为HTML页面的一部分，如果这个数据是用户注入了XSS脚本的数据，则会导致产生XSS攻击。因此，数据流分析的主要思想就是使用一些模型或者工具，分析Web应用程序代码中的数据传输情况，从而发现其中存在的问题。比如，我们可以将用户的输入数据所存储的变量打上污点标记，通过对数据流和变量类型的分析，逐步标记所有引用了污点变量的中间变量，最后通过观察输出到页面中的变量数据是否存在污点，来判断是否可能产生XSS漏洞。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/hitwangpeng/article/details/45503465">[web安全]XSS可能发生的场景及解决方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lovesong/p/5199623.html">前端安全之XSS攻击</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/yefan2222/article/details/7091863">Cross-Site Scripting(XSS): 跨站脚本攻击介绍</a></li>
+</ul>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://kuckboy1994.github.io/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xss/" rel="tag">xss</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2018/05/28/2018-05-28-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            hexo博客搭建指南
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">获取本机的ip地址</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "pTYnUlVxn3Jqw8vwmDXghUTq-gzGzoHsz",
+    app_key: "o0SyljW2iMeUeYfs6nMyA1cu",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2017-2020
+        <i class="ri-heart-fill heart_icon"></i> kuckboy1994
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s4.cnzz.com/z_stat.php?id=1279191630&amp;web_id=1279191630'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.png" alt="空"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">摄影</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=536057&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
