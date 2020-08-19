@@ -101,7 +101,11 @@ var _hmt = _hmt || [];
     <div class="article-meta">
       <a href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/" class="article-date">
   <time datetime="2017-11-14T03:57:53.000Z" itemprop="datePublished">2017-11-14</time>
-</a>   
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
@@ -134,7 +138,7 @@ var _hmt = _hmt || [];
   <p>文本翻译自 <a target="_blank" rel="noopener" href="https://css-tricks.com/">css-tricks</a> 网站的 <a target="_blank" rel="noopener" href="https://css-tricks.com/text-input-expanding-bottom-border/">Text Input with Expanding Bottom Border</a> 一文。翻译有误，期待斧正。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Petr Gazarov在他的文章<code>Text input highlight, TripAdvisor style</code>中使用了一个漂亮的小设计。</p>
 <p><img src="https://github.com/kuckboy1994/Blog/blob/master/gif/bb_oqufjg.webp?raw=true"></p>
-<p>这是一个花招，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p>
+<p>这是一个技巧，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p>
 <a id="more"></a>
 <p>如果你愿意使用<code>&lt;span contenteditable&gt;</code>，你可以在CSS中完成所有的事情！</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">div &#123;</span><br><span class="line"><span class="css">    <span class="selector-tag">padding</span>: 0<span class="selector-class">.4rem</span> 0;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border-bottom</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#383838</span>;</span></span><br><span class="line">    width: 90vw;</span><br><span class="line">&#125;</span><br><span class="line">span &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    bottom: -11px;</span><br><span class="line">    color: white;</span><br><span class="line">    display: inline-block;</span><br><span class="line"><span class="css">    <span class="selector-tag">padding</span>: 0<span class="selector-class">.4rem</span> 0;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border-bottom</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#D5BA5E</span>;</span></span><br><span class="line">    outline: 0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">contenteditable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -169,6 +173,16 @@ var _hmt = _hmt || [];
     
 
     <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+        </li>
+      </ul>
+    </div>
     
     <footer class="article-footer">
        

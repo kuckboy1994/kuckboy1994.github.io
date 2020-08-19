@@ -22,8 +22,11 @@
 <p>十月份的时候，开始了金融大师手机app的项目，开始做手机页面，使用reactjs+and，写h5页面也稍有心得。</p>
 <p>做前端已经一年整了，现在的我回头看当时的我，走了很多弯路，但是这确实是我想走的路。这是我赖以生存的技能，也是我的爱好，创造一个不一样的世界呈现给众人。接下去的一年将会给我更大的挑战，我也会挑战更大的困难。毕竟我不是一个人了…</p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
-        <tag>感悟</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -124,6 +127,9 @@
 <li><a href="https://www.smashingmagazine.com/2013/05/centering-elements-with-flexbox/">Flexbox Is As Easy As Pie: Designing CSS Layouts</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
       <tags>
         <tag>CSS</tag>
       </tags>
@@ -150,10 +156,11 @@
 <p>要是所有人都能理解你，你得平庸成什么样</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>HTML</tag>
-        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>
@@ -162,7 +169,7 @@
     <content><![CDATA[<p>文本翻译自 <a href="https://css-tricks.com/">css-tricks</a> 网站的 <a href="https://css-tricks.com/text-input-expanding-bottom-border/">Text Input with Expanding Bottom Border</a> 一文。翻译有误，期待斧正。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Petr Gazarov在他的文章<code>Text input highlight, TripAdvisor style</code>中使用了一个漂亮的小设计。</p>
 <p><img src="https://github.com/kuckboy1994/Blog/blob/master/gif/bb_oqufjg.webp?raw=true"></p>
-<p>这是一个花招，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p>
+<p>这是一个技巧，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p>
 <a id="more"></a>
 <p>如果你愿意使用<code>&lt;span contenteditable&gt;</code>，你可以在CSS中完成所有的事情！</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">div &#123;</span><br><span class="line"><span class="css">    <span class="selector-tag">padding</span>: 0<span class="selector-class">.4rem</span> 0;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border-bottom</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#383838</span>;</span></span><br><span class="line">    width: 90vw;</span><br><span class="line">&#125;</span><br><span class="line">span &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    bottom: -11px;</span><br><span class="line">    color: white;</span><br><span class="line">    display: inline-block;</span><br><span class="line"><span class="css">    <span class="selector-tag">padding</span>: 0<span class="selector-class">.4rem</span> 0;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border-bottom</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#D5BA5E</span>;</span></span><br><span class="line">    outline: 0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">contenteditable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -185,6 +192,9 @@
 <li><a href="https://w3c.github.io/">w3c</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>翻译</category>
+      </categories>
       <tags>
         <tag>CSS</tag>
       </tags>
@@ -210,9 +220,11 @@
 <li>列①： 注意，我们使用的是div来实现文本的列，而不是CSS列，虽然使用css来实现更酷，更具有语义化，但是用css的话我们上面的就不起作用了。</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>翻译</category>
+      </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>翻译</tag>
       </tags>
   </entry>
   <entry>
@@ -238,6 +250,13 @@
 </blockquote>
 <p>本来看看v8的源码，发现我还是入门级别的，大家都不推荐看。我还是老老实实的打基础的吧。</p>
 ]]></content>
+      <categories>
+        <category>前端</category>
+        <category>HACK</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
   </entry>
   <entry>
     <title>讨论一下css命名</title>
@@ -311,6 +330,9 @@
 <li><a href="https://css-tricks.com/bem-101/">BEM 101</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>通用技能</category>
+      </categories>
       <tags>
         <tag>CSS</tag>
         <tag>规范</tag>
@@ -641,8 +663,10 @@
 <li><a href="https://zh.wikipedia.org/wiki/Vim">Vim-维基百科</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>通用技能</category>
+      </categories>
       <tags>
-        <tag>linux</tag>
         <tag>编辑器</tag>
       </tags>
   </entry>
@@ -759,13 +783,16 @@
 <li><a href="http://kb.cnblogs.com/page/206954/">那些令人喷饭的代码注释</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>通用技能</category>
+      </categories>
       <tags>
         <tag>规范</tag>
         <tag>注释</tag>
       </tags>
   </entry>
   <entry>
-    <title>项目小结（一）</title>
+    <title>vuejs项目小结（一）</title>
     <url>/2017/12/20/2017-12-20-%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<p>许久没有写vue了，前几天有人问我问题，概念都有些理不清楚了。。<br>项目快完成，总结一下。从最基础的开始，重现我遇到的问题和一些细节问题。</p>
 <h2 id="项目效果图"><a href="#项目效果图" class="headerlink" title="项目效果图"></a>项目效果图</h2><p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-1.png"></p>
@@ -848,6 +875,9 @@
 <p>mapstate中定义的计算属性isShowDelAllBtn直接可以在组件中使用 默认带一个参数state，可以直接使用state中的方法和属性</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>先分享这么几点，好久没碰了，之后加深理解之后不断优化。加油！ happy hacking！</p>
 ]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
       <tags>
         <tag>vue</tag>
         <tag>vuex</tag>
@@ -977,6 +1007,10 @@
 <li><a href="http://www.cnblogs.com/xianyulaodi/p/5755079.html">【原】雅虎前端优化的35条军规</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>前端</category>
+        <category>优化</category>
+      </categories>
       <tags>
         <tag>优化</tag>
         <tag>前端</tag>
@@ -1020,6 +1054,9 @@
 <img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png"/>
 <!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png) -->
 `address`包还可以获取`IPv6`和`MAC`地址。详细查看 [address-npm](https://www.npmjs.com/package/address)]]></content>
+      <categories>
+        <category>mac</category>
+      </categories>
       <tags>
         <tag>mac</tag>
       </tags>
@@ -1123,6 +1160,9 @@
 <li><a href="http://blog.csdn.net/yefan2222/article/details/7091863">Cross-Site Scripting(XSS): 跨站脚本攻击介绍</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
       <tags>
         <tag>xss</tag>
       </tags>
@@ -1201,6 +1241,9 @@
 <li><a href="https://github.com/litten/hexo-theme-yilia">Github litten/hexo-theme-yilia</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
         <tag>建站</tag>
@@ -1231,6 +1274,9 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display: block;</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
       <tags>
         <tag>微信小程序</tag>
         <tag>css</tag>
@@ -1255,6 +1301,9 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">button::after &#123;</span><br><span class="line">  border: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在根目录下的 <code>app.wxss</code> 添加如上代码修改所有 <code>button</code> 的效果。<br>猜测官方的 <code>button</code> 组件使用的是 <code>::after</code> 伪类的方式实现边框的。遇到同类问题可以在 <code>::after</code> 上做尝试。 例如: <code>border-radius</code>。</p>
 ]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
       <tags>
         <tag>微信小程序</tag>
       </tags>
@@ -1276,6 +1325,9 @@
 <p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frsobwh7psj20ai0cudhn.jpg"></p>
 <p>红色框起来的地方，我在 <code>喜欢操作</code> 上方加了一个按钮，并且赋值了相应的属性。这样我们就在用户交互的时候同时获取了他的 <code>formid</code>。而且增加了用户的点击区域，优化了交互。</p>
 ]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
       <tags>
         <tag>微信小程序</tag>
       </tags>
@@ -1300,6 +1352,9 @@
 <p>样式中一定要设置 <code>white-space: nowrap;</code> 否则不能滚动。</p>
 <p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtre5rolqg206j0bchdu.gif"></p>
 ]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
       <tags>
         <tag>微信小程序</tag>
       </tags>
@@ -1322,8 +1377,55 @@
 <a id="more"></a>
 
 <h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* global getApp Page wx */</span></span><br><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的防抖函数</span></span><br><span class="line"><span class="keyword">let</span> timeout</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">    timeout = <span class="built_in">setTimeout</span>(func, wait)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的节流函数</span></span><br><span class="line"><span class="keyword">let</span> timeout2 = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!timeout2) &#123;</span><br><span class="line">      timeout2 = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout2)</span><br><span class="line">        timeout2 = <span class="literal">null</span></span><br><span class="line">        func()</span><br><span class="line">      &#125;, wait)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    width: wx.getSystemInfoSync().windowWidth,</span><br><span class="line">    height: wx.getSystemInfoSync().windowHeight,</span><br><span class="line"></span><br><span class="line">    videoLoading: <span class="literal">false</span>,</span><br><span class="line">    videoList: [],</span><br><span class="line"></span><br><span class="line">    location: [],</span><br><span class="line">    isLock: <span class="literal">false</span>,  <span class="comment">// 当前栗子无用，如果有些弹窗控制不住背后的视频列表滚动的话，isLock的作用就发挥出来了。</span></span><br><span class="line">    localIndex: <span class="number">0</span>,</span><br><span class="line">    noPageScroll: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  info: &#123;</span><br><span class="line">    videoPlayDetail: &#123;&#125; <span class="comment">// 存放所有视频的播放位置</span></span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad (options) &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList(<span class="number">1</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 分页获取视频</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  getVideoList (initPage) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoLoading, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">if</span> (videoLoading) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoLoading: <span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 制造模拟数据</span></span><br><span class="line">    <span class="keyword">let</span> data = [&#123;</span><br><span class="line">      cover: <span class="string">&#x27;https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvx1996xoj20da07in0t.jpg&#x27;</span>,</span><br><span class="line">      src: <span class="string">&#x27;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&#x27;</span>,</span><br><span class="line">      width: <span class="number">480</span>,</span><br><span class="line">      height: <span class="number">272</span>,</span><br><span class="line">      title: <span class="string">&#x27;腾讯大学视频&#x27;</span>,</span><br><span class="line">      isPlay: <span class="literal">false</span></span><br><span class="line">    &#125;]</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="comment">// 模拟请求</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        videoList: videoList.concat(<span class="built_in">this</span>.formatVideoList(data)),</span><br><span class="line">        videoLoading: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="comment">// 给数据足够的渲染时间，之后进行视频位置的测量</span></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.getLocationInfo()</span><br><span class="line">        <span class="keyword">if</span> (initPage) &#123; <span class="comment">// 如果是首次进入，就自动播放第一个视频</span></span><br><span class="line">          <span class="built_in">this</span>.showVideoList(<span class="number">0</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 格式化视频列表</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Array&#125;</span> </span>videoList 需要格式化的视频列表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  formatVideoList (videoList) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; width, height &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">return</span> videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> styleHight = width * value.height / value.width</span><br><span class="line">      styleHight = styleHight &gt; <span class="number">0.7</span> * height ? <span class="number">0.7</span> * height : styleHight</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...value,</span><br><span class="line">        styleHight: <span class="built_in">Math</span>.floor(styleHight),</span><br><span class="line">        currentTime: <span class="number">0</span>,</span><br><span class="line">        isPlay: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 点击播放</span></span><br><span class="line">  eventPlay (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; index &#125; = event.currentTarget.dataset</span><br><span class="line">    <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 视频更新的时候不断的去记录播放的位置</span></span><br><span class="line">  eventPlayupdate (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">detail</span>: &#123; currentTime &#125;, <span class="attr">currentTarget</span>: &#123; <span class="attr">dataset</span>: &#123; index &#125; &#125; &#125; = event</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.info.videoPlayDetail[index] = currentTime</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 到底加载更多</span></span><br><span class="line">  onReachBottom () &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 设置播放的视频</span></span><br><span class="line">  showVideoList (index) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index)</span><br><span class="line">    <span class="keyword">let</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    videoList = videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      value.isPlay = <span class="literal">false</span></span><br><span class="line">      <span class="keyword">return</span> value</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">if</span> (index &gt;= <span class="number">0</span> &amp;&amp; videoList[index]) &#123;</span><br><span class="line">      videoList[index].isPlay = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoList</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 全屏播放，设置当前页面滚动无效，全屏的时候，会触发滚动事件。</span></span><br><span class="line">  eventFullScreen (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event)</span><br><span class="line">    <span class="keyword">const</span> &#123; fullScreen &#125; = event.detail</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      noPageScroll: fullScreen</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onPageScroll (&#123; scrollTop &#125;) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.data.noPageScroll) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取数据分别放置到各自的节流防抖函数中，防止调用的时候数据已近发生改变</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节流，每200毫秒触发一次</span></span><br><span class="line">    throttle(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;throttle&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, localIndex, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">          index = i</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (localIndex !== index) &#123;</span><br><span class="line">        videoList[localIndex].currentTime = <span class="built_in">this</span>.info.videoPlayDetail[localIndex]</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          videoList</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">this</span>.showVideoList()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 防抖，只触发一次</span></span><br><span class="line">    debounce(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;debounce&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, isLock &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">if</span> (!isLock) &#123;</span><br><span class="line">        <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">            index = i</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          localIndex: index</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 测量当前的所有视频的高度，计算出视频播放与否的位置</span></span><br><span class="line">  getLocationInfo () &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">var</span> query = wx.createSelectorQuery()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; videoList.length; i++) &#123;</span><br><span class="line">      query.select(<span class="string">`#video<span class="subst">$&#123;i&#125;</span>`</span>).boundingClientRect()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> length = videoList.length</span><br><span class="line">    <span class="keyword">const</span> location = []</span><br><span class="line">    query.exec(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line"></span><br><span class="line">      <span class="keyword">let</span> start = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> end = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> lei = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">          start = <span class="number">0</span></span><br><span class="line">          end = videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          start = end</span><br><span class="line">          end = lei + videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location.push(&#123;</span><br><span class="line">          start: start,</span><br><span class="line">          end: end</span><br><span class="line">        &#125;)</span><br><span class="line">        lei = lei + res[i].height + <span class="number">10</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        location</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
       <tags>
         <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tiktok设置可点击的website链接</title>
+    <url>/2020/08/19/2020-08-19-tiktok%E8%AE%BE%E7%BD%AE%E5%8F%AF%E7%82%B9%E5%87%BB%E7%9A%84website%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>在 <code>tiktok</code> 的 <code>Me</code> 页面设置一个可以点击的连接可以帮助导流。点击之后跳转到不同的应用市场。</p>
+<h2 id="几个前置条件"><a href="#几个前置条件" class="headerlink" title="几个前置条件"></a>几个前置条件</h2><ol>
+<li>粉丝数要达到1000</li>
+<li>一个在国外备案的url</li>
+<li>判断 <code>navigator</code> 信息进行处理</li>
+</ol>
+<h3 id="粉丝数"><a href="#粉丝数" class="headerlink" title="粉丝数"></a>粉丝数</h3><p>粉丝数是硬指标，感觉像是给积极发展平台的奖励 😂</p>
+<h3 id="国外备案的url"><a href="#国外备案的url" class="headerlink" title="国外备案的url"></a>国外备案的url</h3><img src="https://wx2.sinaimg.cn/mw690/ec4d7780ly1ghw3wn8am6j20n01dsjup.jpg" alt="警告提示" style="max-width: 300px; border: 1px solid black;" />
+
+
+<p>这个是我各人的猜测，我测试了公司的几个域名都不行，甚至公司的主app的域名。还测试了国内比较有名的 <code>https://xclient.info</code> 的地址。<code>https://www.baidu.com</code> 是可以的。</p>
+<p>国内的域名可以使用国外的短链接服务来避开。<br>推荐：</p>
+<ol>
+<li><a href="https://bitly.com/">Bitly</a></li>
+</ol>
+<p><img src="https://wx4.sinaimg.cn/mw690/ec4d7780ly1ghw4fys4vzj21i40u0qli.jpg" alt="Bitly"></p>
+<p>合作的用户包括 <code>迪士尼</code>、<code>亚马孙</code>、<code>Nike</code>、<code>Bose</code> 等企业。</p>
+<ol start="2">
+<li><a href="">TinyURL</a></li>
+</ol>
+<p><img src="https://wx1.sinaimg.cn/mw690/ec4d7780ly1ghw4g3bhjtj224n0u0aud.jpg" alt="TinyUrl"></p>
+<p>服务用户也非常广，且永不过期。</p>
+<p>还有其他<a href="https://www.sdwebseo.com/url-shortener/">查看</a></p>
+<h3 id="判断navigator"><a href="#判断navigator" class="headerlink" title="判断navigator"></a>判断navigator</h3><p><code>Navigator</code> 对象</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Navigator &#123;</span><br><span class="line">  appCodeName: <span class="string">&quot;Mozilla&quot;</span> <span class="comment">// 当前浏览器的内部“开发代号”名称。</span></span><br><span class="line">  appName: <span class="string">&quot;Netscape&quot;</span> <span class="comment">// 浏览器官方名称</span></span><br><span class="line">  appVersion: <span class="string">&quot;5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span>, <span class="comment">// 浏览器版本</span></span><br><span class="line">  bluetooth: Bluetooth &#123;&#125; <span class="comment">// 蓝牙信息</span></span><br><span class="line">  clipboard: Clipboard &#123;&#125; <span class="comment">// 剪切板</span></span><br><span class="line">  connection: NetworkInformation &#123; <span class="comment">// 网络连接信息</span></span><br><span class="line">    downlink: <span class="number">2.9</span> <span class="comment">// 网络下行速度</span></span><br><span class="line">    effectiveType: <span class="string">&quot;4g&quot;</span> <span class="comment">// 网络类型</span></span><br><span class="line">    onchange: <span class="literal">null</span>  <span class="comment">// 有值代表网络变更</span></span><br><span class="line">    rtt: <span class="number">100</span>  <span class="comment">// 估算往返时间</span></span><br><span class="line">    saveData: <span class="literal">false</span> <span class="comment">// 打开/请求数据保护模式</span></span><br><span class="line">  &#125;</span><br><span class="line">  cookieEnabled: <span class="literal">true</span> <span class="comment">// 是否启用cookie，可以用来判断是否支持cookie</span></span><br><span class="line">  credentials: CredentialsContainer &#123;&#125;  <span class="comment">// 请求凭证 </span></span><br><span class="line">  deviceMemory: <span class="number">8</span> <span class="comment">// 内存数， 单位GB。 感觉不准 当前mac是16G的</span></span><br><span class="line">  doNotTrack: <span class="literal">null</span>  <span class="comment">// 是否允许网站提供商追踪你的信息，在浏览器端设置，开启 `随浏览流量一起发送“不跟踪”请求`，请求的header中会增加DNT：1，使用与否看服务提供商了</span></span><br><span class="line">  geolocation: Geolocation &#123;&#125; <span class="comment">// 地理位置信息</span></span><br><span class="line">  hardwareConcurrency: <span class="number">8</span>  <span class="comment">// 可用的逻辑处理器核心数</span></span><br><span class="line">  keyboard: Keyboard &#123;&#125; <span class="comment">// 返回一个Keyboard对象，该对象提供对以下功能的访问：检索键盘布局图和切换从物理键盘捕获按键的功能。</span></span><br><span class="line">  language: <span class="string">&quot;en&quot;</span>  <span class="comment">// 用户的首先语言，通常是浏览器用户界面的语言。当未知的时，返回null。</span></span><br><span class="line">  languages: (<span class="number">12</span>) [<span class="string">&quot;en&quot;</span>, <span class="string">&quot;zh-CN&quot;</span>, <span class="string">&quot;zh&quot;</span>, <span class="string">&quot;zh-TW&quot;</span>, <span class="string">&quot;vi&quot;</span>, <span class="string">&quot;ja&quot;</span>, <span class="string">&quot;und&quot;</span>, <span class="string">&quot;nb&quot;</span>, <span class="string">&quot;fr&quot;</span>, <span class="string">&quot;ca&quot;</span>, <span class="string">&quot;da&quot;</span>, <span class="string">&quot;ru&quot;</span>] <span class="comment">// 用户已知的语言列表</span></span><br><span class="line">  locks: LockManager &#123;&#125;</span><br><span class="line">  maxTouchPoints: <span class="number">0</span> <span class="comment">// 返回当前设备能够支持的最大同时触摸的点数。 PC端为0</span></span><br><span class="line">  mediaCapabilities: MediaCapabilities &#123;&#125;</span><br><span class="line">  mediaDevices: MediaDevices &#123;</span><br><span class="line">    ondevicechange: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  mediaSession: MediaSession &#123;</span><br><span class="line">    metadata: <span class="literal">null</span>,</span><br><span class="line">    playbackState: <span class="string">&quot;none&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">  mimeTypes: MimeTypeArray &#123;  <span class="comment">// 支持的媒体类型，除了pdf之外 感觉都很少见</span></span><br><span class="line">    <span class="number">0</span>: MimeType &#123;<span class="attr">type</span>: <span class="string">&quot;application/pdf&quot;</span>, <span class="attr">suffixes</span>: <span class="string">&quot;pdf&quot;</span>, <span class="attr">description</span>: <span class="string">&quot;&quot;</span>, <span class="attr">enabledPlugin</span>: Plugin&#125;,</span><br><span class="line">    <span class="number">1</span>: MimeType &#123;<span class="attr">type</span>: <span class="string">&quot;application/x-google-chrome-pdf&quot;</span>, <span class="attr">suffixes</span>: <span class="string">&quot;pdf&quot;</span>, <span class="attr">description</span>: <span class="string">&quot;Portable Document Format&quot;</span>, <span class="attr">enabledPlugin</span>: Plugin&#125;,</span><br><span class="line">    <span class="number">2</span>: MimeType,</span><br><span class="line">    <span class="number">3</span>: MimeType,</span><br><span class="line">    application/pdf: MimeType,</span><br><span class="line">    application/x-google-chrome-pdf: MimeType,</span><br><span class="line">    application/x-nacl: MimeType,</span><br><span class="line">    application/x-pnacl: MimeType,</span><br><span class="line">    length: <span class="number">4</span></span><br><span class="line">  &#125;</span><br><span class="line">  onLine: <span class="literal">true</span>  <span class="comment">// 是否联网</span></span><br><span class="line">  permissions: Permissions &#123;&#125; <span class="comment">// 更新 查询 授权的信息。 https://developer.mozilla.org/zh-TW/docs/WebAPI/Permissions</span></span><br><span class="line">  platform: <span class="string">&quot;MacIntel&quot;</span>  <span class="comment">// 浏览器平台名</span></span><br><span class="line">  plugins: PluginArray &#123;  <span class="comment">// 安装的插件，这些感觉不像是认知中的插件</span></span><br><span class="line">    <span class="number">0</span>: Plugin,</span><br><span class="line">    <span class="number">1</span>: Plugin,</span><br><span class="line">    <span class="number">2</span>: Plugin,</span><br><span class="line">    Chrome PDF Plugin: Plugin,</span><br><span class="line">    Chrome PDF Viewer: Plugin,</span><br><span class="line">    Native Client: Plugin,</span><br><span class="line">    length: <span class="number">3</span></span><br><span class="line">  &#125;</span><br><span class="line">  presentation: Presentation &#123;</span><br><span class="line">    receiver: <span class="literal">null</span>,</span><br><span class="line">    defaultRequest: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  product: <span class="string">&quot;Gecko&quot;</span>  <span class="comment">// 在任意浏览器下都只返回&#x27;Gecko&#x27;，此属性只用于兼容的目的。。</span></span><br><span class="line">  productSub: <span class="string">&quot;20030107&quot;</span>  <span class="comment">// 返回当前浏览器的编译版本号</span></span><br><span class="line">  serviceWorker: ServiceWorkerContainer &#123; <span class="comment">// service 相关</span></span><br><span class="line">    controller: <span class="literal">null</span>, </span><br><span class="line">    ready: <span class="built_in">Promise</span>, </span><br><span class="line">    oncontrollerchange: <span class="literal">null</span>, </span><br><span class="line">    onmessage: <span class="literal">null</span>, </span><br><span class="line">    onmessageerror: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  storage: StorageManager &#123;&#125;</span><br><span class="line">  usb: USB &#123;</span><br><span class="line">    onconnect: <span class="literal">null</span>,</span><br><span class="line">    ondisconnect: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  userActivation: UserActivation &#123;  <span class="comment">// 窗口是否被激活过，是否处于激活状态</span></span><br><span class="line">    hasBeenActive: <span class="literal">true</span>,</span><br><span class="line">    isActive: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 用户代理 浏览器的相关信息</span></span><br><span class="line">  userAgent: <span class="string">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span></span><br><span class="line">  vendor: <span class="string">&quot;Google Inc.&quot;</span> <span class="comment">// 浏览器供应商的名称.</span></span><br><span class="line">  vendorSub: <span class="string">&quot;&quot;</span> <span class="comment">// 浏览器供应商的版本号。</span></span><br><span class="line">  wakeLock: WakeLock &#123;&#125;</span><br><span class="line">  webkitPersistentStorage: DeprecatedStorageQuota &#123;&#125;</span><br><span class="line">  webkitTemporaryStorage: DeprecatedStorageQuota &#123;&#125;</span><br><span class="line">  xr: XRSystem &#123;  <span class="comment">// 支持VR和增强现实（AR）</span></span><br><span class="line">    ondevicechange: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.sdwebseo.com/url-shortener/">该使用短链接吗？短链接工具有哪些？</a></li>
+<li><a href="https://www.zhangxinxu.com/wordpress/2018/07/navigator-do-not-track-api/">隐私相关-了解HTML5 Do Not Track API</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>tiktok</tag>
+        <tag>短连接</tag>
+        <tag>浏览器</tag>
       </tags>
   </entry>
 </search>
