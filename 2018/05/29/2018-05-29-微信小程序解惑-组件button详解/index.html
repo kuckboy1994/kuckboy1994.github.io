@@ -58,7 +58,7 @@ var _hmt = _hmt || [];
 </script>
 
 
-<link rel="alternate" href="/atom.xml" title="空" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="山" type="application/atom+xml">
 </head>
 
 </html>
@@ -133,21 +133,21 @@ var _hmt = _hmt || [];
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>我们在小程序开发的时候，会有这样的需求，设置一个透明的 <code>button</code>。为什么要用 <code>button</code> 呢？因为 <code>button</code> 有很多的开放功能，例如：获取用户信息、分享、调起会话、获取用户手机号、启动外部App、打开设置页。</p>
-<p>问题来了，设置透明的 <code>button</code> 到底该怎么实现呢？</p>
-<p>设置 <code>background: transparent</code> 是无效的。我们需要设置按钮 <code>镂空</code>。 如下：</p>
+  <p>我们在小程序开发的时候，会有这样的需求，设置一个透明的 <code>button</code>。为什么要用 <code>button</code> 呢？因为 <code>button</code> 有很多的开放功能，例如：获取用户信息、分享、调起会话、获取用户手机号、启动外部App、打开设置页。</p>
+<p>问题来了，设置透明的 <code>button</code> 到底该怎么实现呢？</p>
+<p>设置 <code>background: transparent</code> 是无效的。我们需要设置按钮 <code>镂空</code>。 如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">plain</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>但是。。。 为什么是这样的？<br><img src="http://wx4.sinaimg.cn/mw690/ec4d7780gy1frsmrk5mucj208v0al74e.jpg"></p>
 <a id="more"></a>
 <p>尝试设置一下 <code>CSS</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border: none;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border</span>: <span class="selector-tag">none</span>;</span><br></pre></td></tr></table></figure>
 
 <p>完全没有效果呀？</p>
 <p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frsmvt9q1gj20c00b143h.jpg"></p>
 <p>最终的解决办法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button::after &#123;</span><br><span class="line">  border: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在根目录下的 <code>app.wxss</code> 添加如上代码修改所有 <code>button</code> 的效果。<br>猜测官方的 <code>button</code> 组件使用的是 <code>::after</code> 伪类的方式实现边框的。遇到同类问题可以在 <code>::after</code> 上做尝试。 例如: <code>border-radius</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在根目录下的 <code>app.wxss</code> 添加如上代码修改所有 <code>button</code> 的效果。<br>猜测官方的 <code>button</code> 组件使用的是 <code>::after</code> 伪类的方式实现边框的。遇到同类问题可以在 <code>::after</code> 上做尝试。 例如: <code>border-radius</code>。</p>
  
       <!-- reward -->
       
@@ -360,7 +360,7 @@ var _hmt = _hmt || [];
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/logo.png" alt="空"></a>
+    <a href="/"><img src="/images/logo.png" alt="山"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -662,23 +662,6 @@ var _hmt = _hmt || [];
 <!-- CanvasBackground -->
 
 
-    
-    <div id="music">
-    
-    
-    
-    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=536057&auto=1&height=32"></iframe>
-</div>
-
-<style>
-    #music {
-        position: fixed;
-        right: 15px;
-        bottom: 0;
-        z-index: 998;
-    }
-</style>
     
   </div>
 </body>

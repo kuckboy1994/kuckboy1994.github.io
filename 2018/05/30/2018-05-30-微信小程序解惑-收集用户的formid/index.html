@@ -58,7 +58,7 @@ var _hmt = _hmt || [];
 </script>
 
 
-<link rel="alternate" href="/atom.xml" title="空" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="山" type="application/atom+xml">
 </head>
 
 </html>
@@ -142,12 +142,12 @@ var _hmt = _hmt || [];
 
 <p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。</p>
 <a id="more"></a>
-<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p><code>form</code> 组件可以设置在页面的最外层。内部放置多个 <code>button</code>。统一调用一个 <code>bindsubmit</code> 事件。</p>
-<p>要想尽可能多的获取 <code>formid</code> 又不想把所有的标签都使用 <code>button</code>，因为 <code>button</code> 修改样式的代缴是比较大的。可以使用悬浮的 <code>button</code> 。只要设置：</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p><code>form</code> 组件可以设置在页面的最外层。内部放置多个 <code>button</code>。统一调用一个 <code>bindsubmit</code> 事件。</p>
+<p>要想尽可能多的获取 <code>formid</code> 又不想把所有的标签都使用 <code>button</code>，因为 <code>button</code> 修改样式的代缴是比较大的。可以使用悬浮的 <code>button</code> 。只要设置：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">opacity</span>: 0;</span><br></pre></td></tr></table></figure>
 <p>把原来的事件放置到 <code>button</code> 上即可。</p>
 <p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frsobwh7psj20ai0cudhn.jpg"></p>
-<p>红色框起来的地方，我在 <code>喜欢操作</code> 上方加了一个按钮，并且赋值了相应的属性。这样我们就在用户交互的时候同时获取了他的 <code>formid</code>。而且增加了用户的点击区域，优化了交互。</p>
+<p>红色框起来的地方，我在 <code>喜欢操作</code> 上方加了一个按钮，并且赋值了相应的属性。这样我们就在用户交互的时候同时获取了他的 <code>formid</code>。而且增加了用户的点击区域，优化了交互。</p>
  
       <!-- reward -->
       
@@ -360,7 +360,7 @@ var _hmt = _hmt || [];
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/logo.png" alt="空"></a>
+    <a href="/"><img src="/images/logo.png" alt="山"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -662,23 +662,6 @@ var _hmt = _hmt || [];
 <!-- CanvasBackground -->
 
 
-    
-    <div id="music">
-    
-    
-    
-    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=536057&auto=1&height=32"></iframe>
-</div>
-
-<style>
-    #music {
-        position: fixed;
-        right: 15px;
-        bottom: 0;
-        z-index: 998;
-    }
-</style>
     
   </div>
 </body>
