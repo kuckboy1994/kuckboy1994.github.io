@@ -179,6 +179,129 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-2017-12-26-获取本机的ip地址"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/"
+    >获取本机的ip地址</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/" class="article-date">
+  <time datetime="2017-12-26T06:20:54.000Z" itemprop="datePublished">2017-12-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>有的时候我们需要知道我们本地机器的ip地址。</p>
+<p>前端项目大部分都是通过localhost:端口号来运行的，但是比如我们要写RN的时候，在安卓模拟器中的我们可能就不能直接使用<code>localhost</code>或<code>127.0.0.1</code>，使用的应该是局域网给我们动态分配的ip地址。</p>
+<p>下面介绍两种三种方式获得动态分配的ip地址：</p>
+<h2 id="图形化获取"><a href="#图形化获取" class="headerlink" title="图形化获取"></a>图形化获取</h2><ol>
+<li>打开偏好设置，点击网络</li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png) --> 
+      <a class="article-more-link" href="/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/" rel="tag">mac</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2017-12-21-前端优化"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/12/21/2017-12-21-%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/"
+    >前端优化</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/12/21/2017-12-21-%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" class="article-date">
+  <time datetime="2017-12-21T06:19:27.000Z" itemprop="datePublished">2017-12-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/">优化</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>前端优化主要包括：网络加载类、页面渲染类、CSS优化类、JavaScript执行类、缓存类、图片类、架构协议类等几类。</p>
+<h2 id="网络加载"><a href="#网络加载" class="headerlink" title="网络加载"></a>网络加载</h2><p>1．<code>减少 HTTP 资源请求次数</code>在前端页面中，通常建议尽可能合并静态资源图片、JavaScript 或 CSS 代码，减少页面请求数和资源请求消耗，这样可以缩短页面首次访问的用户等待时间。通过构建工具合并雪碧图、CSS、JavaScript 文件等都是为了减少 HTTP 资源请求次数。另外也要尽量避免重复的资源，防止增加多余请求。</p>
+<p>2．<code>减小 HTTP 请求大小</code>除了减少 HTTP 资源请求次数，也要尽量减小每个 HTTP 请求的大小。如减少没必要的图片、JavaScript、CSS 及 HTML 代码，对文件进行压缩优化，或者使用 gzip 压缩传输内容等都可以用来减小文件大小，缩短网络传输等待时延。前面我们使用构建工具来压缩静态图片资源以及移除代码中的注释并压缩，目的都是为了减小 HTTP 请求的大小。</p>
+<p>3．<code>将 CSS 或 JavaScript 放到外部文件中</code>，避免使用<code>&lt;style&gt;</code>或<code>&lt;script&gt;</code>标签直接引入在 HTML 文件中引用外部资源可以有效利用浏览器的静态资源缓存，但有时候在移动端页面 CSS 或 JavaScript 比较简单的情况下为了减少请求，也会将 CSS 或 JavaScript 直接写到 HTML 里面，具体要根据 CSS 或 JavaScript 文件的大小和业务的场景来分析。如果 CSS 或 JavaScript 文件内容较多，业务逻辑较复杂，建议放到外部文件引入。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//cdn.domain.com/path/main.css&quot;</span> &gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.domain.com/path/main.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2017/12/21/2017-12-21-%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%98%E5%8C%96/" rel="tag">优化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-2017-12-20-项目小结（一）"
   class="article article-type-post"
   itemscope
@@ -645,130 +768,6 @@ var _hmt = _hmt || [];
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>简单分析来说，页面就是上面一个<code>position:fixed;</code>在顶部，下面的列表的最左边一列<code>position-x:fixed</code>（哈哈这个属性当然是不存在的啦）。</p>
 <p>从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们都只能操作一个元素，不知道大家能不能理解，就好比我们页面上有一个区域a有滚动条，当前的页面很长，也有滚动条，鼠标在区域a上滚动的时候页面是不动的，只有当区域a滚到底的时候，页面才会继续滚动。所以利用这个特性，我们创造一个叠加的滚动区域，一个<code>overflow-y:auto;</code>，一个<code>overflow-x:auto</code>。一个只能纵向滚动，一个只能横向滚动。</p> 
       <a class="article-more-link" href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2017-11-11-水平垂直居中"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"
-    >水平垂直居中</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/" class="article-date">
-  <time datetime="2017-11-11T11:52:36.000Z" itemprop="datePublished">2017-11-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/CSS/">CSS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><ol>
-<li><p>若是行内元素，给改元素的父级设置 <code>text-align:center</code> ，即可实现行内元素水平居中。<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/1-text-align.html">demo</a></p>
-</li>
-<li><p>若是块级元素, 该元素设置 <code>margin:0 auto</code> 。<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/2-margin-auto.html">demo</a></p>
-</li>
-<li><p>若子元素包含 <code>float:left</code> 属性, 为了让子元素水平居中, 则可让父元素宽度设置为 <code>fit-content</code> ,并且配合 <code>margin</code> , 作如下设置:<a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/vertical-horizontal-center/horizontal/3-margin-auto-fit-content.html">demo</a></p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fit-content</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: -moz-fit-content;</span><br><span class="line">    <span class="attribute">width</span>: -webkit-fit-content;</span><br><span class="line">    <span class="attribute">width</span>: fit-content;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 目前这个属性只支持Chrome和Firefox浏览器。</p> 
-      <a class="article-more-link" href="/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2017-11-11-使用伪元素来形成类似“居中浮动”的效果"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/"
-    >使用伪元素来形成类似“居中浮动”的效果</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/" class="article-date">
-  <time datetime="2017-11-11T11:50:41.000Z" itemprop="datePublished">2017-11-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>文本翻译自 <a target="_blank" rel="noopener" href="https://css-tricks.com/">css-tricks</a> 网站的 <a target="_blank" rel="noopener" href="https://css-tricks.com/float-center/">Faking ‘float: center’ with Pseudo Elements</a> 一文。翻译有误，期待斧正。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>比方说，你想完成一个类似这样的布局：</p>
-<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/catinmiddle1.png" alt="catinmiddle1"></p>
-<p>这个展示效果没毛病吧？特别是你想把这个猫作为文章的重点。</p>
-<p>做到这一点其实并不容易。我们当前有的布局方法并不能真正的考虑到这一点。事实上，有时候觉得这种布局并没有真正的“网页设计”的思想。我说的对吗？我不认为即使有这种流通边缘的CSS布局系统就能很好地处理这个问题。这有点像float，因为文本环绕着图像，但是文本环绕两个方向，所以有点像<code>float: center;</code>居中浮动;或<code>float: both;</code>全部浮动，但这两个都是不存在的。</p>
-<p>但这是可以实现的！</p> 
-      <a class="article-more-link" href="/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/"
         >阅读全文</a
       >
        
