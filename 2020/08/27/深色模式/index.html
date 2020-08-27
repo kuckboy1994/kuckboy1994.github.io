@@ -11,7 +11,7 @@
    
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    leetcode-647-回文子串 |  
+    深色模式 |  
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -81,7 +81,7 @@ var _hmt = _hmt || [];
     <main class="content on">
       <section class="outer">
   <article
-  id="post-leetcode-647-回文子串"
+  id="post-深色模式"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -92,18 +92,18 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  leetcode-647-回文子串
+  深色模式
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/08/20/leetcode-647-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/" class="article-date">
-  <time datetime="2020-08-20T12:49:37.000Z" itemprop="datePublished">2020-08-20</time>
+      <a href="/2020/08/27/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2020-08-27T06:59:40.000Z" itemprop="datePublished">2020-08-27</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/leetcode/">leetcode</a>
+    <a class="article-category-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>
   </div>
   
 <div class="word_count">
@@ -111,7 +111,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">497</span>
+            <span class="post-count">610</span>
         </span>
     </span>
 
@@ -135,39 +135,54 @@ var _hmt = _hmt || [];
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
-<h3 id="647-回文子串"><a href="#647-回文子串" class="headerlink" title="647. 回文子串"></a>647. 回文子串</h3><p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
-<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：&quot;abc&quot;</span><br><span class="line">输出：3</span><br><span class="line">解释：三个回文子串: &quot;a&quot;, &quot;b&quot;, &quot;c&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：&quot;aaa&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：6个回文子串: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>输入的字符串长度不会超过 1000 。</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindromic-substrings">https://leetcode-cn.com/problems/palindromic-substrings</a></p>
-</blockquote>
+  <p><strong>实现深色模式主要两种思路:</strong></p>
+<ol>
+<li>CSS媒体查询识别</li>
+<li>JsAPi去检测</li>
+</ol>
 <a id="more"></a>
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="暴力求解"><a href="#暴力求解" class="headerlink" title="暴力求解"></a>暴力求解</h3><p>因为要求解所有的回文子串，第一想到的就是暴力求解，可能会担心时间复杂度过高，导致超时。<br>子串的不同起始位置不同，就是不同的子串，这样就可以不用判断重复的问题了，看上去就很适合暴力求解。✌️</p>
-<ol>
-<li><code>i</code> 从 0 到 n。</li>
-<li>奇数回文：判断第 <code>i</code> 位置的字符前后的字符是否是一致的。相等就不断向外扩散，并且计数 <code>+1</code></li>
-<li>偶数回文：判断第 <code>i</code> 位置的字符和 <code>i+1</code>位置的字符是否相等。相等就两个字符分别向前或向后扩散，并且计数 <code>+1</code></li>
-</ol>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
-<li>空间复杂度 O(1)<ul>
-<li>就使用了简单的常量，没有对结果进行保留计算，所以复杂度是O(1)</li>
+<h2 id="CSS媒体查询识别"><a href="#CSS媒体查询识别" class="headerlink" title="CSS媒体查询识别"></a>CSS媒体查询识别</h2><h3 id="prefers-color-scheme"><a href="#prefers-color-scheme" class="headerlink" title="prefers-color-scheme"></a>prefers-color-scheme</h3><p>使用的属性就是 <code>prefers-color-scheme</code>。</p>
+<blockquote>
+<p>prefers-color-scheme CSS 媒体特性用于检测用户是否有将系统的主题色设置为亮色或者暗色。<br>语法<br>no-preference<br>表示系统未得知用户在这方面的选项。在布尔值上下文中，其执行结果为false。<br>light<br>表示用户已告知系统他们选择使用浅色主题的界面。<br>dark<br>表示用户已告知系统他们选择使用暗色主题的界面。  </p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>目前主流的浏览器都支持这个属性。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>当检测到 <code>prefers-color-scheme</code> 为 <code>dark</code> 的时候，设置新的样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: black;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你想使用 css变量 的话可以参考</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--bg</span>: white;</span><br><span class="line">  <span class="attribute">--textColor</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--bg);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--textColor);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) &#123;</span><br><span class="line">  <span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attribute">--bg</span>: black;</span><br><span class="line">    <span class="attribute">--textColor</span>: white;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">var</span>(--bg);</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">var</span>(--textColor);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>:root</code> 这个 CSS 伪类匹配文档树的根元素。对于 <code>HTML</code> 来说，<code>:root</code> 表示 <code>&lt;html&gt;</code> 元素，除了优先级更高之外，与 <code>html</code> 选择器相同。</p>
+</blockquote>
+<p><strong>CSS变量</strong></p>
+<ul>
+<li>通过 <code>--变量名</code> 定义值</li>
+<li>通过 <code>var(--变量名)</code> 使用值</li>
+<li><code>CSS变量</code> 有作用域，且重复定义会产生覆盖</li>
 </ul>
-</li>
-<li>时间复杂度 O(n2)<ul>
-<li>两层循环</li>
+<h2 id="JsAPi去检测"><a href="#JsAPi去检测" class="headerlink" title="JsAPi去检测"></a>JsAPi去检测</h2><blockquote>
+<p>Window 的 <code>matchMedia()</code> 方法返回一个新的 <code>MediaQueryList</code> 对象，表示指定的媒体查询字符串解析后的结果。返回的 <code>MediaQueryList</code> 可被用于判定 Document 是否匹配媒体查询，或者监控一个 document 来判定它匹配了或者停止匹配了此媒体查询。</p>
+</blockquote>
+<p>通过这个方法，所有媒体查询的方法我们都可以通过这个api去实现。<br>例如 <code>(max-width: 600px)</code> 宽度小于等于600像素的时候匹配。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.matchMedia(<span class="string">&#x27;(prefers-color-scheme: dark)&#x27;</span>).matches) &#123;</span><br><span class="line">  <span class="comment">// 深色模式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>matchMedia</code> 会返回一个 <code>MediaQueryList</code> 对象。具有属性matches、media，具有方法addListener、removeListener。</p>
+<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/WX20200827-145018%402x.png" alt="matchMedia"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mql = <span class="built_in">window</span>.matchMedia(<span class="string">&#x27;(prefers-color-scheme: dark)&#x27;</span>)</span><br><span class="line">mql.addEventListener(<span class="string">&#x27;change&#x27;</span>, <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e)</span><br><span class="line">  <span class="keyword">if</span> (e.matches) &#123;</span><br><span class="line">    <span class="comment">// 切换到深色模式</span></span><br><span class="line">    <span class="comment">// 这个只能作为切换的，初始化还要从mql中去获取matches属性</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018728380">为你的网页添加深色模式</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/6844904114095128584">如何自动响应CSS深色模式</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme - MDN</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root">:root - MDN</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*">css变量 - MDN</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/onchange">MediaQueryList.onchange - MDN</a></li>
 </ul>
-</li>
-</ul>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">s</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> countSubstrings = <span class="function"><span class="keyword">function</span> (<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> len = s.length;</span><br><span class="line">  <span class="keyword">let</span> count = len;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; i - j &gt;= <span class="number">0</span> &amp;&amp; i + j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (s[i - j] === s[i + j]) &#123;</span><br><span class="line">        count++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; i - j &gt;= <span class="number">0</span> &amp;&amp; i + j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (s[i - j] === s[i + <span class="number">1</span> + j]) &#123;</span><br><span class="line">        count++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> 
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -225,12 +240,12 @@ var _hmt = _hmt || [];
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://kuckboy1994.github.io/2020/08/20/leetcode-647-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://kuckboy1994.github.io/2020/08/27/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9A%B4%E5%8A%9B%E6%B1%82%E8%A7%A3/" rel="tag">暴力求解</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li></ul>
 
     </footer>
   </div>
@@ -238,19 +253,19 @@ var _hmt = _hmt || [];
    
   <nav class="article-nav">
     
-      <a href="/2020/08/27/%E6%94%B6%E8%97%8F%E7%BD%91%E7%AB%99/" class="article-nav-link">
+      <a href="/2020/08/27/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E7%AE%80%E4%BB%8B-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            收藏网站
+            现代JavaScript教程-简介-学习记录
           
         </div>
       </a>
     
     
-      <a href="/2020/08/20/leetcode-892-%E4%B8%89%E7%BB%B4%E5%BD%A2%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF/" class="article-nav-link">
+      <a href="/2020/08/27/%E6%94%B6%E8%97%8F%E7%BD%91%E7%AB%99/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">leetcode-892-三维形体的表面积</div>
+        <div class="article-nav-title">收藏网站</div>
       </a>
     
   </nav>

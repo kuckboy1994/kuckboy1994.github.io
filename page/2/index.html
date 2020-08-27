@@ -179,6 +179,193 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-2018-05-29-微信小程序解惑-组件button详解"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/05/29/2018-05-29-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E7%BB%84%E4%BB%B6button%E8%AF%A6%E8%A7%A3/"
+    >微信小程序解惑-组件button详解</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/05/29/2018-05-29-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E7%BB%84%E4%BB%B6button%E8%AF%A6%E8%A7%A3/" class="article-date">
+  <time datetime="2018-05-29T15:50:56.000Z" itemprop="datePublished">2018-05-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>我们在小程序开发的时候，会有这样的需求，设置一个透明的 <code>button</code>。为什么要用 <code>button</code> 呢？因为 <code>button</code> 有很多的开放功能，例如：获取用户信息、分享、调起会话、获取用户手机号、启动外部App、打开设置页。</p>
+<p>问题来了，设置透明的 <code>button</code> 到底该怎么实现呢？</p>
+<p>设置 <code>background: transparent</code> 是无效的。我们需要设置按钮 <code>镂空</code>。 如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">plain</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但是。。。 为什么是这样的？<br><img src="http://wx4.sinaimg.cn/mw690/ec4d7780gy1frsmrk5mucj208v0al74e.jpg"></p> 
+      <a class="article-more-link" href="/2018/05/29/2018-05-29-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E7%BB%84%E4%BB%B6button%E8%AF%A6%E8%A7%A3/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-hexo博客搭建指南"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/05/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"
+    >hexo博客搭建指南</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/05/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" class="article-date">
+  <time datetime="2018-05-28T15:38:36.000Z" itemprop="datePublished">2018-05-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><ul>
+<li><p>安装 <code>node</code> 和 <code>git</code></p>
+</li>
+<li><p>安装 <code>hexo</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建项目</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init kuckboy1994.github.io</span><br><span class="line">cd kuckboy1994.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>项目目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml     &#x2F;&#x2F; 配置信息</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds       &#x2F;&#x2F; 模板文件夹</span><br><span class="line">├── source          &#x2F;&#x2F; 资源 博客文章</span><br><span class="line">|   ├── _drafts     &#x2F;&#x2F; 草稿</span><br><span class="line">|   └── _posts      &#x2F;&#x2F; 正式发布的文章</span><br><span class="line">└── themes          &#x2F;&#x2F; 主题</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2018/05/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag">建站</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-2018-01-02-XSS攻击"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/"
+    >XSS攻击</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/" class="article-date">
+  <time datetime="2018-01-02T06:22:16.000Z" itemprop="datePublished">2018-01-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AE%89%E5%85%A8/">安全</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><code>XSS攻击</code> 全称 <code>跨站脚本攻击</code>，常见的就是攻击者把恶意代码植入到用户页面中。</p>
+<p>在XSS攻击中，一般有三个角色参与：攻击者、目标服务器、受害者的浏览器。</p>
+<p>由于服务端没有对用户的输入做安全方面的验证，攻击者就通过输入的方式，夹带一些恶意的html脚本代码（包括html, css, js）。</p> 
+      <a class="article-more-link" href="/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xss/" rel="tag">xss</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-2017-12-26-获取本机的ip地址"
   class="article article-type-post"
   itemscope
@@ -595,192 +782,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BEM/" rel="tag">BEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2017-11-15-获取id元素的“又”一种方法"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/"
-    >获取id元素的“又”一种方法</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/" class="article-date">
-  <time datetime="2017-11-15T06:04:14.000Z" itemprop="datePublished">2017-11-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/HACK/">HACK</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="获取id元素的“又”一种方法"><a href="#获取id元素的“又”一种方法" class="headerlink" title="获取id元素的“又”一种方法"></a>获取id元素的“又”一种方法</h1><p>今天在偶然看到某大在掘金上面发了一篇文章<a target="_blank" rel="noopener" href="https://juejin.im/post/5a0bae515188252964213855">underscore 系列之如何写自己的 underscore</a>，渣渣的我就好奇的点进去看了起来。。。</p>
-<p>在关于 <strong>导出</strong> 的地方看到了</p>
-<blockquote>
-<p>typeof exports != ‘undefined’</p>
-</blockquote>
-<p>这样一句。</p>
-<p>纳尼？ <code>exports</code> 可以直接取到页面中的id为 <code>exports</code> 的元素。</p>
-<p>脑洞巨大的我抛下文章主要内容去查这个问题了。。。</p>
-<p>首先自己试验了一下 <a target="_blank" rel="noopener" href="https://github.com/kuckboy1994/Blog/blob/master/demo/window/window.id.html">demo</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;exports&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    alert(<span class="built_in">window</span>.document.getElementById(<span class="string">&#x27;exports&#x27;</span>) == <span class="built_in">window</span>.exports);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在ie下下面也能完美运行。。</p>
-<p>问题来了，难道大家都不知道这个方法吗？还是这个方法有什么弊端，大家都避而不用？</p> 
-      <a class="article-more-link" href="/2017/11/15/2017-11-15-%E8%8E%B7%E5%8F%96id%E5%85%83%E7%B4%A0%E7%9A%84%E2%80%9C%E5%8F%88%E2%80%9D%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2017-11-14-给文本输入框增加下边框效果"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/"
-    >给文本输入框增加下边框效果</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/" class="article-date">
-  <time datetime="2017-11-14T03:57:53.000Z" itemprop="datePublished">2017-11-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>文本翻译自 <a target="_blank" rel="noopener" href="https://css-tricks.com/">css-tricks</a> 网站的 <a target="_blank" rel="noopener" href="https://css-tricks.com/text-input-expanding-bottom-border/">Text Input with Expanding Bottom Border</a> 一文。翻译有误，期待斧正。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Petr Gazarov在他的文章<code>Text input highlight, TripAdvisor style</code>中使用了一个漂亮的小设计。</p>
-<p><img src="https://github.com/kuckboy1994/Blog/blob/master/gif/bb_oqufjg.webp?raw=true"></p>
-<p>这是一个技巧，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。</p> 
-      <a class="article-more-link" href="/2017/11/14/2017-11-14-%E7%BB%99%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E5%A2%9E%E5%8A%A0%E4%B8%8B%E8%BE%B9%E6%A1%86%E6%95%88%E6%9E%9C/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2017-11-13-用网页实现移动端横向纵向列固定的表格"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/"
-    >用网页实现移动端横向纵向列固定的表格</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/" class="article-date">
-  <time datetime="2017-11-13T03:54:47.000Z" itemprop="datePublished">2017-11-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/CSS/">CSS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>最终效果：</p>
-<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/gif/table-fixed.gif"></p>
-<p>当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>简单分析来说，页面就是上面一个<code>position:fixed;</code>在顶部，下面的列表的最左边一列<code>position-x:fixed</code>（哈哈这个属性当然是不存在的啦）。</p>
-<p>从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们都只能操作一个元素，不知道大家能不能理解，就好比我们页面上有一个区域a有滚动条，当前的页面很长，也有滚动条，鼠标在区域a上滚动的时候页面是不动的，只有当区域a滚到底的时候，页面才会继续滚动。所以利用这个特性，我们创造一个叠加的滚动区域，一个<code>overflow-y:auto;</code>，一个<code>overflow-x:auto</code>。一个只能纵向滚动，一个只能横向滚动。</p> 
-      <a class="article-more-link" href="/2017/11/13/2017-11-13-%E7%94%A8%E7%BD%91%E9%A1%B5%E5%AE%9E%E7%8E%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A8%AA%E5%90%91%E7%BA%B5%E5%90%91%E5%88%97%E5%9B%BA%E5%AE%9A%E7%9A%84%E8%A1%A8%E6%A0%BC/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
     </footer>
   </div>

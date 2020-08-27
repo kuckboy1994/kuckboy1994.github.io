@@ -30,34 +30,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用伪元素来形成类似“居中浮动”的效果</title>
-    <url>/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/</url>
-    <content><![CDATA[<p>文本翻译自 <a href="https://css-tricks.com/">css-tricks</a> 网站的 <a href="https://css-tricks.com/float-center/">Faking ‘float: center’ with Pseudo Elements</a> 一文。翻译有误，期待斧正。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>比方说，你想完成一个类似这样的布局：</p>
-<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/catinmiddle1.png" alt="catinmiddle1"></p>
-<p>这个展示效果没毛病吧？特别是你想把这个猫作为文章的重点。</p>
-<p>做到这一点其实并不容易。我们当前有的布局方法并不能真正的考虑到这一点。事实上，有时候觉得这种布局并没有真正的“网页设计”的思想。我说的对吗？我不认为即使有这种流通边缘的CSS布局系统就能很好地处理这个问题。这有点像float，因为文本环绕着图像，但是文本环绕两个方向，所以有点像<code>float: center;</code>居中浮动;或<code>float: both;</code>全部浮动，但这两个都是不存在的。</p>
-<p>但这是可以实现的！</p>
-<a id="more"></a>
-<p>证明：<a href="https://css-tricks.com/examples/FloatBoth/">查看</a> <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/css-tricks/float-both/index.html">查看源码</a></p>
-<p>我们将通过使用浮动的伪元素占位符来实现它。每一<code>列①</code>放入一个伪元素占位符，一个左浮动，一个右浮动。伪元素的高度为图像的高度，宽度为图像的一半宽（差不多，不要忘记你还有padding和中间的槽【两列中间的分隔距离】需要考虑）。</p>
-<p>主要代码：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#l</span><span class="selector-pseudo">:before</span>, <span class="selector-id">#r</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>; </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">125px</span>; </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">250px</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">float</span>: right; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#r</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">float</span>: left; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/psuedoplaceholders.jpg" alt="psuedoplaceholders"></p>
-<p>现在文本中有一个洞，准备好把我们的图像放在那里。我们可以通过绝对定位来实现，就像在演示中那样。或者你可以把它放在上面的一个元素上，然后用负的顶部边缘来把文本拉出来。</p>
-<h2 id="标注："><a href="#标注：" class="headerlink" title="标注："></a>标注：</h2><ul>
-<li>列①： 注意，我们使用的是div来实现文本的列，而不是CSS列，虽然使用css来实现更酷，更具有语义化，但是用css的话我们上面的就不起作用了。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>翻译</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>水平垂直居中</title>
     <url>/2017/11/11/2017-11-11-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
     <content><![CDATA[<h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><ol>
@@ -218,6 +190,34 @@
 <li><a href="http://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/">小tip: 如何让contenteditable元素只能输入纯文本</a></li>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">contenteditable - HTML | MDN</a></li>
 <li><a href="https://w3c.github.io/">w3c</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>翻译</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用伪元素来形成类似“居中浮动”的效果</title>
+    <url>/2017/11/11/2017-11-11-%E4%BD%BF%E7%94%A8%E4%BC%AA%E5%85%83%E7%B4%A0%E6%9D%A5%E5%BD%A2%E6%88%90%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%B1%85%E4%B8%AD%E6%B5%AE%E5%8A%A8%E2%80%9D%E7%9A%84%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<p>文本翻译自 <a href="https://css-tricks.com/">css-tricks</a> 网站的 <a href="https://css-tricks.com/float-center/">Faking ‘float: center’ with Pseudo Elements</a> 一文。翻译有误，期待斧正。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>比方说，你想完成一个类似这样的布局：</p>
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/catinmiddle1.png" alt="catinmiddle1"></p>
+<p>这个展示效果没毛病吧？特别是你想把这个猫作为文章的重点。</p>
+<p>做到这一点其实并不容易。我们当前有的布局方法并不能真正的考虑到这一点。事实上，有时候觉得这种布局并没有真正的“网页设计”的思想。我说的对吗？我不认为即使有这种流通边缘的CSS布局系统就能很好地处理这个问题。这有点像float，因为文本环绕着图像，但是文本环绕两个方向，所以有点像<code>float: center;</code>居中浮动;或<code>float: both;</code>全部浮动，但这两个都是不存在的。</p>
+<p>但这是可以实现的！</p>
+<a id="more"></a>
+<p>证明：<a href="https://css-tricks.com/examples/FloatBoth/">查看</a> <a href="https://github.com/kuckboy1994/Blog/blob/master/demo/css-tricks/float-both/index.html">查看源码</a></p>
+<p>我们将通过使用浮动的伪元素占位符来实现它。每一<code>列①</code>放入一个伪元素占位符，一个左浮动，一个右浮动。伪元素的高度为图像的高度，宽度为图像的一半宽（差不多，不要忘记你还有padding和中间的槽【两列中间的分隔距离】需要考虑）。</p>
+<p>主要代码：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#l</span><span class="selector-pseudo">:before</span>, <span class="selector-id">#r</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>; </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">125px</span>; </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">250px</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">float</span>: right; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#r</span><span class="selector-pseudo">:before</span> &#123; </span><br><span class="line">  <span class="attribute">float</span>: left; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/css-tricks/psuedoplaceholders.jpg" alt="psuedoplaceholders"></p>
+<p>现在文本中有一个洞，准备好把我们的图像放在那里。我们可以通过绝对定位来实现，就像在演示中那样。或者你可以把它放在上面的一个元素上，然后用负的顶部边缘来把文本拉出来。</p>
+<h2 id="标注："><a href="#标注：" class="headerlink" title="标注："></a>标注：</h2><ul>
+<li>列①： 注意，我们使用的是div来实现文本的列，而不是CSS列，虽然使用css来实现更酷，更具有语义化，但是用css的话我们上面的就不起作用了。</li>
 </ul>
 ]]></content>
       <categories>
@@ -885,524 +885,6 @@
       </tags>
   </entry>
   <entry>
-    <title>获取本机的ip地址</title>
-    <url>/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/</url>
-    <content><![CDATA[<p>有的时候我们需要知道我们本地机器的ip地址。</p>
-<p>前端项目大部分都是通过localhost:端口号来运行的，但是比如我们要写RN的时候，在安卓模拟器中的我们可能就不能直接使用<code>localhost</code>或<code>127.0.0.1</code>，使用的应该是局域网给我们动态分配的ip地址。</p>
-<p>下面介绍两种三种方式获得动态分配的ip地址：</p>
-<h2 id="图形化获取"><a href="#图形化获取" class="headerlink" title="图形化获取"></a>图形化获取</h2><ol>
-<li>打开偏好设置，点击网络</li>
-</ol>
-<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png"/>
-<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png) -->
-<a id="more"></a>
-2. 红框圈起来的就是ip地址
-
-<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip2.png"/>
-<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip2.png) -->
-
-<h2 id="命令行获取"><a href="#命令行获取" class="headerlink" title="命令行获取"></a>命令行获取</h2><ol>
-<li>打开<code>terminal</code><br>输入<code>ifconfig</code>。注意不是<code>ipconfig</code></li>
-</ol>
-<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip3.png"/>
-<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip3.png) -->
-
-<h2 id="程序获取"><a href="#程序获取" class="headerlink" title="程序获取"></a>程序获取</h2><p>每次链接wifi的时候，我们的ip可能就会被重新分配，每次去走上面一遍可能会比较麻烦，有没有上面比较高级的方式获取呢。</p>
-<ol>
-<li>首先需要node环境</li>
-<li>在对应的程序下安装 <code>address</code> 包<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">npm install address --save-dev</span><br></pre></td></tr></table></figure>
-为了演示简单，单独写一个文件，例如：getIpAddress.js<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> address = <span class="built_in">require</span>(<span class="string">&#x27;address&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(address.ip())</span><br></pre></td></tr></table></figure>
-使用node运行。</li>
-</ol>
-<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip4.png"/>
-<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip4.png) -->
-
-
-<p>有了上述的方法，我们就可以在程序启动的时候，告诉开发者（我们自己）当前的ip地址是多少，我们就能直接去模拟器中打开了。</p>
-<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png"/>
-<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png) -->
-`address`包还可以获取`IPv6`和`MAC`地址。详细查看 [address-npm](https://www.npmjs.com/package/address)]]></content>
-      <categories>
-        <category>mac</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XSS攻击</title>
-    <url>/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/</url>
-    <content><![CDATA[<p>XSS攻击全称跨站脚本攻击，常见的就是攻击者把恶意代码植入到用户页面中。</p>
-<p>在XSS攻击中，一般有三个角色参与：攻击者、目标服务器、受害者的浏览器。</p>
-<p>由于服务端没有对用户的输入做安全方面的验证，攻击者就通过输入的方式，夹带一些恶意的html脚本代码（包括html, css, js）。</p>
-<a id="more"></a>
-
-<h2 id="XSS攻击的分类"><a href="#XSS攻击的分类" class="headerlink" title="XSS攻击的分类"></a>XSS攻击的分类</h2><ol>
-<li>反射型XSS（Reflected XSS）</li>
-</ol>
-<p>反射型XSS，又称非持久型XSS。之所以称为反射型XSS，则是因为这种攻击方式的注入代码是从目标服务器通过错误信息、搜索结果等等方式“反射”回来的。而称为非持久型XSS，则是因为这种攻击方式具有一次性。<code>攻击者通过电子邮件等方式将包含注入脚本的恶意链接发送给受害者，当受害者点击该链接时，注入脚本被传输到目标服务器上，然后服务器将注入脚本“反射”到受害者的浏览器上，从而在该浏览器上执行了这段脚本。</code></p>
-<p>比如攻击者将如下链接发送给受害者：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;search.asp?input&#x3D;&lt;script&gt;alert(document.cookie);&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<p>当受害者点击这个链接的时候，注入的脚本被当作搜索的关键词发送到目标服务器的search.asp页面中，则在搜索结果的返回页面中，这段脚本将被当作搜索的关键词而嵌入（服务端渲染）。这样，当用户得到搜索结果页面后，这段脚本也得到了执行。这就是反射型XSS攻击的原理，可以看到，攻击者巧妙地通过反射型XSS的攻击方式，达到了在受害者的浏览器上执行脚本的目的。由于代码注入的是一个动态产生的页面而不是永久的页面，因此这种攻击方式只在点击链接的时候才产生作用，这也是它被称为非持久型XSS的原因。<br>危害在用户查询的时候，可以实现把用户的cookie信息发送给攻击者</p>
-<p>情况二，通过渲染页面进行攻击：<br>比如攻击者将如下链接发送给受害者：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;response-xss.html?input&#x3D;&lt;style&gt;body&#123;background:red;&#125;&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-<p>需要渲染input中的内容到页面中，上面的会修改页面的背景色。<br><s>渲染模式是没办法获取用户cookie信息的（个人测试得出的结论，有异议敬请斧正）。</s><br>如果一个input的value属性值是</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">琅琊榜&quot; onclick&#x3D;&quot;javascript:alert(&#39;handsome boy&#39;)</span><br></pre></td></tr></table></figure>
-<p>就可能出现</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;琅琊榜&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;javascript:alert(&#x27;handsome boy&#x27;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>点击输入框爆炸。。</p>
-<ol start="2">
-<li>存储型XSS（Stored XSS）</li>
-</ol>
-<p>存储型XSS，又称持久型XSS，他和反射型XSS最大的不同就是，攻击脚本将被永久地存放在目标服务器的数据库和文件中。这种攻击多见于论坛，攻击者在发帖的过程中，将恶意脚本连同正常信息一起注入到帖子的内容之中。随着帖子被论坛服务器存储下来，恶意脚本也永久地被存放在论坛服务器的后端存储器中。当其它用户浏览这个被注入了恶意脚本的帖子的时候，恶意脚本则会在他们的浏览器中得到执行，从而受到了攻击。</p>
-<p>可以看到，存储型XSS的攻击方式能够将恶意代码永久地嵌入一个页面当中，所有访问这个页面的用户都将成为受害者。如果我们能够谨慎对待不明链接，那么反射型的XSS攻击将没有多大作为，而存储型XSS则不同，由于它注入的往往是一些我们所信任的页面，因此无论我们多么小心，都难免会受到攻击。可以说，存储型XSS更具有隐蔽性，带来的危害也更大，除非服务器能完全阻止注入，否则任何人都很有可能受到攻击。</p>
-<ol>
-<li><p>发一篇文章，里面包含了恶意脚本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">今天天气不错啊！&lt;script&gt;alert(&#39;handsome boy&#39;)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>后端没有对文章进行过滤，直接保存文章内容到数据库。</p>
-</li>
-<li><p>当其他看这篇文章的时候，包含的恶意脚本就会执行。</p>
-</li>
-</ol>
-<p>PS：因为大部分文章是保存整个HTML内容的，前端显示时候也不做过滤，就极可能出现这种情况。</p>
-<p><code>结论：</code></p>
-<p>后端尽可能对提交数据做过滤，在场景需求而不过滤的情况下，前端就需要做些处理了。</p>
-<p>开发安全措施：</p>
-<ol>
-<li><p>首要是服务端要进行过滤，因为前端的校验可以被绕过。</p>
-</li>
-<li><p>当服务端不校验时候，前端要以各种方式过滤里面可能的恶意脚本，例如script标签，将特殊字符转换成HTML编码。</p>
-</li>
-<li><p>跨站请求伪造</p>
-</li>
-</ol>
-<p>跨站请求伪造（Cross-SiteRequest Forgery，CSRF），作为OWASP组织的2007年提出十大安全漏洞第五，它也属于XSS攻击的一种衍生。所谓跨站请求伪造，就是攻击者利用XSS注入攻击的方式，注入一段脚本，而当受害者的浏览器运行这段脚本时，脚本伪造受害者发送了一个合法请求。比如我们注入如下的HTML代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://www.bank.com/transfer.do?toAct=123456&amp;money=10000&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>假如上面的代码中所访问的是某个银行网站的转账服务，则当受害者的浏览器运行这段脚本时，就会向攻击者指定的账户（示例的123456）执行转账操作。由于这个转账请求是在受害者的浏览器中运行的，因此浏览器也会自动将受害者的Cookie信息一并发送。这样，发送的请求就好像是受害者自己发送的一样，银行网站也将认可这个请求的合法性，攻击者也就达到了伪造请求的目的。</p>
-<p>类似操作：<br>攻击者提供一个免费的wifi，连接之后，在本地开启fiddler这种抓包工具，这类工具不仅能获取到被攻击者的所有信息，还能修改用户访问的内容，模拟用户在被害者设备发起请求。<br><img src="https://github.com/kuckboy1994/Blog/raw/master/images/xss-attack/xss-attack.png"></p>
-<ol start="4">
-<li>注入恶意软件</li>
-</ol>
-<p>除了直接注入恶意脚本以外，通过XSS攻击，攻击者也可以很方便地在脚本中引入一些恶意软件，比如病毒、木马、蠕虫等等。例如，攻击者可以在某个自己建立的页面上放置一些恶意软件，然后用XSS注入的方式，插入一段引用该页面的脚本。这样当受害者的浏览器执行这段脚本的时候，就会自动访问放置了恶意软件的页面，从而受到这些恶意软件的感染。</p>
-<p>利用XSS注入恶意软件的方式，攻击者可以很方便地在互联网上传播病毒、木马和蠕虫，通过这种途径，攻击者就可以通过这些病毒、木马和蠕虫，进一步地对受害者的主机发动攻击。目前，互联网上的“挂马”现象非常普遍，而XSS注入的出现也无疑给“挂马”的攻击者指明了又一个新的方向。通过传播这些木马，窃取合法用户的敏感信息，不少非法攻击者也逐渐将这一过程产业化，经常可以见到以信封方式批量兜售账号密码的现象。这也给许多正常的网络用户造成了许多无法挽回的巨大损失，造成的危害也很大。</p>
-<h2 id="XSS的预防"><a href="#XSS的预防" class="headerlink" title="XSS的预防"></a>XSS的预防</h2><p>在前面的文章中，我们具体介绍了各种XSS攻击的原理和方式。可以看出，XSS是一种覆盖面很广，隐蔽性很高，危害也非常大的网络应用安全漏洞。除非网站服务器完全不存在XSS漏洞，否则就会给攻击者们留下空子。因此，如何在Web应用程序的开发过程中对XSS漏洞进行预防，是所有网站开发人员所必须注意的重中之重。下面我们介绍几种常用的XSS预防措施。</p>
-<ol>
-<li>输入检测</li>
-</ol>
-<p>对用户的所有输入数据进行检测，比如过滤其中的“&lt;”、“&gt;”、“/”等可能导致脚本注入的特殊字符，或者过滤“script”、“javascript”等脚本关键字，或者对输入数据的长度进行限制等等。同时，我们也要考虑用户可能绕开ASCII码，使用十六进行编码如“&lt;</span>”（“&lt;”）、“&gt;”（“&gt;”）等来输入脚本。因此，对用户输入的十六进制编码，我们也要进行相应的过滤。只要开发人员能够严格检测每一处交互点，保证对所有用户可能的输入都进行检测和XSS过滤，就能够有效地阻止XSS攻击。</p>
-<ol start="2">
-<li>输出编码</li>
-</ol>
-<p>通过前面对XSS攻击的分析，我们可以看到，之所以会产生XSS攻击，就是因为Web应用程序将用户的输入直接嵌入到某个页面当中，作为该页面的HTML代码的一部分。因此，当Web应用程序将用户的输入数据输出到目标页面中时，只要用HtmlEncoder等工具先对这些数据进行编码，然后再输出到目标页面中。这样，如果用户输入一些HTML的脚本，也会被当成普通的文字，而不会成为目标页面HTML代码的一部分得到执行。</p>
-<ol start="3">
-<li>Cookie防盗</li>
-</ol>
-<p>利用XSS攻击，攻击者可以很方便地窃取到合法用户的Cookie信息。因此，对于网站来说，不能在Cookie信息中存放太多敏感信息，也不能将Cookie作为身份认证的唯一标识，等等。因此，对于Cookie，我们可以采取以下的措施。首先，我们要尽可能地避免在Cookie中泄露隐私，如用户名、密码等；其次，我们可以将Cookie信息用MD5等Hash算法进行多次散列后存放；再次，为了防止重放攻击，我们也可以将Cookie和IP进行绑定，这样也可以阻止攻击者冒充正常用户的身份。</p>
-<ol start="4">
-<li>严格限制URL访问</li>
-</ol>
-<p>攻击者使用XSS攻击，通常都要借助于自己指定的网站页面，比如用它来记录敏感信息、在该页面上“挂马”等等。因此，在页面的脚本代码执行过程中，只要我们严格限制其访问的URL，比如只允许脚本代码访问本网站的URL等方式，就可以避免脚本的执行链接到其它可能是攻击者指定的页面上。</p>
-<ol start="5">
-<li>用户注意事项</li>
-</ol>
-<p>作为一名普通的网络用户，在XSS攻击的预防上总体处在被动的地位。但是我们也可以通过采取一些措施来尽可能地避免受到XSS攻击。首先，我们不要轻易相信电子邮件或者网页中的不明链接，这些链接很有可能引导反射型XSS攻击或者使我们访问到一些不安全的网页。其次，我们在不必要的时候可以禁用脚本功能，这样XSS注入的脚本就无法得到运行。再次，我们也可以使用一些安全的浏览器上网，有的浏览器提供XSS过滤功能，会提示页面中可能发生的XSS注入并将其阻挡下来。</p>
-<h2 id="XSS的漏洞检测"><a href="#XSS的漏洞检测" class="headerlink" title="XSS的漏洞检测"></a>XSS的漏洞检测</h2><ol>
-<li>黑盒测试<br>所谓黑盒测试，就是在不知道系统的代码和运行状态的条件下，对系统进行的测试。在对XSS漏洞的检测中，我们可以模拟黑客的攻击手段，在所有可能的数据输入接口处，尝试进行一些XSS注入。通过观察注入后的引用这些数据的页面，看其是否出现被注入的现象，即可确实是否存在XSS漏洞。比如我们可以用下面所列的一些脚本来尝试XSS注入：<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">1. 在HTML标签中输出</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">2. 在HTML属性中输出</span><br><span class="line">&quot;&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">e.g.</span></span></span><br><span class="line">&lt;div name=&quot;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;javascript:alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">http://xxx.com/yyy.png&quot; onerror=&quot;alert(&#x27;XSS&#x27;)</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://xxx.com/yyy.png&quot;</span> <span class="attr">onerror</span>=<span class="string">&quot;alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">3. 在<span class="tag">&lt;<span class="name">script</span>&gt;</span>标签中输出</span><br><span class="line">&quot;;alert(document.cookie);//</span><br><span class="line">e.g. </span><br><span class="line"><span class="handlebars"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> x = <span class="string">&quot;&quot;</span>;alert(<span class="built_in">document</span>.cookie);<span class="comment">//&quot;;</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">4. 在事件中输出</span><br><span class="line">&#x27;&#x27;);alert(document.cookie</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;funcA(&#x27;&#x27;);alert(document.cookie)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">5. 在CSS中输出（仅低版本 IE 有效）</span><br><span class="line">body &#123;background-image:url(&quot;javascript:alert(&#x27;XSS&#x27;)&quot;);&#125;</span><br><span class="line">body &#123;background-image:expression(alert(&#x27;xss&#x27;));&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>如果在打开那些引用了该输入数据的页面时，弹出对话框显示信息，则可以确定该数据输入时有可能导致XSS注入，从而确定了XSS漏洞的位置。</p>
-<ol start="2">
-<li>静态分析</li>
-</ol>
-<p>XSS漏洞静态分析方法属于白盒测试方法的一种，它通过对Web应用的代码进行分析，从而发现其中可能存在的问题。通常来说，静态分析技术只是对代码进行一些简单的扫描，找到其中有可能导致XSS注入的地方，将其报告给我们。</p>
-<p>比如在Web应用的代码中可能存在一些读入数据的API，如Request.QueryString()，$_GET等，如果存在这些API，则表示可能引入XSS的注入。通过静态分析工具，我们可以很容易发现所有这些读入数据的API，从而详细检查每一个数据输入点是否进行了XSS注入的过滤。可以看到，静态分析的方法，只是帮助我们定位XSS漏洞的可能位置，由于静态分析工具难以判定是否对输入数据进行过XSS过滤，因此还是需要我们手动地进行检查，从而确保不存在XSS漏洞。</p>
-<ol start="3">
-<li>数据流分析</li>
-</ol>
-<p>XSS漏洞之所以产生，根本原因在于不安全的数据流，使得用户的输入数据被直接嵌入到某些页面中。比如PHP中的echo语句，就能够将一些数据直接添加为HTML页面的一部分，如果这个数据是用户注入了XSS脚本的数据，则会导致产生XSS攻击。因此，数据流分析的主要思想就是使用一些模型或者工具，分析Web应用程序代码中的数据传输情况，从而发现其中存在的问题。比如，我们可以将用户的输入数据所存储的变量打上污点标记，通过对数据流和变量类型的分析，逐步标记所有引用了污点变量的中间变量，最后通过观察输出到页面中的变量数据是否存在污点，来判断是否可能产生XSS漏洞。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://blog.csdn.net/hitwangpeng/article/details/45503465">[web安全]XSS可能发生的场景及解决方法</a></li>
-<li><a href="https://www.cnblogs.com/lovesong/p/5199623.html">前端安全之XSS攻击</a></li>
-<li><a href="http://blog.csdn.net/yefan2222/article/details/7091863">Cross-Site Scripting(XSS): 跨站脚本攻击介绍</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>xss</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客搭建指南</title>
-    <url>/2018/05/28/2018-05-28-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><ul>
-<li><p>安装 <code>node</code> 和 <code>git</code></p>
-</li>
-<li><p>安装 <code>hexo</code></p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建项目</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init kuckboy1994.github.io</span><br><span class="line">cd kuckboy1994.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>项目目录如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml     &#x2F;&#x2F; 配置信息</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds       &#x2F;&#x2F; 模板文件夹</span><br><span class="line">├── source          &#x2F;&#x2F; 资源 博客文章</span><br><span class="line">|   ├── _drafts     &#x2F;&#x2F; 草稿</span><br><span class="line">|   └── _posts      &#x2F;&#x2F; 正式发布的文章</span><br><span class="line">└── themes          &#x2F;&#x2F; 主题</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><ul>
-<li>配置信息</li>
-</ul>
-<p>如下是我个人的<a href="https://github.com/kuckboy1994/hexobackup/blob/master/_config.yml">配置</a>：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## Source: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># Site</span><br><span class="line">title: kuckboy的博客</span><br><span class="line">subtitle: 必须向前看，要犯就犯新的错误</span><br><span class="line">description: 专注种多肉的前端一枚</span><br><span class="line">keywords: 前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer</span><br><span class="line">author: kuckboy1994</span><br><span class="line">email: shanchao@qq.com</span><br><span class="line">language: </span><br><span class="line">timezone: Asia&#x2F;Shanghai</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: &#x2F;&#x2F;blog.kuckboy1994.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Directory</span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads&#x2F;code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"># Writing</span><br><span class="line">new_post_name: :year-:month-:day-:title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default &#x3D; &#39;&#39;)</span><br><span class="line"># per_page: Posts displayed per page. (0 &#x3D; disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br><span class="line">  </span><br><span class="line"># Category &amp; Tag</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Server</span><br><span class="line">## Hexo uses Connect as a server</span><br><span class="line">## You can customize the logger format as defined in</span><br><span class="line">## http:&#x2F;&#x2F;www.senchalabs.org&#x2F;connect&#x2F;logger.html</span><br><span class="line">port: 4000</span><br><span class="line">server_ip: localhost</span><br><span class="line">logger: false</span><br><span class="line">logger_format: dev</span><br><span class="line"></span><br><span class="line"># Date &#x2F; Time format</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F;</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 6</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: yilia</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">    path: baidusitemap.xm</span><br><span class="line"></span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: false</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: rsync</span><br><span class="line">  # type: git</span><br><span class="line">  repo: git@github.com:kuckboy1994&#x2F;kuckboy1994.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  host: 140.143.193.185</span><br><span class="line">  user: root</span><br><span class="line">  root: &#x2F;data&#x2F;blog</span><br><span class="line">  port: 22</span><br><span class="line">  delete: true</span><br><span class="line">  verbose: true</span><br><span class="line">  ignore_errors: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <code>_config.yml</code> 中的 <code>default_layout</code> 参数代替</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new draft 我是草稿</span><br></pre></td></tr></table></figure>
-<p>就会在 <code>/source/_drafts/</code> 下生成一个 <code>我是草稿.md</code> 文件。在生成静态文件的时候这个文件是不会被显示的。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new blog</span><br></pre></td></tr></table></figure>
-<p>就会在 <code>/source/_posts/</code> 下生成一个 <code>blog.md</code> 文件。生成静态文件的时候就是正常的博客了。</p>
-<h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>发布草稿箱中的内容转成正常的博客。在生成静态文件的时候也可以被正常看到。</p>
-<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br><span class="line"></span><br><span class="line">hexo s &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
-<p>启动服务器。在线预览。默认网址是：<code>http://localhost:4000/</code></p>
-<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line">hexo g &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
-<p>生成静态文件</p>
-<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line">hexo d &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
-<p>部署网站</p>
-<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
-<li><code>server</code> 命令是会自动监听文件变化的。开启端口之后。直接刷新网页就可以看到变化。</li>
-<li>新建的草稿如何在线预览？<br>  命令行增加如下参数  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s --draft</span><br></pre></td></tr></table></figure></li>
-<li><code>more &gt;&gt;</code> 设置。在文章的前五行左右加入如下代码，在首页的列表就不会显示全部的文章了。  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>部署之前先修改 <code>_config.yml</code> 中参数的配置。 例如：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="comment"># type: git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:kuckboy1994/kuckboy1994.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">host:</span> <span class="number">140.143</span><span class="number">.193</span><span class="number">.185</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/data/blog</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">22</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>上面的配置包含了两种部署方式。一个是同步的服务器。一个是发布的github的page页面。修改 <code>type</code> 实现两种发布。</p>
-<p><code>git</code> 需要安装</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br><span class="line">  <span class="attr">message:</span> [<span class="string">message</span>]</span><br></pre></td></tr></table></figure>
-
-<p>发布到服务器，需要安装</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
-
-<p>配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> [<span class="string">port</span>]</span><br><span class="line">  <span class="attr">delete:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br><span class="line">  <span class="attr">verbose:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br><span class="line">  <span class="attr">ignore_errors:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br></pre></td></tr></table></figure>
-
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>我使用的主题是 <a href="https://github.com/litten/hexo-theme-yilia">yilia</a>。</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>在项目下执行命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure>
-<p>会把项目 <code>clone</code> 到项目的 <code>theme/yilia</code> 文件夹下。</p>
-<h3 id="修改主题配置"><a href="#修改主题配置" class="headerlink" title="修改主题配置"></a>修改主题配置</h3><p>修改hexo根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code></p>
-<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><p>想把当前博客的配置上传到github上。遇到了如下的问题。</p>
-<p><img src="https://wx3.sinaimg.cn/mw690/ec4d7780gy1fr4x8f45eqj20v808stak.jpg" alt="主题无法提交"></p>
-<p>问题的原因是 <code>themes/yilia</code> 这个项目下有和 <code>github</code> 上的项目关联了。 因为我修改了主题下面的配置，文件改动，但是有没有添加到暂存和提交。但是又不能提交。因为项目不是我维护的。所以你只要删除 <code>themes/yilia</code> 下的 <code>.git</code> 文件夹就可以了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://hexo.io/zh-cn/docs/index.html">hexo 中文官网</a></li>
-<li><a href="https://segmentfault.com/q/1010000007524645">Github pages和hexo d出现错误</a></li>
-<li><a href="https://github.com/litten/hexo-theme-yilia">Github litten/hexo-theme-yilia</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序解惑-组件button详解</title>
-    <url>/2018/05/29/2018-05-29-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E7%BB%84%E4%BB%B6button%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p>我们在小程序开发的时候，会有这样的需求，设置一个透明的 <code>button</code>。为什么要用 <code>button</code> 呢？因为 <code>button</code> 有很多的开放功能，例如：获取用户信息、分享、调起会话、获取用户手机号、启动外部App、打开设置页。</p>
-<p>问题来了，设置透明的 <code>button</code> 到底该怎么实现呢？</p>
-<p>设置 <code>background: transparent</code> 是无效的。我们需要设置按钮 <code>镂空</code>。 如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">plain</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>但是。。。 为什么是这样的？<br><img src="http://wx4.sinaimg.cn/mw690/ec4d7780gy1frsmrk5mucj208v0al74e.jpg"></p>
-<a id="more"></a>
-<p>尝试设置一下 <code>CSS</code></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">border</span>: <span class="selector-tag">none</span>;</span><br></pre></td></tr></table></figure>
-
-<p>完全没有效果呀？</p>
-<p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frsmvt9q1gj20c00b143h.jpg"></p>
-<p>最终的解决办法：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">button</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在根目录下的 <code>app.wxss</code> 添加如上代码修改所有 <code>button</code> 的效果。<br>猜测官方的 <code>button</code> 组件使用的是 <code>::after</code> 伪类的方式实现边框的。遇到同类问题可以在 <code>::after</code> 上做尝试。 例如: <code>border-radius</code>。</p>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序解惑-常见的css问题</title>
-    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E5%B8%B8%E8%A7%81%E7%9A%84css%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响"><a href="#在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响" class="headerlink" title="在 scroll-view 中 padding 会对内部元素的 position: absolute 产生影响"></a>在 <code>scroll-view</code> 中 <code>padding</code> 会对内部元素的 <code>position: absolute</code> 产生影响</h3><p><code>padding</code> 在 <code>scroll-view</code> 中的效果有点像 <code>margin</code> 。</p>
-<p>例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;square&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.square</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>效果如下：</p>
-<p><img src="http://wx2.sinaimg.cn/mw690/ec4d7780gy1frtrw0nlj3j209009mmx7.jpg"></p>
-<p>在 <code>.box</code> 上增加 <code>padding</code></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">100</span>rpx; </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frtrw4o2ifj208x09cdfv.jpg"></p>
-<p>应该是 <code>scroll-view</code> 组件封装的时候没有考虑到 <code>padding</code> 的影响吧。或者官方认为这个遇到问题可以通过调节元素的层级关系来解决而没有去解决的一个疑难杂症？😂</p>
-<h3 id="图片下方存在留白"><a href="#图片下方存在留白" class="headerlink" title="图片下方存在留白"></a>图片下方存在留白</h3><p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtsk7ft47j208y0f7wgn.jpg"></p>
-<p>和正常的网页处理方式一致。</p>
-<ul>
-<li><p>修改 <code>vertical-align</code>, 默认是 <code>baseline</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vertical-align: middle; </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 <code>display</code>, 默认是 <code>inline</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display: block;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序解惑_收集用户的formid</title>
-    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%94%B6%E9%9B%86%E7%94%A8%E6%88%B7%E7%9A%84formid/</url>
-    <content><![CDATA[<h2 id="我们为什么要收集用户的-formid-呢？"><a href="#我们为什么要收集用户的-formid-呢？" class="headerlink" title="我们为什么要收集用户的 formid 呢？"></a>我们为什么要收集用户的 <code>formid</code> 呢？</h2><p>因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。</p>
-<h2 id="如何收集formid"><a href="#如何收集formid" class="headerlink" title="如何收集formid"></a>如何收集formid</h2><p>要获取用户id，首先我们要有一个 <code>form</code> 表单组件。 只有在提交表单的时候才会有 <code>formid</code>，而且 <code>report-submit</code> 属性为 <code>true</code>。代码如下</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- wxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">bindsubmit</span>=<span class="string">&quot;eventCollectFormId&quot;</span> <span class="attr">report-submit</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">form-type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收集用户formId</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">eventCollectFormId (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.detail.formId)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。</p>
-<a id="more"></a>
-<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p><code>form</code> 组件可以设置在页面的最外层。内部放置多个 <code>button</code>。统一调用一个 <code>bindsubmit</code> 事件。</p>
-<p>要想尽可能多的获取 <code>formid</code> 又不想把所有的标签都使用 <code>button</code>，因为 <code>button</code> 修改样式的代缴是比较大的。可以使用悬浮的 <code>button</code> 。只要设置：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">opacity</span>: 0;</span><br></pre></td></tr></table></figure>
-<p>把原来的事件放置到 <code>button</code> 上即可。</p>
-<p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frsobwh7psj20ai0cudhn.jpg"></p>
-<p>红色框起来的地方，我在 <code>喜欢操作</code> 上方加了一个按钮，并且赋值了相应的属性。这样我们就在用户交互的时候同时获取了他的 <code>formid</code>。而且增加了用户的点击区域，优化了交互。</p>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序解惑-横向滚动列表</title>
-    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<ul>
-<li>设置横向滚动列表，除了我们常见的设置</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">overflow-x</span>: <span class="selector-tag">auto</span>;</span><br></pre></td></tr></table></figure>
-
-<p>这样设置出来的列表滚动起来比较 <code>涩</code> 。滚动起来不够流畅。</p>
-<ul>
-<li>还有一种做法就是使用 <code>scroll-view</code> 组件</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;share-list&quot;</span> <span class="attr">scroll-x</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;share-item&quot;</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;[1,2,3,4,5,6]&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.share-list</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<p>样式中一定要设置 <code>white-space: nowrap;</code> 否则不能滚动。</p>
-<p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtre5rolqg206j0bchdu.gif"></p>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序解惑-视频滚动播放</title>
-    <url>/2018/07/03/2018-07-03-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E8%A7%86%E9%A2%91%E6%BB%9A%E5%8A%A8%E6%92%AD%E6%94%BE/</url>
-    <content><![CDATA[<p><a href="https://github.com/kuckboy1994/mp_scroll_play_demo">项目地址</a> 欢迎star</p>
-<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif"></p>
-<ul>
-<li>如果未正常显示gif，<a href="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif">点击链接</a> 查看</li>
-</ul>
-<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><ol>
-<li>滚动到视频一半的位置，进行切换视频播放</li>
-<li>记录所有视频的播放位置，再次切换回来的时候继续播放。</li>
-<li>当播放视频滚出可见范围的时候，立刻停止播放（声音停止）。滚动停止的时候新的视频开始播放。</li>
-<li>全屏播放。（这里存在一个坑，全屏的时候会立刻自动退出全屏）</li>
-<li>基础上拉加载，上拉刷新（demo中未提现，配置下app.json即可实现）</li>
-</ol>
-<a id="more"></a>
-
-<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* global getApp Page wx */</span></span><br><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的防抖函数</span></span><br><span class="line"><span class="keyword">let</span> timeout</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">    timeout = <span class="built_in">setTimeout</span>(func, wait)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的节流函数</span></span><br><span class="line"><span class="keyword">let</span> timeout2 = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!timeout2) &#123;</span><br><span class="line">      timeout2 = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout2)</span><br><span class="line">        timeout2 = <span class="literal">null</span></span><br><span class="line">        func()</span><br><span class="line">      &#125;, wait)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    width: wx.getSystemInfoSync().windowWidth,</span><br><span class="line">    height: wx.getSystemInfoSync().windowHeight,</span><br><span class="line"></span><br><span class="line">    videoLoading: <span class="literal">false</span>,</span><br><span class="line">    videoList: [],</span><br><span class="line"></span><br><span class="line">    location: [],</span><br><span class="line">    isLock: <span class="literal">false</span>,  <span class="comment">// 当前栗子无用，如果有些弹窗控制不住背后的视频列表滚动的话，isLock的作用就发挥出来了。</span></span><br><span class="line">    localIndex: <span class="number">0</span>,</span><br><span class="line">    noPageScroll: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  info: &#123;</span><br><span class="line">    videoPlayDetail: &#123;&#125; <span class="comment">// 存放所有视频的播放位置</span></span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad (options) &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList(<span class="number">1</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 分页获取视频</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  getVideoList (initPage) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoLoading, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">if</span> (videoLoading) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoLoading: <span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 制造模拟数据</span></span><br><span class="line">    <span class="keyword">let</span> data = [&#123;</span><br><span class="line">      cover: <span class="string">&#x27;https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvx1996xoj20da07in0t.jpg&#x27;</span>,</span><br><span class="line">      src: <span class="string">&#x27;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&#x27;</span>,</span><br><span class="line">      width: <span class="number">480</span>,</span><br><span class="line">      height: <span class="number">272</span>,</span><br><span class="line">      title: <span class="string">&#x27;腾讯大学视频&#x27;</span>,</span><br><span class="line">      isPlay: <span class="literal">false</span></span><br><span class="line">    &#125;]</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="comment">// 模拟请求</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        videoList: videoList.concat(<span class="built_in">this</span>.formatVideoList(data)),</span><br><span class="line">        videoLoading: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="comment">// 给数据足够的渲染时间，之后进行视频位置的测量</span></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.getLocationInfo()</span><br><span class="line">        <span class="keyword">if</span> (initPage) &#123; <span class="comment">// 如果是首次进入，就自动播放第一个视频</span></span><br><span class="line">          <span class="built_in">this</span>.showVideoList(<span class="number">0</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 格式化视频列表</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Array&#125;</span> </span>videoList 需要格式化的视频列表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  formatVideoList (videoList) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; width, height &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">return</span> videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> styleHight = width * value.height / value.width</span><br><span class="line">      styleHight = styleHight &gt; <span class="number">0.7</span> * height ? <span class="number">0.7</span> * height : styleHight</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...value,</span><br><span class="line">        styleHight: <span class="built_in">Math</span>.floor(styleHight),</span><br><span class="line">        currentTime: <span class="number">0</span>,</span><br><span class="line">        isPlay: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 点击播放</span></span><br><span class="line">  eventPlay (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; index &#125; = event.currentTarget.dataset</span><br><span class="line">    <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 视频更新的时候不断的去记录播放的位置</span></span><br><span class="line">  eventPlayupdate (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">detail</span>: &#123; currentTime &#125;, <span class="attr">currentTarget</span>: &#123; <span class="attr">dataset</span>: &#123; index &#125; &#125; &#125; = event</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.info.videoPlayDetail[index] = currentTime</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 到底加载更多</span></span><br><span class="line">  onReachBottom () &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 设置播放的视频</span></span><br><span class="line">  showVideoList (index) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index)</span><br><span class="line">    <span class="keyword">let</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    videoList = videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      value.isPlay = <span class="literal">false</span></span><br><span class="line">      <span class="keyword">return</span> value</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">if</span> (index &gt;= <span class="number">0</span> &amp;&amp; videoList[index]) &#123;</span><br><span class="line">      videoList[index].isPlay = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoList</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 全屏播放，设置当前页面滚动无效，全屏的时候，会触发滚动事件。</span></span><br><span class="line">  eventFullScreen (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event)</span><br><span class="line">    <span class="keyword">const</span> &#123; fullScreen &#125; = event.detail</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      noPageScroll: fullScreen</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onPageScroll (&#123; scrollTop &#125;) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.data.noPageScroll) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取数据分别放置到各自的节流防抖函数中，防止调用的时候数据已近发生改变</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节流，每200毫秒触发一次</span></span><br><span class="line">    throttle(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;throttle&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, localIndex, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">          index = i</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (localIndex !== index) &#123;</span><br><span class="line">        videoList[localIndex].currentTime = <span class="built_in">this</span>.info.videoPlayDetail[localIndex]</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          videoList</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">this</span>.showVideoList()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 防抖，只触发一次</span></span><br><span class="line">    debounce(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;debounce&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, isLock &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">if</span> (!isLock) &#123;</span><br><span class="line">        <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">            index = i</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          localIndex: index</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 测量当前的所有视频的高度，计算出视频播放与否的位置</span></span><br><span class="line">  getLocationInfo () &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">var</span> query = wx.createSelectorQuery()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; videoList.length; i++) &#123;</span><br><span class="line">      query.select(<span class="string">`#video<span class="subst">$&#123;i&#125;</span>`</span>).boundingClientRect()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> length = videoList.length</span><br><span class="line">    <span class="keyword">const</span> location = []</span><br><span class="line">    query.exec(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line"></span><br><span class="line">      <span class="keyword">let</span> start = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> end = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> lei = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">          start = <span class="number">0</span></span><br><span class="line">          end = videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          start = end</span><br><span class="line">          end = lei + videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location.push(&#123;</span><br><span class="line">          start: start,</span><br><span class="line">          end: end</span><br><span class="line">        &#125;)</span><br><span class="line">        lei = lei + res[i].height + <span class="number">10</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        location</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>tiktok设置可点击的website链接</title>
-    <url>/2020/08/19/2020-08-19-tiktok%E8%AE%BE%E7%BD%AE%E5%8F%AF%E7%82%B9%E5%87%BB%E7%9A%84website%E9%93%BE%E6%8E%A5/</url>
-    <content><![CDATA[<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>在 <code>tiktok</code> 的 <code>Me</code> 页面设置一个可以点击的连接可以帮助导流。点击之后跳转到不同的应用市场。</p>
-<h2 id="几个前置条件"><a href="#几个前置条件" class="headerlink" title="几个前置条件"></a>几个前置条件</h2><ol>
-<li>粉丝数要达到1000</li>
-<li>一个在国外备案的url</li>
-<li>判断 <code>navigator</code> 信息进行处理<a id="more"></a>
-
-</li>
-</ol>
-<h3 id="粉丝数"><a href="#粉丝数" class="headerlink" title="粉丝数"></a>粉丝数</h3><p>粉丝数是硬指标，感觉像是给积极发展平台的奖励 😂</p>
-<h3 id="国外备案的url"><a href="#国外备案的url" class="headerlink" title="国外备案的url"></a>国外备案的url</h3><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/EBEBB69B9817E60AE52A25DC2E0E5A6D.png" alt="警告提示" style="max-width: 300px; border: 1px solid black;" />
-
-
-<p>这个是我各人的猜测，我测试了公司的几个域名都不行，甚至公司的主app的域名。还测试了国内比较有名的 <code>https://xclient.info</code> 的地址。<code>https://www.baidu.com</code> 是可以的。</p>
-<p>国内的域名可以使用国外的短链接服务来避开。<br>推荐：</p>
-<ol>
-<li><a href="https://bitly.com/">Bitly</a></li>
-</ol>
-<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/klsdsakdjflkjdfsgsksfkljlk3458.png" alt="Bitly"></p>
-<p>合作的用户包括 <code>迪士尼</code>、<code>亚马孙</code>、<code>Nike</code>、<code>Bose</code> 等企业。</p>
-<ol start="2">
-<li><a href="">TinyURL</a></li>
-</ol>
-<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/asdjksjfglkdfj34859ksdfjaksjdflkaj.png" alt="TinyUrl"></p>
-<p>服务用户也非常广，且永不过期。</p>
-<p>还有其他<a href="https://www.sdwebseo.com/url-shortener/">查看</a></p>
-<h3 id="判断navigator"><a href="#判断navigator" class="headerlink" title="判断navigator"></a>判断navigator</h3><p><code>Navigator</code> 对象</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Navigator &#123;</span><br><span class="line">  appCodeName: <span class="string">&quot;Mozilla&quot;</span> <span class="comment">// 当前浏览器的内部“开发代号”名称。</span></span><br><span class="line">  appName: <span class="string">&quot;Netscape&quot;</span> <span class="comment">// 浏览器官方名称</span></span><br><span class="line">  appVersion: <span class="string">&quot;5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span>, <span class="comment">// 浏览器版本</span></span><br><span class="line">  bluetooth: Bluetooth &#123;&#125; <span class="comment">// 蓝牙信息</span></span><br><span class="line">  clipboard: Clipboard &#123;&#125; <span class="comment">// 剪切板</span></span><br><span class="line">  connection: NetworkInformation &#123; <span class="comment">// 网络连接信息</span></span><br><span class="line">    downlink: <span class="number">2.9</span> <span class="comment">// 网络下行速度</span></span><br><span class="line">    effectiveType: <span class="string">&quot;4g&quot;</span> <span class="comment">// 网络类型</span></span><br><span class="line">    onchange: <span class="literal">null</span>  <span class="comment">// 有值代表网络变更</span></span><br><span class="line">    rtt: <span class="number">100</span>  <span class="comment">// 估算往返时间</span></span><br><span class="line">    saveData: <span class="literal">false</span> <span class="comment">// 打开/请求数据保护模式</span></span><br><span class="line">  &#125;</span><br><span class="line">  cookieEnabled: <span class="literal">true</span> <span class="comment">// 是否启用cookie，可以用来判断是否支持cookie</span></span><br><span class="line">  credentials: CredentialsContainer &#123;&#125;  <span class="comment">// 请求凭证 </span></span><br><span class="line">  deviceMemory: <span class="number">8</span> <span class="comment">// 内存数， 单位GB。 感觉不准 当前mac是16G的</span></span><br><span class="line">  doNotTrack: <span class="literal">null</span>  <span class="comment">// 是否允许网站提供商追踪你的信息，在浏览器端设置，开启 `随浏览流量一起发送“不跟踪”请求`，请求的header中会增加DNT：1，使用与否看服务提供商了</span></span><br><span class="line">  geolocation: Geolocation &#123;&#125; <span class="comment">// 地理位置信息</span></span><br><span class="line">  hardwareConcurrency: <span class="number">8</span>  <span class="comment">// 可用的逻辑处理器核心数</span></span><br><span class="line">  keyboard: Keyboard &#123;&#125; <span class="comment">// 返回一个Keyboard对象，该对象提供对以下功能的访问：检索键盘布局图和切换从物理键盘捕获按键的功能。</span></span><br><span class="line">  language: <span class="string">&quot;en&quot;</span>  <span class="comment">// 用户的首先语言，通常是浏览器用户界面的语言。当未知的时，返回null。</span></span><br><span class="line">  languages: (<span class="number">12</span>) [<span class="string">&quot;en&quot;</span>, <span class="string">&quot;zh-CN&quot;</span>, <span class="string">&quot;zh&quot;</span>, <span class="string">&quot;zh-TW&quot;</span>, <span class="string">&quot;vi&quot;</span>, <span class="string">&quot;ja&quot;</span>, <span class="string">&quot;und&quot;</span>, <span class="string">&quot;nb&quot;</span>, <span class="string">&quot;fr&quot;</span>, <span class="string">&quot;ca&quot;</span>, <span class="string">&quot;da&quot;</span>, <span class="string">&quot;ru&quot;</span>] <span class="comment">// 用户已知的语言列表</span></span><br><span class="line">  locks: LockManager &#123;&#125;</span><br><span class="line">  maxTouchPoints: <span class="number">0</span> <span class="comment">// 返回当前设备能够支持的最大同时触摸的点数。 PC端为0</span></span><br><span class="line">  mediaCapabilities: MediaCapabilities &#123;&#125;</span><br><span class="line">  mediaDevices: MediaDevices &#123;</span><br><span class="line">    ondevicechange: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  mediaSession: MediaSession &#123;</span><br><span class="line">    metadata: <span class="literal">null</span>,</span><br><span class="line">    playbackState: <span class="string">&quot;none&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">  mimeTypes: MimeTypeArray &#123;  <span class="comment">// 支持的媒体类型，除了pdf之外 感觉都很少见</span></span><br><span class="line">    <span class="number">0</span>: MimeType &#123;<span class="attr">type</span>: <span class="string">&quot;application/pdf&quot;</span>, <span class="attr">suffixes</span>: <span class="string">&quot;pdf&quot;</span>, <span class="attr">description</span>: <span class="string">&quot;&quot;</span>, <span class="attr">enabledPlugin</span>: Plugin&#125;,</span><br><span class="line">    <span class="number">1</span>: MimeType &#123;<span class="attr">type</span>: <span class="string">&quot;application/x-google-chrome-pdf&quot;</span>, <span class="attr">suffixes</span>: <span class="string">&quot;pdf&quot;</span>, <span class="attr">description</span>: <span class="string">&quot;Portable Document Format&quot;</span>, <span class="attr">enabledPlugin</span>: Plugin&#125;,</span><br><span class="line">    <span class="number">2</span>: MimeType,</span><br><span class="line">    <span class="number">3</span>: MimeType,</span><br><span class="line">    application/pdf: MimeType,</span><br><span class="line">    application/x-google-chrome-pdf: MimeType,</span><br><span class="line">    application/x-nacl: MimeType,</span><br><span class="line">    application/x-pnacl: MimeType,</span><br><span class="line">    length: <span class="number">4</span></span><br><span class="line">  &#125;</span><br><span class="line">  onLine: <span class="literal">true</span>  <span class="comment">// 是否联网</span></span><br><span class="line">  permissions: Permissions &#123;&#125; <span class="comment">// 更新 查询 授权的信息。 https://developer.mozilla.org/zh-TW/docs/WebAPI/Permissions</span></span><br><span class="line">  platform: <span class="string">&quot;MacIntel&quot;</span>  <span class="comment">// 浏览器平台名</span></span><br><span class="line">  plugins: PluginArray &#123;  <span class="comment">// 安装的插件，这些感觉不像是认知中的插件</span></span><br><span class="line">    <span class="number">0</span>: Plugin,</span><br><span class="line">    <span class="number">1</span>: Plugin,</span><br><span class="line">    <span class="number">2</span>: Plugin,</span><br><span class="line">    Chrome PDF Plugin: Plugin,</span><br><span class="line">    Chrome PDF Viewer: Plugin,</span><br><span class="line">    Native Client: Plugin,</span><br><span class="line">    length: <span class="number">3</span></span><br><span class="line">  &#125;</span><br><span class="line">  presentation: Presentation &#123;</span><br><span class="line">    receiver: <span class="literal">null</span>,</span><br><span class="line">    defaultRequest: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  product: <span class="string">&quot;Gecko&quot;</span>  <span class="comment">// 在任意浏览器下都只返回&#x27;Gecko&#x27;，此属性只用于兼容的目的。。</span></span><br><span class="line">  productSub: <span class="string">&quot;20030107&quot;</span>  <span class="comment">// 返回当前浏览器的编译版本号</span></span><br><span class="line">  serviceWorker: ServiceWorkerContainer &#123; <span class="comment">// service 相关</span></span><br><span class="line">    controller: <span class="literal">null</span>, </span><br><span class="line">    ready: <span class="built_in">Promise</span>, </span><br><span class="line">    oncontrollerchange: <span class="literal">null</span>, </span><br><span class="line">    onmessage: <span class="literal">null</span>, </span><br><span class="line">    onmessageerror: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  storage: StorageManager &#123;&#125;</span><br><span class="line">  usb: USB &#123;</span><br><span class="line">    onconnect: <span class="literal">null</span>,</span><br><span class="line">    ondisconnect: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  userActivation: UserActivation &#123;  <span class="comment">// 窗口是否被激活过，是否处于激活状态</span></span><br><span class="line">    hasBeenActive: <span class="literal">true</span>,</span><br><span class="line">    isActive: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 用户代理 浏览器的相关信息</span></span><br><span class="line">  userAgent: <span class="string">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span></span><br><span class="line">  vendor: <span class="string">&quot;Google Inc.&quot;</span> <span class="comment">// 浏览器供应商的名称.</span></span><br><span class="line">  vendorSub: <span class="string">&quot;&quot;</span> <span class="comment">// 浏览器供应商的版本号。</span></span><br><span class="line">  wakeLock: WakeLock &#123;&#125;</span><br><span class="line">  webkitPersistentStorage: DeprecatedStorageQuota &#123;&#125;</span><br><span class="line">  webkitTemporaryStorage: DeprecatedStorageQuota &#123;&#125;</span><br><span class="line">  xr: XRSystem &#123;  <span class="comment">// 支持VR和增强现实（AR）</span></span><br><span class="line">    ondevicechange: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.sdwebseo.com/url-shortener/">该使用短链接吗？短链接工具有哪些？</a></li>
-<li><a href="https://www.zhangxinxu.com/wordpress/2018/07/navigator-do-not-track-api/">隐私相关-了解HTML5 Do Not Track API</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>总结</category>
-      </categories>
-      <tags>
-        <tag>tiktok</tag>
-        <tag>短连接</tag>
-        <tag>浏览器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode-647-回文子串</title>
-    <url>/2020/08/20/leetcode-647-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
-    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
-<h3 id="647-回文子串"><a href="#647-回文子串" class="headerlink" title="647. 回文子串"></a>647. 回文子串</h3><p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
-<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：&quot;abc&quot;</span><br><span class="line">输出：3</span><br><span class="line">解释：三个回文子串: &quot;a&quot;, &quot;b&quot;, &quot;c&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：&quot;aaa&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：6个回文子串: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>输入的字符串长度不会超过 1000 。</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/palindromic-substrings">https://leetcode-cn.com/problems/palindromic-substrings</a></p>
-</blockquote>
-<a id="more"></a>
-
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="暴力求解"><a href="#暴力求解" class="headerlink" title="暴力求解"></a>暴力求解</h3><p>因为要求解所有的回文子串，第一想到的就是暴力求解，可能会担心时间复杂度过高，导致超时。<br>子串的不同起始位置不同，就是不同的子串，这样就可以不用判断重复的问题了，看上去就很适合暴力求解。✌️</p>
-<ol>
-<li><code>i</code> 从 0 到 n。</li>
-<li>奇数回文：判断第 <code>i</code> 位置的字符前后的字符是否是一致的。相等就不断向外扩散，并且计数 <code>+1</code></li>
-<li>偶数回文：判断第 <code>i</code> 位置的字符和 <code>i+1</code>位置的字符是否相等。相等就两个字符分别向前或向后扩散，并且计数 <code>+1</code></li>
-</ol>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
-<li>空间复杂度 O(1)<ul>
-<li>就使用了简单的常量，没有对结果进行保留计算，所以复杂度是O(1)</li>
-</ul>
-</li>
-<li>时间复杂度 O(n2)<ul>
-<li>两层循环</li>
-</ul>
-</li>
-</ul>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">s</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> countSubstrings = <span class="function"><span class="keyword">function</span> (<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> len = s.length;</span><br><span class="line">  <span class="keyword">let</span> count = len;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; i - j &gt;= <span class="number">0</span> &amp;&amp; i + j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (s[i - j] === s[i + j]) &#123;</span><br><span class="line">        count++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; i - j &gt;= <span class="number">0</span> &amp;&amp; i + j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (s[i - j] === s[i + <span class="number">1</span> + j]) &#123;</span><br><span class="line">        count++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>leetcode</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>暴力求解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode-892-三维形体的表面积</title>
-    <url>/2020/08/20/leetcode-892-%E4%B8%89%E7%BB%B4%E5%BD%A2%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF/</url>
-    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
-<h3 id="892-三维形体的表面积"><a href="#892-三维形体的表面积" class="headerlink" title="892. 三维形体的表面积"></a>892. 三维形体的表面积</h3><p>在 <code>N * N</code> 的网格上，我们放置一些 <code>1 * 1 * 1</code>  的立方体。</p>
-<p>每个值 <code>v = grid[i][j]</code> 表示 <code>v</code> 个正方体叠放在对应单元格 <code>(i, j)</code> 上。</p>
-<p>请你返回最终形体的表面积。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[2]]  </span><br><span class="line">输出：10</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[1,2],[3,4]]  </span><br><span class="line">输出：34  </span><br></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[1,0],[0,2]]  </span><br><span class="line">输出：16  </span><br></pre></td></tr></table></figure>
-<p><strong>示例 4：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[1,1,1],[1,0,1],[1,1,1]]  </span><br><span class="line">输出：32  </span><br></pre></td></tr></table></figure>
-<p><strong>示例 5：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[2,2,2],[2,1,2],[2,2,2]]  </span><br><span class="line">输出：46  </span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= N &lt;= 50</code></li>
-<li><code>0 &lt;= grid[i][j] &lt;= 50</code></li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/surface-area-of-3d-shapes">https://leetcode-cn.com/problems/surface-area-of-3d-shapes</a>  </p>
-</blockquote>
-<a id="more"></a>
-
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="”加法“"><a href="#”加法“" class="headerlink" title="”加法“"></a>”加法“</h3><p>按每个方块贡献多少面积去计算。</p>
-<p>方位术语：<br><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/WX20200820-190647%402x.png" alt="方位术语"></p>
-<p><code>i,j</code> 位置有 <code>n</code> 个方块，顶部底部一共贡献 <code>2</code> 个面积。上下左右分别是没有重叠的面积<br><code>Max(grid[i][j] - grid[i2][j2], 0)</code></p>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
-<li>空间复杂度 O(1)</li>
-<li>时间复杂度 O(n2)<ul>
-<li>两层循环</li>
-</ul>
-</li>
-</ul>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[][]&#125;</span> <span class="variable">grid</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> surfaceArea = <span class="function"><span class="keyword">function</span> (<span class="params">grid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> n = grid.length;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">      <span class="comment">// 当前位置有放方块，增加顶部和底部的面积</span></span><br><span class="line">      <span class="keyword">if</span> (grid[i][j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        ans += <span class="number">2</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 上方方块 的面积，如果低于上方方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i - <span class="number">1</span>][j], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 右侧方块 的面积，如果低于右侧方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (j === n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i][j + <span class="number">1</span>], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 下方方块 的面积，如果低于下方方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (i === n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i + <span class="number">1</span>][j], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 左侧方块 的面积，如果低于左侧方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (j === <span class="number">0</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i][j - <span class="number">1</span>], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="”减法“"><a href="#”减法“" class="headerlink" title="”减法“"></a>”减法“</h3><p><code>i,j</code> 位置有 <code>n</code> 个方块，按照一个方块无遮挡的话有 <code>6n</code> 个面积。再减去上下左右顶部底部的重叠面积。</p>
-<h4 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
-<li>空间复杂度 O(1)</li>
-<li>时间复杂度 O(n2)<ul>
-<li>两层循环</li>
-</ul>
-</li>
-</ul>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[][]&#125;</span> <span class="variable">grid</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> surfaceArea = <span class="function"><span class="keyword">function</span> (<span class="params">grid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> n = grid.length</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">      <span class="comment">// 有方块，就有表面积，否则跳过</span></span><br><span class="line">      <span class="keyword">if</span> (grid[i][j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 一个方块默认6个面积</span></span><br><span class="line">        <span class="comment">// ans += grid[i][j] * 6;</span></span><br><span class="line">        <span class="comment">// 有方块，顶部和底部就会重叠</span></span><br><span class="line">        <span class="comment">// ans -= 2 * (grid[i][j] - 1);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 化简</span></span><br><span class="line">        ans += <span class="number">4</span> * grid[i][j] + <span class="number">2</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 找到右测重复的面积，最后一个没有右侧，跳过 放置越界</span></span><br><span class="line">      <span class="keyword">if</span> (j &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans -= <span class="number">2</span> * <span class="built_in">Math</span>.min(grid[i][j], grid[i][j + <span class="number">1</span>]);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 找到下方重复的面积，最后一个没有下方，跳过 放置越界</span></span><br><span class="line">      <span class="keyword">if</span> (i &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans -= <span class="number">2</span> * <span class="built_in">Math</span>.min(grid[i][j], grid[i + <span class="number">1</span>][j]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>这个题主要靠观察，总结出规律，暴力求解。</p>
-]]></content>
-      <categories>
-        <category>leetcode</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-        <tag>暴力求解</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端优化</title>
     <url>/2017/12/21/2017-12-21-%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<p>前端优化主要包括：网络加载类、页面渲染类、CSS优化类、JavaScript执行类、缓存类、图片类、架构协议类等几类。</p>
@@ -1532,6 +1014,656 @@
       <tags>
         <tag>优化</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取本机的ip地址</title>
+    <url>/2017/12/26/2017-12-26-%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80/</url>
+    <content><![CDATA[<p>有的时候我们需要知道我们本地机器的ip地址。</p>
+<p>前端项目大部分都是通过localhost:端口号来运行的，但是比如我们要写RN的时候，在安卓模拟器中的我们可能就不能直接使用<code>localhost</code>或<code>127.0.0.1</code>，使用的应该是局域网给我们动态分配的ip地址。</p>
+<p>下面介绍两种三种方式获得动态分配的ip地址：</p>
+<h2 id="图形化获取"><a href="#图形化获取" class="headerlink" title="图形化获取"></a>图形化获取</h2><ol>
+<li>打开偏好设置，点击网络</li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip1.png) -->
+<a id="more"></a>
+2. 红框圈起来的就是ip地址
+
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip2.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip2.png) -->
+
+<h2 id="命令行获取"><a href="#命令行获取" class="headerlink" title="命令行获取"></a>命令行获取</h2><ol>
+<li>打开<code>terminal</code><br>输入<code>ifconfig</code>。注意不是<code>ipconfig</code></li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip3.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip3.png) -->
+
+<h2 id="程序获取"><a href="#程序获取" class="headerlink" title="程序获取"></a>程序获取</h2><p>每次链接wifi的时候，我们的ip可能就会被重新分配，每次去走上面一遍可能会比较麻烦，有没有上面比较高级的方式获取呢。</p>
+<ol>
+<li>首先需要node环境</li>
+<li>在对应的程序下安装 <code>address</code> 包<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">npm install address --save-dev</span><br></pre></td></tr></table></figure>
+为了演示简单，单独写一个文件，例如：getIpAddress.js<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> address = <span class="built_in">require</span>(<span class="string">&#x27;address&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(address.ip())</span><br></pre></td></tr></table></figure>
+使用node运行。</li>
+</ol>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip4.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip4.png) -->
+
+
+<p>有了上述的方法，我们就可以在程序启动的时候，告诉开发者（我们自己）当前的ip地址是多少，我们就能直接去模拟器中打开了。</p>
+<img style="width:600px;" src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png"/>
+<!-- ![](https://raw.githubusercontent.com/kuckboy1994/Blog/master/images/node/getIpAddress/ip5.png) -->
+`address`包还可以获取`IPv6`和`MAC`地址。详细查看 [address-npm](https://www.npmjs.com/package/address)]]></content>
+      <categories>
+        <category>mac</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XSS攻击</title>
+    <url>/2018/01/02/2018-01-02-XSS%E6%94%BB%E5%87%BB/</url>
+    <content><![CDATA[<p><code>XSS攻击</code> 全称 <code>跨站脚本攻击</code>，常见的就是攻击者把恶意代码植入到用户页面中。</p>
+<p>在XSS攻击中，一般有三个角色参与：攻击者、目标服务器、受害者的浏览器。</p>
+<p>由于服务端没有对用户的输入做安全方面的验证，攻击者就通过输入的方式，夹带一些恶意的html脚本代码（包括html, css, js）。</p>
+<a id="more"></a>
+
+<h2 id="XSS攻击的分类"><a href="#XSS攻击的分类" class="headerlink" title="XSS攻击的分类"></a>XSS攻击的分类</h2><ol>
+<li>反射型XSS（Reflected XSS）</li>
+</ol>
+<p>反射型XSS，又称非持久型XSS。之所以称为反射型XSS，则是因为这种攻击方式的注入代码是从目标服务器通过错误信息、搜索结果等等方式“反射”回来的。而称为非持久型XSS，则是因为这种攻击方式具有一次性。<code>攻击者通过电子邮件等方式将包含注入脚本的恶意链接发送给受害者，当受害者点击该链接时，注入脚本被传输到目标服务器上，然后服务器将注入脚本“反射”到受害者的浏览器上，从而在该浏览器上执行了这段脚本。</code></p>
+<p>比如攻击者将如下链接发送给受害者：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;search.asp?input&#x3D;&lt;script&gt;alert(document.cookie);&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>当受害者点击这个链接的时候，注入的脚本被当作搜索的关键词发送到目标服务器的search.asp页面中，则在搜索结果的返回页面中，这段脚本将被当作搜索的关键词而嵌入（服务端渲染）。这样，当用户得到搜索结果页面后，这段脚本也得到了执行。这就是反射型XSS攻击的原理，可以看到，攻击者巧妙地通过反射型XSS的攻击方式，达到了在受害者的浏览器上执行脚本的目的。由于代码注入的是一个动态产生的页面而不是永久的页面，因此这种攻击方式只在点击链接的时候才产生作用，这也是它被称为非持久型XSS的原因。<br>危害在用户查询的时候，可以实现把用户的cookie信息发送给攻击者</p>
+<p>情况二，通过渲染页面进行攻击：<br>比如攻击者将如下链接发送给受害者：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.targetserver.com&#x2F;response-xss.html?input&#x3D;&lt;style&gt;body&#123;background:red;&#125;&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<p>需要渲染input中的内容到页面中，上面的会修改页面的背景色。<br><s>渲染模式是没办法获取用户cookie信息的（个人测试得出的结论，有异议敬请斧正）。</s><br>如果一个input的value属性值是</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">琅琊榜&quot; onclick&#x3D;&quot;javascript:alert(&#39;handsome boy&#39;)</span><br></pre></td></tr></table></figure>
+<p>就可能出现</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;琅琊榜&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;javascript:alert(&#x27;handsome boy&#x27;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>点击输入框爆炸。。</p>
+<ol start="2">
+<li>存储型XSS（Stored XSS）</li>
+</ol>
+<p>存储型XSS，又称持久型XSS，他和反射型XSS最大的不同就是，攻击脚本将被永久地存放在目标服务器的数据库和文件中。这种攻击多见于论坛，攻击者在发帖的过程中，将恶意脚本连同正常信息一起注入到帖子的内容之中。随着帖子被论坛服务器存储下来，恶意脚本也永久地被存放在论坛服务器的后端存储器中。当其它用户浏览这个被注入了恶意脚本的帖子的时候，恶意脚本则会在他们的浏览器中得到执行，从而受到了攻击。</p>
+<p>可以看到，存储型XSS的攻击方式能够将恶意代码永久地嵌入一个页面当中，所有访问这个页面的用户都将成为受害者。如果我们能够谨慎对待不明链接，那么反射型的XSS攻击将没有多大作为，而存储型XSS则不同，由于它注入的往往是一些我们所信任的页面，因此无论我们多么小心，都难免会受到攻击。可以说，存储型XSS更具有隐蔽性，带来的危害也更大，除非服务器能完全阻止注入，否则任何人都很有可能受到攻击。</p>
+<ol>
+<li><p>发一篇文章，里面包含了恶意脚本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">今天天气不错啊！&lt;script&gt;alert(&#39;handsome boy&#39;)&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>后端没有对文章进行过滤，直接保存文章内容到数据库。</p>
+</li>
+<li><p>当其他看这篇文章的时候，包含的恶意脚本就会执行。</p>
+</li>
+</ol>
+<p>PS：因为大部分文章是保存整个HTML内容的，前端显示时候也不做过滤，就极可能出现这种情况。</p>
+<p><code>结论：</code></p>
+<p>后端尽可能对提交数据做过滤，在场景需求而不过滤的情况下，前端就需要做些处理了。</p>
+<p>开发安全措施：</p>
+<ol>
+<li><p>首要是服务端要进行过滤，因为前端的校验可以被绕过。</p>
+</li>
+<li><p>当服务端不校验时候，前端要以各种方式过滤里面可能的恶意脚本，例如script标签，将特殊字符转换成HTML编码。</p>
+</li>
+<li><p>跨站请求伪造</p>
+</li>
+</ol>
+<p>跨站请求伪造（Cross-SiteRequest Forgery，CSRF），作为OWASP组织的2007年提出十大安全漏洞第五，它也属于XSS攻击的一种衍生。所谓跨站请求伪造，就是攻击者利用XSS注入攻击的方式，注入一段脚本，而当受害者的浏览器运行这段脚本时，脚本伪造受害者发送了一个合法请求。比如我们注入如下的HTML代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://www.bank.com/transfer.do?toAct=123456&amp;money=10000&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>假如上面的代码中所访问的是某个银行网站的转账服务，则当受害者的浏览器运行这段脚本时，就会向攻击者指定的账户（示例的123456）执行转账操作。由于这个转账请求是在受害者的浏览器中运行的，因此浏览器也会自动将受害者的Cookie信息一并发送。这样，发送的请求就好像是受害者自己发送的一样，银行网站也将认可这个请求的合法性，攻击者也就达到了伪造请求的目的。</p>
+<p>类似操作：<br>攻击者提供一个免费的wifi，连接之后，在本地开启fiddler这种抓包工具，这类工具不仅能获取到被攻击者的所有信息，还能修改用户访问的内容，模拟用户在被害者设备发起请求。<br><img src="https://github.com/kuckboy1994/Blog/raw/master/images/xss-attack/xss-attack.png"></p>
+<ol start="4">
+<li>注入恶意软件</li>
+</ol>
+<p>除了直接注入恶意脚本以外，通过XSS攻击，攻击者也可以很方便地在脚本中引入一些恶意软件，比如病毒、木马、蠕虫等等。例如，攻击者可以在某个自己建立的页面上放置一些恶意软件，然后用XSS注入的方式，插入一段引用该页面的脚本。这样当受害者的浏览器执行这段脚本的时候，就会自动访问放置了恶意软件的页面，从而受到这些恶意软件的感染。</p>
+<p>利用XSS注入恶意软件的方式，攻击者可以很方便地在互联网上传播病毒、木马和蠕虫，通过这种途径，攻击者就可以通过这些病毒、木马和蠕虫，进一步地对受害者的主机发动攻击。目前，互联网上的“挂马”现象非常普遍，而XSS注入的出现也无疑给“挂马”的攻击者指明了又一个新的方向。通过传播这些木马，窃取合法用户的敏感信息，不少非法攻击者也逐渐将这一过程产业化，经常可以见到以信封方式批量兜售账号密码的现象。这也给许多正常的网络用户造成了许多无法挽回的巨大损失，造成的危害也很大。</p>
+<h2 id="XSS的预防"><a href="#XSS的预防" class="headerlink" title="XSS的预防"></a>XSS的预防</h2><p>在前面的文章中，我们具体介绍了各种XSS攻击的原理和方式。可以看出，XSS是一种覆盖面很广，隐蔽性很高，危害也非常大的网络应用安全漏洞。除非网站服务器完全不存在XSS漏洞，否则就会给攻击者们留下空子。因此，如何在Web应用程序的开发过程中对XSS漏洞进行预防，是所有网站开发人员所必须注意的重中之重。下面我们介绍几种常用的XSS预防措施。</p>
+<ol>
+<li>输入检测</li>
+</ol>
+<p>对用户的所有输入数据进行检测，比如过滤其中的“&lt;”、“&gt;”、“/”等可能导致脚本注入的特殊字符，或者过滤“script”、“javascript”等脚本关键字，或者对输入数据的长度进行限制等等。同时，我们也要考虑用户可能绕开ASCII码，使用十六进行编码如“&lt;</span>”（“&lt;”）、“&gt;”（“&gt;”）等来输入脚本。因此，对用户输入的十六进制编码，我们也要进行相应的过滤。只要开发人员能够严格检测每一处交互点，保证对所有用户可能的输入都进行检测和XSS过滤，就能够有效地阻止XSS攻击。</p>
+<ol start="2">
+<li>输出编码</li>
+</ol>
+<p>通过前面对XSS攻击的分析，我们可以看到，之所以会产生XSS攻击，就是因为Web应用程序将用户的输入直接嵌入到某个页面当中，作为该页面的HTML代码的一部分。因此，当Web应用程序将用户的输入数据输出到目标页面中时，只要用HtmlEncoder等工具先对这些数据进行编码，然后再输出到目标页面中。这样，如果用户输入一些HTML的脚本，也会被当成普通的文字，而不会成为目标页面HTML代码的一部分得到执行。</p>
+<ol start="3">
+<li>Cookie防盗</li>
+</ol>
+<p>利用XSS攻击，攻击者可以很方便地窃取到合法用户的Cookie信息。因此，对于网站来说，不能在Cookie信息中存放太多敏感信息，也不能将Cookie作为身份认证的唯一标识，等等。因此，对于Cookie，我们可以采取以下的措施。首先，我们要尽可能地避免在Cookie中泄露隐私，如用户名、密码等；其次，我们可以将Cookie信息用MD5等Hash算法进行多次散列后存放；再次，为了防止重放攻击，我们也可以将Cookie和IP进行绑定，这样也可以阻止攻击者冒充正常用户的身份。</p>
+<ol start="4">
+<li>严格限制URL访问</li>
+</ol>
+<p>攻击者使用XSS攻击，通常都要借助于自己指定的网站页面，比如用它来记录敏感信息、在该页面上“挂马”等等。因此，在页面的脚本代码执行过程中，只要我们严格限制其访问的URL，比如只允许脚本代码访问本网站的URL等方式，就可以避免脚本的执行链接到其它可能是攻击者指定的页面上。</p>
+<ol start="5">
+<li>用户注意事项</li>
+</ol>
+<p>作为一名普通的网络用户，在XSS攻击的预防上总体处在被动的地位。但是我们也可以通过采取一些措施来尽可能地避免受到XSS攻击。首先，我们不要轻易相信电子邮件或者网页中的不明链接，这些链接很有可能引导反射型XSS攻击或者使我们访问到一些不安全的网页。其次，我们在不必要的时候可以禁用脚本功能，这样XSS注入的脚本就无法得到运行。再次，我们也可以使用一些安全的浏览器上网，有的浏览器提供XSS过滤功能，会提示页面中可能发生的XSS注入并将其阻挡下来。</p>
+<h2 id="XSS的漏洞检测"><a href="#XSS的漏洞检测" class="headerlink" title="XSS的漏洞检测"></a>XSS的漏洞检测</h2><ol>
+<li>黑盒测试<br>所谓黑盒测试，就是在不知道系统的代码和运行状态的条件下，对系统进行的测试。在对XSS漏洞的检测中，我们可以模拟黑客的攻击手段，在所有可能的数据输入接口处，尝试进行一些XSS注入。通过观察注入后的引用这些数据的页面，看其是否出现被注入的现象，即可确实是否存在XSS漏洞。比如我们可以用下面所列的一些脚本来尝试XSS注入：<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">1. 在HTML标签中输出</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">2. 在HTML属性中输出</span><br><span class="line">&quot;&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.cookie)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">e.g.</span></span></span><br><span class="line">&lt;div name=&quot;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;javascript:alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">http://xxx.com/yyy.png&quot; onerror=&quot;alert(&#x27;XSS&#x27;)</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://xxx.com/yyy.png&quot;</span> <span class="attr">onerror</span>=<span class="string">&quot;alert(&#x27;XSS&#x27;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">3. 在<span class="tag">&lt;<span class="name">script</span>&gt;</span>标签中输出</span><br><span class="line">&quot;;alert(document.cookie);//</span><br><span class="line">e.g. </span><br><span class="line"><span class="handlebars"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> x = <span class="string">&quot;&quot;</span>;alert(<span class="built_in">document</span>.cookie);<span class="comment">//&quot;;</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">4. 在事件中输出</span><br><span class="line">&#x27;&#x27;);alert(document.cookie</span><br><span class="line">e.g.</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;funcA(&#x27;&#x27;);alert(document.cookie)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">5. 在CSS中输出（仅低版本 IE 有效）</span><br><span class="line">body &#123;background-image:url(&quot;javascript:alert(&#x27;XSS&#x27;)&quot;);&#125;</span><br><span class="line">body &#123;background-image:expression(alert(&#x27;xss&#x27;));&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如果在打开那些引用了该输入数据的页面时，弹出对话框显示信息，则可以确定该数据输入时有可能导致XSS注入，从而确定了XSS漏洞的位置。</p>
+<ol start="2">
+<li>静态分析</li>
+</ol>
+<p>XSS漏洞静态分析方法属于白盒测试方法的一种，它通过对Web应用的代码进行分析，从而发现其中可能存在的问题。通常来说，静态分析技术只是对代码进行一些简单的扫描，找到其中有可能导致XSS注入的地方，将其报告给我们。</p>
+<p>比如在Web应用的代码中可能存在一些读入数据的API，如Request.QueryString()，$_GET等，如果存在这些API，则表示可能引入XSS的注入。通过静态分析工具，我们可以很容易发现所有这些读入数据的API，从而详细检查每一个数据输入点是否进行了XSS注入的过滤。可以看到，静态分析的方法，只是帮助我们定位XSS漏洞的可能位置，由于静态分析工具难以判定是否对输入数据进行过XSS过滤，因此还是需要我们手动地进行检查，从而确保不存在XSS漏洞。</p>
+<ol start="3">
+<li>数据流分析</li>
+</ol>
+<p>XSS漏洞之所以产生，根本原因在于不安全的数据流，使得用户的输入数据被直接嵌入到某些页面中。比如PHP中的echo语句，就能够将一些数据直接添加为HTML页面的一部分，如果这个数据是用户注入了XSS脚本的数据，则会导致产生XSS攻击。因此，数据流分析的主要思想就是使用一些模型或者工具，分析Web应用程序代码中的数据传输情况，从而发现其中存在的问题。比如，我们可以将用户的输入数据所存储的变量打上污点标记，通过对数据流和变量类型的分析，逐步标记所有引用了污点变量的中间变量，最后通过观察输出到页面中的变量数据是否存在污点，来判断是否可能产生XSS漏洞。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/hitwangpeng/article/details/45503465">[web安全]XSS可能发生的场景及解决方法</a></li>
+<li><a href="https://www.cnblogs.com/lovesong/p/5199623.html">前端安全之XSS攻击</a></li>
+<li><a href="http://blog.csdn.net/yefan2222/article/details/7091863">Cross-Site Scripting(XSS): 跨站脚本攻击介绍</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>xss</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客搭建指南</title>
+    <url>/2018/05/28/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><ul>
+<li><p>安装 <code>node</code> 和 <code>git</code></p>
+</li>
+<li><p>安装 <code>hexo</code></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建项目</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init kuckboy1994.github.io</span><br><span class="line">cd kuckboy1994.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>项目目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml     &#x2F;&#x2F; 配置信息</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds       &#x2F;&#x2F; 模板文件夹</span><br><span class="line">├── source          &#x2F;&#x2F; 资源 博客文章</span><br><span class="line">|   ├── _drafts     &#x2F;&#x2F; 草稿</span><br><span class="line">|   └── _posts      &#x2F;&#x2F; 正式发布的文章</span><br><span class="line">└── themes          &#x2F;&#x2F; 主题</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><ul>
+<li>配置信息</li>
+</ul>
+<p>如下是我个人的<a href="https://github.com/kuckboy1994/hexobackup/blob/master/_config.yml">配置</a>：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Hexo Configuration</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/configuration.html</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Source: https://github.com/hexojs/hexo/</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Site</span></span><br><span class="line">title: kuckboy的博客</span><br><span class="line">subtitle: 必须向前看，要犯就犯新的错误</span><br><span class="line">description: 专注种多肉的前端一枚</span><br><span class="line">keywords: 前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer</span><br><span class="line">author: kuckboy1994</span><br><span class="line">email: shanchao@qq.com</span><br><span class="line">language: </span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> URL</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span></span><br><span class="line">url: //blog.kuckboy1994.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Directory</span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Writing</span></span><br><span class="line">new_post_name: :year-:month-:day-:title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"><span class="meta">#</span><span class="bash"> Home page setting</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> path: Root path <span class="keyword">for</span> your blogs index page. (default = <span class="string">&#x27;&#x27;</span>)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> per_page: Posts displayed per page. (0 = <span class="built_in">disable</span> pagination)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line">index_generator:</span><br><span class="line">  path: &#x27;&#x27;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br><span class="line">  </span><br><span class="line"><span class="meta">#</span><span class="bash"> Category &amp; Tag</span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Server</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Hexo uses Connect as a server</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># You can customize the logger format as defined in</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># http://www.senchalabs.org/connect/logger.html</span></span></span><br><span class="line">port: 4000</span><br><span class="line">server_ip: localhost</span><br><span class="line">logger: false</span><br><span class="line">logger_format: dev</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Date / Time format</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Hexo uses Moment.js to parse and display date</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># You can customize the date format as defined in</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># http://momentjs.com/docs/#/displaying/format/</span></span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Pagination</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Set per_page to 0 to disable pagination</span></span></span><br><span class="line">per_page: 6</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Extensions</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Plugins: https://hexo.io/plugins/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Themes: https://hexo.io/themes/</span></span></span><br><span class="line">theme: yilia</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">    path: baidusitemap.xm</span><br><span class="line"></span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: false</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/deployment.html</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: rsync</span><br><span class="line"><span class="meta">  #</span><span class="bash"> <span class="built_in">type</span>: git</span></span><br><span class="line">  repo: git@github.com:kuckboy1994/kuckboy1994.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  host: 140.143.193.185</span><br><span class="line">  user: root</span><br><span class="line">  root: /data/blog</span><br><span class="line">  port: 22</span><br><span class="line">  delete: true</span><br><span class="line">  verbose: true</span><br><span class="line">  ignore_errors: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <code>_config.yml</code> 中的 <code>default_layout</code> 参数代替</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new draft 我是草稿</span><br></pre></td></tr></table></figure>
+<p>就会在 <code>/source/_drafts/</code> 下生成一个 <code>我是草稿.md</code> 文件。在生成静态文件的时候这个文件是不会被显示的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new blog</span><br></pre></td></tr></table></figure>
+<p>就会在 <code>/source/_posts/</code> 下生成一个 <code>blog.md</code> 文件。生成静态文件的时候就是正常的博客了。</p>
+<h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>发布草稿箱中的内容转成正常的博客。在生成静态文件的时候也可以被正常看到。</p>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br><span class="line"></span><br><span class="line">hexo s &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
+<p>启动服务器。在线预览。默认网址是：<code>http://localhost:4000/</code></p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line">hexo g &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
+<p>生成静态文件</p>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line">hexo d &#x2F;&#x2F; 简写</span><br></pre></td></tr></table></figure>
+<p>部署网站</p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
+<li><code>server</code> 命令是会自动监听文件变化的。开启端口之后。直接刷新网页就可以看到变化。</li>
+<li>新建的草稿如何在线预览？<br>  命令行增加如下参数  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s --draft</span><br></pre></td></tr></table></figure></li>
+<li><code>more</code> 设置。在文章的前五行左右加入如下代码，在首页的列表就不会显示全部的文章了。  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>部署之前先修改 <code>_config.yml</code> 中参数的配置。 例如：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="comment"># type: git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:kuckboy1994/kuckboy1994.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">host:</span> <span class="number">140.143</span><span class="number">.193</span><span class="number">.185</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">/data/blog</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">22</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>上面的配置包含了两种部署方式。一个是同步的服务器。一个是发布的github的page页面。修改 <code>type</code> 实现两种发布。</p>
+<p><code>git</code> 需要安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br><span class="line">  <span class="attr">message:</span> [<span class="string">message</span>]</span><br></pre></td></tr></table></figure>
+
+<p>发布到服务器，需要安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> [<span class="string">port</span>]</span><br><span class="line">  <span class="attr">delete:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br><span class="line">  <span class="attr">verbose:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br><span class="line">  <span class="attr">ignore_errors:</span> [<span class="literal">true</span><span class="string">|false</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>我使用的主题是 <a href="https://github.com/litten/hexo-theme-yilia">yilia</a>。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>在项目下执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure>
+<p>会把项目 <code>clone</code> 到项目的 <code>theme/yilia</code> 文件夹下。</p>
+<h3 id="修改主题配置"><a href="#修改主题配置" class="headerlink" title="修改主题配置"></a>修改主题配置</h3><p>修改hexo根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code></p>
+<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><p>想把当前博客的配置上传到github上。遇到了如下的问题。</p>
+<p><img src="https://wx3.sinaimg.cn/mw690/ec4d7780gy1fr4x8f45eqj20v808stak.jpg" alt="主题无法提交"></p>
+<p>问题的原因是 <code>themes/yilia</code> 这个项目下有和 <code>github</code> 上的项目关联了。 因为我修改了主题下面的配置，文件改动，但是有没有添加到暂存和提交。但是又不能提交。因为项目不是我维护的。所以你只要删除 <code>themes/yilia</code> 下的 <code>.git</code> 文件夹就可以了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://hexo.io/zh-cn/docs/index.html">hexo 中文官网</a></li>
+<li><a href="https://segmentfault.com/q/1010000007524645">Github pages和hexo d出现错误</a></li>
+<li><a href="https://github.com/litten/hexo-theme-yilia">Github litten/hexo-theme-yilia</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-常见的css问题</title>
+    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E5%B8%B8%E8%A7%81%E7%9A%84css%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响"><a href="#在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响" class="headerlink" title="在 scroll-view 中 padding 会对内部元素的 position: absolute 产生影响"></a>在 <code>scroll-view</code> 中 <code>padding</code> 会对内部元素的 <code>position: absolute</code> 产生影响</h3><p><code>padding</code> 在 <code>scroll-view</code> 中的效果有点像 <code>margin</code> 。</p>
+<p>例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;square&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.square</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>效果如下：</p>
+<p><img src="http://wx2.sinaimg.cn/mw690/ec4d7780gy1frtrw0nlj3j209009mmx7.jpg"></p>
+<p>在 <code>.box</code> 上增加 <code>padding</code></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">100</span>rpx; </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frtrw4o2ifj208x09cdfv.jpg"></p>
+<p>应该是 <code>scroll-view</code> 组件封装的时候没有考虑到 <code>padding</code> 的影响吧。或者官方认为这个遇到问题可以通过调节元素的层级关系来解决而没有去解决的一个疑难杂症？😂</p>
+<h3 id="图片下方存在留白"><a href="#图片下方存在留白" class="headerlink" title="图片下方存在留白"></a>图片下方存在留白</h3><p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtsk7ft47j208y0f7wgn.jpg"></p>
+<p>和正常的网页处理方式一致。</p>
+<ul>
+<li><p>修改 <code>vertical-align</code>, 默认是 <code>baseline</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vertical-align: middle; </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 <code>display</code>, 默认是 <code>inline</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display: block;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-组件button详解</title>
+    <url>/2018/05/29/2018-05-29-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E7%BB%84%E4%BB%B6button%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p>我们在小程序开发的时候，会有这样的需求，设置一个透明的 <code>button</code>。为什么要用 <code>button</code> 呢？因为 <code>button</code> 有很多的开放功能，例如：获取用户信息、分享、调起会话、获取用户手机号、启动外部App、打开设置页。</p>
+<p>问题来了，设置透明的 <code>button</code> 到底该怎么实现呢？</p>
+<p>设置 <code>background: transparent</code> 是无效的。我们需要设置按钮 <code>镂空</code>。 如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">plain</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但是。。。 为什么是这样的？<br><img src="http://wx4.sinaimg.cn/mw690/ec4d7780gy1frsmrk5mucj208v0al74e.jpg"></p>
+<a id="more"></a>
+<p>尝试设置一下 <code>CSS</code></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">border</span>: <span class="selector-tag">none</span>;</span><br></pre></td></tr></table></figure>
+
+<p>完全没有效果呀？</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/ec4d7780gy1frsmvt9q1gj20c00b143h.jpg"></p>
+<p>最终的解决办法：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">button</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在根目录下的 <code>app.wxss</code> 添加如上代码修改所有 <code>button</code> 的效果。<br>猜测官方的 <code>button</code> 组件使用的是 <code>::after</code> 伪类的方式实现边框的。遇到同类问题可以在 <code>::after</code> 上做尝试。 例如: <code>border-radius</code>。</p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑_收集用户的formid</title>
+    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%94%B6%E9%9B%86%E7%94%A8%E6%88%B7%E7%9A%84formid/</url>
+    <content><![CDATA[<h2 id="我们为什么要收集用户的-formid-呢？"><a href="#我们为什么要收集用户的-formid-呢？" class="headerlink" title="我们为什么要收集用户的 formid 呢？"></a>我们为什么要收集用户的 <code>formid</code> 呢？</h2><p>因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。</p>
+<h2 id="如何收集formid"><a href="#如何收集formid" class="headerlink" title="如何收集formid"></a>如何收集formid</h2><p>要获取用户id，首先我们要有一个 <code>form</code> 表单组件。 只有在提交表单的时候才会有 <code>formid</code>，而且 <code>report-submit</code> 属性为 <code>true</code>。代码如下</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- wxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">bindsubmit</span>=<span class="string">&quot;eventCollectFormId&quot;</span> <span class="attr">report-submit</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">form-type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收集用户formId</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">eventCollectFormId (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.detail.formId)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。</p>
+<a id="more"></a>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p><code>form</code> 组件可以设置在页面的最外层。内部放置多个 <code>button</code>。统一调用一个 <code>bindsubmit</code> 事件。</p>
+<p>要想尽可能多的获取 <code>formid</code> 又不想把所有的标签都使用 <code>button</code>，因为 <code>button</code> 修改样式的代缴是比较大的。可以使用悬浮的 <code>button</code> 。只要设置：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">opacity</span>: 0;</span><br></pre></td></tr></table></figure>
+<p>把原来的事件放置到 <code>button</code> 上即可。</p>
+<p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frsobwh7psj20ai0cudhn.jpg"></p>
+<p>红色框起来的地方，我在 <code>喜欢操作</code> 上方加了一个按钮，并且赋值了相应的属性。这样我们就在用户交互的时候同时获取了他的 <code>formid</code>。而且增加了用户的点击区域，优化了交互。</p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-横向滚动列表</title>
+    <url>/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8%E5%88%97%E8%A1%A8/</url>
+    <content><![CDATA[<ul>
+<li>设置横向滚动列表，除了我们常见的设置</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">overflow-x</span>: <span class="selector-tag">auto</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这样设置出来的列表滚动起来比较 <code>涩</code> 。滚动起来不够流畅。</p>
+<ul>
+<li>还有一种做法就是使用 <code>scroll-view</code> 组件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;share-list&quot;</span> <span class="attr">scroll-x</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;share-item&quot;</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;[1,2,3,4,5,6]&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.share-list</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>样式中一定要设置 <code>white-space: nowrap;</code> 否则不能滚动。</p>
+<p><img src="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frtre5rolqg206j0bchdu.gif"></p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序解惑-视频滚动播放</title>
+    <url>/2018/07/03/2018-07-03-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E8%A7%86%E9%A2%91%E6%BB%9A%E5%8A%A8%E6%92%AD%E6%94%BE/</url>
+    <content><![CDATA[<p><a href="https://github.com/kuckboy1994/mp_scroll_play_demo">项目地址</a> 欢迎star</p>
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif"></p>
+<ul>
+<li>如果未正常显示gif，<a href="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif">点击链接</a> 查看</li>
+</ul>
+<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><ol>
+<li>滚动到视频一半的位置，进行切换视频播放</li>
+<li>记录所有视频的播放位置，再次切换回来的时候继续播放。</li>
+<li>当播放视频滚出可见范围的时候，立刻停止播放（声音停止）。滚动停止的时候新的视频开始播放。</li>
+<li>全屏播放。（这里存在一个坑，全屏的时候会立刻自动退出全屏）</li>
+<li>基础上拉加载，上拉刷新（demo中未提现，配置下app.json即可实现）</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* global getApp Page wx */</span></span><br><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的防抖函数</span></span><br><span class="line"><span class="keyword">let</span> timeout</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">    timeout = <span class="built_in">setTimeout</span>(func, wait)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础版的节流函数</span></span><br><span class="line"><span class="keyword">let</span> timeout2 = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span> (<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!timeout2) &#123;</span><br><span class="line">      timeout2 = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout2)</span><br><span class="line">        timeout2 = <span class="literal">null</span></span><br><span class="line">        func()</span><br><span class="line">      &#125;, wait)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    width: wx.getSystemInfoSync().windowWidth,</span><br><span class="line">    height: wx.getSystemInfoSync().windowHeight,</span><br><span class="line"></span><br><span class="line">    videoLoading: <span class="literal">false</span>,</span><br><span class="line">    videoList: [],</span><br><span class="line"></span><br><span class="line">    location: [],</span><br><span class="line">    isLock: <span class="literal">false</span>,  <span class="comment">// 当前栗子无用，如果有些弹窗控制不住背后的视频列表滚动的话，isLock的作用就发挥出来了。</span></span><br><span class="line">    localIndex: <span class="number">0</span>,</span><br><span class="line">    noPageScroll: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  info: &#123;</span><br><span class="line">    videoPlayDetail: &#123;&#125; <span class="comment">// 存放所有视频的播放位置</span></span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad (options) &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList(<span class="number">1</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 分页获取视频</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  getVideoList (initPage) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoLoading, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">if</span> (videoLoading) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoLoading: <span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 制造模拟数据</span></span><br><span class="line">    <span class="keyword">let</span> data = [&#123;</span><br><span class="line">      cover: <span class="string">&#x27;https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvx1996xoj20da07in0t.jpg&#x27;</span>,</span><br><span class="line">      src: <span class="string">&#x27;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&#x27;</span>,</span><br><span class="line">      width: <span class="number">480</span>,</span><br><span class="line">      height: <span class="number">272</span>,</span><br><span class="line">      title: <span class="string">&#x27;腾讯大学视频&#x27;</span>,</span><br><span class="line">      isPlay: <span class="literal">false</span></span><br><span class="line">    &#125;]</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line">    data = data.concat(data)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="comment">// 模拟请求</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        videoList: videoList.concat(<span class="built_in">this</span>.formatVideoList(data)),</span><br><span class="line">        videoLoading: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="comment">// 给数据足够的渲染时间，之后进行视频位置的测量</span></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.getLocationInfo()</span><br><span class="line">        <span class="keyword">if</span> (initPage) &#123; <span class="comment">// 如果是首次进入，就自动播放第一个视频</span></span><br><span class="line">          <span class="built_in">this</span>.showVideoList(<span class="number">0</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 格式化视频列表</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Array&#125;</span> </span>videoList 需要格式化的视频列表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  formatVideoList (videoList) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; width, height &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">return</span> videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> styleHight = width * value.height / value.width</span><br><span class="line">      styleHight = styleHight &gt; <span class="number">0.7</span> * height ? <span class="number">0.7</span> * height : styleHight</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...value,</span><br><span class="line">        styleHight: <span class="built_in">Math</span>.floor(styleHight),</span><br><span class="line">        currentTime: <span class="number">0</span>,</span><br><span class="line">        isPlay: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 点击播放</span></span><br><span class="line">  eventPlay (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; index &#125; = event.currentTarget.dataset</span><br><span class="line">    <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 视频更新的时候不断的去记录播放的位置</span></span><br><span class="line">  eventPlayupdate (event) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">detail</span>: &#123; currentTime &#125;, <span class="attr">currentTarget</span>: &#123; <span class="attr">dataset</span>: &#123; index &#125; &#125; &#125; = event</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.info.videoPlayDetail[index] = currentTime</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 到底加载更多</span></span><br><span class="line">  onReachBottom () &#123;</span><br><span class="line">    <span class="built_in">this</span>.getVideoList()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 设置播放的视频</span></span><br><span class="line">  showVideoList (index) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index)</span><br><span class="line">    <span class="keyword">let</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    videoList = videoList.map(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">      value.isPlay = <span class="literal">false</span></span><br><span class="line">      <span class="keyword">return</span> value</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">if</span> (index &gt;= <span class="number">0</span> &amp;&amp; videoList[index]) &#123;</span><br><span class="line">      videoList[index].isPlay = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      videoList</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 全屏播放，设置当前页面滚动无效，全屏的时候，会触发滚动事件。</span></span><br><span class="line">  eventFullScreen (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event)</span><br><span class="line">    <span class="keyword">const</span> &#123; fullScreen &#125; = event.detail</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      noPageScroll: fullScreen</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onPageScroll (&#123; scrollTop &#125;) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.data.noPageScroll) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取数据分别放置到各自的节流防抖函数中，防止调用的时候数据已近发生改变</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节流，每200毫秒触发一次</span></span><br><span class="line">    throttle(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;throttle&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, localIndex, videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">          index = i</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (localIndex !== index) &#123;</span><br><span class="line">        videoList[localIndex].currentTime = <span class="built_in">this</span>.info.videoPlayDetail[localIndex]</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          videoList</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">this</span>.showVideoList()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 防抖，只触发一次</span></span><br><span class="line">    debounce(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;debounce&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> &#123; location, isLock &#125; = <span class="built_in">this</span>.data</span><br><span class="line">      <span class="keyword">if</span> (!isLock) &#123;</span><br><span class="line">        <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; location.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (location[i].start &lt;= scrollTop &amp;&amp; location[i].end &gt;= scrollTop) &#123;</span><br><span class="line">            index = i</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.showVideoList(index)</span><br><span class="line">        <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">          localIndex: index</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">200</span>)()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 测量当前的所有视频的高度，计算出视频播放与否的位置</span></span><br><span class="line">  getLocationInfo () &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; videoList &#125; = <span class="built_in">this</span>.data</span><br><span class="line">    <span class="keyword">var</span> query = wx.createSelectorQuery()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; videoList.length; i++) &#123;</span><br><span class="line">      query.select(<span class="string">`#video<span class="subst">$&#123;i&#125;</span>`</span>).boundingClientRect()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> length = videoList.length</span><br><span class="line">    <span class="keyword">const</span> location = []</span><br><span class="line">    query.exec(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line"></span><br><span class="line">      <span class="keyword">let</span> start = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> end = <span class="number">0</span></span><br><span class="line">      <span class="keyword">let</span> lei = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">          start = <span class="number">0</span></span><br><span class="line">          end = videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          start = end</span><br><span class="line">          end = lei + videoList[i][<span class="string">&#x27;styleHight&#x27;</span>] / <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location.push(&#123;</span><br><span class="line">          start: start,</span><br><span class="line">          end: end</span><br><span class="line">        &#125;)</span><br><span class="line">        lei = lei + res[i].height + <span class="number">10</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        location</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tiktok设置可点击的website链接</title>
+    <url>/2020/08/19/2020-08-19-tiktok%E8%AE%BE%E7%BD%AE%E5%8F%AF%E7%82%B9%E5%87%BB%E7%9A%84website%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>在 <code>tiktok</code> 的 <code>Me</code> 页面设置一个可以点击的连接可以帮助导流。点击之后跳转到不同的应用市场。</p>
+<h2 id="几个前置条件"><a href="#几个前置条件" class="headerlink" title="几个前置条件"></a>几个前置条件</h2><ol>
+<li>粉丝数要达到1000</li>
+<li>一个在国外备案的url</li>
+<li>判断 <code>navigator</code> 信息进行处理<a id="more"></a>
+
+</li>
+</ol>
+<h3 id="粉丝数"><a href="#粉丝数" class="headerlink" title="粉丝数"></a>粉丝数</h3><p>粉丝数是硬指标，感觉像是给积极发展平台的奖励 😂</p>
+<h3 id="国外备案的url"><a href="#国外备案的url" class="headerlink" title="国外备案的url"></a>国外备案的url</h3><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/EBEBB69B9817E60AE52A25DC2E0E5A6D.png" alt="警告提示" style="max-width: 300px; border: 1px solid black;" />
+
+
+<p>这个是我各人的猜测，我测试了公司的几个域名都不行，甚至公司的主app的域名。还测试了国内比较有名的 <code>https://xclient.info</code> 的地址。<code>https://www.baidu.com</code> 是可以的。</p>
+<p>国内的域名可以使用国外的短链接服务来避开。<br>推荐：</p>
+<ol>
+<li><a href="https://bitly.com/">Bitly</a></li>
+</ol>
+<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/klsdsakdjflkjdfsgsksfkljlk3458.png" alt="Bitly"></p>
+<p>合作的用户包括 <code>迪士尼</code>、<code>亚马孙</code>、<code>Nike</code>、<code>Bose</code> 等企业。</p>
+<ol start="2">
+<li><a href="">TinyURL</a></li>
+</ol>
+<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/asdjksjfglkdfj34859ksdfjaksjdflkaj.png" alt="TinyUrl"></p>
+<p>服务用户也非常广，且永不过期。</p>
+<p>还有其他<a href="https://www.sdwebseo.com/url-shortener/">查看</a></p>
+<h3 id="判断navigator"><a href="#判断navigator" class="headerlink" title="判断navigator"></a>判断navigator</h3><p><code>Navigator</code> 对象</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Navigator &#123;</span><br><span class="line">  appCodeName: <span class="string">&quot;Mozilla&quot;</span> <span class="comment">// 当前浏览器的内部“开发代号”名称。</span></span><br><span class="line">  appName: <span class="string">&quot;Netscape&quot;</span> <span class="comment">// 浏览器官方名称</span></span><br><span class="line">  appVersion: <span class="string">&quot;5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span>, <span class="comment">// 浏览器版本</span></span><br><span class="line">  bluetooth: Bluetooth &#123;&#125; <span class="comment">// 蓝牙信息</span></span><br><span class="line">  clipboard: Clipboard &#123;&#125; <span class="comment">// 剪切板</span></span><br><span class="line">  connection: NetworkInformation &#123; <span class="comment">// 网络连接信息</span></span><br><span class="line">    downlink: <span class="number">2.9</span> <span class="comment">// 网络下行速度</span></span><br><span class="line">    effectiveType: <span class="string">&quot;4g&quot;</span> <span class="comment">// 网络类型</span></span><br><span class="line">    onchange: <span class="literal">null</span>  <span class="comment">// 有值代表网络变更</span></span><br><span class="line">    rtt: <span class="number">100</span>  <span class="comment">// 估算往返时间</span></span><br><span class="line">    saveData: <span class="literal">false</span> <span class="comment">// 打开/请求数据保护模式</span></span><br><span class="line">  &#125;</span><br><span class="line">  cookieEnabled: <span class="literal">true</span> <span class="comment">// 是否启用cookie，可以用来判断是否支持cookie</span></span><br><span class="line">  credentials: CredentialsContainer &#123;&#125;  <span class="comment">// 请求凭证 </span></span><br><span class="line">  deviceMemory: <span class="number">8</span> <span class="comment">// 内存数， 单位GB。 感觉不准 当前mac是16G的</span></span><br><span class="line">  doNotTrack: <span class="literal">null</span>  <span class="comment">// 是否允许网站提供商追踪你的信息，在浏览器端设置，开启 `随浏览流量一起发送“不跟踪”请求`，请求的header中会增加DNT：1，使用与否看服务提供商了</span></span><br><span class="line">  geolocation: Geolocation &#123;&#125; <span class="comment">// 地理位置信息</span></span><br><span class="line">  hardwareConcurrency: <span class="number">8</span>  <span class="comment">// 可用的逻辑处理器核心数</span></span><br><span class="line">  keyboard: Keyboard &#123;&#125; <span class="comment">// 返回一个Keyboard对象，该对象提供对以下功能的访问：检索键盘布局图和切换从物理键盘捕获按键的功能。</span></span><br><span class="line">  language: <span class="string">&quot;en&quot;</span>  <span class="comment">// 用户的首先语言，通常是浏览器用户界面的语言。当未知的时，返回null。</span></span><br><span class="line">  languages: (<span class="number">12</span>) [<span class="string">&quot;en&quot;</span>, <span class="string">&quot;zh-CN&quot;</span>, <span class="string">&quot;zh&quot;</span>, <span class="string">&quot;zh-TW&quot;</span>, <span class="string">&quot;vi&quot;</span>, <span class="string">&quot;ja&quot;</span>, <span class="string">&quot;und&quot;</span>, <span class="string">&quot;nb&quot;</span>, <span class="string">&quot;fr&quot;</span>, <span class="string">&quot;ca&quot;</span>, <span class="string">&quot;da&quot;</span>, <span class="string">&quot;ru&quot;</span>] <span class="comment">// 用户已知的语言列表</span></span><br><span class="line">  locks: LockManager &#123;&#125;</span><br><span class="line">  maxTouchPoints: <span class="number">0</span> <span class="comment">// 返回当前设备能够支持的最大同时触摸的点数。 PC端为0</span></span><br><span class="line">  mediaCapabilities: MediaCapabilities &#123;&#125;</span><br><span class="line">  mediaDevices: MediaDevices &#123;</span><br><span class="line">    ondevicechange: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  mediaSession: MediaSession &#123;</span><br><span class="line">    metadata: <span class="literal">null</span>,</span><br><span class="line">    playbackState: <span class="string">&quot;none&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">  mimeTypes: MimeTypeArray &#123;  <span class="comment">// 支持的媒体类型，除了pdf之外 感觉都很少见</span></span><br><span class="line">    <span class="number">0</span>: MimeType &#123;<span class="attr">type</span>: <span class="string">&quot;application/pdf&quot;</span>, <span class="attr">suffixes</span>: <span class="string">&quot;pdf&quot;</span>, <span class="attr">description</span>: <span class="string">&quot;&quot;</span>, <span class="attr">enabledPlugin</span>: Plugin&#125;,</span><br><span class="line">    <span class="number">1</span>: MimeType &#123;<span class="attr">type</span>: <span class="string">&quot;application/x-google-chrome-pdf&quot;</span>, <span class="attr">suffixes</span>: <span class="string">&quot;pdf&quot;</span>, <span class="attr">description</span>: <span class="string">&quot;Portable Document Format&quot;</span>, <span class="attr">enabledPlugin</span>: Plugin&#125;,</span><br><span class="line">    <span class="number">2</span>: MimeType,</span><br><span class="line">    <span class="number">3</span>: MimeType,</span><br><span class="line">    application/pdf: MimeType,</span><br><span class="line">    application/x-google-chrome-pdf: MimeType,</span><br><span class="line">    application/x-nacl: MimeType,</span><br><span class="line">    application/x-pnacl: MimeType,</span><br><span class="line">    length: <span class="number">4</span></span><br><span class="line">  &#125;</span><br><span class="line">  onLine: <span class="literal">true</span>  <span class="comment">// 是否联网</span></span><br><span class="line">  permissions: Permissions &#123;&#125; <span class="comment">// 更新 查询 授权的信息。 https://developer.mozilla.org/zh-TW/docs/WebAPI/Permissions</span></span><br><span class="line">  platform: <span class="string">&quot;MacIntel&quot;</span>  <span class="comment">// 浏览器平台名</span></span><br><span class="line">  plugins: PluginArray &#123;  <span class="comment">// 安装的插件，这些感觉不像是认知中的插件</span></span><br><span class="line">    <span class="number">0</span>: Plugin,</span><br><span class="line">    <span class="number">1</span>: Plugin,</span><br><span class="line">    <span class="number">2</span>: Plugin,</span><br><span class="line">    Chrome PDF Plugin: Plugin,</span><br><span class="line">    Chrome PDF Viewer: Plugin,</span><br><span class="line">    Native Client: Plugin,</span><br><span class="line">    length: <span class="number">3</span></span><br><span class="line">  &#125;</span><br><span class="line">  presentation: Presentation &#123;</span><br><span class="line">    receiver: <span class="literal">null</span>,</span><br><span class="line">    defaultRequest: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  product: <span class="string">&quot;Gecko&quot;</span>  <span class="comment">// 在任意浏览器下都只返回&#x27;Gecko&#x27;，此属性只用于兼容的目的。。</span></span><br><span class="line">  productSub: <span class="string">&quot;20030107&quot;</span>  <span class="comment">// 返回当前浏览器的编译版本号</span></span><br><span class="line">  serviceWorker: ServiceWorkerContainer &#123; <span class="comment">// service 相关</span></span><br><span class="line">    controller: <span class="literal">null</span>, </span><br><span class="line">    ready: <span class="built_in">Promise</span>, </span><br><span class="line">    oncontrollerchange: <span class="literal">null</span>, </span><br><span class="line">    onmessage: <span class="literal">null</span>, </span><br><span class="line">    onmessageerror: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  storage: StorageManager &#123;&#125;</span><br><span class="line">  usb: USB &#123;</span><br><span class="line">    onconnect: <span class="literal">null</span>,</span><br><span class="line">    ondisconnect: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  userActivation: UserActivation &#123;  <span class="comment">// 窗口是否被激活过，是否处于激活状态</span></span><br><span class="line">    hasBeenActive: <span class="literal">true</span>,</span><br><span class="line">    isActive: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 用户代理 浏览器的相关信息</span></span><br><span class="line">  userAgent: <span class="string">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span></span><br><span class="line">  vendor: <span class="string">&quot;Google Inc.&quot;</span> <span class="comment">// 浏览器供应商的名称.</span></span><br><span class="line">  vendorSub: <span class="string">&quot;&quot;</span> <span class="comment">// 浏览器供应商的版本号。</span></span><br><span class="line">  wakeLock: WakeLock &#123;&#125;</span><br><span class="line">  webkitPersistentStorage: DeprecatedStorageQuota &#123;&#125;</span><br><span class="line">  webkitTemporaryStorage: DeprecatedStorageQuota &#123;&#125;</span><br><span class="line">  xr: XRSystem &#123;  <span class="comment">// 支持VR和增强现实（AR）</span></span><br><span class="line">    ondevicechange: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.sdwebseo.com/url-shortener/">该使用短链接吗？短链接工具有哪些？</a></li>
+<li><a href="https://www.zhangxinxu.com/wordpress/2018/07/navigator-do-not-track-api/">隐私相关-了解HTML5 Do Not Track API</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>tiktok</tag>
+        <tag>短连接</tag>
+        <tag>浏览器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode-892-三维形体的表面积</title>
+    <url>/2020/08/20/leetcode-892-%E4%B8%89%E7%BB%B4%E5%BD%A2%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<h3 id="892-三维形体的表面积"><a href="#892-三维形体的表面积" class="headerlink" title="892. 三维形体的表面积"></a>892. 三维形体的表面积</h3><p>在 <code>N * N</code> 的网格上，我们放置一些 <code>1 * 1 * 1</code>  的立方体。</p>
+<p>每个值 <code>v = grid[i][j]</code> 表示 <code>v</code> 个正方体叠放在对应单元格 <code>(i, j)</code> 上。</p>
+<p>请你返回最终形体的表面积。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[2]]  </span><br><span class="line">输出：10</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[1,2],[3,4]]  </span><br><span class="line">输出：34  </span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[1,0],[0,2]]  </span><br><span class="line">输出：16  </span><br></pre></td></tr></table></figure>
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[1,1,1],[1,0,1],[1,1,1]]  </span><br><span class="line">输出：32  </span><br></pre></td></tr></table></figure>
+<p><strong>示例 5：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：[[2,2,2],[2,1,2],[2,2,2]]  </span><br><span class="line">输出：46  </span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= N &lt;= 50</code></li>
+<li><code>0 &lt;= grid[i][j] &lt;= 50</code></li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/surface-area-of-3d-shapes">https://leetcode-cn.com/problems/surface-area-of-3d-shapes</a>  </p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="”加法“"><a href="#”加法“" class="headerlink" title="”加法“"></a>”加法“</h3><p>按每个方块贡献多少面积去计算。</p>
+<p>方位术语：<br><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/WX20200820-190647%402x.png" alt="方位术语"></p>
+<p><code>i,j</code> 位置有 <code>n</code> 个方块，顶部底部一共贡献 <code>2</code> 个面积。上下左右分别是没有重叠的面积<br><code>Max(grid[i][j] - grid[i2][j2], 0)</code></p>
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
+<li>空间复杂度 O(1)</li>
+<li>时间复杂度 O(n2)<ul>
+<li>两层循环</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[][]&#125;</span> <span class="variable">grid</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> surfaceArea = <span class="function"><span class="keyword">function</span> (<span class="params">grid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> n = grid.length;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">      <span class="comment">// 当前位置有放方块，增加顶部和底部的面积</span></span><br><span class="line">      <span class="keyword">if</span> (grid[i][j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        ans += <span class="number">2</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 上方方块 的面积，如果低于上方方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i - <span class="number">1</span>][j], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 右侧方块 的面积，如果低于右侧方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (j === n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i][j + <span class="number">1</span>], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 下方方块 的面积，如果低于下方方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (i === n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i + <span class="number">1</span>][j], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 当前方块 高出 左侧方块 的面积，如果低于左侧方块即为0</span></span><br><span class="line">      <span class="keyword">if</span> (j === <span class="number">0</span>) &#123;</span><br><span class="line">        ans += grid[i][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans += <span class="built_in">Math</span>.max(grid[i][j] - grid[i][j - <span class="number">1</span>], <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="”减法“"><a href="#”减法“" class="headerlink" title="”减法“"></a>”减法“</h3><p><code>i,j</code> 位置有 <code>n</code> 个方块，按照一个方块无遮挡的话有 <code>6n</code> 个面积。再减去上下左右顶部底部的重叠面积。</p>
+<h4 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
+<li>空间复杂度 O(1)</li>
+<li>时间复杂度 O(n2)<ul>
+<li>两层循环</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[][]&#125;</span> <span class="variable">grid</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> surfaceArea = <span class="function"><span class="keyword">function</span> (<span class="params">grid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> n = grid.length</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">      <span class="comment">// 有方块，就有表面积，否则跳过</span></span><br><span class="line">      <span class="keyword">if</span> (grid[i][j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 一个方块默认6个面积</span></span><br><span class="line">        <span class="comment">// ans += grid[i][j] * 6;</span></span><br><span class="line">        <span class="comment">// 有方块，顶部和底部就会重叠</span></span><br><span class="line">        <span class="comment">// ans -= 2 * (grid[i][j] - 1);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 化简</span></span><br><span class="line">        ans += <span class="number">4</span> * grid[i][j] + <span class="number">2</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 找到右测重复的面积，最后一个没有右侧，跳过 放置越界</span></span><br><span class="line">      <span class="keyword">if</span> (j &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans -= <span class="number">2</span> * <span class="built_in">Math</span>.min(grid[i][j], grid[i][j + <span class="number">1</span>]);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 找到下方重复的面积，最后一个没有下方，跳过 放置越界</span></span><br><span class="line">      <span class="keyword">if</span> (i &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">        ans -= <span class="number">2</span> * <span class="built_in">Math</span>.min(grid[i][j], grid[i + <span class="number">1</span>][j]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>这个题主要靠观察，总结出规律，暴力求解。</p>
+]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>暴力求解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode-647-回文子串</title>
+    <url>/2020/08/20/leetcode-647-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<h3 id="647-回文子串"><a href="#647-回文子串" class="headerlink" title="647. 回文子串"></a>647. 回文子串</h3><p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
+<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：&quot;abc&quot;</span><br><span class="line">输出：3</span><br><span class="line">解释：三个回文子串: &quot;a&quot;, &quot;b&quot;, &quot;c&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：&quot;aaa&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：6个回文子串: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>输入的字符串长度不会超过 1000 。</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/palindromic-substrings">https://leetcode-cn.com/problems/palindromic-substrings</a></p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="暴力求解"><a href="#暴力求解" class="headerlink" title="暴力求解"></a>暴力求解</h3><p>因为要求解所有的回文子串，第一想到的就是暴力求解，可能会担心时间复杂度过高，导致超时。<br>子串的不同起始位置不同，就是不同的子串，这样就可以不用判断重复的问题了，看上去就很适合暴力求解。✌️</p>
+<ol>
+<li><code>i</code> 从 0 到 n。</li>
+<li>奇数回文：判断第 <code>i</code> 位置的字符前后的字符是否是一致的。相等就不断向外扩散，并且计数 <code>+1</code></li>
+<li>偶数回文：判断第 <code>i</code> 位置的字符和 <code>i+1</code>位置的字符是否相等。相等就两个字符分别向前或向后扩散，并且计数 <code>+1</code></li>
+</ol>
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ul>
+<li>空间复杂度 O(1)<ul>
+<li>就使用了简单的常量，没有对结果进行保留计算，所以复杂度是O(1)</li>
+</ul>
+</li>
+<li>时间复杂度 O(n2)<ul>
+<li>两层循环</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">s</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> countSubstrings = <span class="function"><span class="keyword">function</span> (<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> len = s.length;</span><br><span class="line">  <span class="keyword">let</span> count = len;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; i - j &gt;= <span class="number">0</span> &amp;&amp; i + j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (s[i - j] === s[i + j]) &#123;</span><br><span class="line">        count++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; i - j &gt;= <span class="number">0</span> &amp;&amp; i + j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (s[i - j] === s[i + <span class="number">1</span> + j]) &#123;</span><br><span class="line">        count++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>暴力求解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>收藏网站</title>
+    <url>/2020/08/27/%E6%94%B6%E8%97%8F%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<h2 id="团队博客"><a href="#团队博客" class="headerlink" title="团队博客"></a>团队博客</h2><ul>
+<li><a href="https://tech.meituan.com/">美团技术团队</a></li>
+</ul>
+<h2 id="个人博客"><a href="#个人博客" class="headerlink" title="个人博客"></a>个人博客</h2><ul>
+<li><a href="https://xugaoyi.com/">Evan’s blog</a> —— Web前端技术博客，积跬步以至千里，致敬每个爱学习的你。</li>
+<li></li>
+</ul>
+<h2 id="书籍-教程"><a href="#书籍-教程" class="headerlink" title="书籍/教程"></a>书籍/教程</h2><ul>
+<li><a href="https://github.com/ruanyf/free-books">ruanyf/free-books - github</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>收藏</category>
+      </categories>
+      <tags>
+        <tag>日常更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深色模式</title>
+    <url>/2020/08/27/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<p><strong>实现深色模式主要两种思路:</strong></p>
+<ol>
+<li>CSS媒体查询识别</li>
+<li>JsAPi去检测</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="CSS媒体查询识别"><a href="#CSS媒体查询识别" class="headerlink" title="CSS媒体查询识别"></a>CSS媒体查询识别</h2><h3 id="prefers-color-scheme"><a href="#prefers-color-scheme" class="headerlink" title="prefers-color-scheme"></a>prefers-color-scheme</h3><p>使用的属性就是 <code>prefers-color-scheme</code>。</p>
+<blockquote>
+<p>prefers-color-scheme CSS 媒体特性用于检测用户是否有将系统的主题色设置为亮色或者暗色。<br>语法<br>no-preference<br>表示系统未得知用户在这方面的选项。在布尔值上下文中，其执行结果为false。<br>light<br>表示用户已告知系统他们选择使用浅色主题的界面。<br>dark<br>表示用户已告知系统他们选择使用暗色主题的界面。  </p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>目前主流的浏览器都支持这个属性。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>当检测到 <code>prefers-color-scheme</code> 为 <code>dark</code> 的时候，设置新的样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: black;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你想使用 css变量 的话可以参考</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--bg</span>: white;</span><br><span class="line">  <span class="attribute">--textColor</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--bg);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--textColor);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) &#123;</span><br><span class="line">  <span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attribute">--bg</span>: black;</span><br><span class="line">    <span class="attribute">--textColor</span>: white;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">var</span>(--bg);</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">var</span>(--textColor);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>:root</code> 这个 CSS 伪类匹配文档树的根元素。对于 <code>HTML</code> 来说，<code>:root</code> 表示 <code>&lt;html&gt;</code> 元素，除了优先级更高之外，与 <code>html</code> 选择器相同。</p>
+</blockquote>
+<p><strong>CSS变量</strong></p>
+<ul>
+<li>通过 <code>--变量名</code> 定义值</li>
+<li>通过 <code>var(--变量名)</code> 使用值</li>
+<li><code>CSS变量</code> 有作用域，且重复定义会产生覆盖</li>
+</ul>
+<h2 id="JsAPi去检测"><a href="#JsAPi去检测" class="headerlink" title="JsAPi去检测"></a>JsAPi去检测</h2><blockquote>
+<p>Window 的 <code>matchMedia()</code> 方法返回一个新的 <code>MediaQueryList</code> 对象，表示指定的媒体查询字符串解析后的结果。返回的 <code>MediaQueryList</code> 可被用于判定 Document 是否匹配媒体查询，或者监控一个 document 来判定它匹配了或者停止匹配了此媒体查询。</p>
+</blockquote>
+<p>通过这个方法，所有媒体查询的方法我们都可以通过这个api去实现。<br>例如 <code>(max-width: 600px)</code> 宽度小于等于600像素的时候匹配。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.matchMedia(<span class="string">&#x27;(prefers-color-scheme: dark)&#x27;</span>).matches) &#123;</span><br><span class="line">  <span class="comment">// 深色模式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>matchMedia</code> 会返回一个 <code>MediaQueryList</code> 对象。具有属性matches、media，具有方法addListener、removeListener。</p>
+<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/WX20200827-145018%402x.png" alt="matchMedia"></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> mql = <span class="built_in">window</span>.matchMedia(<span class="string">&#x27;(prefers-color-scheme: dark)&#x27;</span>)</span><br><span class="line">mql.addEventListener(<span class="string">&#x27;change&#x27;</span>, <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e)</span><br><span class="line">  <span class="keyword">if</span> (e.matches) &#123;</span><br><span class="line">    <span class="comment">// 切换到深色模式</span></span><br><span class="line">    <span class="comment">// 这个只能作为切换的，初始化还要从mql中去获取matches属性</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://segmentfault.com/a/1190000018728380">为你的网页添加深色模式</a></li>
+<li><a href="https://juejin.im/post/6844904114095128584">如何自动响应CSS深色模式</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme - MDN</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root">:root - MDN</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*">css变量 - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/onchange">MediaQueryList.onchange - MDN</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>浏览器</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>现代JavaScript教程-简介-学习记录</title>
+    <url>/2020/08/27/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E7%AE%80%E4%BB%8B-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><strong>此文章仅作为个人学习查漏补缺，并不适合作为学习大纲。学习请前往 <a href="https://zh.javascript.info/">现代 JavaScript 教程</a></strong></p>
+<h2 id="1-1-JavaScript-简介"><a href="#1-1-JavaScript-简介" class="headerlink" title="1.1 JavaScript 简介"></a>1.1 JavaScript 简介</h2><ul>
+<li>V8 —— Chrome 和 Opera 中的 JavaScript 引擎。</li>
+<li>SpiderMonkey —— Firefox 中的 JavaScript 引擎。</li>
+</ul>
+<h3 id="引擎是如何工作的？"><a href="#引擎是如何工作的？" class="headerlink" title="引擎是如何工作的？"></a>引擎是如何工作的？</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">引擎很复杂，但是基本原理很简单。</span><br><span class="line"></span><br><span class="line">引擎（通常嵌入在浏览器中）读取（“解析”）脚本。</span><br><span class="line">然后将脚本转化（“编译”）为机器语言。</span><br><span class="line">然后这机器语言代码快速地运行。</span><br><span class="line">引擎会对流程中的每个阶段都进行优化。它甚至可以在运行时监视编译的脚本，分析数据流并根据这些进一步优化机器代码。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<p><strong>引擎主要的工作：解析、编译、优化</strong></p>
+<h3 id="浏览器中的-JavaScript-能做什么？"><a href="#浏览器中的-JavaScript-能做什么？" class="headerlink" title="浏览器中的 JavaScript 能做什么？"></a>浏览器中的 JavaScript 能做什么？</h3><ul>
+<li>修改 html 的内容</li>
+<li>响应用户的行为。完成交互，例如鼠标移动，键盘敲击</li>
+<li>发送请求。传送和获取数据</li>
+<li>本地数据存储。</li>
+</ul>
+<h3 id="浏览器中的-JavaScript-不能做什么？"><a href="#浏览器中的-JavaScript-不能做什么？" class="headerlink" title="浏览器中的 JavaScript 不能做什么？"></a>浏览器中的 JavaScript 不能做什么？</h3><ul>
+<li>读写复制磁盘的文件，权限需要授权。例如相机、麦克风</li>
+<li>不同网站（域名、协议或者端口任一不相同的网站）之间不能进行通信，“同源策略” 限制</li>
+<li>从其他网站的服务器获取数据能力受限</li>
+</ul>
+<h3 id="是什么使得-JavaScript-与众不同？"><a href="#是什么使得-JavaScript-与众不同？" class="headerlink" title="是什么使得 JavaScript 与众不同？"></a>是什么使得 JavaScript 与众不同？</h3><ul>
+<li>和 HTML/CSS 完全的集成。</li>
+<li>使用简单的工具完成简单的任务。</li>
+<li>被所有的主流浏览器支持，并且默认开启。</li>
+</ul>
+<h2 id="1-2-手册与规范"><a href="#1-2-手册与规范" class="headerlink" title="1.2 手册与规范"></a>1.2 手册与规范</h2><h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><ul>
+<li><a href="https://tc39.es/ecma262/">最新的规范草案</a></li>
+<li><a href="https://github.com/tc39/proposals">最新最前沿且将要“标准化”的功能</a></li>
+</ul>
+<h3 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h3><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考 - MDN</a></li>
+</ul>
+<h3 id="兼容性表"><a href="#兼容性表" class="headerlink" title="兼容性表"></a>兼容性表</h3><ul>
+<li><a href="http://caniuse.com/">caniuse</a> —— 每个功能都列有一个支持信息表格，例如想看哪个引擎支持现代加密（cryptography）函数：<a href="http://caniuse.com/#feat=cryptography%E3%80%82">http://caniuse.com/#feat=cryptography。</a></li>
+<li><a href="https://kangax.github.io/compat-table">https://kangax.github.io/compat-table</a> —— 一份列有语言功能以及引擎是否支持这些功能的表格。</li>
+</ul>
+<h2 id="1-3-代码编辑器"><a href="#1-3-代码编辑器" class="headerlink" title="1.3 代码编辑器"></a>1.3 代码编辑器</h2><h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h3><p>IDE（集成开发环境）是用于管理整个项目具有强大功能的编辑器。顾名思义，它不仅仅是一个编辑器，而且还是个完整的开发环境。</p>
+<p>包含 导航、自动补全、版本控制(git)、集成测试环境等其他项目层面的东西。</p>
+<h3 id="轻量编辑器"><a href="#轻量编辑器" class="headerlink" title="轻量编辑器"></a>轻量编辑器</h3><p>“轻量编辑器”没有 IDE 功能那么强大，但是他们一般很快、优雅而且简单。</p>
+]]></content>
+      <categories>
+        <category>现代JavaScript教程</category>
+      </categories>
+      <tags>
+        <tag>现代JavaScript教程</tag>
+        <tag>学习记录</tag>
       </tags>
   </entry>
 </search>
