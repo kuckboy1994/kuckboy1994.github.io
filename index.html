@@ -179,6 +179,691 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-现代JavaScript教程-Object（对象）：基础知识-学习记录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/31/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-Object%EF%BC%88%E5%AF%B9%E8%B1%A1%EF%BC%89%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+    >现代JavaScript教程-Object（对象）：基础知识-学习记录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/08/31/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-Object%EF%BC%88%E5%AF%B9%E8%B1%A1%EF%BC%89%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-08-31T12:24:10.000Z" itemprop="datePublished">2020-08-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B/">现代JavaScript教程</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="4-1-对象"><a href="#4-1-对象" class="headerlink" title="4.1 对象"></a>4.1 对象</h2><h3 id="属性名称限制"><a href="#属性名称限制" class="headerlink" title="属性名称限制"></a>属性名称限制</h3><p>这里有个小陷阱：一个名为 <code>__proto__</code> 的属性。我们不能将它设置为一个非对象的值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">obj.__proto__ = <span class="number">5</span>; <span class="comment">// 分配一个数字</span></span><br><span class="line">alert(obj.__proto__); <span class="comment">// [object Object] — 值为对象，与预期结果不同</span></span><br></pre></td></tr></table></figure>
+<p>我们从代码中可以看出来，把它赋值为 5 的操作被忽略了。</p>
+<h3 id="像对象一样排序"><a href="#像对象一样排序" class="headerlink" title="像对象一样排序"></a>像对象一样排序</h3><p>对象的属性的输出顺序：整数属性进行排序，其他属性按照创建的顺序显示。数字优先级比其他属性优先级高。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// demo1</span></span><br><span class="line"><span class="keyword">let</span> codes = &#123;</span><br><span class="line">  <span class="string">&quot;49&quot;</span>: <span class="string">&quot;Germany&quot;</span>,</span><br><span class="line">  <span class="string">&quot;41&quot;</span>: <span class="string">&quot;Switzerland&quot;</span>,</span><br><span class="line">  <span class="string">&quot;44&quot;</span>: <span class="string">&quot;Great Britain&quot;</span>,</span><br><span class="line">  <span class="comment">// ..,</span></span><br><span class="line">  <span class="string">&quot;1&quot;</span>: <span class="string">&quot;USA&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> code <span class="keyword">in</span> codes) &#123;</span><br><span class="line">  alert(code); <span class="comment">// 1, 41, 44, 49</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// demo2</span></span><br><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  surname: <span class="string">&quot;Smith&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line">user.age = <span class="number">25</span>; <span class="comment">// 增加一个</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 非整数属性是按照创建的顺序来排列的</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> prop <span class="keyword">in</span> user) &#123;</span><br><span class="line">  alert( prop ); <span class="comment">// name, surname, age</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// demo3 不想按照数字顺序输出的话，就用非整数来“欺骗”程序</span></span><br><span class="line"><span class="keyword">let</span> codes = &#123;</span><br><span class="line">  <span class="string">&quot;+49&quot;</span>: <span class="string">&quot;Germany&quot;</span>,</span><br><span class="line">  <span class="string">&quot;+41&quot;</span>: <span class="string">&quot;Switzerland&quot;</span>,</span><br><span class="line">  <span class="string">&quot;+44&quot;</span>: <span class="string">&quot;Great Britain&quot;</span>,</span><br><span class="line">  <span class="comment">// ..,</span></span><br><span class="line">  <span class="string">&quot;+1&quot;</span>: <span class="string">&quot;USA&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> code <span class="keyword">in</span> codes) &#123;</span><br><span class="line">  alert( +code ); <span class="comment">// 49, 41, 44, 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-2-对象拷贝，引用"><a href="#4-2-对象拷贝，引用" class="headerlink" title="4.2 对象拷贝，引用"></a>4.2 对象拷贝，引用</h2><p><strong>浅拷贝</strong></p>
+<ul>
+<li><code>Object.assign(dest, [src1, src2])</code></li>
+<li><code>spread operator</code></li>
+</ul>
+<p><strong>ps: 深拷贝</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> deepClone = <span class="function">(<span class="params">obj, hash = <span class="keyword">new</span> <span class="built_in">WeakMap</span>()</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (hash.has(obj)) <span class="keyword">return</span> hash.get(obj)</span><br><span class="line">  <span class="keyword">if</span> (obj === <span class="literal">null</span>) <span class="keyword">return</span> obj</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> obj</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(obj)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>(obj)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> newObj = <span class="keyword">new</span> obj.constructor;</span><br><span class="line"></span><br><span class="line">  hash.set(obj, newObj)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">      newObj[key] = deepClone(obj[key], hash)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> newObj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>let newObj = new obj.constructor;</code> 克隆实例对象的时候，同时把他的原型克隆过来，不用判断 <code>array</code> 或者是 <code>object</code></p>
+<p><code>WeakMap</code>  专门用来存储 <code>key</code> 是对象的 键值对，<code>WeakMap</code> 对应特殊的垃圾回收机制，不需要手动释放，只要引用的对象被清除了，<code>weakMap</code> 中的键值对就会消失。<br>常用来存放dom节点的信息</p>
+<ul>
+<li><code>JSON.parse(JSON.stringify(obj))</code></li>
+</ul>
+<h2 id="4-3-垃圾回收"><a href="#4-3-垃圾回收" class="headerlink" title="4.3 垃圾回收"></a>4.3 垃圾回收</h2><h3 id="可达性（Reachability）"><a href="#可达性（Reachability）" class="headerlink" title="可达性（Reachability）"></a>可达性（Reachability）</h3><p>“可达”值是那些以某种方式可访问或可用的值。它们一定是存储在内存中的。</p>
+<ol>
+<li>这里列出固有的可达值的基本集合，这些值明显不能被释放。<ul>
+<li>当前函数的局部变量和参数。</li>
+<li>嵌套调用时，当前调用链上所有函数的变量与参数。</li>
+<li>全局变量。</li>
+<li>（还有一些内部的）</li>
+</ul>
+</li>
+</ol>
+<p>这些值被称作 根（roots）。</p>
+<ol start="2">
+<li>如果一个值可以 <code>通过引用</code> 或 <code>引用链从根</code> 访问任何其他值，则认为该值是可达的。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> A = &#123;&#125;;</span><br><span class="line">A.B = &#123;&#125;;</span><br><span class="line">A.C = &#123;&#125;;</span><br><span class="line">A.B.c = A.C;</span><br><span class="line">A.C.b = A.B;</span><br><span class="line"></span><br><span class="line">A = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(A);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/WX20200831-114749%402x.png" alt="孤岛"></p>
+<p>B、C、b、c 与根没有连接，成为了“孤岛”，将被从内存中删除。</p>
+<h3 id="内部算法"><a href="#内部算法" class="headerlink" title="内部算法"></a>内部算法</h3><p>垃圾回收的基本算法被称为 “mark-and-sweep”。 —— <code>标记清除法</code></p>
+<p>定期执行以下“垃圾回收”步骤：</p>
+<ul>
+<li>垃圾收集器找到所有的根，并“标记”（记住）它们。</li>
+<li>然后它遍历并“标记”来自它们的所有引用。</li>
+<li>然后它遍历标记的对象并标记 他们的 引用。所有被遍历到的对象都会被记住，以免将来再次遍历到同一个对象。</li>
+<li>……如此操作，直到所有可达的（从根部）引用都被访问到。</li>
+<li>没有被标记的对象都会被删除。</li>
+</ul>
+<p>ps：总结 找到所有的根节点，并记录。找到所有记录的节点被引用的节点，不断递归，找到遍历所有可达节点，没有标记的对象会被删除。</p>
+<p><strong>一些优化建议</strong></p>
+<ul>
+<li><strong>分代收集（Generational collection）</strong>—— 对象被分成两组：“新的”和“旧的”。许多对象出现，完成他们的工作并很快死去，他们可以很快被清理。那些长期存活的对象会变得“老旧”，而且被检查的频次也会减少。<ul>
+<li>新生代，老生代</li>
+</ul>
+</li>
+<li><strong>增量收集（Incremental collection）</strong>—— 如果有许多对象，并且我们试图一次遍历并标记整个对象集，则可能需要一些时间，并在执行过程中带来明显的延迟。所以引擎试图将垃圾收集工作分成几部分来做。然后将这几部分会逐一进行处理。这需要他们之间有额外的标记来追踪变化，但是这样会有许多微小的延迟而不是一个大的延迟。</li>
+<li>*闲时收集（Idle-time collection）**—— 垃圾收集器只会在 CPU 空闲时尝试运行，以减少可能对代码执行的影响。</li>
+</ul>
+<p><strong>总结</strong></p>
+<ul>
+<li>垃圾回收是自动完成的，我们不能强制执行或是阻止执行。</li>
+<li>当对象是可达状态时，它一定是存在于内存中的。</li>
+<li>被引用与可访问（从一个根）不同：一组相互连接的对象可能整体都不可达。</li>
+</ul>
+<p><strong>其他资料</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection">V8 之旅：垃圾回收</a></li>
+<li><a target="_blank" rel="noopener" href="https://v8.dev/">v8 blog</a></li>
+<li><a target="_blank" rel="noopener" href="https://mrale.ph/">v8 engineer</a></li>
+</ul>
+<h2 id="4-4-对象方法，”this”"><a href="#4-4-对象方法，”this”" class="headerlink" title="4.4 对象方法，”this”"></a>4.4 对象方法，”this”</h2><h3 id="“this”-不受限制"><a href="#“this”-不受限制" class="headerlink" title="“this” 不受限制"></a>“this” 不受限制</h3><p><code>this</code> 的值是在代码运行时计算出来的，它取决于代码上下文。</p>
+<p>严格模式下，单纯的调用函数，内部的this指向undefined。否则返回全局对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);  <span class="comment">// undefined</span></span><br><span class="line">&#125;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
+
+<p>ps: this的指向的五种情况</p>
+<ol>
+<li>当在函数调用的时候指向全局对象，严格模式下 <code>undefined</code></li>
+<li>当方法调用的时候指向<code>调用</code>对象</li>
+<li>当用 <code>apply</code> 和 <code>call</code> 上下文调用的时候指向传入的第一个参数</li>
+<li>构造函数内部的this，用来创建的实例对象的时候，this指向实例对象</li>
+<li>箭头函数的this指向调用环境(外层的this)，外层也要看它的this的指向</li>
+</ol>
+<h2 id="4-5-构造器和操作符-“new”"><a href="#4-5-构造器和操作符-“new”" class="headerlink" title="4.5 构造器和操作符 “new”"></a>4.5 构造器和操作符 “new”</h2><h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>构造函数在技术上是常规函数。不过有两个约定：</p>
+<ol>
+<li>它们的命名以大写字母开头。</li>
+<li>它们只能由 “new” 操作符来执行。</li>
+</ol>
+<p>一个函数被使用 new 操作符执行时，它按照以下步骤：</p>
+<p>ps: 以下是重学前端中的定义</p>
+<ol>
+<li>以构造器的 prototype 属性（注意与私有字段 <code>[[prototype]]</code> 的区分）为原型，创建新对象；<ul>
+<li>保持原型一致</li>
+</ul>
+</li>
+<li>将 this 和调用参数传给构造器，执行；</li>
+<li>如果构造器返回的是对象，则返回，否则返回第一步创建的对象。<ul>
+<li>原始类型，会忽略，返回第一步创建的对象</li>
+<li>return; 也会返回第一步创建的对象</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://kuckboy.oss-cn-hangzhou.aliyuncs.com/blog/img/WX20200831-142329%402x.png"></p>
+<p><strong>匿名构造函数</strong></p>
+<p>只能被调用一次，每次创建出来的原型都不一样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="keyword">new</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line">  <span class="built_in">this</span>.isAdmin = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ……用于用户创建的其他代码</span></span><br><span class="line">  <span class="comment">// 也许是复杂的逻辑和语句</span></span><br><span class="line">  <span class="comment">// 局部变量等</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="构造器模式测试：new-target"><a href="#构造器模式测试：new-target" class="headerlink" title="构造器模式测试：new.target"></a>构造器模式测试：new.target</h3><p>在一个函数内部，我们可以使用 <code>new.target</code> 属性来检查它是否被使用 <code>new</code> 进行调用了。</p>
+<p>对于常规调用，它为空，对于使用 <code>new</code> 的调用，则等于该函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">User</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="keyword">new</span>.target);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不带 &quot;new&quot;：</span></span><br><span class="line">User(); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 带 &quot;new&quot;：</span></span><br><span class="line"><span class="keyword">new</span> User(); <span class="comment">// function User &#123; ... &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>它可以被用在函数内部，来判断该函数是被通过 <code>new</code> 调用的“构造器模式”，还是没被通过 <code>new</code> 调用的“常规模式”。</p>
+<p>我们也可以让 new 调用和常规调用做相同的工作，像这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">User</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="keyword">new</span>.target) &#123; <span class="comment">// 如果你没有通过 new 运行我</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> User(name); <span class="comment">// ……我会给你添加 new</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> john = User(<span class="string">&quot;John&quot;</span>); <span class="comment">// 将调用重定向到新用户</span></span><br><span class="line">alert(john.name); <span class="comment">// John</span></span><br></pre></td></tr></table></figure>
+
+<p>这种方法有时被用在库中以使语法更加灵活。这样人们在调用函数时，无论是否使用了 <code>new</code> ，程序都能工作。</p>
+<p>不过，到处都使用它并不是一件好事，因为省略了 <code>new</code> 使得很难观察到代码中正在发生什么。而通过 <code>new</code> 我们都可以知道这创建了一个新对象。</p>
+<h3 id="构造器的-return"><a href="#构造器的-return" class="headerlink" title="构造器的 return"></a>构造器的 return</h3><p>如果没有参数，我们可以省略 <code>new</code> 后的括号：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="keyword">new</span> User; <span class="comment">// &lt;-- 没有参数</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">let</span> user = <span class="keyword">new</span> User();</span><br></pre></td></tr></table></figure>
+
+<p>这里省略括号不被认为是一种“好风格”，但是规范允许使用该语法。</p>
+<h2 id="4-6-可选链-“-”"><a href="#4-6-可选链-“-”" class="headerlink" title="4.6 可选链 “?.”"></a>4.6 可选链 “?.”</h2><h3 id="可选链"><a href="#可选链" class="headerlink" title="可选链"></a>可选链</h3><p>如果可选链 <code>?.</code> 前面部分是 <code>undefined</code> 或者 <code>null</code> ，它会停止运算并返回 <code>undefined</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;&#125;; <span class="comment">// user 没有 address</span></span><br><span class="line"></span><br><span class="line">alert( user?.address?.street ); <span class="comment">// undefined （不报错）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>?. 前的变量必须已声明</strong></p>
+<p>如果未声明变量 <code>user</code>，那么 <code>user?.anything</code> 会触发一个错误：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ReferenceError: user is not defined</span></span><br><span class="line">user?.address;</span><br></pre></td></tr></table></figure>
+
+<p><code>?.</code> 前的变量必须已通过 <code>let/const/var user</code> 进行声明。可选链仅适用于已声明的变量。</p>
+<h3 id="短路效应"><a href="#短路效应" class="headerlink" title="短路效应"></a>短路效应</h3><p>正如前面所说的，如果 ?. 左边部分不存在，就会立即停止运算（“短路效应”）。</p>
+<p>所以，如果后面有任何函数调用或者副作用，它们均不会执行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> x = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">user?.sayHi(x++); <span class="comment">// 没事发生</span></span><br><span class="line"></span><br><span class="line">alert(x); <span class="comment">// 0，值没有增加</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="其它情况：-，"><a href="#其它情况：-，" class="headerlink" title="其它情况：?.()，?.[]"></a>其它情况：?.()，?.[]</h3><p>可选链 ?. 不是一个运算符，而是一个特殊的语法结构。它还可以与函数和方括号一起使用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user1 = &#123;</span><br><span class="line">  admin() &#123;</span><br><span class="line">    alert(<span class="string">&quot;I am admin&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> user2 = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">user1.admin?.(); <span class="comment">// I am admin</span></span><br><span class="line">user2.admin?.();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;John&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> user2 = <span class="literal">null</span>; <span class="comment">// 假设，我们不能授权此用户</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> key = <span class="string">&quot;firstName&quot;</span>;</span><br><span class="line"></span><br><span class="line">alert( user1?.[key] ); <span class="comment">// John</span></span><br><span class="line">alert( user2?.[key] ); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line">alert( user1?.[key]?.something?.not?.existing); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>我们还可以将 ?. 跟 delete 一起使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> user?.name; <span class="comment">// 如果 user 存在，则删除 user.name</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>我们可以使用 <code>?.</code> 来安全地读取或删除，但不能写入</strong></p>
+<p>可选链 <code>?.</code> 不能用在赋值语句的左侧：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面这段代码的想法是要写入 user.name，如果 user 存在的话</span></span><br><span class="line"></span><br><span class="line">user?.name = <span class="string">&quot;John&quot;</span>; <span class="comment">// Error，不起作用</span></span><br><span class="line"><span class="comment">// because it evaluates to undefined = &quot;John&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>过分使用可能会影响我们查找bug，因为他们会对我们隐藏</strong></p>
+<h2 id="4-7-Symbol-类型"><a href="#4-7-Symbol-类型" class="headerlink" title="4.7 Symbol 类型"></a>4.7 Symbol 类型</h2><p>根据规范，对象的属性键只能是字符串类型或者 <code>Symbol</code> 类型。</p>
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><p><strong>Symbol 不会被自动转换为字符串</strong></p>
+<p>JavaScript 中的大多数值都支持字符串的隐式转换。例如，我们可以 <code>alert</code> 任何值，都可以生效。<code>Symbol</code> 比较特殊，它不会被自动转换。</p>
+<p>例如，这个 <code>alert</code> 将会提示出错：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> id = <span class="built_in">Symbol</span>(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">alert(id); <span class="comment">// 类型错误：无法将 Symbol 值转换为字符串。</span></span><br></pre></td></tr></table></figure>
+
+<p>这是一种防止混乱的“语言保护”，因为字符串和 Symbol 有本质上的不同，不应该意外地将它们转换成另一个。</p>
+<p>如果我们真的想显示一个 Symbol，我们需要在它上面调用 <code>.toString()</code>，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> id = <span class="built_in">Symbol</span>(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">alert(id.toString()); <span class="comment">// Symbol(id)，现在它有效了</span></span><br></pre></td></tr></table></figure>
+
+<p>或者获取 <code>symbol.description</code> 属性，只显示描述（description）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> id = <span class="built_in">Symbol</span>(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">alert(id.description); <span class="comment">// id</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="“隐藏”属性"><a href="#“隐藏”属性" class="headerlink" title="“隐藏”属性"></a>“隐藏”属性</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  <span class="comment">// 属于另一个代码</span></span><br><span class="line">  name: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> id = <span class="built_in">Symbol</span>(<span class="string">&quot;id&quot;</span>);</span><br><span class="line"></span><br><span class="line">user[id] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">alert(user[id]); <span class="comment">// 1         我们可以使用 Symbol 作为键来访问数据</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(user))  <span class="comment">// [&quot;name&quot;]     Symbol 作为键 是不能被遍历相关的方法获取到的</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><code>Object.assign</code> 会同时复制字符串和 symbol 属性：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> id = <span class="built_in">Symbol</span>(<span class="string">&quot;id&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  [id]: <span class="number">123</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> clone = <span class="built_in">Object</span>.assign(&#123;&#125;, user);</span><br><span class="line"></span><br><span class="line">alert( clone[id] ); <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// cropSetting    裁剪设置(智能裁剪)    单选框    [&#123;&quot;key&quot;:&quot;&quot;,&quot;name&quot;:&quot;关闭&quot;&#125;,&#123;&quot;key&quot;:&quot;client&quot;,&quot;name&quot;:&quot;客户端裁剪&quot;&#125;,&#123;&quot;key&quot;:&quot;common&quot;,&quot;name&quot;:&quot;通用模式&quot;&#125;,&#123;&quot;key&quot;:&quot;face&quot;,&quot;name&quot;:&quot;人像模式&quot;&#125;,&#123;&quot;key&quot;:&quot;person&quot;,&quot;name&quot;:&quot;人体模式&quot;&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="全局-symbol"><a href="#全局-symbol" class="headerlink" title="全局 symbol"></a>全局 symbol</h3><p>全局 Symbol 注册表。通过 Symbol.for 注册和读取。 通过 Symbol.keyFor 获取对应的 symbol变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过 name 获取 Symbol</span></span><br><span class="line"><span class="keyword">let</span> sym = <span class="built_in">Symbol</span>.for(<span class="string">&quot;name&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> sym2 = <span class="built_in">Symbol</span>.for(<span class="string">&quot;id&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过 Symbol 获取 name</span></span><br><span class="line">alert( <span class="built_in">Symbol</span>.keyFor(sym) ); <span class="comment">// name</span></span><br><span class="line">alert( <span class="built_in">Symbol</span>.keyFor(sym2) ); <span class="comment">// id</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="系统-Symbol"><a href="#系统-Symbol" class="headerlink" title="系统 Symbol"></a>系统 Symbol</h3><p>JavaScript 内部有很多“系统” Symbol，我们可以使用它们来微调对象的各个方面。</p>
+<p>它们都被列在了 <a target="_blank" rel="noopener" href="https://tc39.github.io/ecma262/#sec-well-known-symbols">众所周知的 Symbol</a> 表的规范中：</p>
+<ul>
+<li>Symbol.hasInstance</li>
+<li>Symbol.isConcatSpreadable</li>
+<li>Symbol.iterator</li>
+<li>Symbol.toPrimitive</li>
+<li>……等等。</li>
+</ul>
+<p>例如，Symbol.toPrimitive 允许我们将对象描述为原始值转换。我们很快就会看到它的使用。</p>
+<p>当我们研究相应的语言特征时，我们对其他的 Symbol 也会慢慢熟悉起来。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>从技术上说，Symbol 不是 100% 隐藏的。有一个内置方法 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">Object.getOwnPropertySymbols(obj)</a> 允许我们获取所有的 Symbol。还有一个名为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys">Reflect.ownKeys(obj)</a> 的方法可以返回一个对象的 所有 键，包括 Symbol。所以它们并不是真正的隐藏。但是大多数库、内置方法和语法结构都没有使用这些方法。</p>
+<h2 id="4-8-对象-—-原始值转换"><a href="#4-8-对象-—-原始值转换" class="headerlink" title="4.8 对象 — 原始值转换"></a>4.8 对象 — 原始值转换</h2><p>这个推荐看 <a target="_blank" rel="noopener" href="https://zh.javascript.info/object-toprimitive">原文</a></p>
+<h3 id="ToPrimitive"><a href="#ToPrimitive" class="headerlink" title="ToPrimitive"></a>ToPrimitive</h3><p>下面是三个类型转换的变体，被称为 “hint”</p>
+<p><strong>“string”</strong></p>
+<p>对象到字符串的转换，当我们对期望一个字符串的对象执行操作时，如 “alert”：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出</span></span><br><span class="line">alert(obj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将对象作为属性键</span></span><br><span class="line">anotherObj[obj] = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>“number”</strong></p>
+<p>对象到数字的转换，例如当我们进行数学运算时：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 显式转换</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="built_in">Number</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数学运算（除了二进制加法）</span></span><br><span class="line"><span class="keyword">let</span> n = +obj; <span class="comment">// 一元加法</span></span><br><span class="line"><span class="keyword">let</span> delta = date1 - date2;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 小于/大于的比较</span></span><br><span class="line"><span class="keyword">let</span> greater = user1 &gt; user2;</span><br></pre></td></tr></table></figure>
+
+<p><strong>“default”</strong></p>
+<p>在少数情况下发生，当运算符“不确定”期望值的类型时。</p>
+<p>例如，二进制加法 + 可用于字符串（连接），也可以用于数字（相加），所以字符串和数字这两种类型都可以。因此，当二元加法得到对象类型的参数时，它将依据 “default” hint 来对其进行转换。</p>
+<p>此外，如果对象被用于与字符串、数字或 symbol 进行 == 比较，这时到底应该进行哪种转换也不是很明确，因此使用 “default” hint。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二元加法使用默认 hint</span></span><br><span class="line"><span class="keyword">let</span> total = obj1 + obj2;</span><br><span class="line"></span><br><span class="line"><span class="comment">// obj == number 使用默认 hint</span></span><br><span class="line"><span class="keyword">if</span> (user == <span class="number">1</span>) &#123; ... &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>像 &lt; 和 &gt; 这样的小于/大于比较运算符，也可以同时用于字符串和数字。不过，它们使用 “number” hint，而不是 “default”。这是历史原因。</p>
+<h3 id="Symbol-toPrimitive"><a href="#Symbol-toPrimitive" class="headerlink" title="Symbol.toPrimitive"></a>Symbol.toPrimitive</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  money: <span class="number">1000</span>,</span><br><span class="line"></span><br><span class="line">  [<span class="built_in">Symbol</span>.toPrimitive](hint) &#123;</span><br><span class="line">    alert(<span class="string">`hint: <span class="subst">$&#123;hint&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">return</span> hint == <span class="string">&quot;string&quot;</span> ? <span class="string">`&#123;name: &quot;<span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>&quot;&#125;`</span> : <span class="built_in">this</span>.money;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转换演示：</span></span><br><span class="line">alert(user); <span class="comment">// hint: string -&gt; &#123;name: &quot;John&quot;&#125;</span></span><br><span class="line">alert(+user); <span class="comment">// hint: number -&gt; 1000</span></span><br><span class="line">alert(user + <span class="number">500</span>); <span class="comment">// hint: default -&gt; 1500</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="toString-valueOf"><a href="#toString-valueOf" class="headerlink" title="toString/valueOf"></a>toString/valueOf</h3><p>方法 <code>toString</code> 和 <code>valueOf</code> 来自上古时代。它们不是 <code>symbol</code>（那时候还没有 <code>symbol</code> 这个概念），而是“常规的”字符串命名的方法。它们提供了一种可选的“老派”的实现转换的方法。</p>
+<p>如果没有 <code>Symbol.toPrimitive</code>，那么 JavaScript 将尝试找到它们，并且按照下面的顺序进行尝试：</p>
+<ul>
+<li>对于 “string” hint，<code>toString -&gt; valueOf</code>。</li>
+<li>其他情况，<code>valueOf -&gt; toString</code>。</li>
+</ul>
+<p>这些方法必须返回一个原始值。如果 toString 或 valueOf 返回了一个对象，那么返回值会被忽略（和这里没有方法的时候相同）。</p>
+<p>默认情况下，普通对象具有 toString 和 valueOf 方法：</p>
+<ul>
+<li><code>toString</code> 方法返回一个字符串 <code>&quot;[object Object]&quot;</code>。</li>
+<li><code>valueOf</code> 方法返回对象自身。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;<span class="attr">name</span>: <span class="string">&quot;John&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line">alert(user); <span class="comment">// [object Object]</span></span><br><span class="line">alert(user.valueOf() === user); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>转换算法是：</p>
+<ol>
+<li>调用 obj<a href="hint">Symbol.toPrimitive</a> 如果这个方法存在，</li>
+<li>否则，如果 hint 是 “string”<ul>
+<li>尝试 obj.toString() 和 obj.valueOf()，无论哪个存在。</li>
+</ul>
+</li>
+<li>否则，如果 hint 是 “number” 或者 “default”<ul>
+<li>尝试 obj.valueOf() 和 obj.toString()，无论哪个存在。</li>
+</ul>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B/" rel="tag">现代JavaScript教程</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-现代JavaScript教程-代码质量-学习记录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/28/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+    >现代JavaScript教程-代码质量-学习记录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/08/28/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-08-28T09:03:38.000Z" itemprop="datePublished">2020-08-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B/">现代JavaScript教程</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="3-3-注释"><a href="#3-3-注释" class="headerlink" title="3.3 注释"></a>3.3 注释</h2><h3 id="好的注释"><a href="#好的注释" class="headerlink" title="好的注释"></a>好的注释</h3><p><strong>记录函数的参数和用法</strong></p>
+<p>有一个专门用于记录函数的语法 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/JSDoc">JSDoc</a>：用法、参数和返回值。<br>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回 x 的 n 次幂的值。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>x 要改变的值。</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>n 幂数，必须是一个自然数。</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span> </span>x 的 n 次幂的值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pow</span>(<span class="params">x, n</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-5-使用-Mocha-进行自动化测试"><a href="#3-5-使用-Mocha-进行自动化测试" class="headerlink" title="3.5 使用 Mocha 进行自动化测试"></a>3.5 使用 Mocha 进行自动化测试</h2><p><strong>自动化测试意味着测试是独立于代码的。它们以各种方式运行我们的函数，并将结果与预期结果进行比较。</strong></p>
+<h3 id="行为驱动开发（BDD）"><a href="#行为驱动开发（BDD）" class="headerlink" title="行为驱动开发（BDD）"></a>行为驱动开发（BDD）</h3><p><strong>BDD 包含了三部分内容：测试、文档和示例。</strong></p>
+<p>Behavior-driven development</p>
+<blockquote>
+<p>在 BDD 中，规范先行，实现在后。最后我们同时拥有了规范和代码。<br>我们首先写一些暂时无法通过的测试，然后去实现它们。<br>规范有三种使用方式：  </p>
+<ul>
+<li>作为 测试 —— 保证代码正确工作。</li>
+<li>作为 文档 —— describe 和 it 的标题告诉我们函数做了什么。</li>
+<li>作为 案例 —— 测试实际工作的例子展示了一个函数可以被怎样使用。</li>
+</ul>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://zh.javascript.info/testing-mocha">dmeo 实现</a></p>
+<p>ps: 正常的开发流程中现在更推荐TDD</p>
+<h3 id="Polyfill"><a href="#Polyfill" class="headerlink" title="Polyfill"></a>Polyfill</h3><ul>
+<li>polyfill 主要做的事，更新/添加新函数到当前环境。<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zloirock/core-js">core js</a></li>
+<li><a target="_blank" rel="noopener" href="https://polyfill.io/v3/">polyfill</a></li>
+</ul>
+</li>
+<li>transpiler[转换器] 使用标准的js对代码进行重新。<ul>
+<li>典型的代表 babel</li>
+<li>常用的工具 webpack</li>
+</ul>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B/" rel="tag">现代JavaScript教程</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-现代JavaScript教程-JavaScript基础知识-学习记录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/28/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+    >现代JavaScript教程-JavaScript基础知识-学习记录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/08/28/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-08-28T07:38:53.000Z" itemprop="datePublished">2020-08-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B/">现代JavaScript教程</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><strong>此文章仅作为个人学习查漏补缺，并不适合作为学习大纲。学习请前往 <a target="_blank" rel="noopener" href="https://zh.javascript.info/">现代 JavaScript 教程</a></strong></p>
+<h2 id="2-1-Hello-world"><a href="#2-1-Hello-world" class="headerlink" title="2. 1 Hello, world!"></a>2. 1 Hello, world!</h2><h3 id="现代的标记（markup）"><a href="#现代的标记（markup）" class="headerlink" title="现代的标记（markup）"></a>现代的标记（markup）</h3><p><code>&lt;script&gt;</code> 标签有一些现在很少用到的特性（attribute），但是我们可以在老代码中找到它们：</p>
+<p><strong>type 特性：<code>&lt;script type=…&gt;</code></strong><br>在老的 HTML4 标准中，要求 script 标签有 type 特性。通常是 type=”text/javascript”。</p>
+<p><strong>脚本前后的注释</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span>&lt;!--</span><br><span class="line">    ...</span><br><span class="line"><span class="javascript"><span class="comment">//--&gt;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这些注释是用于不支持 <code>&lt;script&gt;</code> 标签的古老的浏览器隐藏 JavaScript 代码的。由于最近 15 年内发布的浏览器都没有这样的问题，因此这种注释能帮你辨认出一些老掉牙的代码。</p>
+<h3 id="外部脚本"><a href="#外部脚本" class="headerlink" title="外部脚本"></a>外部脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">一般来说，只有最简单的脚本才嵌入到 HTML 中。更复杂的脚本存放在单独的文件中。</span><br><span class="line"></span><br><span class="line">使用独立文件的好处是浏览器会下载它，然后将它保存到浏览器的 &#96;缓存&#96; 中。</span><br><span class="line"></span><br><span class="line">之后，其他页面想要相同的脚本就会从缓存中获取，而不是下载它。所以文件实际上只会下载一次。</span><br><span class="line"></span><br><span class="line">这可以节省流量，并使得页面（加载）更快。</span><br></pre></td></tr></table></figure>
+
+<p><strong>如果设置了 src 特性，script 标签内容将会被忽略。</strong></p>
+<p>一个单独的 <code>&lt;script&gt;</code> 标签不能同时有 src 特性和内部包裹的代码。</p>
+<p>这将不会工作：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;file.js&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  alert(<span class="number">1</span>); <span class="comment">// 此内容会被忽略，因为设定了 src</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们必须进行选择，要么使用外部的 <code>&lt;script src=&quot;…&quot;&gt;</code>，要么使用正常包裹代码的 <code>&lt;script&gt;</code>。</p>
+<p>为了让上面的例子工作，我们可以将它分成两个 <code>&lt;script&gt;</code> 标签。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;file.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">  alert(1);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-代码结构"><a href="#2-2-代码结构" class="headerlink" title="2.2 代码结构"></a>2.2 代码结构</h2><h3 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h3><p>当存在分行符（line break）时，在大多数情况下可以省略分号。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">alert(<span class="string">&#x27;world&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在这，JavaScript 将分行符理解成“隐式”的分号。这也被称为 <a target="_blank" rel="noopener" href="https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion">自动分号插入</a>。</p>
+<p><strong>在大多数情况下，换行意味着一个分号。但是“大多数情况”并不意味着“总是”！</strong></p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="number">3</span> +</span><br><span class="line"><span class="number">1</span></span><br><span class="line">+ <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>JavaScript 无法确定是否真的需要自动插入分号的情况。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">&quot;There will be an error&quot;</span>)</span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>].forEach(alert)</span><br><span class="line"><span class="comment">// 会报错</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-现代模式，”use-strict”"><a href="#2-3-现代模式，”use-strict”" class="headerlink" title="2.3 现代模式，”use strict”"></a>2.3 现代模式，”use strict”</h2><p>在 <code>2009 年 ECMAScript 5 (ES5) </code> 中，你可以通过 <code>&quot;use strict&quot;</code> 来激活新特性。</p>
+<p><code>&quot;use strict&quot;</code> 一定要在脚本最顶部，只有注释可以出现在其之前，否则不能启用。</p>
+<p><strong>没有办法取消 <code>use strict</code></strong></p>
+<h3 id="浏览器控制台使用-use-strict"><a href="#浏览器控制台使用-use-strict" class="headerlink" title="浏览器控制台使用 use strict"></a>浏览器控制台使用 use strict</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>; <span class="xml"><span class="tag">&lt;<span class="name">Shift+Enter</span> 换行&gt;</span></span></span><br><span class="line"><span class="xml">//  ...你的代码</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">按下</span> <span class="attr">Enter</span> 以运行&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="我们应该使用-“use-strict”-吗？"><a href="#我们应该使用-“use-strict”-吗？" class="headerlink" title="我们应该使用 “use strict” 吗？"></a>我们应该使用 “use strict” 吗？</h3><p><code>现代js</code> 支持 <code>class</code> 和 <code>modules</code>。 他们默认启用 <code>use strict</code>。</p>
+<h2 id="2-4-变量"><a href="#2-4-变量" class="headerlink" title="2.4 变量"></a>2.4 变量</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">保留字列表</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">break       case        catch</span><br><span class="line">class       const       continue</span><br><span class="line">debugger    default     delete</span><br><span class="line">do          else        export</span><br><span class="line">extends     finally     for</span><br><span class="line">function    if          import</span><br><span class="line">in          instanceof  new</span><br><span class="line">return      super       switch</span><br><span class="line">this        throw       try</span><br><span class="line">typeof      var         void</span><br><span class="line">while       with        yield</span><br></pre></td></tr></table></figure>
+
+<p><strong>use strict 下的赋值</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"></span><br><span class="line">num = <span class="number">5</span>; <span class="comment">// 错误：num 未定义</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-5-数据类型"><a href="#2-5-数据类型" class="headerlink" title="2.5 数据类型"></a>2.5 数据类型</h2><p><code>js</code> 是 <code>“动态类型” （dynamically typed）</code>的编程语言。定义的变量并不会在定义后，被限制为某一数据类型。</p>
+<p><strong>8 种基本的数据类型（译注：7 种原始类型和 1 种引用类型）</strong></p>
+<h3 id="Number-类型"><a href="#Number-类型" class="headerlink" title="Number 类型"></a>Number 类型</h3><p><code>NaN</code> 是粘性的。任何对 NaN 的进一步操作都会返回 NaN：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert( <span class="string">&quot;not a number&quot;</span> / <span class="number">2</span> + <span class="number">5</span> ); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
+<p>所以，如果在数学表达式中有一个 NaN，会被传播到最终结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数学运算是安全的</span><br><span class="line"></span><br><span class="line">在 JavaScript 中做数学运算是安全的。我们可以做任何事：除以 0，将非数字字符串视为数字，等等。</span><br><span class="line">脚本永远不会因为一个致命的错误（“死亡”）而停止。最坏的情况下，我们会得到 NaN 的结果。</span><br></pre></td></tr></table></figure>
+
+<h3 id="BigInt-类型"><a href="#BigInt-类型" class="headerlink" title="BigInt 类型"></a>BigInt 类型</h3><blockquote>
+<p>“number” 类型无法表示大于 (253-1)（即 9007199254740991），或小于 -(253-1) 的整数。</p>
+</blockquote>
+<p>可以通过将 <code>n</code> 附加到整数字段的末尾来创建 <code>BigInt</code> 值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 尾部的 &quot;n&quot; 表示这是一个 BigInt 类型</span></span><br><span class="line"><span class="keyword">const</span> bigInt = <span class="number">1234567890123456789012345678901234567890n</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>新出，可能有兼容性问题，Safari/iE</strong>，大值数据操作的库可能是一个更好的选择</p>
+<h3 id="String-类型"><a href="#String-类型" class="headerlink" title="String 类型"></a>String 类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">双引号：&quot;Hello&quot;.</span><br><span class="line">单引号：&#39;Hello&#39;.</span><br><span class="line">反引号：&#96;Hello&#96;.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Boolean-类型（逻辑类型）"><a href="#Boolean-类型（逻辑类型）" class="headerlink" title="Boolean 类型（逻辑类型）"></a>Boolean 类型（逻辑类型）</h3><h3 id="“null”-值"><a href="#“null”-值" class="headerlink" title="“null” 值"></a>“null” 值</h3><p>JavaScript 中的 null 仅仅是一个代表“无”、“空”或“值未知”的特殊值。</p>
+<h3 id="“undefined”-值"><a href="#“undefined”-值" class="headerlink" title="“undefined” 值"></a>“undefined” 值</h3><p>undefined 的含义是 <code>未被赋值</code>。</p>
+<h3 id="symbol-类型"><a href="#symbol-类型" class="headerlink" title="symbol 类型"></a>symbol 类型</h3><h3 id="object-类型"><a href="#object-类型" class="headerlink" title="object 类型"></a>object 类型</h3><p>以上的所有类型都被称之为“原始类型”，因为它们的值只包含一个单独的内容（字符串、数字或者其他）。相反，object 则用于储存数据集合和更复杂的实体。</p>
+<h3 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h3><p><strong>typeof的两种调用方式</strong></p>
+<ol>
+<li>作为运算符：<code>typeof x</code>。</li>
+<li>函数形式：<code>typeof(x)</code>。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span> <span class="comment">// &quot;undefined&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">0</span> <span class="comment">// &quot;number&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">10n</span> <span class="comment">// &quot;bigint&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span> <span class="comment">// &quot;boolean&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">&quot;foo&quot;</span> <span class="comment">// &quot;string&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>(<span class="string">&quot;id&quot;</span>) <span class="comment">// &quot;symbol&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Math</span> <span class="comment">// &quot;object&quot;  (1)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span> <span class="comment">// &quot;object&quot;  (2)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> alert <span class="comment">// &quot;function&quot;  (3)</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>Math</code> 是一个提供数学运算的内建 <code>object</code>。我们会在 数字类型 一节中学习它。此处仅作为一个 <code>object</code> 的示例。</li>
+<li><code>typeof null</code> 的结果是 <code>&quot;object&quot;</code>。这是官方承认的 <code>typeof</code> 的行为上的错误，这个问题来自于 JavaScript 语言的早期，并为了兼容性而保留了下来。<code>null</code> 绝对不是一个 <code>object</code>。<code>null</code> 有自己的类型，它是一个特殊值。</li>
+<li><code>typeof alert</code> 的结果是 <code>&quot;function&quot;</code>，因为 <code>alert</code> 在 JavaScript 语言中是一个函数。我们会在下一章学习函数，那时我们会了解到，在 JavaScript 语言中没有一个特别的 <code>“function”</code> 类型。函数隶属于 <code>object</code> 类型。但是 <code>typeof</code> 会对函数区分对待，并返回 <code>&quot;function&quot;</code>。这也是来自于 JavaScript 语言早期的问题。从技术上讲，这种行为是不正确的，但在实际编程中却非常方便。</li>
+</ol>
+<h2 id="2-7-类型转换"><a href="#2-7-类型转换" class="headerlink" title="2.7 类型转换"></a>2.7 类型转换</h2><h3 id="数字型转换"><a href="#数字型转换" class="headerlink" title="数字型转换"></a>数字型转换</h3><table>
+<thead>
+<tr>
+<th>值</th>
+<th>变成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>undefined</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>null</td>
+<td>0</td>
+</tr>
+<tr>
+<td>true 和 false</td>
+<td>1 and 0</td>
+</tr>
+<tr>
+<td>string</td>
+<td>去掉首尾空格后的纯数字字符串中含有的数字。如果剩余字符串为空，则转换结果为 0。否则，将会从剩余字符串中“读取”数字。当类型转换出现 error 时返回 NaN。</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">alert( <span class="built_in">Number</span>(<span class="string">&quot;   123   &quot;</span>) ); <span class="comment">// 123</span></span><br><span class="line">alert( <span class="built_in">Number</span>(<span class="string">&quot;123z&quot;</span>) );      <span class="comment">// NaN（从字符串“读取”数字，读到 &quot;z&quot; 时出现错误）</span></span><br><span class="line">alert( <span class="built_in">Number</span>(<span class="literal">true</span>) );        <span class="comment">// 1</span></span><br><span class="line">alert( <span class="built_in">Number</span>(<span class="literal">false</span>) );       <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 注意对比parseInt()</span></span><br><span class="line">alert( <span class="built_in">parseInt</span>(<span class="string">&quot;123z&quot;</span>) );    <span class="comment">// 123 从前面开始转换数字，遇到 “非数字” 停止</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 子串为空的 “特殊情况”</span></span><br><span class="line">alert( <span class="built_in">Number</span>(<span class="string">&quot; \t \n&quot;</span>) )     <span class="comment">// \t \n 也是 空格 没有具体显示的意义</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>请注意 <code>null</code> 和 <code>undefined</code> 在这有点不同： <code>null</code> 变成数字 <code>0</code>， <code>undefined</code> 变成 <code>NaN</code>。</p>
+<h3 id="布尔型转换"><a href="#布尔型转换" class="headerlink" title="布尔型转换"></a>布尔型转换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Boolean</span>(<span class="string">&quot;0&quot;</span>)    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="string">&quot; &quot;</span>)    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="string">&quot;&quot;</span>)     <span class="comment">// false, 只要是非空的字符串都返回true</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>变成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0, null, undefined, NaN, “”</td>
+<td>false</td>
+</tr>
+<tr>
+<td>其他值</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h2 id="2-8-基础运算符，数学"><a href="#2-8-基础运算符，数学" class="headerlink" title="2.8 基础运算符，数学"></a>2.8 基础运算符，数学</h2><p><strong>运算元</strong></p>
+<p>运算元 —— 运算符应用的对象。运算符两边 运算元（我们也称之为 “参数”）的个人，可以成为 一元运算符、二元运算符、三元运算符。</p>
+<ul>
+<li>一元运算符<ul>
+<li><code>x = -x</code> 一元负号运算符 </li>
+</ul>
+</li>
+<li>二元运算符<ul>
+<li><code>a + b</code> 二元加号运算符</li>
+</ul>
+</li>
+<li>三元运算符<ul>
+<li><code>a &gt; 0 &gt; x : y</code> 三元运算符</li>
+</ul>
+</li>
+</ul>
+<h3 id="求幂"><a href="#求幂" class="headerlink" title="求幂 **"></a>求幂 **</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert( <span class="number">2</span> ** <span class="number">4</span> ); <span class="comment">// 16 (2 * 2 * 2 * 2，自乘 4 次)</span></span><br><span class="line">alert( <span class="number">4</span> ** (<span class="number">1</span>/<span class="number">2</span>) ); <span class="comment">// 2（1/2 次方与平方根相同)</span></span><br><span class="line">alert( <span class="number">8</span> ** (<span class="number">1</span>/<span class="number">3</span>) ); <span class="comment">// 2（1/3 次方与立方根相同)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符 +"></a>二元运算符 +</h3><p><code>+</code> 两边只要有子串，一定输出的是字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="number">2</span> + <span class="number">2</span> + <span class="string">&#x27;1&#x27;</span> ); <span class="comment">// &quot;41&quot;，不是 &quot;221&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>二元 <code>+</code> 是唯一一个支持字符串的运算符。其他算术运算符只对数字起作用，并且总是将其运算元转换为数字。  </p>
+<h3 id="数字转化，一元运算符"><a href="#数字转化，一元运算符" class="headerlink" title="数字转化，一元运算符 +"></a>数字转化，一元运算符 +</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> apples = <span class="string">&quot;2&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> oranges = <span class="string">&quot;3&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在二元运算符加号起作用之前，所有的值都被转化为了数字</span></span><br><span class="line">alert( +apples + +oranges ); <span class="comment">// 5</span></span><br><span class="line"><span class="comment">// 一元运算符 优先级高于 二元运算符</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 更长的写法</span></span><br><span class="line"><span class="comment">// alert( Number(apples) + Number(oranges) ); // 5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p><strong>数字越大，越先执行。如果优先级相同，则按照由左至右的顺序执行。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">优先级表</a></p>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>位运算符把运算元当做 32 位整数，并在它们的二进制表现形式上操作。</p>
+<ul>
+<li>按位与 ( &amp; )</li>
+<li>按位或 ( | )</li>
+<li>按位异或 ( ^ )</li>
+<li>按位非 ( ~ )</li>
+<li>左移 ( &lt;&lt; )</li>
+<li>右移 ( &gt;&gt; )</li>
+<li>无符号右移 ( &gt;&gt;&gt; )</li>
+</ul>
+<h3 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h3><p>只返回最后一个值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = (<span class="number">1</span> + <span class="number">2</span>, <span class="number">3</span> + <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">alert( a ); <span class="comment">// 7（3 + 4 的结果）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>逗号运算符的优先级非常低</em></strong></p>
+<p>请注意逗号运算符的优先级非常低，比 = 还要低，因此上面你的例子中圆括号非常重要。</p>
+<p>如果没有圆括号：a = 1 + 2, 3 + 4 会先执行 +，将数值相加得到 a = 3, 7，然后赋值运算符 = 执行, ‘a = 3’，然后逗号之后的数值 7 不会再执行，它被忽略掉了。相当于 (a = 1 + 2), 3 + 4。</p>
+<h2 id="2-9-值的比较"><a href="#2-9-值的比较" class="headerlink" title="2.9 值的比较"></a>2.9 值的比较</h2><h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert( <span class="string">&#x27;Z&#x27;</span> &gt; <span class="string">&#x27;A&#x27;</span> ); <span class="comment">// true</span></span><br><span class="line">alert( <span class="string">&#x27;Glow&#x27;</span> &gt; <span class="string">&#x27;Glee&#x27;</span> ); <span class="comment">// true</span></span><br><span class="line">alert( <span class="string">&#x27;Bee&#x27;</span> &gt; <span class="string">&#x27;Be&#x27;</span> ); <span class="comment">// true</span></span><br><span class="line">alert( <span class="string">&#x27;a&#x27;</span> &gt; <span class="string">&#x27;A&#x27;</span> ); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p><strong>比较的非真正的字典顺序，而是 Unicode 编码顺序， Unicode 编码中 A 在 a 之前</strong></p>
+<h3 id="不同类型间的比较"><a href="#不同类型间的比较" class="headerlink" title="不同类型间的比较"></a>不同类型间的比较</h3><p><a target="_blank" rel="noopener" href="https://tc39.es/ecma262/#sec-abstract-equality-comparison">Abstract Equality Comparison - ecma</a></p>
+<p>类型相同的话，就会做严格相等判断</p>
+<p>不同类型比较，都会先转换成 <code>number</code> 之后再进行比较</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">true</span> == <span class="string">&#x27;123&#x27;</span>   <span class="comment">// false</span></span><br><span class="line"><span class="number">0</span> == <span class="string">&#x27;0&#x27;</span>        <span class="comment">// true</span></span><br><span class="line"><span class="string">&#x27;&#x27;</span> == <span class="literal">false</span>     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>严格相等运算符 <code>===</code> 在进行比较时不会做任何的类型转换。</p>
+<h3 id="对-null-和-undefined-进行比较"><a href="#对-null-和-undefined-进行比较" class="headerlink" title="对 null 和 undefined 进行比较"></a>对 null 和 undefined 进行比较</h3><p><strong>严格相等时</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span>  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>== 比较</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>与其他都不相等</p>
+<p><strong>&lt; &gt; &lt;= &gt;= 比较</strong></p>
+<p><code>null</code> 被转化为 <code>0</code> ， <code>undefined</code> 被转化为 <code>NaN</code> 。</p>
+<p><strong>null vs 0</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">alert( <span class="literal">null</span> &gt; <span class="number">0</span> );  <span class="comment">// (1) false</span></span><br><span class="line">alert( <span class="literal">null</span> == <span class="number">0</span> ); <span class="comment">// (2) false</span></span><br><span class="line">alert( <span class="literal">null</span> &gt;= <span class="number">0</span> ); <span class="comment">// (3) true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// (1) 是的，上面的结果完全打破了你对数学的认识。在最后一行代码显示“null 大于等于 0”的情况下，前两行代码中一定会有一个是正确的，然而事实表明它们的结果都是 false。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// (2) 为什么会出现这种反常结果，这是因为相等性检查 == 和普通比较符 &gt; &lt; &gt;= &lt;= 的代码逻辑是相互独立的。进行值的比较时，null 会被转化为数字，因此它被转化为了 0。这就是为什么（3）中 null &gt;= 0 返回值是 true，（1）中 null &gt; 0 返回值是 false。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// (3) 另一方面，undefined 和 null 在相等性检查 == 中不会进行任何的类型转换，它们有自己独立的比较规则，所以除了它们之间互等外，不会等于任何其他的值。这就解释了为什么（2）中 null == 0 会返回 false。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>(2) 个人观点，重新解释一下</strong></p>
+<ul>
+<li><code>&gt;= &gt;</code> 和 <code>==</code> 不是一个判断规则下的。</li>
+<li><code>&gt;= &gt;</code> 属于 <a target="_blank" rel="noopener" href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">Abstract Relational Comparison</a> 比较的时候，将 <code>null</code> 转换为0</li>
+<li><code>==</code> 属于 <a target="_blank" rel="noopener" href="https://tc39.es/ecma262/#sec-abstract-equality-comparison">Abstract Equality Comparison</a> 比较的时候，只要有 <code>null</code> 就判断另一项是不是 <code>undefined</code>，否则就返回 <code>false</code> 了</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/97a8f9c10572">在javascript中，null＞=0 为真，null==0却为假，null到底是什么？</a></p>
+<h3 id="避免问题"><a href="#避免问题" class="headerlink" title="避免问题"></a>避免问题</h3><p>我们为何要研究上述示例？我们需要时刻记得这些古怪的规则吗？不，其实不需要。虽然随着代码写得越来越多，我们对这些规则也都会烂熟于胸，但是我们需要更为可靠的方法来避免潜在的问题：</p>
+<p>除了严格相等 === 外，其他但凡是有 <code>undefined/null</code> 参与的比较，我们都需要格外小心。<br>除非你非常清楚自己在做什么，否则永远不要使用 <code>&gt;= &gt; &lt; &lt;=</code> 去比较一个可能为 <code>null/undefined</code> 的变量。对于取值可能是 <code>null/undefined</code> 的变量，请按需要分别检查它的取值情况。</p>
+<h2 id="2-10-条件分支：if-和-‘-’"><a href="#2-10-条件分支：if-和-‘-’" class="headerlink" title="2.10 条件分支：if 和 ‘?’"></a>2.10 条件分支：if 和 ‘?’</h2><h3 id="多个-‘-’"><a href="#多个-‘-’" class="headerlink" title="多个 ‘?’"></a>多个 ‘?’</h3><p><strong>条件链</strong></p>
+<p>这个三元操作符是右结合的，也就是说你可以像这样把它链接起来， 和 <code>if … else if … else if … else</code> 链类似:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params">…</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> condition1 ? value1</span><br><span class="line">         : condition2 ? value2</span><br><span class="line">         : condition3 ? value3</span><br><span class="line">         : value4;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Equivalent to:</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params">…</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (condition1) &#123; <span class="keyword">return</span> value1; &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (condition2) &#123; <span class="keyword">return</span> value2; &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (condition3) &#123; <span class="keyword">return</span> value3; &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123; <span class="keyword">return</span> value4; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-11-逻辑运算符"><a href="#2-11-逻辑运算符" class="headerlink" title="2.11 逻辑运算符"></a>2.11 逻辑运算符</h2><ul>
+<li><code>||</code> 返回第一个为真的值，或者最后一个值</li>
+<li><code>&amp;&amp;</code> 返回第一个为假的值，或者最后一个值</li>
+</ul>
+<blockquote>
+<p><strong>与运算 &amp;&amp; 在或运算符 || 之前执行</strong><br>与运算 &amp;&amp; 的优先级比或运算 || 要高。<br>所以代码 a &amp;&amp; b || c &amp;&amp; d 完全跟 &amp;&amp; 表达式加了括号一样：(a &amp;&amp; b) || (c &amp;&amp; d)。</p>
+</blockquote>
+<blockquote>
+<p><strong>非运算符 ! 的优先级在所有逻辑运算符里面最高，所以它总是在 &amp;&amp; 和 || 前执行。</strong></p>
+</blockquote>
+<h2 id="2-12-空值合并运算符-‘-’"><a href="#2-12-空值合并运算符-‘-’" class="headerlink" title="2.12 空值合并运算符 ‘??’"></a>2.12 空值合并运算符 ‘??’</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a ?? b  <span class="comment">// 只要 a 不是 null 或 undefined 就返回a，否则就返回 b</span></span><br><span class="line"><span class="comment">// 空值或未定义</span></span><br><span class="line"><span class="comment">// 以下的简写</span></span><br><span class="line">(a !== <span class="literal">null</span> &amp;&amp; a !== <span class="literal">undefined</span>) ? a : b</span><br><span class="line"></span><br><span class="line"><span class="comment">// demo</span></span><br><span class="line"><span class="literal">undefined</span> ?? <span class="string">&#x27;shan&#x27;</span> <span class="comment">// &#x27;shan&#x27;</span></span><br><span class="line"><span class="literal">null</span> ?? <span class="string">&#x27;shan&#x27;</span>      <span class="comment">// &#x27;shan&#x27;</span></span><br><span class="line"><span class="literal">false</span> ?? <span class="string">&#x27;shan&#x27;</span>     <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p><code>??</code> 运算符的优先级相当低：在 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table">MDN table</a> 中为 5。</p>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算类型</th>
+<th>方向</th>
+<th>运算符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>Logical AND</td>
+<td>left-to-right</td>
+<td>… &amp;&amp; …</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Logical OR</td>
+<td>left-to-right</td>
+<td>…</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nullish coalescing operator</td>
+<td>left-to-right</td>
+<td>… ?? …</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Conditional</td>
+<td>right-to-left</td>
+<td>… ? … : …</td>
+</tr>
+</tbody></table>
+<p>这里还有一个相关的语言级别的限制。</p>
+<p><strong>出于安全原因，禁止将 ?? 运算符与 &amp;&amp; 和 || 运算符一起使用。</strong></p>
+<p>下面的代码会触发一个语法错误：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">1</span> &amp;&amp; <span class="number">2</span> ?? <span class="number">3</span>; <span class="comment">// Syntax error</span></span><br></pre></td></tr></table></figure>
+
+<p>这个限制无疑是值得商榷的，但是它被添加到语言规范中是为了避免编程错误，因为人们开始使用 <code>??</code> 替代 <code>||</code>。</p>
+<p>可以明确地使用括号来解决这个问题：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = (<span class="number">1</span> &amp;&amp; <span class="number">2</span>) ?? <span class="number">3</span>; <span class="comment">// 起作用</span></span><br><span class="line">alert(x); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>如果没有明确添加括号，不能将其与 || 或 &amp;&amp; 一起使用。</strong></p>
+<h2 id="2-13-循环：while-和-for"><a href="#2-13-循环：while-和-for" class="headerlink" title="2.13 循环：while 和 for"></a>2.13 循环：while 和 for</h2><p><strong>内联变量声明</strong></p>
+<p>这里“计数”变量 i 是在循环中声明的。这叫做“内联”变量声明。这样的变量只在循环中可见。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  alert(i); <span class="comment">// 0, 1, 2</span></span><br><span class="line">&#125;</span><br><span class="line">alert(i); <span class="comment">// 错误，没有这个变量。</span></span><br></pre></td></tr></table></figure>
+
+<p>除了定义一个变量，我们也可以使用现有的变量：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123; <span class="comment">// 使用现有的变量</span></span><br><span class="line">  alert(i); <span class="comment">// 0, 1, 2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">alert(i); <span class="comment">//3，可见，因为是在循环之外声明的</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>禁止 break/continue 在 ‘?’ 的右边</strong></p>
+<p>请注意 <code>非表达式的语法结构</code> 不能与三元运算符 <code>?</code> 一起使用。特别是 <code>break/continue</code> 这样的指令是不允许这样使用的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(i &gt; <span class="number">5</span>) ? alert(i) : <span class="keyword">continue</span>; <span class="comment">// continue 不允许在这个位置</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="break-label"><a href="#break-label" class="headerlink" title="break label"></a>break label</h3><p>跳出循环</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">outer: <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> input = prompt(<span class="string">`Value at coords (<span class="subst">$&#123;i&#125;</span>,<span class="subst">$&#123;j&#125;</span>)`</span>, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果是空字符串或被取消，则中断并跳出这两个循环。</span></span><br><span class="line">    <span class="keyword">if</span> (!input) <span class="keyword">break</span> outer; <span class="comment">// (*)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用得到的值做些事……</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="string">&#x27;Done!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只有在循环中才能用</li>
+<li>标签定义的位置必须在调用的上方</li>
+</ul>
+<h2 id="2-15-函数"><a href="#2-15-函数" class="headerlink" title="2.15 函数"></a>2.15 函数</h2><p><strong>不要在 return 与返回值之间添加新行</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span></span><br><span class="line"> (some + long + expression + or + whatever * f(a) + f(b))</span><br><span class="line"><span class="comment">// 不能按照想象运行, 因为js默认会在return后面加上分号</span></span><br><span class="line"><span class="comment">// =&gt; </span></span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line"> (some + long + expression + or + whatever * f(a) + f(b))</span><br><span class="line"></span><br><span class="line"><span class="comment">// right</span></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  some + long + expression</span><br><span class="line">  + or +</span><br><span class="line">  whatever * f(a) + f(b)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-16-函数表达式"><a href="#2-16-函数表达式" class="headerlink" title="2.16 函数表达式"></a>2.16 函数表达式</h2><p><strong>为什么这里末尾会有个分号？</strong></p>
+<p>你可能想知道，为什么函数表达式结尾有一个分号 ;，而函数声明没有：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>答案很简单：</p>
+<ul>
+<li>在**<em>代码块的结尾不需要加分号**</em> <code>;</code>，像 <code>if &#123; ... &#125;</code>，<code>for &#123; &#125;</code>，<code>function f &#123; &#125;</code> 等语法结构后面都不用加。</li>
+<li>函数表达式是在语句内部的：<code>let sayHi = ...;</code>，作为一个值。它不是代码块而是一个赋值语句。不管值是什么，都建议在语句末尾添加分号 ;。所以这里的分号与函数表达式本身没有任何关系，它只是用于终止语句。</li>
+</ul>
+<p><strong>初始化阶段，函数声明会优先完成，所以重新赋值对函数声明方式来说是不可实现的，得使用函数表达式</strong></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B/" rel="tag">现代JavaScript教程</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-现代JavaScript教程-简介-学习记录"
   class="article article-type-post"
   itemscope
@@ -611,192 +1296,6 @@ var _hmt = _hmt || [];
 <li>基础上拉加载，上拉刷新（demo中未提现，配置下app.json即可实现）</li>
 </ol> 
       <a class="article-more-link" href="/2018/07/03/2018-07-03-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E8%A7%86%E9%A2%91%E6%BB%9A%E5%8A%A8%E6%92%AD%E6%94%BE/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2018-05-30-微信小程序解惑-常见的css问题"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E5%B8%B8%E8%A7%81%E7%9A%84css%E9%97%AE%E9%A2%98/"
-    >微信小程序解惑-常见的css问题</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E5%B8%B8%E8%A7%81%E7%9A%84css%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2018-05-30T15:03:01.000Z" itemprop="datePublished">2018-05-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响"><a href="#在-scroll-view-中-padding-会对内部元素的-position-absolute-产生影响" class="headerlink" title="在 scroll-view 中 padding 会对内部元素的 position: absolute 产生影响"></a>在 <code>scroll-view</code> 中 <code>padding</code> 会对内部元素的 <code>position: absolute</code> 产生影响</h3><p><code>padding</code> 在 <code>scroll-view</code> 中的效果有点像 <code>margin</code> 。</p>
-<p>例如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;square&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.square</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E5%B8%B8%E8%A7%81%E7%9A%84css%E9%97%AE%E9%A2%98/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2018-05-30-微信小程序解惑-横向滚动列表"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8%E5%88%97%E8%A1%A8/"
-    >微信小程序解惑-横向滚动列表</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8%E5%88%97%E8%A1%A8/" class="article-date">
-  <time datetime="2018-05-30T14:45:35.000Z" itemprop="datePublished">2018-05-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <ul>
-<li>设置横向滚动列表，除了我们常见的设置</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow-x</span>: <span class="selector-tag">auto</span>;</span><br></pre></td></tr></table></figure>
-
-<p>这样设置出来的列表滚动起来比较 <code>涩</code> 。滚动起来不够流畅。</p>
-<ul>
-<li>还有一种做法就是使用 <code>scroll-view</code> 组件</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;share-list&quot;</span> <span class="attr">scroll-x</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;share-item&quot;</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;[1,2,3,4,5,6]&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.share-list</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%A8%AA%E5%90%91%E6%BB%9A%E5%8A%A8%E5%88%97%E8%A1%A8/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-2018-05-30-微信小程序解惑-收集用户的formid"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%94%B6%E9%9B%86%E7%94%A8%E6%88%B7%E7%9A%84formid/"
-    >微信小程序解惑_收集用户的formid</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%94%B6%E9%9B%86%E7%94%A8%E6%88%B7%E7%9A%84formid/" class="article-date">
-  <time datetime="2018-05-29T16:33:57.000Z" itemprop="datePublished">2018-05-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="我们为什么要收集用户的-formid-呢？"><a href="#我们为什么要收集用户的-formid-呢？" class="headerlink" title="我们为什么要收集用户的 formid 呢？"></a>我们为什么要收集用户的 <code>formid</code> 呢？</h2><p>因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。</p>
-<h2 id="如何收集formid"><a href="#如何收集formid" class="headerlink" title="如何收集formid"></a>如何收集formid</h2><p>要获取用户id，首先我们要有一个 <code>form</code> 表单组件。 只有在提交表单的时候才会有 <code>formid</code>，而且 <code>report-submit</code> 属性为 <code>true</code>。代码如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- wxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">bindsubmit</span>=<span class="string">&quot;eventCollectFormId&quot;</span> <span class="attr">report-submit</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">form-type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收集用户formId</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">eventCollectFormId (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.detail.formId)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。</p> 
-      <a class="article-more-link" href="/2018/05/30/2018-05-30-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%83%91-%E6%94%B6%E9%9B%86%E7%94%A8%E6%88%B7%E7%9A%84formid/"
         >阅读全文</a
       >
        
