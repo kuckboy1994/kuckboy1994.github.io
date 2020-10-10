@@ -1610,9 +1610,11 @@
   <entry>
     <title>现代JavaScript教程-代码质量-学习记录</title>
     <url>/2020/08/28/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="3-3-注释"><a href="#3-3-注释" class="headerlink" title="3.3 注释"></a>3.3 注释</h2><h3 id="好的注释"><a href="#好的注释" class="headerlink" title="好的注释"></a>好的注释</h3><p><strong>记录函数的参数和用法</strong></p>
+    <content><![CDATA[<p><strong>此文章仅作为个人学习查漏补缺，并不适合作为学习大纲。学习请前往 <a href="https://zh.javascript.info/">现代 JavaScript 教程</a></strong></p>
+<h2 id="3-3-注释"><a href="#3-3-注释" class="headerlink" title="3.3 注释"></a>3.3 注释</h2><h3 id="好的注释"><a href="#好的注释" class="headerlink" title="好的注释"></a>好的注释</h3><p><strong>记录函数的参数和用法</strong></p>
 <p>有一个专门用于记录函数的语法 <a href="https://en.wikipedia.org/wiki/JSDoc">JSDoc</a>：用法、参数和返回值。<br>例如：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回 x 的 n 次幂的值。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>x 要改变的值。</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>n 幂数，必须是一个自然数。</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span> </span>x 的 n 次幂的值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pow</span>(<span class="params">x, n</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <h2 id="3-5-使用-Mocha-进行自动化测试"><a href="#3-5-使用-Mocha-进行自动化测试" class="headerlink" title="3.5 使用 Mocha 进行自动化测试"></a>3.5 使用 Mocha 进行自动化测试</h2><p><strong>自动化测试意味着测试是独立于代码的。它们以各种方式运行我们的函数，并将结果与预期结果进行比较。</strong></p>
 <h3 id="行为驱动开发（BDD）"><a href="#行为驱动开发（BDD）" class="headerlink" title="行为驱动开发（BDD）"></a>行为驱动开发（BDD）</h3><p><strong>BDD 包含了三部分内容：测试、文档和示例。</strong></p>
@@ -1716,6 +1718,8 @@
 <p><strong>脚本前后的注释</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span>&lt;!--</span><br><span class="line">    ...</span><br><span class="line"><span class="javascript"><span class="comment">//--&gt;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这些注释是用于不支持 <code>&lt;script&gt;</code> 标签的古老的浏览器隐藏 JavaScript 代码的。由于最近 15 年内发布的浏览器都没有这样的问题，因此这种注释能帮你辨认出一些老掉牙的代码。</p>
+<a id="more"></a>
+
 <h3 id="外部脚本"><a href="#外部脚本" class="headerlink" title="外部脚本"></a>外部脚本</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一般来说，只有最简单的脚本才嵌入到 HTML 中。更复杂的脚本存放在单独的文件中。</span><br><span class="line"></span><br><span class="line">使用独立文件的好处是浏览器会下载它，然后将它保存到浏览器的 &#96;缓存&#96; 中。</span><br><span class="line"></span><br><span class="line">之后，其他页面想要相同的脚本就会从缓存中获取，而不是下载它。所以文件实际上只会下载一次。</span><br><span class="line"></span><br><span class="line">这可以节省流量，并使得页面（加载）更快。</span><br></pre></td></tr></table></figure>
 
 <p><strong>如果设置了 src 特性，script 标签内容将会被忽略。</strong></p>
@@ -2001,10 +2005,12 @@
   <entry>
     <title>现代JavaScript教程-Object（对象）：基础知识-学习记录</title>
     <url>/2020/08/31/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-Object%EF%BC%88%E5%AF%B9%E8%B1%A1%EF%BC%89%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="4-1-对象"><a href="#4-1-对象" class="headerlink" title="4.1 对象"></a>4.1 对象</h2><h3 id="属性名称限制"><a href="#属性名称限制" class="headerlink" title="属性名称限制"></a>属性名称限制</h3><p>这里有个小陷阱：一个名为 <code>__proto__</code> 的属性。我们不能将它设置为一个非对象的值：</p>
+    <content><![CDATA[<p><strong>此文章仅作为个人学习查漏补缺，并不适合作为学习大纲。学习请前往 <a href="https://zh.javascript.info/">现代 JavaScript 教程</a></strong></p>
+<h2 id="4-1-对象"><a href="#4-1-对象" class="headerlink" title="4.1 对象"></a>4.1 对象</h2><h3 id="属性名称限制"><a href="#属性名称限制" class="headerlink" title="属性名称限制"></a>属性名称限制</h3><p>这里有个小陷阱：一个名为 <code>__proto__</code> 的属性。我们不能将它设置为一个非对象的值：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">obj.__proto__ = <span class="number">5</span>; <span class="comment">// 分配一个数字</span></span><br><span class="line">alert(obj.__proto__); <span class="comment">// [object Object] — 值为对象，与预期结果不同</span></span><br></pre></td></tr></table></figure>
 <p>我们从代码中可以看出来，把它赋值为 5 的操作被忽略了。</p>
 <h3 id="像对象一样排序"><a href="#像对象一样排序" class="headerlink" title="像对象一样排序"></a>像对象一样排序</h3><p>对象的属性的输出顺序：整数属性进行排序，其他属性按照创建的顺序显示。数字优先级比其他属性优先级高。</p>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// demo1</span></span><br><span class="line"><span class="keyword">let</span> codes = &#123;</span><br><span class="line">  <span class="string">&quot;49&quot;</span>: <span class="string">&quot;Germany&quot;</span>,</span><br><span class="line">  <span class="string">&quot;41&quot;</span>: <span class="string">&quot;Switzerland&quot;</span>,</span><br><span class="line">  <span class="string">&quot;44&quot;</span>: <span class="string">&quot;Great Britain&quot;</span>,</span><br><span class="line">  <span class="comment">// ..,</span></span><br><span class="line">  <span class="string">&quot;1&quot;</span>: <span class="string">&quot;USA&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> code <span class="keyword">in</span> codes) &#123;</span><br><span class="line">  alert(code); <span class="comment">// 1, 41, 44, 49</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// demo2</span></span><br><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  surname: <span class="string">&quot;Smith&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line">user.age = <span class="number">25</span>; <span class="comment">// 增加一个</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 非整数属性是按照创建的顺序来排列的</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> prop <span class="keyword">in</span> user) &#123;</span><br><span class="line">  alert( prop ); <span class="comment">// name, surname, age</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// demo3 不想按照数字顺序输出的话，就用非整数来“欺骗”程序</span></span><br><span class="line"><span class="keyword">let</span> codes = &#123;</span><br><span class="line">  <span class="string">&quot;+49&quot;</span>: <span class="string">&quot;Germany&quot;</span>,</span><br><span class="line">  <span class="string">&quot;+41&quot;</span>: <span class="string">&quot;Switzerland&quot;</span>,</span><br><span class="line">  <span class="string">&quot;+44&quot;</span>: <span class="string">&quot;Great Britain&quot;</span>,</span><br><span class="line">  <span class="comment">// ..,</span></span><br><span class="line">  <span class="string">&quot;+1&quot;</span>: <span class="string">&quot;USA&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> code <span class="keyword">in</span> codes) &#123;</span><br><span class="line">  alert( +code ); <span class="comment">// 49, 41, 44, 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="4-2-对象拷贝，引用"><a href="#4-2-对象拷贝，引用" class="headerlink" title="4.2 对象拷贝，引用"></a>4.2 对象拷贝，引用</h2><p><strong>浅拷贝</strong></p>
@@ -2223,6 +2229,457 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>现代JavaScript教程</category>
+      </categories>
+      <tags>
+        <tag>现代JavaScript教程</tag>
+        <tag>学习记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>现代JavaScript教程-函数进阶内容-学习记录</title>
+    <url>/2020/10/10/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E5%86%85%E5%AE%B9-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><strong>此文章仅作为个人学习查漏补缺，并不适合作为学习大纲。学习请前往 <a href="https://zh.javascript.info/">现代 JavaScript 教程</a></strong></p>
+<h2 id="6-1-递归和堆栈"><a href="#6-1-递归和堆栈" class="headerlink" title="6.1 递归和堆栈"></a>6.1 递归和堆栈</h2><p><strong>递归深度</strong></p>
+<p>最大递归深度受限于 JavaScript 引擎。对我们来说，引擎在最大迭代深度为 <code>10000</code> 及以下时是可靠的，有些引擎可能允许更大的最大深度，但是对于大多数引擎来说，100000 可能就超出限制了。有一些自动优化能够帮助减轻这种情况（尾部调用优化），但目前它们还没有被完全支持，只能用于简单场景。</p>
+<p>这就限制了递归的应用，但是递归仍然被广泛使用。有很多任务中，递归思维方式会使代码更简单，更容易维护。</p>
+<h3 id="执行上下文和堆栈"><a href="#执行上下文和堆栈" class="headerlink" title="执行上下文和堆栈"></a>执行上下文和堆栈</h3><p><code>执行上下文</code> 是一个内部数据结构，它包含有关函数执行时的详细细节：当前控制流所在的位置，当前的变量，<code>this</code> 的值（此处我们不使用它），以及其它的一些内部细节。</p>
+<p>一个函数调用仅具有一个与其相关联的执行上下文。</p>
+<p>当一个函数进行嵌套调用时，将发生以下的事儿：</p>
+<ul>
+<li>当前函数被暂停；</li>
+<li>与它关联的执行上下文被一个叫做 执行上下文堆栈 的特殊数据结构保存；</li>
+<li>执行嵌套调用；</li>
+<li>嵌套调用结束后，从堆栈中恢复之前的执行上下文，并从停止的位置恢复外部函数。</li>
+</ul>
+<p><strong>任何递归都可以用循环来重写。通常循环变体更有效。</strong> 但是递归使代码更简短，便于理解和维护。</p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/04/tail-call.html">尾调优化</a></p>
+<h2 id="6-2-Rest-参数与-Spread-语法"><a href="#6-2-Rest-参数与-Spread-语法" class="headerlink" title="6.2 Rest 参数与 Spread 语法"></a>6.2 Rest 参数与 Spread 语法</h2><ul>
+<li>Rest —— 收集</li>
+<li>Spread —— 展开</li>
+</ul>
+<p><strong>Rest 参数必须放到参数列表的末尾</strong></p>
+<p>Rest 参数会收集剩余的所有参数，因此下面这种用法没有意义，并且会导致错误：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">arg1, ...rest, arg2</span>) </span>&#123; <span class="comment">// arg2 在 ...rest 后面？！</span></span><br><span class="line">  <span class="comment">// error</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>...rest</code> 必须处在最后。</p>
+<p><strong>箭头函数没有arguments</strong></p>
+<h2 id="6-3-闭包"><a href="#6-3-闭包" class="headerlink" title="6.3 闭包"></a>6.3 闭包</h2><h3 id="词法环境"><a href="#词法环境" class="headerlink" title="词法环境"></a>词法环境</h3><h4 id="Step-1-变量"><a href="#Step-1-变量" class="headerlink" title="Step 1. 变量"></a>Step 1. 变量</h4><p>词法环境对象由两部分组成：</p>
+<ol>
+<li>环境记录（Environment Record）—— 一个存储所有局部变量作为其属性（包括一些其他信息，例如 this 的值）的对象。</li>
+<li>对 <code>外部词法环境</code> 的引用，与外部代码相关联</li>
+</ol>
+<ul>
+<li>代码中的一个变量 只是对应 <code>词法环境</code> 这个对象的一个属性。  </li>
+<li><code>全局词法环境</code> 没有外部引用，所以指向 <code>null</code>  </li>
+<li><code>词法环境</code> 不能显示操作</li>
+</ul>
+<h4 id="Step-2-函数声明"><a href="#Step-2-函数声明" class="headerlink" title="Step 2. 函数声明"></a>Step 2. 函数声明</h4><p>一个函数其实也是一个值，就像变量一样。</p>
+<p><strong>不同之处在于函数声明的初始化会被立即完成。</strong></p>
+<h4 id="Step-3-内部和外部的词法环境"><a href="#Step-3-内部和外部的词法环境" class="headerlink" title="Step 3. 内部和外部的词法环境"></a>Step 3. 内部和外部的词法环境</h4><p>内部词法环境有一个外层词法环境的引用。</p>
+<p><strong>当代码要访问一个变量时 —— 首先会搜索内部词法环境，然后搜索外部环境，然后搜索更外部的环境，以此类推，直到全局词法环境。</strong></p>
+<h4 id="Step-4-返回函数"><a href="#Step-4-返回函数" class="headerlink" title="Step 4. 返回函数"></a>Step 4. 返回函数</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeCounter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> count++;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> counter = makeCounter();</span><br></pre></td></tr></table></figure>
+
+<p>所有的函数在“诞生”时都会记住创建它们的词法环境。从技术上讲，这里没有什么魔法：所有函数都有名为 <code>[[Environment]]</code> 的隐藏属性，该属性保存了对创建该函数的词法环境的引用。</p>
+<p><strong>在变量所在的词法环境中更新变量。</strong> 更新makeCounter 这个词法环境的中的count的值。</p>
+<blockquote>
+<p><strong>闭包</strong></p>
+<p><code>闭包</code> 是指内部函数总是可以访问其所在的外部函数中声明的变量和参数，即使在其外部函数被返回（寿命终结）了之后。在某些编程语言中，这是不可能的，或者应该以特殊的方式编写函数来实现。但是如上所述，在 JavaScript 中，所有函数都是天生闭包的（只有一个例外，将在 “new Function” 语法 中讲到）。</p>
+<p>也就是说：JavaScript 中的函数会自动通过隐藏的 <code>[[Environment]]</code> 属性记住创建它们的位置，所以它们都可以访问外部变量。</p>
+<p>在面试时，前端开发者通常会被问到“什么是闭包？”，正确的回答应该是闭包的定义，并解释清楚为什么 JavaScript 中的所有函数都是闭包的，以及可能的关于 <code>[[Environment]]</code> 属性和词法环境原理的技术细节。</p>
+</blockquote>
+<h3 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h3><p>通常，函数调用完全之后，词法环境和其中的变量就会被删除。如果一个嵌套的函数在函数结束后任可达，则它具有引用的词法环境 <code>[[Environment]]</code> 属性。</p>
+<h2 id="6-4-旧时的-“var”"><a href="#6-4-旧时的-“var”" class="headerlink" title="6.4 旧时的 “var”"></a>6.4 旧时的 “var”</h2><h3 id="IIFE（immediately-invoked-function-expressions，IIFE）"><a href="#IIFE（immediately-invoked-function-expressions，IIFE）" class="headerlink" title="IIFE（immediately-invoked function expressions，IIFE）"></a>IIFE（immediately-invoked function expressions，IIFE）</h3><p>在之前，JavaScript 中只有 var 这一种声明变量的方式，并且这种方式声明的变量没有块级作用域，程序员们就发明了一种模仿块级作用域的方法。这种方法被称为“立即调用函数表达式”（immediately-invoked function expressions，IIFE）。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建 IIFE 的方法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 需要使用圆括号把该函数表达式包起来，以告诉 JavaScript，这个函数是在另一个表达式的上下文中创建的，因此它是一个函数表达式：它不需要函数名，可以立即调用。</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">&quot;Parentheses around the function&quot;</span>);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">&quot;Parentheses around the whole thing&quot;</span>);</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">&quot;Bitwise NOT operator starts the expression&quot;</span>);</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line">+<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">&quot;Unary plus starts the expression&quot;</span>);</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-5-全局对象"><a href="#6-5-全局对象" class="headerlink" title="6.5 全局对象"></a>6.5 全局对象</h2><p>全局对象有一个通用名称 globalThis。</p>
+<h2 id="6-6-函数对象，NFE"><a href="#6-6-函数对象，NFE" class="headerlink" title="6.6 函数对象，NFE"></a>6.6 函数对象，NFE</h2><p>函数本质上是对象</p>
+<ul>
+<li>name —— 函数的名称，自动推测</li>
+<li>length —— 函数的参数个数</li>
+</ul>
+<h3 id="命名函数表达式（NFE，Named-Function-Expression）"><a href="#命名函数表达式（NFE，Named-Function-Expression）" class="headerlink" title="命名函数表达式（NFE，Named Function Expression）"></a>命名函数表达式（NFE，Named Function Expression）</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> sayHi = <span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">who</span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">`Hello, <span class="subst">$&#123;who&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sayHi(<span class="string">&quot;John&quot;</span>); <span class="comment">// Hello, John</span></span><br></pre></td></tr></table></figure>
+
+<p>关于名字 func 有两个特殊的地方，这就是添加它的原因：</p>
+<ol>
+<li>它允许函数在内部引用自己。</li>
+<li>它在函数外是不可见的。</li>
+</ol>
+<p>例如，下面的函数 sayHi 会在没有入参 who 时，以 “Guest” 为入参调用自己：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> sayHi = <span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">who</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (who) &#123;</span><br><span class="line">    alert(<span class="string">`Hello, <span class="subst">$&#123;who&#125;</span>`</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    func(<span class="string">&quot;Guest&quot;</span>); <span class="comment">// 使用 func 再次调用函数自身</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sayHi(); <span class="comment">// Hello, Guest</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 但这不工作：</span></span><br><span class="line">func(); <span class="comment">// Error, func is not defined（在函数外不可见）</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="任意数量的括号求和"><a href="#任意数量的括号求和" class="headerlink" title="任意数量的括号求和"></a>任意数量的括号求和</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> currentSum = a;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">b</span>) </span>&#123;</span><br><span class="line">    currentSum += b;</span><br><span class="line">    <span class="keyword">return</span> f;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  f.toString = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> currentSum;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">alert( sum(<span class="number">1</span>)(<span class="number">2</span>) ); <span class="comment">// 3</span></span><br><span class="line">alert( sum(<span class="number">5</span>)(<span class="number">-1</span>)(<span class="number">2</span>) ); <span class="comment">// 6</span></span><br><span class="line">alert( sum(<span class="number">6</span>)(<span class="number">-1</span>)(<span class="number">-2</span>)(<span class="number">-3</span>) ); <span class="comment">// 0</span></span><br><span class="line">alert( sum(<span class="number">0</span>)(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)(<span class="number">4</span>)(<span class="number">5</span>) ); <span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-7-“new-Function”-语法"><a href="#6-7-“new-Function”-语法" class="headerlink" title="6.7 “new Function” 语法"></a>6.7 “new Function” 语法</h2><p>语法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> func = <span class="keyword">new</span> <span class="built_in">Function</span> ([arg1, arg2, ...argN], functionBody);</span><br></pre></td></tr></table></figure>
+
+<p>由于历史原因，参数也可以按逗号分隔符的形式给出。</p>
+<p>以下三种声明的含义相同：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;return a + b&#x27;</span>); <span class="comment">// 基础语法</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">&#x27;a,b&#x27;</span>, <span class="string">&#x27;return a + b&#x27;</span>); <span class="comment">// 逗号分隔</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">&#x27;a , b&#x27;</span>, <span class="string">&#x27;return a + b&#x27;</span>); <span class="comment">// 逗号和空格分隔</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>new Function</code> 创建的函数，它的 <code>[[Environment]]</code> 指向全局词法环境，而不是函数所在的外部词法环境。因此，我们不能在 <code>new Function </code>中直接使用外部变量。不过这样是好事，这有助于降低我们代码出错的可能。并且，从代码架构上讲，显式地使用参数传值是一种更好的方法，并且避免了与使用压缩程序而产生冲突的问题。</p>
+<h2 id="6-9-装饰者模式和转发，call-apply"><a href="#6-9-装饰者模式和转发，call-apply" class="headerlink" title="6.9 装饰者模式和转发，call/apply"></a>6.9 装饰者模式和转发，call/apply</h2><h2 id="6-10-函数绑定"><a href="#6-10-函数绑定" class="headerlink" title="6.10 函数绑定"></a>6.10 函数绑定</h2><h3 id="偏函数（Partial-functions）"><a href="#偏函数（Partial-functions）" class="headerlink" title="偏函数（Partial functions）"></a>偏函数（Partial functions）</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mul</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a * b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> triple = mul.bind(<span class="literal">null</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">alert( triple(<span class="number">3</span>) ); <span class="comment">// = mul(3, 3) = 9</span></span><br><span class="line">alert( triple(<span class="number">4</span>) ); <span class="comment">// = mul(3, 4) = 12</span></span><br><span class="line">alert( triple(<span class="number">5</span>) ); <span class="comment">// = mul(3, 5) = 15</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>为什么我们通常会创建一个偏函数？</strong></p>
+<p>好处是我们可以创建一个具有可读性高的名字（double，triple）的独立函数。我们可以使用它，并且不必每次都提供一个参数，因为参数是被绑定了的。</p>
+<p>另一方面，当我们有一个非常通用的函数，并希望有一个通用型更低的该函数的变体时，偏函数会非常有用。</p>
+<p>例如，我们有一个函数 send(from, to, text)。然后，在一个 user 对象的内部，我们可能希望对它使用 send 的偏函数变体：从当前 user 发送 sendTo(to, text)。</p>
+<h3 id="二次绑定"><a href="#二次绑定" class="headerlink" title="二次绑定"></a>二次绑定</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f = f.bind( &#123;<span class="attr">name</span>: <span class="string">&quot;John&quot;</span>&#125; ).bind( &#123;<span class="attr">name</span>: <span class="string">&quot;Pete&quot;</span>&#125; );</span><br><span class="line"></span><br><span class="line">f(); <span class="comment">// John</span></span><br></pre></td></tr></table></figure>
+
+<p>一个函数不能被重新绑定(re-bound)</p>
+<h2 id="6-11-深入理解箭头函数"><a href="#6-11-深入理解箭头函数" class="headerlink" title="6.11 深入理解箭头函数"></a>6.11 深入理解箭头函数</h2><ul>
+<li>没有 <code>this</code></li>
+<li>没有 <code>arguments</code></li>
+<li>不能使用 <code>new</code> 进行调用</li>
+<li>它们也没有 <code>super</code>，但目前我们还没有学到它。我们将在 <code>类继承</code> 一章中学习它。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>现代JavaScript教程</category>
+      </categories>
+      <tags>
+        <tag>现代JavaScript教程</tag>
+        <tag>学习记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>现代JavaScript教程-数据类型-学习记录</title>
+    <url>/2020/09/11/%E7%8E%B0%E4%BB%A3JavaScript%E6%95%99%E7%A8%8B-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><strong>此文章仅作为个人学习查漏补缺，并不适合作为学习大纲。学习请前往 <a href="https://zh.javascript.info/">现代 JavaScript 教程</a></strong></p>
+<h2 id="5-1-原始类型的方法"><a href="#5-1-原始类型的方法" class="headerlink" title="5.1 原始类型的方法"></a>5.1 原始类型的方法</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"></span><br><span class="line">str.test = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">alert(str.test);</span><br></pre></td></tr></table></figure>
+
+<p>根据你是否开启了严格模式 <code>use strict</code>，会得到如下结果：</p>
+<ol>
+<li>undefined（非严格模式）</li>
+<li>报错（严格模式）。</li>
+</ol>
+<p>为什么？让我们看看在 (*) 那一行到底发生了什么：</p>
+<ol>
+<li>当访问 <code>str</code> 的属性时，一个“对象包装器”被创建了。</li>
+<li>在严格模式下，向其写入内容会报错。</li>
+<li>否则，将继续执行带有属性的操作，该对象将获得 <code>test</code> 属性，但是此后，“对象包装器”将消失，因此在最后一行，<code>str</code> 并没有该属性的踪迹。</li>
+</ol>
+<p>这个例子清楚地表明，原始类型不是对象。</p>
+<p><strong>它们不能存储额外的数据。</strong></p>
+<h2 id="5-2-数字类型"><a href="#5-2-数字类型" class="headerlink" title="5.2 数字类型"></a>5.2 数字类型</h2><p>在现代 JavaScript 中，数字（number）有两种类型：</p>
+<ol>
+<li>JavaScript 中的常规数字以 64 位的格式 <code>IEEE-754</code> 存储，也被称为“双精度浮点数”。</li>
+<li><code>BigInt</code> 数字，用于表示任意长度的整数。有时会需要它们，因为常规数字不能超过 <code>2^53</code> 或小于 <code>-2^53</code>。由于仅在少数特殊领域才会用到 <code>BigInt</code>。</li>
+</ol>
+<h3 id="十六进制，二进制和八进制数字"><a href="#十六进制，二进制和八进制数字" class="headerlink" title="十六进制，二进制和八进制数字"></a>十六进制，二进制和八进制数字</h3><ul>
+<li>十六进制  <code>0x</code></li>
+<li>八进制    <code>0o</code></li>
+<li>二进制    <code>0b</code></li>
+</ul>
+<h3 id="toString-base"><a href="#toString-base" class="headerlink" title="toString(base)"></a>toString(base)</h3><p>base 代表几进制，最小2(0, 1)，最大36（0..9, a..z）</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">255</span>;</span><br><span class="line"></span><br><span class="line">alert( num.toString(<span class="number">16</span>) );  <span class="comment">// ff</span></span><br><span class="line">alert( num.toString(<span class="number">2</span>) );   <span class="comment">// 11111111</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用两个点来调用一个方法</strong></p>
+<p>请注意 <code>123456..toString(36)</code> 中的两个点不是打错了。如果我们想直接在一个数字上调用一个方法，比如上面例子中的 <code>toString</code> ，那么我们需要在它后面放置两个点 ..。</p>
+<p>如果我们放置一个点：<code>123456.toString(36)</code>，那么就会出现一个 error ，因为 JavaScript 语法隐含了第一个点之后的部分为小数部分。如果我们再放一个点，那么 JavaScript 就知道小数部分为空，现在使用该方法。</p>
+<p>也可以写成 <code>(123456).toString(36)</code>。</p>
+<h3 id="舍入"><a href="#舍入" class="headerlink" title="舍入"></a>舍入</h3><p><strong>Math.trunc（IE 浏览器不支持这个方法）</strong></p>
+<p>移除小数点后的所有内容而没有舍入：3.1 变成 3，-1.1 变成 -1。</p>
+<p><strong>保留2位小数</strong></p>
+<ol>
+<li><code>Math.floor(num * 100) / 100</code></li>
+<li><code>num.toFixed(2)</code></li>
+</ol>
+<h3 id="不精确的计算"><a href="#不精确的计算" class="headerlink" title="不精确的计算"></a>不精确的计算</h3><p>0.1 + 0.2 != 0.3</p>
+<h3 id="测试：isFinite-和-isNaN"><a href="#测试：isFinite-和-isNaN" class="headerlink" title="测试：isFinite 和 isNaN"></a>测试：isFinite 和 isNaN</h3><p><strong>与 Object.is 进行比较</strong></p>
+<p>有一个特殊的内建方法 <code>Object.is</code>，它类似于 === 一样对值进行比较，但它对于两种边缘情况更可靠：</p>
+<p>它适用于 NaN：<code>Object.is（NaN，NaN）=== true</code>，这是件好事。<br>值 0 和 -0 是不同的：<code>Object.is（0，-0）=== false</code>，从技术上讲这是对的，因为在内部，数字的符号位可能会不同，即使其他所有位均为零。<br>在所有其他情况下，<code>Object.is(a，b)</code> 与 <code>a === b</code> 相同。</p>
+<p>这种比较方式经常被用在 JavaScript 规范中。当内部算法需要比较两个值是否完全相同时，它使用 Object.is（内部称为 SameValue）。</p>
+<h3 id="parseInt-和-parseFloat"><a href="#parseInt-和-parseFloat" class="headerlink" title="parseInt 和 parseFloat"></a>parseInt 和 parseFloat</h3><p><strong>parseInt(str, radix)` 的第二个参数</strong></p>
+<p><code>parseInt()</code> 函数具有可选的第二个参数。它指定了数字系统的基数，因此 <code>parseInt</code> 还可以解析十六进制数字、二进制数字等的字符串：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert( <span class="built_in">parseInt</span>(<span class="string">&#x27;0xff&#x27;</span>, <span class="number">16</span>) ); <span class="comment">// 255</span></span><br><span class="line">alert( <span class="built_in">parseInt</span>(<span class="string">&#x27;ff&#x27;</span>, <span class="number">16</span>) ); <span class="comment">// 255，没有 0x 仍然有效</span></span><br><span class="line"></span><br><span class="line">alert( <span class="built_in">parseInt</span>(<span class="string">&#x27;2n9c&#x27;</span>, <span class="number">36</span>) ); <span class="comment">// 123456</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="引号（Quotes）"><a href="#引号（Quotes）" class="headerlink" title="引号（Quotes）"></a>引号（Quotes）</h3><p><strong>func<code>string</code></strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="string">&quot;Mike&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> age = <span class="number">28</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myTag</span>(<span class="params">strings, personExp, ageExp</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(strings, personExp, ageExp)</span><br><span class="line">  <span class="comment">// [&quot;that &quot;, &quot; is a &quot;, &quot;&quot;, raw: Array(3)] &quot;Mike&quot; 28</span></span><br><span class="line">  <span class="keyword">var</span> str0 = strings[<span class="number">0</span>]; <span class="comment">// &quot;that &quot;</span></span><br><span class="line">  <span class="keyword">var</span> str1 = strings[<span class="number">1</span>]; <span class="comment">// &quot; is a &quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> ageStr;</span><br><span class="line">  <span class="keyword">if</span> (ageExp &gt; <span class="number">99</span>) &#123;</span><br><span class="line">    ageStr = <span class="string">&quot;centenarian&quot;</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ageStr = <span class="string">&quot;youngster&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> str0 + personExp + str1 + ageStr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> output = myTag<span class="string">`that <span class="subst">$&#123;person&#125;</span> is a <span class="subst">$&#123;age&#125;</span>`</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(output);</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><table>
+<thead>
+<tr>
+<th>字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>\n</code></td>
+<td>换行</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>回车：不单独使用。Windows 文本文件使用两个字符 <code>\r\n</code> 的组合来表示换行。</td>
+</tr>
+<tr>
+<td><code>\&#39;</code>, <code>\&quot;</code></td>
+<td>引号</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>反斜线</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>制表符</td>
+</tr>
+<tr>
+<td><code>\b</code>, <code>\f</code>, <code>\v</code></td>
+<td>退格，换页，垂直标签 —— 为了兼容性，现在已经不使用了。</td>
+</tr>
+<tr>
+<td><code>\xXX</code></td>
+<td>具有给定十六进制 Unicode XX 的 Unicode 字符，例如：’\x7A’ 和 ‘z’ 相同。</td>
+</tr>
+<tr>
+<td><code>\uXXXX</code></td>
+<td>以 UTF-16 编码的十六进制代码 XXXX 的 unicode 字符，例如 \u00A9 —— 是版权符号 © 的 unicode。它必须正好是 4 个十六进制数字。</td>
+</tr>
+<tr>
+<td><code>\u&#123;X…XXXXXX&#125;</code>（1 到 6 个十六进制字符）</td>
+<td>具有给定 UTF-32 编码的 unicode 符号。一些罕见的字符用两个 unicode 符号编码，占用 4 个字节。这样我们就可以插入长代码了。</td>
+</tr>
+</tbody></table>
+<h3 id="访问字符"><a href="#访问字符" class="headerlink" title="访问字符"></a>访问字符</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`Hello`</span>;</span><br><span class="line"></span><br><span class="line">alert( str[<span class="number">1000</span>] ); <span class="comment">// undefined</span></span><br><span class="line">alert( str.charAt(<span class="number">1000</span>) ); <span class="comment">// &#x27;&#x27;（空字符串）</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查找子字符串"><a href="#查找子字符串" class="headerlink" title="查找子字符串"></a>查找子字符串</h3><p><strong>str.indexOf(substr, pos)</strong></p>
+<h3 id="按位（bitwise）NOT-技巧"><a href="#按位（bitwise）NOT-技巧" class="headerlink" title="按位（bitwise）NOT 技巧"></a>按位（bitwise）NOT 技巧</h3><p>它将数字转换为 32-bit 整数（如果存在小数部分，则删除小数部分），然后对其二进制表示形式中的所有位均取反。 <strong>对于 32-bit 整数，~n 等于 -(n+1)。</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert( ~<span class="number">2</span> ); <span class="comment">// -3，和 -(2+1) 相同</span></span><br><span class="line">alert( ~<span class="number">1</span> ); <span class="comment">// -2，和 -(1+1) 相同</span></span><br><span class="line">alert( ~<span class="number">0</span> ); <span class="comment">// -1，和 -(0+1) 相同</span></span><br><span class="line">alert( ~<span class="number">-1</span> ); <span class="comment">// 0，和 -(-1+1) 相同</span></span><br></pre></td></tr></table></figure>
+
+<p><code>indexOf</code> 刚好没有结果的时候返回 -1。 -1 会转换成 0 为假，其他负值都为真。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;Widget&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (~str.indexOf(<span class="string">&quot;Widget&quot;</span>)) &#123;</span><br><span class="line">  alert( <span class="string">&#x27;Found it!&#x27;</span> ); <span class="comment">// 正常运行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>确切地说，由于 ~ 运算符将大数字截断为 32 位，因此存在给出 0 的其他数字，最小的数字是 ~4294967295=0。这使得这种检查只有在字符串没有那么长的情况下才是正确的。</p>
+<h3 id="获取子字符串"><a href="#获取子字符串" class="headerlink" title="获取子字符串"></a>获取子字符串</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>选择方式……</th>
+<th>负值参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>slice(start, end)</td>
+<td>从 start 到 end（不含 end）</td>
+<td>允许</td>
+</tr>
+<tr>
+<td>substring(start, end)</td>
+<td>start 与 end 之间（包括 start，但不包括 end）</td>
+<td>负值</td>
+</tr>
+<tr>
+<td>substr(start, length)</td>
+<td>从 start 开始获取长为 length 的字符串</td>
+<td>允许 start</td>
+</tr>
+</tbody></table>
+<h3 id="比较字符串"><a href="#比较字符串" class="headerlink" title="比较字符串"></a>比较字符串</h3><p><strong>str.codePointAt(pos)</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 不同的字母有不同的代码</span></span><br><span class="line">alert( <span class="string">&quot;z&quot;</span>.codePointAt(<span class="number">0</span>) ); <span class="comment">// 122</span></span><br><span class="line">alert( <span class="string">&quot;Z&quot;</span>.codePointAt(<span class="number">0</span>) ); <span class="comment">// 90</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>String.fromCodePoint(code)</strong></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">其他复杂的参数</a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">65</span>; i &lt;= <span class="number">220</span>; i++) &#123;</span><br><span class="line">  str += <span class="built_in">String</span>.fromCodePoint(i);</span><br><span class="line">&#125;</span><br><span class="line">alert( str );</span><br><span class="line"><span class="comment">// ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz&#123;|&#125;~</span></span><br><span class="line"><span class="comment">// ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="正确的比较"><a href="#正确的比较" class="headerlink" title="正确的比较"></a>正确的比较</h3><p><strong>str.localeCompare(str2)</strong></p>
+<ul>
+<li>如果 str 小于 str2 则返回负数。</li>
+<li>如果 str 大于 str2 则返回正数。</li>
+<li>如果它们相等则返回 0。</li>
+</ul>
+<h3 id="代理对"><a href="#代理对" class="headerlink" title="代理对"></a>代理对</h3><p>所有常用的字符都是一个 2 字节的代码。大多数欧洲语言，数字甚至大多数象形文字中的字母都有 2 字节的表示形式。</p>
+<p>但 2 字节只允许 65536 个组合，这对于表示每个可能的符号是不够的。所以稀有的符号被称为“代理对”的一对 2 字节的符号编码。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert( <span class="string">&#x27;𝒳&#x27;</span>.length ); <span class="comment">// 2，大写数学符号 X</span></span><br><span class="line">alert( <span class="string">&#x27;😂&#x27;</span>.length ); <span class="comment">// 2，笑哭表情</span></span><br><span class="line">alert( <span class="string">&#x27;𩷶&#x27;</span>.length ); <span class="comment">// 2，罕见的中国象形文字</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="变音符号与规范化"><a href="#变音符号与规范化" class="headerlink" title="变音符号与规范化"></a>变音符号与规范化</h3><p>在许多语言中，都有一些由基本字符组成的符号，在其上方/下方有一个标记。</p>
+<p>例如，字母 <code>a</code> 可以是 <code>àáâäãåā</code> 的基本字符。最常见的“复合”字符在 UTF-16 表中都有自己的代码。但不是全部，因为可能的组合太多。</p>
+<p>为了支持任意组合，UTF-16 允许我们使用多个 unicode 字符：基本字符紧跟“装饰”它的一个或多个“标记”字符。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert( <span class="string">&#x27;S\u0307&#x27;</span> ); <span class="comment">// Ṡ</span></span><br><span class="line">alert( <span class="string">&#x27;S\u0307\u0323&#x27;</span> ); <span class="comment">// Ṩ</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-4-数组"><a href="#5-4-数组" class="headerlink" title="5.4 数组"></a>5.4 数组</h2><p>JavaScript 中的数组既可以用作队列，也可以用作栈。它们允许你从首端/末端来添加/删除元素。</p>
+<p>这在计算机科学中，允许这样的操作的数据结构被称为 双端队列（deque）。</p>
+<p>数组误用的几种方式:</p>
+<ul>
+<li>添加一个非数字的属性，比如 arr.test = 5。</li>
+<li>制造空洞，比如：添加 arr[0]，然后添加 arr[1000] (它们中间什么都没有)。</li>
+<li>以倒序填充数组，比如 arr[1000]，arr[999] 等等。</li>
+</ul>
+<p>请将数组视为作用于 <code>有序数据</code> 的特殊结构。它们为此提供了特殊的方法。数组在 JavaScript 引擎内部是经过特殊调整的，使得更好地作用于连续的有序数据，所以请以正确的方式使用数组。如果你需要任意键值，那很有可能实际上你需要的是常规对象 <code>&#123;&#125;</code></p>
+<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p><code>push/pop </code>方法运行的比较快，而 <code>shift/unshift</code> 比较慢。</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><ul>
+<li>for循环</li>
+<li>for..of 值循环</li>
+<li>for..in 不推荐<ul>
+<li>for..in 循环会遍历 所有属性，不仅仅是这些数字属性。</li>
+</ul>
+</li>
+</ul>
+<h3 id="关于-“length”"><a href="#关于-“length”" class="headerlink" title="关于 “length”"></a>关于 “length”</h3><p>当我们修改数组的时候，length 属性会自动更新。准确来说，它实际上不是数组里元素的个数，而是最大的数字索引值加一。</p>
+<p><code>length</code> 可写，设置之后，等于截取操作。且不可逆</p>
+<h3 id="new-Array"><a href="#new-Array" class="headerlink" title="new Array()"></a>new Array()</h3><p>参数为一个数字的时候，创建的是对应长度的空数组，否则就是包含这些元素的数组</p>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><p>数组没有 Symbol.toPrimitive，也没有 valueOf，它们只能执行 toString 进行转换。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">alert( arr ); <span class="comment">// 1,2,3</span></span><br><span class="line">alert( <span class="built_in">String</span>(arr) === <span class="string">&#x27;1,2,3&#x27;</span> ); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-6-Iterable-object（可迭代对象）"><a href="#5-6-Iterable-object（可迭代对象）" class="headerlink" title="5.6 Iterable object（可迭代对象）"></a>5.6 Iterable object（可迭代对象）</h2><p>可以应用 <code>for..of</code> 的对象被称为 <code>可迭代的</code>。</p>
+<ul>
+<li>技术上来说，可迭代对象必须实现 <code>Symbol.iterator</code> 方法。<ul>
+<li><code>obj[Symbol.iterator]</code> 的结果被称为 <code>迭代器（iterator）</code>。由它处理进一步的迭代过程。</li>
+<li>一个迭代器必须有 <code>next()</code> 方法，它返回一个 <code>&#123;done: Boolean, value: any&#125;</code> 对象，这里 <code>done:true</code> 表明迭代结束，否则 <code>value</code> 就是下一个值。</li>
+</ul>
+</li>
+<li><code>Symbol.iterator</code> 方法会被 <code>for..of</code> 自动调用，但我们也可以直接调用它。</li>
+<li>内置的可迭代对象例如字符串和数组，都实现了 Symbol.iterator。</li>
+<li>字符串迭代器能够识别代理对（surrogate pair）。（译注：代理对也就是 UTF-16 扩展字符。）</li>
+</ul>
+<p>有索引属性和 <code>length</code> 属性的对象被称为 <code>类数组对象</code>。这种对象可能还具有其他属性和方法，但是没有数组的内建方法。</p>
+<p>如果我们仔细研究一下规范 —— 就会发现大多数内建方法都假设它们需要处理的是可迭代对象或者类数组对象，而不是“真正的”数组，因为这样抽象度更高。</p>
+<p><code>Array.from(obj[, mapFn, thisArg])</code> 将可迭代对象或类数组对象 obj 转化为真正的数组 Array，然后我们就可以对它应用数组的方法。可选参数 <code>mapFn</code>(映射函数) 和 <code>thisArg</code> 允许我们将函数应用到每个元素。</p>
+<h3 id="实现迭代器的两种方式"><a href="#实现迭代器的两种方式" class="headerlink" title="实现迭代器的两种方式"></a>实现迭代器的两种方式</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> range = &#123;</span><br><span class="line">  <span class="keyword">from</span>: <span class="number">1</span>,</span><br><span class="line">  to: <span class="number">5</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. for..of 调用首先会调用这个：</span></span><br><span class="line">range[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ……它返回迭代器对象（iterator object）：</span></span><br><span class="line">  <span class="comment">// 2. 接下来，for..of 仅与此迭代器一起工作，要求它提供下一个值</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    current: <span class="built_in">this</span>.from,</span><br><span class="line">    last: <span class="built_in">this</span>.to,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. next() 在 for..of 的每一轮循环迭代中被调用</span></span><br><span class="line">    next() &#123;</span><br><span class="line">      <span class="comment">// 4. 它将会返回 &#123;done:.., value :...&#125; 格式的对象</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.current &lt;= <span class="built_in">this</span>.last) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123; <span class="attr">done</span>: <span class="literal">false</span>, <span class="attr">value</span>: <span class="built_in">this</span>.current++ &#125;;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123; <span class="attr">done</span>: <span class="literal">true</span> &#125;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 现在它可以运行了！</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> num <span class="keyword">of</span> range) &#123;</span><br><span class="line">  alert(num); <span class="comment">// 1, 然后是 2, 3, 4, 5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>请注意可迭代对象的核心功能：关注点分离。</p>
+<ul>
+<li><code>range</code> 自身没有 <code>next()</code> 方法。</li>
+<li>相反，是通过调用 <code>range[Symbol.iterator]()</code> 创建了另一个对象，即所谓的“迭代器”对象，并且它的 <code>next</code> 会为迭代生成值。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> range = &#123;</span><br><span class="line">  <span class="keyword">from</span>: <span class="number">1</span>,</span><br><span class="line">  to: <span class="number">5</span>,</span><br><span class="line"></span><br><span class="line">  [<span class="built_in">Symbol</span>.iterator]() &#123;</span><br><span class="line">    <span class="built_in">this</span>.current = <span class="built_in">this</span>.from;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 迭代器使用的对象是当前对象，会调用当前对象的next方法</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  next() &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.current &lt;= <span class="built_in">this</span>.to) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">done</span>: <span class="literal">false</span>, <span class="attr">value</span>: <span class="built_in">this</span>.current++ &#125;;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">done</span>: <span class="literal">true</span> &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> num <span class="keyword">of</span> range) &#123;</span><br><span class="line">  alert(num); <span class="comment">// 1, 然后是 2, 3, 4, 5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-7-Map-and-Set（映射和集合）"><a href="#5-7-Map-and-Set（映射和集合）" class="headerlink" title="5.7 Map and Set（映射和集合）"></a>5.7 Map and Set（映射和集合）</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p>Map 是一个带键的数据项的集合，就像一个 <code>Object</code> 一样。 但是它们最大的差别是 <code>Map</code> 允许任何类型的键（key）。</p>
+<p><strong>方法和属性</strong></p>
+<ul>
+<li>new Map() —— 创建 map。</li>
+<li>map.set(key, value) —— 根据键存储值。</li>
+<li>map.get(key) —— 根据键来返回值，如果 map 中不存在对应的 key，则返回 undefined。</li>
+<li>map.has(key) —— 如果 key 存在则返回 true，否则返回 false。</li>
+<li>map.delete(key) —— 删除指定键的值。</li>
+<li>map.clear() —— 清空 map。</li>
+<li>map.size —— 返回当前元素个数。</li>
+</ul>
+<p><strong>map[key] 不是使用 Map 的正确方式</strong></p>
+<p><strong>Map 是怎么比较键的？</strong></p>
+<p>Map 使用 <a href="https://tc39.es/ecma262/#sec-samevaluezero">SameValueZero</a> 算法来比较键是否相等。它和严格等于 <code>===</code> 差不多，但区别是 <code>NaN</code> 被看成是等于 <code>NaN</code>。所以 <code>NaN</code> 也可以被用作键。</p>
+<p>这个算法不能被改变或者自定义。</p>
+<p><strong>链式调用</strong></p>
+<p>每一次 <code>map.set</code> 调用都会返回 <code>map</code> 本身，所以我们可以进行“链式”调用：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">map.set(<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;str1&#x27;</span>)</span><br><span class="line">  .set(<span class="number">1</span>, <span class="string">&#x27;num1&#x27;</span>)</span><br><span class="line">  .set(<span class="literal">true</span>, <span class="string">&#x27;bool1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Map-迭代"><a href="#Map-迭代" class="headerlink" title="Map 迭代"></a>Map 迭代</h3><p>如果要在 map 里使用循环，可以使用以下三个方法：</p>
+<ul>
+<li><p><code>map.keys()</code> —— 遍历并返回所有的键（returns an iterable for keys），</p>
+</li>
+<li><p><code>map.values()</code> —— 遍历并返回所有的值（returns an iterable for values），</p>
+</li>
+<li><p><code>map.entries()</code> —— 遍历并返回所有的实体（returns an iterable for entries）[key, value]，for..of 在默认情况下使用的就是这个。</p>
+</li>
+<li><p><code>map.forEach</code></p>
+</li>
+</ul>
+<p><strong>使用插入顺序</strong></p>
+<p>迭代的顺序与插入值的顺序相同。与普通的 <code>Object</code> 不同，<code>Map</code> 保留了此顺序。</p>
+<p><strong>对象转map</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Map</span>(<span class="built_in">Object</span>.entries(obj));</span><br></pre></td></tr></table></figure>
+
+<p><strong>map转对象</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.fromEntries(map.entries())</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.fromEntries(map)</span><br><span class="line"><span class="comment">// 上面的代码作用也是一样的，因为 Object.fromEntries 期望得到一个可迭代对象作为参数，而不一定是数组。并且 map 的标准迭代会返回跟 map.entries() 一样的键/值对。因此，我们可以获得一个普通对象（plain object），其键/值对与 map 相同。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>Set 是一个特殊的类型集合 —— “值的集合”（没有键），它的每一个值只能出现一次。</p>
+<p><strong>方法和属性</strong></p>
+<ul>
+<li>new Set(iterable) —— 创建一个 set，如果提供了一个 iterable 对象（通常是数组），将会从数组里面复制值到 set 中。</li>
+<li>set.add(value) —— 添加一个值，返回 set 本身</li>
+<li>set.delete(value) —— 删除值，如果 value 在这个方法调用的时候存在则返回 true ，否则返回 false。</li>
+<li>set.has(value) —— 如果 value 在 set 中，返回 true，否则返回 false。</li>
+<li>set.clear() —— 清空 set。</li>
+<li>set.size —— 返回元素个数。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">set.forEach(<span class="function">(<span class="params">value, valueAgain, set</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// valueAgain =&gt; key, 在set中value和key是相等的</span></span><br><span class="line">  alert(value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-8-WeakMap-and-WeakSet（弱映射和弱集合）"><a href="#5-8-WeakMap-and-WeakSet（弱映射和弱集合）" class="headerlink" title="5.8 WeakMap and WeakSet（弱映射和弱集合）"></a>5.8 WeakMap and WeakSet（弱映射和弱集合）</h2><h3 id="WeakMap"><a href="#WeakMap" class="headerlink" title="WeakMap"></a>WeakMap</h3><p><code>WeakMap</code> 和 <code>Map</code> 的第一个不同点就是，<code>WeakMap</code> 的键必须是对象，不能是原始值。</p>
+<p>在 <code>weakMap</code> 中使用一个对象作为键，并且没有其他对这个对象的引用 —— 该对象将会被从内存（和map）中自动清除。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> john = &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> weakMap = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line">weakMap.set(john, <span class="string">&quot;...&quot;</span>);</span><br><span class="line"></span><br><span class="line">john = <span class="literal">null</span>; <span class="comment">// 覆盖引用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// john 被从内存中删除了！</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>WeakMap 只有以下的方法：</strong></p>
+<ul>
+<li>weakMap.get(key)</li>
+<li>weakMap.set(key, value)</li>
+<li>weakMap.delete(key)</li>
+<li>weakMap.has(key)</li>
+</ul>
+<h3 id="WeakSet"><a href="#WeakSet" class="headerlink" title="WeakSet"></a>WeakSet</h3><ul>
+<li>与 <code>Set</code> 类似，但是我们只能向 <code>WeakSet</code> 添加对象（而不能是原始值）。</li>
+<li>对象只有在其它某个（些）地方能被访问的时候，才能留在 <code>set</code> 中。</li>
+<li>跟 <code>Set</code> 一样，<code>WeakSet</code> 支持 <code>add</code>，<code>has</code> 和 <code>delete</code> 方法，但不支持 <code>size</code> 和 <code>keys()</code>，并且不可迭代。</li>
+</ul>
+<p><code>WeakMap</code> 和 <code>WeakSet</code> 最明显的局限性就是不能迭代，并且无法获取所有当前内容。那样可能会造成不便，但是并不会阻止 <code>WeakMap/WeakSet</code> 完成其主要工作 — 成为在其它地方管理/存储“额外”的对象数据。</p>
+<p><code>WeakMap</code> 和 <code>WeakSet</code> 被用作“主要”对象存储之外的“辅助”数据结构。一旦将对象从主存储器中删除，如果该对象仅被用作 <code>WeakMap</code> 或 <code>WeakSet</code> 的键，那么它将被自动清除。</p>
+<h2 id="5-9-Object-keys，values，entries"><a href="#5-9-Object-keys，values，entries" class="headerlink" title="5.9 Object.keys，values，entries"></a>5.9 Object.keys，values，entries</h2><p><strong>Object.keys/values/entries 会忽略 symbol 属性</strong></p>
+<p>就像 <code>for..in</code> 循环一样，这些方法会忽略使用 <code>Symbol(...)</code> 作为键的属性。</p>
+<p>通常这很方便。但是，如果我们也想要 <code>Symbol</code> 类型的键，那么这儿有一个单独的方法 <code>Object.getOwnPropertySymbols</code>，它会返回一个只包含 <code>Symbol</code> 类型的键的数组。另外，还有一种方法 <code>Reflect.ownKeys(obj)</code>，它会返回 <strong>所有</strong> 键。</p>
+<h2 id="5-10-解构赋值"><a href="#5-10-解构赋值" class="headerlink" title="5.10 解构赋值"></a>5.10 解构赋值</h2><h3 id="数组解构-“拆包”"><a href="#数组解构-“拆包”" class="headerlink" title="数组解构 “拆包”"></a>数组解构 “拆包”</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [firstName, surname] = <span class="string">&quot;Ilya Kantor&quot;</span>.split(<span class="string">&#x27; &#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>忽略使用逗号的元素</strong></p>
+<p>数组中不想要的元素也可以通过添加额外的逗号来把它丢弃：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 不需要第二个元素</span></span><br><span class="line"><span class="keyword">let</span> [firstName, , title] = [<span class="string">&quot;Julius&quot;</span>, <span class="string">&quot;Caesar&quot;</span>, <span class="string">&quot;Consul&quot;</span>, <span class="string">&quot;of the Roman Republic&quot;</span>];</span><br><span class="line"></span><br><span class="line">alert( title ); <span class="comment">// Consul</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>等号右侧可以是任何可迭代对象</strong></p>
+<p>……实际上，我们可以将其与任何可迭代对象一起使用，而不仅限于数组：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = <span class="string">&quot;abc&quot;</span>; <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span></span><br><span class="line"><span class="keyword">let</span> [one, two, three] = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br></pre></td></tr></table></figure>
+
+<p><strong>赋值给等号左侧的任何内容</strong></p>
+<p>我们可以在等号左侧使用任何“可以被赋值的”东西。</p>
+<p>例如，一个对象的属性：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;&#125;;</span><br><span class="line">[user.name, user.surname] = <span class="string">&quot;Ilya Kantor&quot;</span>.split(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line"></span><br><span class="line">alert(user.name); <span class="comment">// Ilya</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><p><strong>赋值给等号左侧的任何内容</strong></p>
+<p>赋值两侧一定要用 <code>(...)</code> 包裹，否则会认为 <code>&#123;...&#125;</code> 是一个代码块。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">a</span>: <span class="number">0</span>, <span class="attr">b</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> copy = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">(&#123; <span class="attr">a</span>: copy.a, <span class="attr">b</span>: copy.b &#125; = obj);</span><br><span class="line"><span class="built_in">console</span>.log(copy);    <span class="comment">// &#123;a: 0, b: 1&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-11-日期和时间"><a href="#5-11-日期和时间" class="headerlink" title="5.11 日期和时间"></a>5.11 日期和时间</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 返回的都是Date对象，是当前时区的时间。</span></span><br><span class="line"><span class="built_in">console</span>.dir(<span class="keyword">new</span> <span class="built_in">Date</span>())</span><br><span class="line"><span class="comment">// 如果你在时区 UTC-1，输出 60</span></span><br><span class="line"><span class="comment">// 如果你在时区 UTC+3，输出 -180</span></span><br><span class="line"><span class="comment">// 如果你在时区 UTC+8，输出 -480</span></span><br><span class="line">alert( <span class="keyword">new</span> <span class="built_in">Date</span>().getTimezoneOffset() );</span><br></pre></td></tr></table></figure>
+
+<h3 id="自动校准（Autocorrection）"><a href="#自动校准（Autocorrection）" class="headerlink" title="自动校准（Autocorrection）"></a>自动校准（Autocorrection）</h3><p>自动校准 是 <code>Date</code> 对象的一个非常方便的特性。我们可以设置超范围的数值，它会自动校准。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2013</span>, <span class="number">0</span>, <span class="number">32</span>); <span class="comment">// 32 Jan 2013 ?!?</span></span><br><span class="line">alert(date); <span class="comment">// ……是 1st Feb 2013!</span></span><br></pre></td></tr></table></figure>
+
+<p>获取时间戳的三种方式</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">+ <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</span><br><span class="line"><span class="built_in">Date</span>.now()</span><br></pre></td></tr></table></figure>
+
+<h3 id="对一个字符串使用-Date-parse"><a href="#对一个字符串使用-Date-parse" class="headerlink" title="对一个字符串使用 Date.parse"></a>对一个字符串使用 Date.parse</h3><p><code>Date.parse(str)</code> 方法可以从一个字符串中读取日期。</p>
+<p>字符串的格式应该为：<code>YYYY-MM-DDTHH:mm:ss.sssZ</code>，其中：</p>
+<p><code>YYYY-MM-DD</code> —— 日期：年-月-日。<br>字符 <code>&quot;T&quot;</code> 是一个分隔符。<br><code>HH:mm:ss.sss</code> —— 时间：小时，分钟，秒，毫秒。<br>可选字符 <code>&#39;Z&#39;</code> 为 <code>+-hh:mm</code> 格式的时区。单个字符 Z 代表 UTC+0 时区。<br>简短形式也是可以的，比如 <code>YYYY-MM-DD</code> 或 <code>YYYY-MM</code>，甚至可以是 <code>YYYY</code>。</p>
+<p><code>Date.parse(str)</code> 调用会解析给定格式的字符串，并返回时间戳（自 1970-01-01 00:00:00 起所经过的毫秒数）。如果给定字符串的格式不正确，则返回 NaN。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> ms = <span class="built_in">Date</span>.parse(<span class="string">&#x27;2012-01-26T13:51:50.417-07:00&#x27;</span>);</span><br><span class="line"></span><br><span class="line">alert(ms); <span class="comment">// 1327611110417  (时间戳)</span></span><br></pre></td></tr></table></figure>
+
+<p>我们可以通过时间戳来立即创建一个 new Date 对象：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>( <span class="built_in">Date</span>.parse(<span class="string">&#x27;2012-01-26T13:51:50.417-07:00&#x27;</span>) );</span><br><span class="line"></span><br><span class="line">alert(date);</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>有时我们需要更加精准的时间度量。JavaScript 自身并没有测量微秒的方法（百万分之一秒），但大多数运行环境会提供。例如：浏览器有 <code>performance.now()</code> 方法来给出从页面加载开始的以毫秒为单位的微秒数（精确到毫秒的小数点后三位）：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert(<span class="string">`Loading started <span class="subst">$&#123;performance.now()&#125;</span>ms ago`</span>);</span><br><span class="line"><span class="comment">// 类似于 &quot;Loading started 34731.26000000001ms ago&quot;</span></span><br><span class="line"><span class="comment">// .26 表示的是微秒（260 微秒）</span></span><br><span class="line"><span class="comment">// 小数点后超过 3 位的数字是精度错误，只有前三位数字是正确的</span></span><br></pre></td></tr></table></figure>
+
+<p><code>Node.js</code> 有 <code>microtime</code> 模块以及其他方法。从技术上讲，几乎所有的设备和环境都允许获取更高精度的数值，只是不是通过 <code>Date</code> 对象。</p>
+<h2 id="5-12-JSON-方法，toJSON"><a href="#5-12-JSON-方法，toJSON" class="headerlink" title="5.12 JSON 方法，toJSON"></a>5.12 JSON 方法，toJSON</h2><h3 id="排除和转换：replacer"><a href="#排除和转换：replacer" class="headerlink" title="排除和转换：replacer"></a>排除和转换：replacer</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> json = <span class="built_in">JSON</span>.stringify(value[, replacer, space])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>value</code> 要编码的值</li>
+<li><code>replacer</code><ul>
+<li>可以是一个数组，包含所有需要展示的字段，有助于避免循环引用导致的错误</li>
+<li>可以是一个函数，参数是 <code>key</code>，<code>value</code> 返回对应的 <code>value</code> 就是默认的情况， 返回 <code>undefined</code> 就是不显示</li>
+<li>可以是 <code>null</code>，这一步不做处理</li>
+</ul>
+</li>
+<li><code>space</code> 格式化<ul>
+<li>数字代表缩进几个空格</li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义-“toJSON”"><a href="#自定义-“toJSON”" class="headerlink" title="自定义 “toJSON”"></a>自定义 “toJSON”</h3><p><code>JSON.stringify</code> 会调用对象上的 <code>toJSON</code> 方法</p>
+<h3 id="JSON-parse"><a href="#JSON-parse" class="headerlink" title="JSON.parse"></a>JSON.parse</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> value = <span class="built_in">JSON</span>.parse(str, [reviver]);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>str</code> 要解析的 JSON 字符串。</li>
+<li><code>reviver</code> 可选的函数 <code>function(key,value)</code>，该函数将为每个 <code>(key, value)</code> 对调用，并可以对值进行转换。</li>
+</ul>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> room = &#123;</span><br><span class="line">  number: <span class="number">23</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> meetup = &#123;</span><br><span class="line">  title: <span class="string">&quot;Conference&quot;</span>,</span><br><span class="line">  occupiedBy: [&#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span> &#125;, &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span> &#125;],</span><br><span class="line">  place: room,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环引用</span></span><br><span class="line">room.occupiedBy = meetup;</span><br><span class="line">meetup.self = meetup;</span><br><span class="line"></span><br><span class="line">alert(</span><br><span class="line">  <span class="built_in">JSON</span>.stringify(meetup, <span class="function"><span class="keyword">function</span> <span class="title">replacer</span>(<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* your code */</span></span><br><span class="line">    <span class="built_in">console</span>.log(key, value);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (key != <span class="string">&quot;&quot;</span> &amp;&amp; value === meetup) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">    <span class="comment">/* your code */</span></span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 结果应该是：</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">  &quot;title&quot;:&quot;Conference&quot;,</span></span><br><span class="line"><span class="comment">  &quot;occupiedBy&quot;:[&#123;&quot;name&quot;:&quot;John&quot;&#125;,&#123;&quot;name&quot;:&quot;Alice&quot;&#125;],</span></span><br><span class="line"><span class="comment">  &quot;place&quot;:&#123;&quot;number&quot;:23&#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>现代JavaScript教程</category>
       </categories>
